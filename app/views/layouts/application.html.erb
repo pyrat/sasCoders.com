@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta name="description" content= "">
+  <meta name="keywords" content="">
+  <title>SAS Coders Dot Com</title>
+  <%= stylesheet_link_tag "style" %>
+
+</head>
+
+<body>
+<center>
+<% if session[:user_id] %>
+  hello <%= @user.first_name %>
+<% else %>
+  Please sign in: 
+  <% form_tag :controller=> :user, :action=> :login do %>
+     <%= text_field_tag(:email, nil, :size=>5, :class=>"admin") %>
+	 <%= text_field_tag(:pw, nil, :size=>5, :class=>"admin") %>
+     <%= image_submit_tag "button.png" %>
+  <% end %>
+<% end %>
+<%= flash[:notice] %>
+<%= yield %>
+</center>
+</body>
+</html>

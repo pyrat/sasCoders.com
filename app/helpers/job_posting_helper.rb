@@ -1,0 +1,2 @@
+module JobPostingHelper
+end

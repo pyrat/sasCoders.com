@@ -1,0 +1,178 @@
+
+body {
+    
+	margin-top: 5;
+	margin-left: 5;
+	margin-right: 5;
+	padding: 0;
+	/*background-color: #336699; */
+	background-color: #f2fafd;
+	/*text-align: center; */  
+	
+	font-size: 70%;
+
+}
+
+body, p, h1, h2, h3, h4, table, td, th, ul, ol, textarea, input {
+  font-family:verdana,helvetica,arial,sans-serif;
+}
+	
+
+input.admin {
+  height: 8px;
+  font-size: 8px;
+}
+
+div.admin{
+  background-color: #FFFFFF;
+}
+
+#container {
+	position: relative;
+	width: 860px;
+	border: 2px solid #002097;
+	top: 10px;
+	clear: both;
+	padding: 0;
+	text-align: left;
+	background-color: #FFFFFF;
+	}
+
+#header {
+	 height: 100px; 
+	background-color: #EEEEEE;
+	border-bottom: 2px solid #002097;
+	/* border-top: 2px solid #002097; */
+	}
+
+#content {
+	float: right;
+	width: 650px;
+   /*     height: 600px; */
+	background-color: #FFFFFF;
+	padding: 3px;
+	margin: 3; 
+/*	border-top: 2px solid #336699; 
+	border-bottom: 2px solid #336699; */
+	}
+
+#sidebar {
+	float: left;
+	width: 190px;
+/*	height: 600px; */
+	top: 0;
+	right: 0;
+	background-color: #f2fafd;
+	margin: 3;
+	text-align: left;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 15px;
+/*	border: 2px solid #336699; */
+	border-right: 2px solid #002097;
+/*	border-left:  2px solid #336699; */
+	border-bottom:  2px solid #002097;
+	}
+
+#footer {
+	background-color: #CCCCCC;
+	clear: both;
+	border-top: 2px solid #002097;
+	font-size: 80%;
+	text-align: right;
+	}
+	
+	
+h1 { 
+  color: #6586A7;
+ /* height: 30px; */
+  text-align: left;
+  padding-left: 3px;
+  font-size: 250%;
+  
+}
+
+h3 { 
+  color: #FFC652;  
+  padding-left:40px;
+  text-align: left;
+  font-size: 140%;
+}
+
+ul.schools{
+  list-style-type:none;
+}
+
+.indent{
+  padding-left: 1px;
+
+}
+
+.important {
+  color: #0E426C;
+  font-size: 120%;
+}
+
+fieldset {
+  border: 1px solid #002097;
+}
+
+div.column_header {
+  color: #002097;
+  font-weight: bold;
+}
+
+ul.programs{
+  list-style-type: circle;
+}
+
+td.top_align {
+  vertical-align: top;
+}
+
+
+fieldset.inner{
+  background-color: #bde6f5;
+}
+
+fieldset.optional{
+  background-color: #eca388;
+  border: 2px solid #d75323;
+}
+
+fieldset.dontWait{
+  background-color: #eca388;
+  border: 2px solid #d75323;
+  font-size: 18px;
+  color: #d75323;
+}
+
+fieldset.content{
+  background-color: #eeeeee;
+}
+
+div#adContainer{
+  /* background-color: #FFFFCC; */
+  border: 2px solid #002097;
+}
+
+.adTextTitle {
+  color: #002097;
+  font-size: 24px;
+  font-style: oblique;
+  margin-left:6px;
+}
+.adText123 {
+  font-size: 18px;
+  margin-left:24px;
+  color: #002097;
+}
+
+div#onlineSchools{
+  background-color: #889988;
+  width: 190px;
+}
+
+div.hidden {
+  visibility: hidden;
+}

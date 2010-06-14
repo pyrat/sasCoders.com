@@ -1,0 +1,13 @@
+<h1>Jobs Matching Your Search</h1>
+<br>
+Search details:<br>
+<p>Full Address: <%= @geo.full_address %></p>
+<p>Precision: <%= @geo.precision %> </p>
+<hr>
+
+<% for job in @jobs %>
+  <div>
+    <h3>Title: <%= h job.title %></h3> Distance: <%= job.distance %>
+    <p>Short description: <%= h job.short_description %> </p>
+  </div>
+<% end %>

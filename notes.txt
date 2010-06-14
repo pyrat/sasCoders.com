@@ -1,0 +1,19 @@
+
+Set up a new app on heroku so we can test out the email plugin.
+is git set up on this one locally yet?
+
+What other actions need to be done?
+Search for jobs is done AFAIK
+jobs admin page/ jobs edit page
+
+Recruiter display page
+update the look of the homepage.
+
+Lets tackle search for jobs.
+working on search_controller, test telecommute == only, test index, create view
+
+** search controller does not handle include/exclude telecommite jobs yet. now it does.
+
+Register recruiter page
+ input fields form
+ accept fields, send confirmation email?

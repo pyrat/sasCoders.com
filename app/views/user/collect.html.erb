@@ -1,0 +1,31 @@
+<%= flash[:notice] %><br><br>
+<%= flash[:error] %>
+<table>
+
+<tr>
+	<td valign=top>
+		<h3>Register with sasCoders.com</h3>
+		<% form_tag :controller=>:user, :action=>:register do %>
+		  
+		<div class="fields">
+
+		<%= label_tag "Email" %>
+		<%= text_field_tag :email, params[:email], :size=>40 %>
+
+		<%= label_tag "user_name" %>
+		<%= text_field_tag :user_name, params[:user_name] %>
+
+		<%= label_tag "password" %>
+		<%= password_field_tag :password, params[:password] %>
+
+		<%= label_tag "password_confirmation" %>
+		<%= password_field_tag :password_confirmation, params[:password_confirmation] %>
+		<br><br>
+		<%= submit_tag 'Register', :class => "button" %> 
+
+		</div>
+		<% end %>
+
+				</td>
+	</tr>
+</table>

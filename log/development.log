@@ -1,0 +1,3129 @@
+  [4;36;1mSQL (40.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (86.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (198.8ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+  [4;35;1mSQL (123.1ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `user_name` varchar(255), `display_name` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `remember_token` varchar(255), `activation_code` varchar(255), `state` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `first_name` varchar(255), `last_name` varchar(255), `telephone` varchar(255), `company` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (122.0ms)[0m   [0;1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (120.6ms)[0m   [0mCREATE TABLE `roles_users` (`role_id` int(11), `user_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mRole Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.3ms)[0m   [0;1mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `user_name` varchar(255), `display_name` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `remember_token` varchar(255), `activation_code` varchar(255), `state` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `first_name` varchar(255), `last_name` varchar(255), `telephone` varchar(255), `company` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `user_name` varchar(255), `display_name` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `remember_token` varchar(255), `activation_code` varchar(255), `state` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `first_name` varchar(255), `last_name` varchar(255), `telephone` varchar(255), `company` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `user_name` varchar(255), `display_name` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `remember_token` varchar(255), `activation_code` varchar(255), `state` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `first_name` varchar(255), `last_name` varchar(255), `telephone` varchar(255), `company` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `user_name` varchar(255), `display_name` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `remember_token` varchar(255), `activation_code` varchar(255), `state` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `first_name` varchar(255), `last_name` varchar(255), `telephone` varchar(255), `company` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `user_name` varchar(255), `display_name` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `remember_token` varchar(255), `activation_code` varchar(255), `state` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `first_name` varchar(255), `last_name` varchar(255), `telephone` varchar(255), `company` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `user_name` varchar(255), `display_name` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `remember_token` varchar(255), `activation_code` varchar(255), `state` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `first_name` varchar(255), `last_name` varchar(255), `telephone` varchar(255), `company` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `user_name` varchar(255), `display_name` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `remember_token` varchar(255), `activation_code` varchar(255), `state` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `first_name` varchar(255), `last_name` varchar(255), `telephone` varchar(255), `company` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+  [4;36;1mSQL (99.5ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `user_name` varchar(255), `display_name` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `remember_token` varchar(255), `activation_code` varchar(255), `state` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `first_name` varchar(255), `last_name` varchar(255), `telephone` varchar(255), `company` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (170.2ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (120.7ms)[0m   [0;1mCREATE TABLE `roles_users` (`role_id` int(11), `user_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mRole Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRole Create (0.3ms)[0m   [0mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`salt`, `company`, `activated_at`, `updated_at`, `hashed_password`, `activation_code`, `remember_token_expires_at`, `remember_token`, `display_name`, `first_name`, `telephone`, `user_name`, `last_name`, `email`, `state`, `created_at`) VALUES('18477000.495234256003524', NULL, NULL, '2010-01-25 18:15:28', 'dcfbdfe7fcfdbedc537f9c5d3f1669b8f4b1a34c', NULL, NULL, NULL, NULL, 'Stephen', NULL, 'admin', 'Philp', 'admin@admin.com', NULL, '2010-01-25 18:15:28')[0m
+  [4;36;1mroles_users Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `roles_users` (`role_id`, `user_id`) VALUES (1, 1)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100102164457')[0m
+Migrating to CreateRoles (20100102170801)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'roles' already exists: CREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+  [4;36;1mSQL (1.6ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mDROP TABLE `roles`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mDROP TABLE `roles_users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100102164457'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+  [4;36;1mSQL (62.4ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `user_name` varchar(255), `display_name` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `remember_token` varchar(255), `activation_code` varchar(255), `state` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `first_name` varchar(255), `last_name` varchar(255), `telephone` varchar(255), `company` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (121.4ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (110.3ms)[0m   [0;1mCREATE TABLE `roles_users` (`role_id` int(11), `user_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mRole Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRole Create (0.2ms)[0m   [0mINSERT INTO `roles` (`name`) VALUES('admin')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`salt`, `company`, `activated_at`, `updated_at`, `hashed_password`, `activation_code`, `remember_token_expires_at`, `remember_token`, `display_name`, `first_name`, `telephone`, `user_name`, `last_name`, `email`, `state`, `created_at`) VALUES('18482900.46352911559912', NULL, NULL, '2010-01-25 18:19:32', '706633ac00bb4b584e3c053478b4397282263513', NULL, NULL, NULL, NULL, 'Stephen', NULL, 'admin', 'Philp', 'admin@admin.com', NULL, '2010-01-25 18:19:32')[0m
+  [4;36;1mroles_users Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `roles_users` (`role_id`, `user_id`) VALUES (1, 1)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100102164457')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 10:26:44) [GET]
+
+ActionController::RoutingError (No route matches "/users" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-25 10:27:01) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering user/index
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined method `photo_url' for #<User:0x19ec6a8>) on line #11 of app/views/user/index.html.erb:
+8: 
+9: <% @users.each do |user| %>
+10:   <tr>
+11: 	<td><%= image_tag( user.photo_url, :height=>20, :width=>20 ) %></td>
+12: 	<td><%= user.email %></td>
+13: 	<td><%= user.user_name %></td>
+14: 		
+
+    app/views/user/index.html.erb:11
+    app/views/user/index.html.erb:9:in `each'
+    app/views/user/index.html.erb:9
+
+Rendered rescues/_trace (40.3ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-25 10:27:31) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering user/index
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 24ms (View: 15, DB: 3) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-25 10:28:03) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering user/index
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 16ms (View: 6, DB: 3) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-25 11:47:25) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering user/index
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined local variable or method `new_user' for #<ActionView::Base:0x292f548>) on line #15 of app/views/user/index.html.erb:
+12:   </tr>
+13: <% end %>
+14: </table>
+15: <%= link_to "Sign Up", new_user%>
+16: <br />
+
+    app/views/user/index.html.erb:15
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-25 15:10:33) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering user/index
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined local variable or method `register' for #<ActionView::Base:0x2802fd0>) on line #16 of app/views/user/index.html.erb:
+13: <% end %>
+14: </table>
+15: <br><br>
+16: <%= link_to "Register", register %>
+17: <br />
+
+    app/views/user/index.html.erb:16
+
+Rendered rescues/_trace (103.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-25 15:14:36) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering user/index
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined local variable or method `register_path' for #<ActionView::Base:0x294b388>) on line #16 of app/views/user/index.html.erb:
+13: <% end %>
+14: </table>
+15: <br><br>
+16: <%= link_to "Register", register_path %>
+17: <br />
+
+    app/views/user/index.html.erb:16
+
+Rendered rescues/_trace (37.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-25 15:15:41) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering user/index
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-25 15:15:46) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::APP_NAME) on line #6 of app/views/user/register.html.erb:
+3: 
+4: <tr>
+5: 	<td valign=top>
+6: 		<h3>Register with <%= APP_NAME %></h3>
+7: 		<% form_for(@user) do |f| %>
+8: 		  <%= f.error_messages %>
+9: 		<div class="fields">
+
+    app/views/user/register.html.erb:6
+
+Rendered rescues/_trace (100.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (39.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-26 16:40:35) [GET]
+  [4;36;1mUser Load (56.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering user/index
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 255ms (View: 87, DB: 99) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-26 16:40:39) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::APP_NAME) on line #6 of app/views/user/register.html.erb:
+3: 
+4: <tr>
+5: 	<td valign=top>
+6: 		<h3>Register with <%= APP_NAME %></h3>
+7: 		<% form_for(@user) do |f| %>
+8: 		  <%= f.error_messages %>
+9: 		<div class="fields">
+
+    app/views/user/register.html.erb:6
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-26 16:42:09) [GET]
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+
+ActionView::TemplateError (undefined method `users_path' for #<ActionView::Base:0x378b38>) on line #7 of app/views/user/register.html.erb:
+4: <tr>
+5: 	<td valign=top>
+6: 		<h3>Register with sasCoders.com</h3>
+7: 		<% form_for(@user) do |f| %>
+8: 		  <%= f.error_messages %>
+9: 		<div class="fields">
+10: 
+
+    app/views/user/register.html.erb:7
+
+Rendered rescues/_trace (39.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-26 16:45:57) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+
+ActionView::TemplateError (undefined method `users_path' for #<ActionView::Base:0x268151c>) on line #7 of app/views/user/register.html.erb:
+4: <tr>
+5: 	<td valign=top>
+6: 		<h3>Register with sasCoders.com</h3>
+7: 		<% form_for(@user) do |f| %>
+8: 		  <%= f.error_messages %>
+9: 		<div class="fields">
+10: 
+
+    app/views/user/register.html.erb:7
+
+Rendered rescues/_trace (44.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-26 16:50:53) [GET]
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+
+ActionView::TemplateError (undefined method `users_path' for #<ActionView::Base:0x2551250>) on line #7 of app/views/user/register.html.erb:
+4: <tr>
+5: 	<td valign=top>
+6: 		<h3>Register with sasCoders.com</h3>
+7: 		<% form_for(@user) do |f| %>
+8: 		  <%= f.error_messages %>
+9: 		<div class="fields">
+10: 
+
+    app/views/user/register.html.erb:7
+
+Rendered rescues/_trace (39.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-26 17:19:56) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering user/index
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 66ms (View: 52, DB: 3) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-26 17:19:58) [GET]
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+Completed in 12ms (View: 3, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-26 17:20:21) [GET]
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+
+ActionView::TemplateError (undefined method `users_path' for #<ActionView::Base:0x27551a0>) on line #7 of app/views/user/register.html.erb:
+4: <tr>
+5: 	<td valign=top>
+6: 		<h3>Register with sasCoders.com</h3>
+7: 		<% form_for(@user) do |f| %>
+8: 		  <%= f.error_messages %>
+9: 		<div class="fields">
+10: 
+
+    app/views/user/register.html.erb:7
+
+Rendered rescues/_trace (42.3ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-26 17:21:48) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+
+ActionView::TemplateError (undefined method `users_path' for #<ActionView::Base:0x25e96f4>) on line #7 of app/views/user/register.html.erb:
+4: <tr>
+5: 	<td valign=top>
+6: 		<h3>Register with sasCoders.com</h3>
+7: 		<% form_for(@user) do |f| %>
+8: 		  
+9: 		<% end %>
+10: 
+
+    app/views/user/register.html.erb:7
+
+Rendered rescues/_trace (102.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-26 17:21:52) [GET]
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+
+ActionView::TemplateError (undefined method `users_path' for #<ActionView::Base:0x273f364>) on line #7 of app/views/user/register.html.erb:
+4: <tr>
+5: 	<td valign=top>
+6: 		<h3>Register with sasCoders.com</h3>
+7: 		<% form_for(@user) do |f| %>
+8: 		  
+9: 		<% end %>
+10: 
+
+    app/views/user/register.html.erb:7
+
+Rendered rescues/_trace (39.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-26 17:23:34) [GET]
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+
+ActionView::TemplateError (undefined method `users_path' for #<ActionView::Base:0x260d950>) on line #7 of app/views/user/register.html.erb:
+4: <tr>
+5: 	<td valign=top>
+6: 		<h3>Register with sasCoders.com</h3>
+7: 		<% form_for(@user) do |f| %>
+8: 		  
+9: 		<% end %>
+10: 
+
+    app/views/user/register.html.erb:7
+
+Rendered rescues/_trace (101.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-26 17:25:35) [GET]
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #7 of app/views/user/register.html.erb:
+4: <tr>
+5: 	<td valign=top>
+6: 		<h3>Register with sasCoders.com</h3>
+7: 		<% form_for(@u) do |f| %>
+8: 		  
+9: 		<% end %>
+10: 
+
+    app/views/user/register.html.erb:7
+
+Rendered rescues/_trace (39.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-26 17:27:10) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+
+ActionView::TemplateError (undefined method `users_path' for #<ActionView::Base:0x261d6c0>) on line #7 of app/views/user/register.html.erb:
+4: <tr>
+5: 	<td valign=top>
+6: 		<h3>Register with sasCoders.com</h3>
+7: 		<% form_for(@user) do |f| %>
+8: 		  
+9: 		<% end %>
+10: 
+
+    app/views/user/register.html.erb:7
+
+Rendered rescues/_trace (101.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-27 09:37:58) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering user/index
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 58ms (View: 43, DB: 3) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-27 09:38:01) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+
+ActionView::TemplateError (undefined method `password_confirmation' for #<User:0x1a072c8>) on line #21 of app/views/user/register.html.erb:
+18: 		<%= f.password_field :password %>
+19: 
+20: 		<label for="password_confirmation">Confirm Password</label>
+21: 		<%= f.password_field :password_confirmation %>
+22: 		<br><br>
+23: 		<%= f.submit 'Register', :class => "button" %> 
+24: 
+
+    app/views/user/register.html.erb:21
+    app/views/user/register.html.erb:7
+
+Rendered rescues/_trace (45.8ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-27 10:14:59) [GET]
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+Completed in 12ms (View: 4, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-27 10:15:51) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"2lcre8r", "password"=>"2lcre8r", "user_name"=>"stephen.philp", "email"=>"stephen.r.philp@gmail.com"}, "commit"=>"Register", "authenticity_token"=>"QLLS5x3xREg3ZRG4U9KAX3rdris7okNK/gXCLL/sqGw="}
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+Completed in 14ms (View: 5, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-27 10:18:01) [GET]
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+Completed in 16ms (View: 7, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#create (for 127.0.0.1 at 2010-01-27 10:18:28) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"2lcre8r", "password"=>"2lcre8r", "user_name"=>"stephen.philp", "email"=>"stephen.r.philp@gmail.com"}, "commit"=>"Register", "authenticity_token"=>"QLLS5x3xREg3ZRG4U9KAX3rdris7okNK/gXCLL/sqGw="}
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.6ms)[0m   [0;1mINSERT INTO `users` (`salt`, `company`, `activated_at`, `updated_at`, `hashed_password`, `activation_code`, `remember_token_expires_at`, `remember_token`, `display_name`, `first_name`, `telephone`, `user_name`, `last_name`, `email`, `state`, `created_at`) VALUES('212891900.652193482481091', NULL, NULL, '2010-01-27 18:18:28', 'e314704120f2ab3b636259bfe15bffaf3203cf86', NULL, NULL, NULL, NULL, NULL, NULL, 'stephen.philp', NULL, 'stephen.r.philp@gmail.com', NULL, '2010-01-27 18:18:28')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Rendering user/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #7 of app/views/user/index.html.erb:
+4:   <th>Email</th>
+5:   <th>User Name</th>
+6:   
+7: <% @users.each do |user| %>
+8:   <tr>
+9: 	<td><%= user.email %></td>
+10: 	<td><%= user.user_name %></td>
+
+    app/views/user/index.html.erb:7
+    app/controllers/user_controller.rb:18:in `create'
+
+Rendered rescues/_trace (38.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#create (for 127.0.0.1 at 2010-01-27 10:21:09) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"2lcre8r", "password"=>"2lcre8r", "user_name"=>"stephen.philp", "email"=>"stephen.r.philp@gmail.com"}, "commit"=>"Register", "authenticity_token"=>"QLLS5x3xREg3ZRG4U9KAX3rdris7okNK/gXCLL/sqGw="}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`salt`, `company`, `activated_at`, `updated_at`, `hashed_password`, `activation_code`, `remember_token_expires_at`, `remember_token`, `display_name`, `first_name`, `telephone`, `user_name`, `last_name`, `email`, `state`, `created_at`) VALUES('206214500.666750374423357', NULL, NULL, '2010-01-27 18:21:09', 'aebb2119dc1ddaaff1d29db0b0ff719fa50cb9c4', NULL, NULL, NULL, NULL, NULL, NULL, 'stephen.philp', NULL, 'stephen.r.philp@gmail.com', NULL, '2010-01-27 18:21:09')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+
+ActionView::MissingTemplate (Missing template user/create.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#create (for 127.0.0.1 at 2010-01-27 10:22:05) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"2lcre8r", "password"=>"2lcre8r", "user_name"=>"stephen.philp", "email"=>"stephen.r.philp@gmail.com"}, "commit"=>"Register", "authenticity_token"=>"QLLS5x3xREg3ZRG4U9KAX3rdris7okNK/gXCLL/sqGw="}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`salt`, `company`, `activated_at`, `updated_at`, `hashed_password`, `activation_code`, `remember_token_expires_at`, `remember_token`, `display_name`, `first_name`, `telephone`, `user_name`, `last_name`, `email`, `state`, `created_at`) VALUES('204476000.785503387144578', NULL, NULL, '2010-01-27 18:22:05', '8772a8b9a114beb2d4a7392ed83626ad194c2445', NULL, NULL, NULL, NULL, NULL, NULL, 'stephen.philp', NULL, 'stephen.r.philp@gmail.com', NULL, '2010-01-27 18:22:05')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering user/index
+Completed in 15ms (View: 1, DB: 4) | 200 OK [http://localhost/user/create]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-28 10:53:23) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering user/index
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 13ms (View: 4, DB: 3) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-28 10:53:26) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+Completed in 13ms (View: 4, DB: 3) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#create (for 127.0.0.1 at 2010-01-28 10:53:38) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"2lcre8r", "password"=>"2lcre8r", "user_name"=>"stephen.philp", "email"=>"stephen.r.philp@gmail.com"}, "commit"=>"Register", "authenticity_token"=>"QsQwkH294GSYyTGUUXN76iSXlL+ARgRWG5t3xysxB9s="}
+  [4;35;1mUser Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'stephen.r.philp@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`user_name`) = BINARY 'stephen.philp') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+
+NoMethodError (undefined method `password_non_blank' for #<User:0x292bd80>):
+  app/controllers/user_controller.rb:16:in `create'
+
+Rendered rescues/_trace (95.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-28 11:56:08) [GET]
+
+SyntaxError (/Users/stephen/Desktop/rails/sasCoders/app/models/user.rb:23: void value expression
+/Users/stephen/Desktop/rails/sasCoders/app/models/user.rb:23: syntax error, unexpected kFALSE, expecting kTHEN or ':' or '\n' or ';'
+/Users/stephen/Desktop/rails/sasCoders/app/models/user.rb:71: syntax error, unexpected kEND, expecting $end):
+  app/controllers/user_controller.rb:3:in `index'
+
+Rendered rescues/_trace (38.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-28 11:57:33) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering user/index
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 13ms (View: 4, DB: 2) | 200 OK [http://localhost/user/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-28 11:57:36) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+Completed in 13ms (View: 4, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#create (for 127.0.0.1 at 2010-01-28 11:58:11) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"2lcre8r", "password"=>"2lcre8r", "user_name"=>"stephen.philp", "email"=>"stephen.r.philp@gmail.com"}, "commit"=>"Register", "authenticity_token"=>"QsQwkH294GSYyTGUUXN76iSXlL+ARgRWG5t3xysxB9s="}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'stephen.r.philp@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`user_name`) = BINARY 'stephen.philp') LIMIT 1[0m
+  [4;35;1mUser Create (2.1ms)[0m   [0mINSERT INTO `users` (`salt`, `company`, `activated_at`, `updated_at`, `hashed_password`, `activation_code`, `remember_token_expires_at`, `remember_token`, `display_name`, `first_name`, `telephone`, `user_name`, `last_name`, `email`, `state`, `created_at`) VALUES('205540700.642552603741457', NULL, NULL, '2010-01-28 19:58:11', '4ae03259ae9adc1d3e7b5de906d51cb74587b0d4', NULL, NULL, NULL, NULL, NULL, NULL, 'stephen.philp', NULL, 'stephen.r.philp@gmail.com', NULL, '2010-01-28 19:58:11')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering user/index
+Completed in 22ms (View: 1, DB: 6) | 200 OK [http://localhost/user/create]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-28 11:58:18) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+Completed in 13ms (View: 4, DB: 3) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#create (for 127.0.0.1 at 2010-01-28 11:58:42) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"", "password"=>"2lcre8r", "user_name"=>"stephen.philp", "email"=>"ss"}, "commit"=>"Register", "authenticity_token"=>"QsQwkH294GSYyTGUUXN76iSXlL+ARgRWG5t3xysxB9s="}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'ss') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`user_name`) = BINARY 'stephen.philp') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+
+ActionView::MissingTemplate (Missing template user/create.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-28 14:13:09) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering user/index
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 14ms (View: 5, DB: 3) | 200 OK [http://localhost/user/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-28 14:13:12) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+NoMethodError (Attempt to call private method):
+  app/controllers/user_controller.rb:14:in `register'
+
+Rendered rescues/_trace (32.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-28 14:14:57) [GET]
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x2861954>) on line #15 of app/views/user/register.html.erb:
+12: 		<%= text_field_tag :email, params[:email], :size=>40 %>
+13: 
+14: 		<%= label_tag "user_name" %>
+15: 		<%= f.text_field :user_name %>
+16: 
+17: 		<%= label_tag "password" %>
+18: 		<%= password_field_tag :password, params[:password] %>
+
+    app/views/user/register.html.erb:15
+    app/views/user/register.html.erb:7
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-28 15:32:48) [GET]
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+Completed in 17ms (View: 5, DB: 3) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-28 15:42:16) [POST]
+  Parameters: {"commit"=>"Register", "password_confirmation"=>"2lcre8r", "authenticity_token"=>"QsQwkH294GSYyTGUUXN76iSXlL+ARgRWG5t3xysxB9s=", "user_name"=>"stephen.philp", "password"=>"2lcre8r", "email"=>"stephen@pelicanprogramming.com"}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering user/register
+Completed in 17ms (View: 3, DB: 2) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-28 17:27:15) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/index
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Com) on line #7 of app/views/layouts/application.html.erb:
+4:   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+5:   <meta name="description" content= "">
+6:   <meta name="keywords" content="">
+7:   <title><%= SAS Coders Dot Com %></title>
+8:   
+9: </head>
+10: 
+
+    app/views/layouts/application.html.erb:7
+
+Rendered rescues/_trace (39.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (39.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-30 08:35:53) [GET]
+  [4;36;1mUser Load (44.5ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/index
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 220ms (View: 63, DB: 88) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-30 08:38:05) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/index
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-30 09:19:27) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/index
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 13ms (View: 4, DB: 3) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-01-30 09:19:59) [GET]
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`user_name` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/register
+Completed in 139ms (View: 28, DB: 4) | 200 OK [http://localhost/user/register]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-30 09:26:06) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/index
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-30 09:26:10) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/index
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 13ms (View: 4, DB: 3) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-30 09:32:02) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/index
+ERROR: compiling _run_erb_app47views47user47index46html46erb RAISED compile error
+/Users/stephen/Desktop/rails/sasCoders/app/views/user/index.html.erb:17: syntax error, unexpected ';', expecting ')'
+...ate => "user/register").to_s); @output_buffer.concat "\n"
+                              ^
+Function body:           def _run_erb_app47views47user47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing users</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <th>Email</th>\n"
+@output_buffer.concat "  <th>User Name</th>\n"
+@output_buffer.concat "  \n"
+ @users.each do |user| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "\t<td>"; @output_buffer.concat(( user.email ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "\t<td>"; @output_buffer.concat(( user.user_name ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "<br><br>\n"
+@output_buffer.concat "<!-- i need this to just render the template, not run the controller method -->\n"
+@output_buffer.concat(( link_to render(:template => "user/register").to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/stephen/Desktop/rails/sasCoders/app/views/user/index.html.erb:22:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/stephen/Desktop/rails/sasCoders/app/views/user/index.html.erb:17: syntax error, unexpected ';', expecting ')'
+...ate => "user/register").to_s); @output_buffer.concat "\n"
+                              ^) on line #17 of app/views/user/index.html.erb:
+14: </table>
+15: <br><br>
+16: <!-- i need this to just render the template, not run the controller method -->
+17: <%= link_to render(:template => "user/register"%>
+18: <br />
+
+    app/views/user/index.html.erb:22:in `compile!'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-30 09:32:27) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/index
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 15ms (View: 6, DB: 3) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-30 09:33:10) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/index
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 17ms (View: 7, DB: 3) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-01-30 09:33:13) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/index
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 13ms (View: 4, DB: 3) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (40.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-02-15 11:39:36) [GET]
+  [4;36;1mUser Load (34.6ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/index
+  [4;35;1mUser Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 218ms (View: 83, DB: 78) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-02-15 11:39:52) [GET]
+Rendering template within layouts/application
+Rendering user/collect
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-15 11:40:24) [POST]
+  Parameters: {"commit"=>"Register", "password_confirmation"=>"test", "authenticity_token"=>"t2FhsTStjh/sUqPvd35Vb5TvfTFRD43Sp7oh73VKbzc=", "user_name"=>"test user", "password"=>"test", "email"=>"test"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'test') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`user_name`) = BINARY 'test user') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+
+ActionView::MissingTemplate (Missing template user/register.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-02-15 11:44:17) [GET]
+Rendering template within layouts/application
+Rendering user/collect
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-15 11:49:37) [POST]
+  Parameters: {"commit"=>"Register", "password_confirmation"=>"", "authenticity_token"=>"t2FhsTStjh/sUqPvd35Vb5TvfTFRD43Sp7oh73VKbzc=", "user_name"=>"test user", "password"=>"", "email"=>"test"}
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'test') LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`user_name`) = BINARY 'test user') LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/collect
+Completed in 23ms (View: 2, DB: 3) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-02-15 11:49:49) [POST]
+  Parameters: {"commit"=>"Register", "password_confirmation"=>"test", "authenticity_token"=>"t2FhsTStjh/sUqPvd35Vb5TvfTFRD43Sp7oh73VKbzc=", "user_name"=>"test user", "password"=>"test", "email"=>"test@test.com"}
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'test@test.com') LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`user_name`) = BINARY 'test user') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO `users` (`salt`, `company`, `activated_at`, `updated_at`, `hashed_password`, `activation_code`, `remember_token_expires_at`, `remember_token`, `display_name`, `first_name`, `telephone`, `user_name`, `last_name`, `email`, `state`, `created_at`) VALUES('212979400.653827321219086', NULL, NULL, '2010-02-15 19:49:49', '7ee32a82af8e5373c63a83f579a404b0ba50c4e8', NULL, NULL, NULL, NULL, NULL, NULL, 'test user', NULL, 'test@test.com', NULL, '2010-02-15 19:49:49')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering user/index
+Completed in 128ms (View: 2, DB: 4) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (39.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (64.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+Migrating to CreateJobPostings (20100224234214)
+  [4;36;1mSQL (91.2ms)[0m   [0;1mCREATE TABLE `job_postings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `reference_id` varchar(255), `title` varchar(255), `company_name` varchar(255), `company_type` varchar(255), `short_description` text, `long_description` text, `zip` varchar(255), `type` varchar(255), `experience` varchar(255), `pay` varchar(255), `addl_instructions` text, `created_at` datetime, `approved_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100224234214')[0m
+Migrating to CreateInvoices (20100224234307)
+  [4;36;1mSQL (171.5ms)[0m   [0;1mCREATE TABLE `invoices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `amount` int(11), `billed_date` datetime, `product` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100224234307')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW FIELDS FROM `invoices`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mdescribe `invoices`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `invoices`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mdescribe `job_postings`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `job_postings`[0m
+  [4;35;1mSQL (43.4ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-02-24 16:04:55) [GET]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 77ms (View: 13, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-02-24 16:05:45) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-02-24 17:51:54) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-02-24 17:52:20) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered site/_content (1.0ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-02-24 19:27:10) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.4ms)
+Rendered site/_content (1.0ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-06-01 11:31:10) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.5ms)
+Rendered site/_content (1.5ms)
+Completed in 45ms (View: 43, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-06-01 11:44:46) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (1.1ms)
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-01 11:44:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#login (for 127.0.0.1 at 2010-06-01 11:44:53) [POST]
+  Parameters: {"name"=>"", "x"=>"0", "y"=>"0", "authenticity_token"=>"HymOmhj2A5ucHdZ4BEv5wO+ibhMqFvbmpaNi18CzBxw=", "pw"=>""}
+
+ActionController::UnknownAction (No action responded to login. Actions: index):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-06-01 15:12:28) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.4ms)
+Rendered site/_content (1.4ms)
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+/Users/stephen/Desktop/rails/sasCoders/app/views/layouts/application.html.erb:17: syntax error, unexpected tASSOC, expecting '}'
+..."  ";  form_tag {:controller=> :user, :action=> :login} do ;...
+                              ^
+/Users/stephen/Desktop/rails/sasCoders/app/views/layouts/application.html.erb:17: syntax error, unexpected kDO, expecting kEND
+...=> :user, :action=> :login} do ; @output_buffer.concat "\n"
+                              ^
+/Users/stephen/Desktop/rails/sasCoders/app/views/layouts/application.html.erb:27: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\">\n"
+@output_buffer.concat "<head>\n"
+@output_buffer.concat "  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" />\n"
+@output_buffer.concat "  <meta name=\"description\" content= \"\">\n"
+@output_buffer.concat "  <meta name=\"keywords\" content=\"\">\n"
+@output_buffer.concat "  <title>SAS Coders Dot Com</title>\n"
+@output_buffer.concat "  "; @output_buffer.concat(( stylesheet_link_tag "style" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</head>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<body>\n"
+@output_buffer.concat "<center>\n"
+ if session[:logged_in] ; @output_buffer.concat "\n"
+@output_buffer.concat "  Logged in<br>\n"
+ else ; @output_buffer.concat "\n"
+@output_buffer.concat "  ";  form_tag {:controller=> :user, :action=> :login} do ; @output_buffer.concat "\n"
+@output_buffer.concat "     "; @output_buffer.concat(( text_field_tag(:name, nil, :size=>5, :class=>"admin") ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t "; @output_buffer.concat(( text_field_tag(:pw, nil, :size=>5, :class=>"admin") ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "     "; @output_buffer.concat(( image_submit_tag "button.png" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  ";  end ; @output_buffer.concat "\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</center>\n"
+@output_buffer.concat "</body>\n"
+@output_buffer.concat "</html>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/stephen/Desktop/rails/sasCoders/app/views/layouts/application.html.erb:27:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:347:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/stephen/Desktop/rails/sasCoders/app/views/layouts/application.html.erb:17: syntax error, unexpected tASSOC, expecting '}'
+..."  ";  form_tag {:controller=> :user, :action=> :login} do ;...
+                              ^
+/Users/stephen/Desktop/rails/sasCoders/app/views/layouts/application.html.erb:17: syntax error, unexpected kDO, expecting kEND
+...=> :user, :action=> :login} do ; @output_buffer.concat "\n"
+                              ^
+/Users/stephen/Desktop/rails/sasCoders/app/views/layouts/application.html.erb:27: syntax error, unexpected kENSURE, expecting $end) on line #17 of app/views/layouts/application.html.erb:
+14: <% if session[:logged_in] %>
+15:   Logged in<br>
+16: <% else %>
+17:   <% form_tag {:controller=> :user, :action=> :login} do %>
+18:      <%= text_field_tag(:name, nil, :size=>5, :class=>"admin") %>
+19: 	 <%= text_field_tag(:pw, nil, :size=>5, :class=>"admin") %>
+20:      <%= image_submit_tag "button.png" %>
+
+    app/views/layouts/application.html.erb:27:in `compile!'
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-06-01 15:13:59) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-01 15:13:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-01 15:14:29) [POST]
+  Parameters: {"name"=>"admin@admin.com", "x"=>"0", "y"=>"0", "authenticity_token"=>"HymOmhj2A5ucHdZ4BEv5wO+ibhMqFvbmpaNi18CzBxw=", "pw"=>"mos2es"}
+  [4;36;1mUser Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.activated_at=):
+  app/models/user.rb:42:in `authenticate'
+  app/controllers/user_controller.rb:46:in `login'
+
+Rendered rescues/_trace (33.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-01 15:20:53) [POST]
+  Parameters: {"name"=>"admin@admin.com", "x"=>"0", "y"=>"0", "authenticity_token"=>"HymOmhj2A5ucHdZ4BEv5wO+ibhMqFvbmpaNi18CzBxw=", "pw"=>"mos2es"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template user/login.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-01 15:32:16) [POST]
+  Parameters: {"name"=>"admin@admin.com", "x"=>"0", "y"=>"0", "authenticity_token"=>"HymOmhj2A5ucHdZ4BEv5wO+ibhMqFvbmpaNi18CzBxw=", "pw"=>"mos2es"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template user/login.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-01 15:32:38) [POST]
+  Parameters: {"name"=>"admin@admin.com", "x"=>"0", "y"=>"0", "authenticity_token"=>"HymOmhj2A5ucHdZ4BEv5wO+ibhMqFvbmpaNi18CzBxw=", "pw"=>"mos2es"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template user/login.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-01 15:56:34) [POST]
+  Parameters: {"name"=>"admin@admin.com", "x"=>"0", "y"=>"0", "authenticity_token"=>"HymOmhj2A5ucHdZ4BEv5wO+ibhMqFvbmpaNi18CzBxw=", "pw"=>"mos2es"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::MissingTemplate (Missing template application/index.erb in view path app/views):
+  app/controllers/user_controller.rb:52:in `login'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-01 16:07:52) [POST]
+  Parameters: {"name"=>"admin@admin.com", "x"=>"0", "y"=>"0", "authenticity_token"=>"HymOmhj2A5ucHdZ4BEv5wO+ibhMqFvbmpaNi18CzBxw=", "pw"=>"mos2es"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+Redirected to http://localhost:3000application/index
+Completed in 10ms (DB: 3) | 302 Found [http://localhost/user/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-01 16:09:15) [POST]
+  Parameters: {"name"=>"admin@admin.com", "x"=>"0", "y"=>"0", "authenticity_token"=>"HymOmhj2A5ucHdZ4BEv5wO+ibhMqFvbmpaNi18CzBxw=", "pw"=>"mos2es"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering application/index
+
+ActionView::MissingTemplate (Missing template application/index.erb in view path app/views):
+  app/controllers/user_controller.rb:52:in `login'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-01 16:10:54) [POST]
+  Parameters: {"name"=>"admin@admin.com", "x"=>"0", "y"=>"0", "authenticity_token"=>"HymOmhj2A5ucHdZ4BEv5wO+ibhMqFvbmpaNi18CzBxw=", "pw"=>"mos2es"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+
+ActionView::TemplateError (Missing template user/_content.erb in view path app/views) on line #7 of app/views/site/index.html.erb:
+4: </div>
+5: 
+6: <div id="content">
+7:  <%= render(:partial => "content") %>
+8: </div>
+9: <div id="sidebar">
+10: 
+
+    app/views/site/index.html.erb:7
+    app/controllers/user_controller.rb:52:in `login'
+
+Rendered rescues/_trace (88.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-01 16:12:26) [POST]
+  Parameters: {"name"=>"admin@admin.com", "x"=>"0", "y"=>"0", "authenticity_token"=>"HymOmhj2A5ucHdZ4BEv5wO+ibhMqFvbmpaNi18CzBxw=", "pw"=>"mos2es"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (0.1ms)
+Completed in 20ms (View: 9, DB: 4) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-01 16:12:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-01 16:12:49) [POST]
+  Parameters: {"x"=>"0", "y"=>"0", "authenticity_token"=>"HymOmhj2A5ucHdZ4BEv5wO+ibhMqFvbmpaNi18CzBxw=", "pw"=>"mos2es", "email"=>"admin@admin.com"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'admin@admin.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (0.1ms)
+Completed in 164ms (View: 2, DB: 3) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-02 14:49:12) [GET]
+
+ActionController::RoutingError (No route matches "/job_posting/create/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-02 14:49:40) [GET]
+
+ActionController::RoutingError (No route matches "/job_posting/index" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#index (for 127.0.0.1 at 2010-06-02 14:52:27) [GET]
+Rendering template within layouts/application
+Rendering job_posting/index
+Completed in 219ms (View: 218, DB: 0) | 200 OK [http://localhost/job_posting/index]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#create (for 127.0.0.1 at 2010-06-02 14:52:44) [GET]
+Rendering template within layouts/application
+Rendering job_posting/create
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/job_posting/create]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJobPosting Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mJobPosting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJobPosting Load (0.3ms)[0m   [0;1mSELECT * FROM `job_postings` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#add_job (for 127.0.0.1 at 2010-06-03 11:38:11) [GET]
+
+ActionController::UnknownAction (No action responded to add_job. Actions: create, delete, edit, and index):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#add_job (for 127.0.0.1 at 2010-06-03 11:47:23) [GET]
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+
+ActionView::MissingTemplate (Missing template job_posting/add_job.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-06-03 11:48:20) [GET]
+  [4;35;1mJobPosting Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering job_posting/addJob
+
+ActionView::TemplateError (undefined method `job_type' for #<JobPosting:0x61c830>) on line #11 of app/views/job_posting/addJob.html.erb:
+8:   <p>Short Description: <% form.text_area :short_description, :rows=>3 %> </p>
+9:   <p>Long Description: <% form.text_area :long_description, :rows=>6 %> </p>
+10:   <p>Zip: <% form.text_field :zip, :size=> 6%> </p>
+11:   <p>Job Type: <% form.text_field :job_type, :size=>30 %> </p>
+12:   <p>Experience Required: <% form.text_area :experience, :rows=>2 %> </p>
+13:   <p>Pay: <% form.text_field :pay, :size=>7 %> </p>
+14:   <p>Additional Instructions: <% form.text_area :addl_instructions, :rows=>3 %> </p>
+
+    app/views/job_posting/addJob.html.erb:11
+    app/views/job_posting/addJob.html.erb:4
+
+Rendered rescues/_trace (45.3ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-06-03 11:49:37) [GET]
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering job_posting/addJob
+Completed in 36ms (View: 28, DB: 2) | 200 OK [http://localhost/job_posting/addJob]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-03 11:49:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-06-03 11:51:12) [GET]
+  [4;35;1mJobPosting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering job_posting/addJob
+Completed in 17ms (View: 10, DB: 2) | 200 OK [http://localhost/job_posting/addJob]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-03 11:51:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#create (for 127.0.0.1 at 2010-06-03 11:52:52) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"SmAQzXC2dLBeCRaoxfQyLpRcqHaz+tgrd3W0yqkXu+c=", "jobPosting"=>{"zip"=>"90278", "company_name"=>"a super company", "title"=>"a really good job", "addl_instructions"=>"these are the addl instructions", "short_description"=>"this is the short description dude.", "type"=>"hourly", "company_type"=>"Recruiter", "long_description"=>"THis is the longest description in the whole wide world", "pay"=>"10 bajillion", "experience"=>"lots of experience reqd"}}
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mJobPosting Create (0.6ms)[0m   [0;1mINSERT INTO `job_postings` (`zip`, `updated_at`, `title`, `company_name`, `short_description`, `addl_instructions`, `type`, `company_type`, `long_description`, `reference_id`, `pay`, `approved_at`, `experience`, `created_at`) VALUES('90278', '2010-06-03 18:52:52', 'a really good job', 'a super company', 'this is the short description dude.', 'these are the addl instructions', NULL, 'Recruiter', 'THis is the longest description in the whole wide world', NULL, '10 bajillion', NULL, 'lots of experience reqd', '2010-06-03 18:52:52')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering job_posting/create
+Completed in 100ms (View: 7, DB: 4) | 200 OK [http://localhost/job_posting/create]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-03 11:52:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+Migrating to CreateJobPostings (20100224234214)
+Migrating to CreateInvoices (20100224234307)
+Migrating to AddLatLngToJobPosting (20100603230333)
+  [4;36;1mSQL (110.2ms)[0m   [0;1mALTER TABLE `job_postings` ADD `lat` float[0m
+  [4;35;1mSQL (211.1ms)[0m   [0mALTER TABLE `job_postings` ADD `lng` float[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100603230333')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW FIELDS FROM `invoices`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `invoices`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `invoices`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `job_postings`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `job_postings`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-03 16:41:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#create (for 127.0.0.1 at 2010-06-03 16:41:58) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"SmAQzXC2dLBeCRaoxfQyLpRcqHaz+tgrd3W0yqkXu+c=", "jobPosting"=>{"zip"=>"92315", "company_name"=>"a super company", "title"=>"a really good job", "addl_instructions"=>"these are the addl instructions", "short_description"=>"this is the short description dude.", "type"=>"hourly", "company_type"=>"Recruiter", "long_description"=>"THis is the longest description in the whole wide world", "pay"=>"10 bajillion", "experience"=>"lots of experience reqd"}}
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mJobPosting Create (0.3ms)[0m   [0;1mINSERT INTO `job_postings` (`zip`, `updated_at`, `title`, `company_name`, `short_description`, `addl_instructions`, `type`, `lng`, `company_type`, `long_description`, `reference_id`, `pay`, `approved_at`, `lat`, `experience`, `created_at`) VALUES('92315', '2010-06-03 23:41:58', 'a really good job', 'a super company', 'this is the short description dude.', 'these are the addl instructions', NULL, NULL, 'Recruiter', 'THis is the longest description in the whole wide world', NULL, '10 bajillion', NULL, NULL, 'lots of experience reqd', '2010-06-03 23:41:58')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering job_posting/create
+Completed in 14ms (View: 2, DB: 3) | 200 OK [http://localhost/job_posting/create]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-03 16:41:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-06-03 16:44:19) [GET]
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering job_posting/addJob
+Completed in 13ms (View: 5, DB: 2) | 200 OK [http://localhost/job_posting/addJob]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-03 16:44:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#create (for 127.0.0.1 at 2010-06-03 16:44:23) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"SmAQzXC2dLBeCRaoxfQyLpRcqHaz+tgrd3W0yqkXu+c=", "jobPosting"=>{"zip"=>"92315", "company_name"=>"a super company", "title"=>"a really good job", "addl_instructions"=>"these are the addl instructions", "short_description"=>"this is the short description dude.", "type"=>"hourly", "company_type"=>"Recruiter", "long_description"=>"THis is the longest description in the whole wide world", "pay"=>"10 bajillion", "experience"=>"lots of experience reqd"}}
+  [4;35;1mJobPosting Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: 92315. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>92315</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Big Bear Lake, CA 92315, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Big Bear Lake</LocalityName><PostalCode><PostalCodeNumber>92315</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.2547370" south="34.2326720" east="-116.8737920" west="-116.9359010" />
+    </ExtendedData>
+    <Point><coordinates>-116.8998680,34.2423893,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mJobPosting Create (0.4ms)[0m   [0mINSERT INTO `job_postings` (`zip`, `updated_at`, `title`, `company_name`, `short_description`, `addl_instructions`, `type`, `lng`, `company_type`, `long_description`, `reference_id`, `pay`, `approved_at`, `lat`, `experience`, `created_at`) VALUES('92315', '2010-06-03 23:44:23', 'a really good job', 'a super company', 'this is the short description dude.', 'these are the addl instructions', NULL, -116.899868, 'Recruiter', 'THis is the longest description in the whole wide world', NULL, '10 bajillion', NULL, 34.2423893, 'lots of experience reqd', '2010-06-03 23:44:23')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering job_posting/create
+Completed in 375ms (View: 2, DB: 3) | 200 OK [http://localhost/job_posting/create]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-03 16:44:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#create (for 127.0.0.1 at 2010-06-03 16:45:20) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"SmAQzXC2dLBeCRaoxfQyLpRcqHaz+tgrd3W0yqkXu+c=", "jobPosting"=>{"zip"=>"", "company_name"=>"a super company", "title"=>"a really good job", "addl_instructions"=>"these are the addl instructions", "short_description"=>"this is the short description dude.", "type"=>"telecommute", "company_type"=>"Recruiter", "long_description"=>"THis is the longest description in the whole wide world", "pay"=>"10 bajillion", "experience"=>"lots of experience reqd"}}
+  [4;35;1mJobPosting Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+Google geocoding. Address: . Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>0.000000,0.000000</name>
+  <Status>
+    <code>400</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address: 
+Geocoder.us geocoding. Address: . Result: city:  state:  zip:  please supply an address as ?address=[address]<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>200 OK</title>
+</head><body>
+<h1>OK</h1>
+<p>Your browser sent a request that this server could not understand.<br />
+</p>
+<hr>
+<address>Apache/2.2.9 (Debian) mod_perl/2.0.4 Perl/v5.10.0 Server at geocoder.us Port 80</address>
+</body></html>
+geocoder.us was unable to geocode address: 
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering job_posting/create
+Completed in 692ms (View: 2, DB: 3) | 200 OK [http://localhost/job_posting/create]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-03 16:45:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#create (for 127.0.0.1 at 2010-06-03 16:51:59) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"SmAQzXC2dLBeCRaoxfQyLpRcqHaz+tgrd3W0yqkXu+c=", "jobPosting"=>{"zip"=>"", "company_name"=>"a super company", "title"=>"a really good job", "addl_instructions"=>"these are the addl instructions", "short_description"=>"this is the short description dude.", "type"=>"telecommute", "company_type"=>"Recruiter", "long_description"=>"THis is the longest description in the whole wide world", "pay"=>"10 bajillion", "experience"=>"lots of experience reqd"}}
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mJobPosting Create (0.3ms)[0m   [0;1mINSERT INTO `job_postings` (`zip`, `updated_at`, `title`, `company_name`, `short_description`, `addl_instructions`, `type`, `lng`, `company_type`, `long_description`, `reference_id`, `pay`, `approved_at`, `lat`, `experience`, `created_at`) VALUES('', '2010-06-03 23:51:59', 'a really good job', 'a super company', 'this is the short description dude.', 'these are the addl instructions', NULL, 177.90255, 'Recruiter', 'THis is the longest description in the whole wide world', NULL, '10 bajillion', NULL, -18.271835, 'lots of experience reqd', '2010-06-03 23:51:59')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering job_posting/create
+Completed in 14ms (View: 2, DB: 3) | 200 OK [http://localhost/job_posting/create]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-03 16:51:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#create (for 127.0.0.1 at 2010-06-03 16:52:27) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"SmAQzXC2dLBeCRaoxfQyLpRcqHaz+tgrd3W0yqkXu+c=", "jobPosting"=>{"zip"=>"92315", "company_name"=>"a super company", "title"=>"a really good job", "addl_instructions"=>"these are the addl instructions", "short_description"=>"this is the short description dude.", "type"=>"big bear", "company_type"=>"Recruiter", "long_description"=>"THis is the longest description in the whole wide world", "pay"=>"10 bajillion", "experience"=>"lots of experience reqd"}}
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+WARNING: Can't mass-assign these protected attributes: type
+Google geocoding. Address: 92315. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>92315</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Big Bear Lake, CA 92315, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Big Bear Lake</LocalityName><PostalCode><PostalCodeNumber>92315</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.2547370" south="34.2326720" east="-116.8737920" west="-116.9359010" />
+    </ExtendedData>
+    <Point><coordinates>-116.8998680,34.2423893,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mJobPosting Create (0.3ms)[0m   [0;1mINSERT INTO `job_postings` (`zip`, `updated_at`, `title`, `company_name`, `short_description`, `addl_instructions`, `type`, `lng`, `company_type`, `long_description`, `reference_id`, `pay`, `approved_at`, `lat`, `experience`, `created_at`) VALUES('92315', '2010-06-03 23:52:27', 'a really good job', 'a super company', 'this is the short description dude.', 'these are the addl instructions', NULL, -116.899868, 'Recruiter', 'THis is the longest description in the whole wide world', NULL, '10 bajillion', NULL, 34.2423893, 'lots of experience reqd', '2010-06-03 23:52:27')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering job_posting/create
+Completed in 388ms (View: 2, DB: 3) | 200 OK [http://localhost/job_posting/create]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-03 16:52:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+Migrating to CreateJobPostings (20100224234214)
+Migrating to CreateInvoices (20100224234307)
+Migrating to AddLatLngToJobPosting (20100603230333)
+Migrating to RenameTypeInJobPostings (20100603235743)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mSHOW COLUMNS FROM `job_postings` LIKE 'type'[0m
+  [4;36;1mSQL (85.9ms)[0m   [0;1mALTER TABLE `job_postings` CHANGE `type` `job_type` varchar(255) DEFAULT NULL[0m
+  [4;35;1mSQL (200.6ms)[0m   [0mALTER TABLE `job_postings` ADD `telecommute` tinyint(1)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100603235743')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `invoices`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `invoices`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `invoices`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mdescribe `job_postings`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `job_postings`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-06-03 17:08:03) [GET]
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering job_posting/addJob
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://localhost/job_posting/addJob]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-03 17:08:03) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#create (for 127.0.0.1 at 2010-06-03 17:08:34) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"SmAQzXC2dLBeCRaoxfQyLpRcqHaz+tgrd3W0yqkXu+c=", "jobPosting"=>{"zip"=>"90293", "company_name"=>"a super company", "title"=>"a really good job", "addl_instructions"=>"", "short_description"=>"this is the short description dude.", "telecommute"=>"0", "job_type"=>"a great job", "company_type"=>"Recruiter", "long_description"=>"THis is the longest description in the whole wide world", "pay"=>"", "experience"=>"benzadrine"}}
+  [4;35;1mJobPosting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Google geocoding. Address: 90293. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>90293</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Playa Del Rey, CA 90293, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Playa Del Rey</LocalityName><PostalCode><PostalCodeNumber>90293</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.9742740" south="33.9163179" east="-118.4222100" west="-118.4602290" />
+    </ExtendedData>
+    <Point><coordinates>-118.4425960,33.9541669,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mJobPosting Create (0.3ms)[0m   [0mINSERT INTO `job_postings` (`zip`, `updated_at`, `title`, `company_name`, `short_description`, `addl_instructions`, `lng`, `telecommute`, `company_type`, `job_type`, `long_description`, `reference_id`, `pay`, `approved_at`, `lat`, `experience`, `created_at`) VALUES('90293', '2010-06-04 00:08:34', 'a really good job', 'a super company', 'this is the short description dude.', '', -118.442596, 0, 'Recruiter', 'a great job', 'THis is the longest description in the whole wide world', NULL, '', NULL, 33.9541669, 'benzadrine', '2010-06-04 00:08:34')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering job_posting/create
+Completed in 415ms (View: 3, DB: 3) | 200 OK [http://localhost/job_posting/create]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-03 17:08:34) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#create (for 127.0.0.1 at 2010-06-03 17:09:32) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"SmAQzXC2dLBeCRaoxfQyLpRcqHaz+tgrd3W0yqkXu+c=", "jobPosting"=>{"zip"=>"90293", "company_name"=>"a super company", "title"=>"a really good job", "addl_instructions"=>"", "short_description"=>"this is the short description dude.", "telecommute"=>"1", "job_type"=>"a great job", "company_type"=>"Recruiter", "long_description"=>"THis is the longest description in the whole wide world", "pay"=>"200", "experience"=>"benzadrine and telecommuting!"}}
+  [4;35;1mJobPosting Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Google geocoding. Address: 90293. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>90293</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Playa Del Rey, CA 90293, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Playa Del Rey</LocalityName><PostalCode><PostalCodeNumber>90293</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.9742740" south="33.9163179" east="-118.4222100" west="-118.4602290" />
+    </ExtendedData>
+    <Point><coordinates>-118.4425960,33.9541669,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mJobPosting Create (0.3ms)[0m   [0mINSERT INTO `job_postings` (`zip`, `updated_at`, `title`, `company_name`, `short_description`, `addl_instructions`, `lng`, `telecommute`, `company_type`, `job_type`, `long_description`, `reference_id`, `pay`, `approved_at`, `lat`, `experience`, `created_at`) VALUES('90293', '2010-06-04 00:09:33', 'a really good job', 'a super company', 'this is the short description dude.', '', -118.442596, 1, 'Recruiter', 'a great job', 'THis is the longest description in the whole wide world', NULL, '200', NULL, 33.9541669, 'benzadrine and telecommuting!', '2010-06-04 00:09:33')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering job_posting/create
+Completed in 353ms (View: 2, DB: 3) | 200 OK [http://localhost/job_posting/create]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-03 17:09:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Fri Jun 04 13:13:15 -0700 2010
+  Status: 500 Internal Server Error
+  /Users/stephen/Desktop/rails/sasCoders/app/controllers/application_controller.rb:15: syntax error, unexpected ']', expecting '}'
+	if session{:user].blank? ||
+	                 ^
+/Users/stephen/Desktop/rails/sasCoders/app/controllers/application_controller.rb:21: syntax error, unexpected kELSE, expecting '}'
+/Users/stephen/Desktop/rails/sasCoders/app/controllers/application_controller.rb:23: syntax error, unexpected kEND, expecting '}'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-06-04 13:14:35) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (13.7ms)
+Rendered site/_content (13.3ms)
+Completed in 55ms (View: 54, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-04 13:14:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-06-04 13:15:01) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:logged_in?] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://localhost/job_posting/addJob]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-06-04 13:15:01) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-04 13:15:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-04 13:15:15) [POST]
+  Parameters: {"x"=>"0", "y"=>"0", "authenticity_token"=>"ujYL7MLhj7iCVhCw87uOtUqf2+4ujtN7HxTqgJ4B+gA=", "pw"=>"s", "email"=>"s"}
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 's') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (0.1ms)
+Completed in 99ms (View: 3, DB: 3) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-04 13:15:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-06-04 13:15:29) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:logged_in?] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/job_posting/addJob]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-06-04 13:15:29) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-04 13:15:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-04 13:16:23) [POST]
+  Parameters: {"x"=>"0", "y"=>"0", "authenticity_token"=>"ujYL7MLhj7iCVhCw87uOtUqf2+4ujtN7HxTqgJ4B+gA=", "pw"=>"mos2es", "email"=>"admin@admin.com"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'admin@admin.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'admin@admin.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`user_name`) = BINARY 'admin' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `activated_at` = '2010-06-04 20:16:23', `updated_at` = '2010-06-04 20:16:23' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (0.1ms)
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #15 of app/views/layouts/application.html.erb:
+12: <body>
+13: <center>
+14: <% if session[:user] %>
+15:   hello <%= session[:user].first_name session[:user].last_name %>
+16: <% else %>
+17:   Please sign in: 
+18:   <% form_tag :controller=> :user, :action=> :login do %>
+
+    app/views/layouts/application.html.erb:15:in `first_name'
+    app/views/layouts/application.html.erb:15
+    app/controllers/user_controller.rb:57:in `login'
+
+Rendered rescues/_trace (46.1ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-04 13:18:47) [POST]
+  Parameters: {"x"=>"0", "y"=>"0", "authenticity_token"=>"ujYL7MLhj7iCVhCw87uOtUqf2+4ujtN7HxTqgJ4B+gA=", "pw"=>"mos2es", "email"=>"admin@admin.com"}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'admin@admin.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'admin@admin.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`user_name`) = BINARY 'admin' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `activated_at` = '2010-06-04 20:18:47', `updated_at` = '2010-06-04 20:18:47' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (0.1ms)
+Completed in 22ms (View: 5, DB: 4) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-06-04 13:31:39) [GET]
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mJobPosting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering job_posting/addJob
+Completed in 91ms (View: 72, DB: 5) | 200 OK [http://localhost/job_posting/addJob]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Fri Jun 04 13:42:38 -0700 2010
+  Status: 500 Internal Server Error
+  /Users/stephen/Desktop/rails/sasCoders/app/controllers/application_controller.rb:31: syntax error, unexpected kRESCUE, expecting kEND
+	rescue ActiveRecord::RecordNotFound
+	      ^
+/Users/stephen/Desktop/rails/sasCoders/app/controllers/application_controller.rb:33: syntax error, unexpected $end, expecting kEND
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-06-04 13:43:25) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (0.1ms)
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-04 13:43:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-04 13:43:33) [POST]
+  Parameters: {"x"=>"0", "y"=>"0", "authenticity_token"=>"ujYL7MLhj7iCVhCw87uOtUqf2+4ujtN7HxTqgJ4B+gA=", "pw"=>"s", "email"=>"s"}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 's') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (0.1ms)
+Completed in 12ms (View: 2, DB: 3) | 200 OK [http://localhost/user/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-04 13:43:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-04 13:43:40) [POST]
+  Parameters: {"x"=>"0", "y"=>"0", "authenticity_token"=>"ujYL7MLhj7iCVhCw87uOtUqf2+4ujtN7HxTqgJ4B+gA=", "pw"=>"mos2es", "email"=>"admin@admin.com"}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'admin@admin.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'admin@admin.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`user_name`) = BINARY 'admin' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `activated_at` = '2010-06-04 20:43:40', `updated_at` = '2010-06-04 20:43:40' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (0.1ms)
+Completed in 18ms (View: 2, DB: 4) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-06-04 13:43:48) [GET]
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering job_posting/addJob
+Completed in 24ms (View: 5, DB: 5) | 200 OK [http://localhost/job_posting/addJob]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+Migrating to CreateJobPostings (20100224234214)
+Migrating to CreateInvoices (20100224234307)
+Migrating to AddLatLngToJobPosting (20100603230333)
+Migrating to RenameTypeInJobPostings (20100603235743)
+Migrating to AddOwnerIdToJobPosts (20100604204939)
+  [4;36;1mSQL (83.2ms)[0m   [0;1mALTER TABLE `job_postings` ADD `owner_id` int(11)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100604204939')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `invoices`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `invoices`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `invoices`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mdescribe `job_postings`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `job_postings`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+Migrating to CreateJobPostings (20100224234214)
+Migrating to CreateInvoices (20100224234307)
+Migrating to AddLatLngToJobPosting (20100603230333)
+Migrating to RenameTypeInJobPostings (20100603235743)
+Migrating to AddOwnerIdToJobPosts (20100604204939)
+Migrating to ModifyJobPostingsTable (20100608175854)
+  [4;36;1mSQL (113.3ms)[0m   [0;1mALTER TABLE `job_postings` ADD `days_to_run` int(11)[0m
+  [4;35;1mSQL (191.6ms)[0m   [0mALTER TABLE `job_postings` ADD `start_run_date` datetime[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100608175854')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `invoices`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `invoices`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `invoices`[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `job_postings`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `job_postings`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (39.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-06-08 16:22:33) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (20.0ms)
+Rendered site/_content (14.8ms)
+Completed in 90ms (View: 87, DB: 40) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-08 16:22:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-08 16:22:47) [POST]
+  Parameters: {"x"=>"0", "y"=>"0", "authenticity_token"=>"79+9ltSmb9RB4+9QRmx63Bn0sP7xtGRYm6CIAGhgpSg=", "pw"=>"admin", "email"=>"admin@admin.com"}
+  [4;36;1mUser Columns (66.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'admin@admin.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (0.1ms)
+Completed in 219ms (View: 2, DB: 67) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-08 16:22:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-06-08 16:22:58) [POST]
+  Parameters: {"x"=>"0", "y"=>"0", "authenticity_token"=>"79+9ltSmb9RB4+9QRmx63Bn0sP7xtGRYm6CIAGhgpSg=", "pw"=>"mos2es", "email"=>"admin@admin.com"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'admin@admin.com') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'admin@admin.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`user_name`) = BINARY 'admin' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `activated_at` = '2010-06-08 23:22:58', `updated_at` = '2010-06-08 23:22:58' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.1ms)
+Rendered site/_content (0.1ms)
+Completed in 429ms (View: 2, DB: 5) | 200 OK [http://localhost/user/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-06-08 16:23:16) [GET]
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mJobPosting Columns (30.0ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering job_posting/addJob
+
+ActionView::TemplateError (undefined method `start_date_run' for #<JobPosting:0x2869028>) on line #16 of app/views/job_posting/addJob.html.erb:
+13:   <p>Pay: <%= form.text_field :pay, :size=>7 %> </p>
+14:   <p>Additional Instructions: <%= form.text_area :addl_instructions, :rows=>3 %> </p>
+15:   <hr>
+16:   <p>Start Date For Ad: <%= form.text_area :start_date_run, :size=>9 %> Leave blank if you want it to start
+17:   as soon as it's approved.</p>
+18:   <p>Days To Run: <%= form.select(:days_to_run, %w{15 30}) %>
+19:   <p><%= submit_tag %></p>
+
+    app/views/job_posting/addJob.html.erb:16
+    app/views/job_posting/addJob.html.erb:3
+
+Rendered rescues/_trace (50.3ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-06-08 16:24:01) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering job_posting/addJob
+Completed in 29ms (View: 10, DB: 6) | 200 OK [http://localhost/job_posting/addJob]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-06-08 16:26:51) [GET]
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mJobPosting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering job_posting/addJob
+Completed in 29ms (View: 10, DB: 6) | 200 OK [http://localhost/job_posting/addJob]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#create (for 127.0.0.1 at 2010-06-08 16:31:53) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"79+9ltSmb9RB4+9QRmx63Bn0sP7xtGRYm6CIAGhgpSg=", "jobPosting"=>{"zip"=>"92315", "company_name"=>"badass consulting", "title"=>"Seeking badass programmer", "addl_instructions"=>"only bad ass people apply.", "short_description"=>"you have to be bad ass.", "telecommute"=>"0", "job_type"=>"full time bad assness", "company_type"=>"Recruiter", "long_description"=>"you have to be really bad ass.", "days_to_run"=>"30", "pay"=>"25K", "start_run_date"=>"04/20/11", "experience"=>"15 years being bad ass."}}
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+
+TypeError ($_ value need to be String (nil given)):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date/format.rb:965:in `_parse'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/date.rb:974:in `parse'
+  app/controllers/job_posting_controller.rb:20:in `create'
+
+Rendered rescues/_trace (33.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#create (for 127.0.0.1 at 2010-06-08 16:34:54) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"79+9ltSmb9RB4+9QRmx63Bn0sP7xtGRYm6CIAGhgpSg=", "jobPosting"=>{"zip"=>"92315", "company_name"=>"badass consulting", "title"=>"Seeking badass programmer", "addl_instructions"=>"only bad ass people apply.", "short_description"=>"you have to be bad ass.", "telecommute"=>"0", "job_type"=>"full time bad assness", "company_type"=>"Recruiter", "long_description"=>"you have to be really bad ass.", "days_to_run"=>"30", "pay"=>"25K", "start_run_date"=>"04/20/11", "experience"=>"15 years being bad ass."}}
+  [4;36;1mUser Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Google geocoding. Address: 92315. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>92315</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Big Bear Lake, CA 92315, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Big Bear Lake</LocalityName><PostalCode><PostalCodeNumber>92315</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.2547370" south="34.2326720" east="-116.8737920" west="-116.9359010" />
+    </ExtendedData>
+    <Point><coordinates>-116.8998680,34.2423893,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mJobPosting Create (0.5ms)[0m   [0;1mINSERT INTO `job_postings` (`zip`, `updated_at`, `title`, `company_name`, `short_description`, `addl_instructions`, `lng`, `telecommute`, `company_type`, `job_type`, `long_description`, `owner_id`, `reference_id`, `pay`, `days_to_run`, `approved_at`, `lat`, `start_run_date`, `experience`, `created_at`) VALUES('92315', '2010-06-08 23:34:54', 'Seeking badass programmer', 'badass consulting', 'you have to be bad ass.', 'only bad ass people apply.', -116.899868, 0, 'Recruiter', 'full time bad assness', 'you have to be really bad ass.', 1, 'sasCoders1', '25K', 30, NULL, 34.2423893, '2011-04-20 07:00:00', '15 years being bad ass.', '2010-06-08 23:34:54')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering job_posting/create
+Completed in 551ms (View: 26, DB: 7) | 200 OK [http://localhost/job_posting/create]
+  [4;36;1mSQL (39.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJobPosting Columns (58.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.9ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+Google geocoding. Address: 92315. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>92315</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Big Bear Lake, CA 92315, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Big Bear Lake</LocalityName><PostalCode><PostalCodeNumber>92315</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.2547370" south="34.2326720" east="-116.8737920" west="-116.9359010" />
+    </ExtendedData>
+    <Point><coordinates>-116.8998680,34.2423893,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address:  redondo beach ca. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name> redondo beach ca</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Redondo Beach, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8862407" south="33.8121064" east="-118.3243781" west="-118.4524375" />
+    </ExtendedData>
+    <Point><coordinates>-118.3884078,33.8491816,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+Google geocoding. Address:  90278 redondo beach ca. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name> 90278 redondo beach ca</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-06-12 12:45:52) [GET]
+Rendering template within layouts/application
+Rendering site/index
+ERROR: compiling _run_erb_app47views47site47index46html46erb RAISED compile error
+/Users/stephen/Desktop/rails/sasCoders/app/views/site/index.html.erb:10: syntax error, unexpected ';', expecting ')'
+...l => "shared/sidebar" ).to_s); @output_buffer.concat "\n"
+                              ^
+Function body:           def _run_erb_app47views47site47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"container\">\n"
+@output_buffer.concat "<div id=\"header\">\n"
+@output_buffer.concat(( render(:partial => "shared/header") ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<div id=\"content\">\n"
+@output_buffer.concat " "; @output_buffer.concat(( render(:partial => "site/content") ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "<div id=\"sidebar\">\n"
+@output_buffer.concat "  "; @output_buffer.concat(( render(:partial => "shared/sidebar" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<div id=\"footer\">\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</div>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/stephen/Desktop/rails/sasCoders/app/views/site/index.html.erb:20:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/stephen/Desktop/rails/sasCoders/app/views/site/index.html.erb:10: syntax error, unexpected ';', expecting ')'
+...l => "shared/sidebar" ).to_s); @output_buffer.concat "\n"
+                              ^) on line #10 of app/views/site/index.html.erb:
+7:  <%= render(:partial => "site/content") %>
+8: </div>
+9: <div id="sidebar">
+10:   <%= render(:partial => "shared/sidebar" %>
+11: </div>
+12: 
+13: <div id="footer">
+
+    app/views/site/index.html.erb:20:in `compile!'
+
+Rendered rescues/_trace (87.0ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-06-12 12:46:22) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.4ms)
+Rendered site/_content (17.5ms)
+Rendered shared/_sidebar (2.6ms)
+Completed in 49ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-12 12:46:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-12 12:50:11) [GET]
+  Parameters: {"city"=>"", "within"=>"10", "zip"=>"92315", "commit"=>"Search!", "country"=>"", "telecommute"=>"include", "state"=>""}
+
+SyntaxError (/Users/stephen/Desktop/rails/sasCoders/app/controllers/search_controller.rb:29: syntax error, unexpected '='
+  	   @jobs = = Job_posting.find(:all, :origi...
+  	            ^
+/Users/stephen/Desktop/rails/sasCoders/app/controllers/search_controller.rb:31: syntax error, unexpected tSTRING_BEG, expecting kEND
+	     flash[:notice] "Unfortunately there were 0 job...
+	                     ^
+/Users/stephen/Desktop/rails/sasCoders/app/controllers/search_controller.rb:36: syntax error, unexpected tSTRING_BEG, expecting kEND
+	   flash[:notice] "That location could not be found."
+	                   ^):
+  
+
+Rendered rescues/_trace (29.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-12 12:50:52) [GET]
+  Parameters: {"city"=>"", "within"=>"10", "zip"=>"92315", "commit"=>"Search!", "country"=>"", "telecommute"=>"include", "state"=>""}
+
+SyntaxError (/Users/stephen/Desktop/rails/sasCoders/app/controllers/search_controller.rb:31: syntax error, unexpected tSTRING_BEG, expecting kEND
+	     flash[:notice] "Unfortunately there were 0 job...
+	                     ^
+/Users/stephen/Desktop/rails/sasCoders/app/controllers/search_controller.rb:36: syntax error, unexpected tSTRING_BEG, expecting kEND
+	   flash[:notice] "That location could not be found."
+	                   ^):
+  
+
+Rendered rescues/_trace (32.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-06-12 12:51:38) [GET]
+  Parameters: {"city"=>"", "within"=>"10", "zip"=>"92315", "commit"=>"Search!", "country"=>"", "telecommute"=>"include", "state"=>""}
+
+ArgumentError (comparison of String with 1 failed):
+  app/controllers/search_controller.rb:14:in `<'
+  app/controllers/search_controller.rb:14:in `index'
+
+Rendered rescues/_trace (32.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-06-12 12:53:27) [GET]
+  Parameters: {"city"=>"", "within"=>"10", "zip"=>"92315", "commit"=>"Search!", "country"=>"", "telecommute"=>"include", "state"=>""}
+Google geocoding. Address:   92315 . Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  92315 </name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Big Bear Lake, CA 92315, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Big Bear Lake</LocalityName><PostalCode><PostalCodeNumber>92315</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.2547370" south="34.2326720" east="-116.8737920" west="-116.9359010" />
+    </ExtendedData>
+    <Point><coordinates>-116.8998680,34.2423893,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+
+LoadError (Expected /Users/stephen/Desktop/rails/sasCoders/app/models/job_posting.rb to define Job_posting):
+  app/controllers/search_controller.rb:29:in `index'
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-06-12 12:54:53) [GET]
+  Parameters: {"city"=>"", "within"=>"10", "zip"=>"92315", "commit"=>"Search!", "country"=>"", "telecommute"=>"include", "state"=>""}
+Google geocoding. Address:   92315 . Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  92315 </name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Big Bear Lake, CA 92315, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Big Bear Lake</LocalityName><PostalCode><PostalCodeNumber>92315</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.2547370" south="34.2326720" east="-116.8737920" west="-116.9359010" />
+    </ExtendedData>
+    <Point><coordinates>-116.8998680,34.2423893,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+
+NameError (undefined local variable or method `geo' for #<SearchController:0x268895c>):
+  app/controllers/search_controller.rb:29:in `index'
+
+Rendered rescues/_trace (98.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-06-12 12:55:22) [GET]
+  Parameters: {"city"=>"", "within"=>"10", "zip"=>"92315", "commit"=>"Search!", "country"=>"", "telecommute"=>"include", "state"=>""}
+Google geocoding. Address:   92315 . Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  92315 </name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Big Bear Lake, CA 92315, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Big Bear Lake</LocalityName><PostalCode><PostalCodeNumber>92315</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.2547370" south="34.2326720" east="-116.8737920" west="-116.9359010" />
+    </ExtendedData>
+    <Point><coordinates>-116.8998680,34.2423893,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mJobPosting Load (1.5ms)[0m   [0;1mSELECT *, 
+ (ACOS(least(1,COS(0.597642437034676)*COS(-2.04028759174676)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.597642437034676)*SIN(-2.04028759174676)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.597642437034676)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>34.0978194471464 AND job_postings.lat<34.3869591528536 AND job_postings.lng>-117.074751172877 AND job_postings.lng<-116.724984827123)) AND (
+ (ACOS(least(1,COS(0.597642437034676)*COS(-2.04028759174676)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.597642437034676)*SIN(-2.04028759174676)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.597642437034676)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 10)) ORDER BY distance[0m
+Rendering template within layouts/application
+Rendering search/index
+  [4;35;1mJobPosting Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+
+ActionView::TemplateError (undefined method `short_descr' for #<JobPosting:0x27c4280>) on line #11 of app/views/search/index.html.erb:
+8: <% for job in @jobs %>
+9:   <div>
+10:     <h3>Title: <%= h job.title %></h3>
+11:     <p>Short description: <%= h job.short_descr %> </p>
+12:   </div>
+13: <% end %>
+
+    app/views/search/index.html.erb:11
+    app/views/search/index.html.erb:8:in `each'
+    app/views/search/index.html.erb:8
+
+Rendered rescues/_trace (39.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-06-12 12:56:03) [GET]
+  Parameters: {"city"=>"", "within"=>"10", "zip"=>"92315", "commit"=>"Search!", "country"=>"", "telecommute"=>"include", "state"=>""}
+Google geocoding. Address:   92315 . Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  92315 </name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Big Bear Lake, CA 92315, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Big Bear Lake</LocalityName><PostalCode><PostalCodeNumber>92315</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.2547370" south="34.2326720" east="-116.8737920" west="-116.9359010" />
+    </ExtendedData>
+    <Point><coordinates>-116.8998680,34.2423893,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mJobPosting Load (0.7ms)[0m   [0;1mSELECT *, 
+ (ACOS(least(1,COS(0.597642437034676)*COS(-2.04028759174676)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.597642437034676)*SIN(-2.04028759174676)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.597642437034676)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>34.0978194471464 AND job_postings.lat<34.3869591528536 AND job_postings.lng>-117.074751172877 AND job_postings.lng<-116.724984827123)) AND (
+ (ACOS(least(1,COS(0.597642437034676)*COS(-2.04028759174676)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.597642437034676)*SIN(-2.04028759174676)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.597642437034676)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 10)) ORDER BY distance[0m
+Rendering template within layouts/application
+Rendering search/index
+  [4;35;1mJobPosting Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Completed in 466ms (View: 8, DB: 3) | 200 OK [http://localhost/search?city=&state=&zip=92315&country=&within=10&telecommute=include&commit=Search%21]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-12 12:56:03) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-06-12 12:56:39) [GET]
+  Parameters: {"city"=>"", "within"=>"5", "zip"=>"90405", "commit"=>"Search!", "country"=>"", "telecommute"=>"include", "state"=>""}
+Google geocoding. Address:   90405 . Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  90405 </name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Santa Monica, CA 90405, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Santa Monica</LocalityName><PostalCode><PostalCodeNumber>90405</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.0280370" south="33.9931610" east="-118.4434260" west="-118.4927770" />
+    </ExtendedData>
+    <Point><coordinates>-118.4659576,34.0097460,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mJobPosting Load (0.7ms)[0m   [0;1mSELECT *, 
+ (ACOS(least(1,COS(0.593582045466971)*COS(-2.067621011648)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.593582045466971)*SIN(-2.067621011648)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.593582045466971)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>33.9374610735732 AND job_postings.lat<34.0820309264268 AND job_postings.lng>-118.553158960802 AND job_postings.lng<-118.378756239198)) AND (
+ (ACOS(least(1,COS(0.593582045466971)*COS(-2.067621011648)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.593582045466971)*SIN(-2.067621011648)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.593582045466971)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 5)) ORDER BY distance[0m
+Rendering template within layouts/application
+Rendering search/index
+  [4;35;1mJobPosting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Completed in 220ms (View: 5, DB: 3) | 200 OK [http://localhost/search?city=&state=&zip=90405&country=&within=5&telecommute=include&commit=Search%21]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-12 12:56:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-06-12 12:58:43) [GET]
+  Parameters: {"city"=>"", "within"=>"5", "zip"=>"", "commit"=>"Search!", "country"=>"", "telecommute"=>"include", "state"=>"tx"}
+Google geocoding. Address:  tx  . Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name> tx  </name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Texas, USA</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>TX</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="36.6839567" south="26.9980919" east="-91.7060121" west="-108.0976141" />
+    </ExtendedData>
+    <Point><coordinates>-99.9018131,31.9685988,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mJobPosting Load (0.6ms)[0m   [0;1mSELECT *, 
+ (ACOS(least(1,COS(0.557957306309108)*COS(-1.743615567307)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.557957306309108)*SIN(-1.743615567307)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.557957306309108)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>31.8963138735732 AND job_postings.lat<32.0408837264268 AND job_postings.lng>-99.987020738906 AND job_postings.lng<-99.8166054610941)) AND (
+ (ACOS(least(1,COS(0.557957306309108)*COS(-1.743615567307)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.557957306309108)*SIN(-1.743615567307)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.557957306309108)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 5)) ORDER BY distance[0m
+Rendering template within layouts/application
+Rendering search/index
+Completed in 425ms (View: 2, DB: 1) | 200 OK [http://localhost/search?city=&state=tx&zip=&country=&within=5&telecommute=include&commit=Search%21]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-12 12:58:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
