@@ -5,7 +5,7 @@ class ApplicationMailer < ActionMailer::Base
 	  from       "SasCoders.com"
 	  subject    "Please Activate Your New Account"
 	  sent_on    Time.now
-	  body       { :user => "user", :url => "some_url" }
+	  body       :user => "user"
 	  # the body method takes a hash which generates an instance variable/value per key/value pair
 	end  
 
