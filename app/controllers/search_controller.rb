@@ -33,8 +33,11 @@ class SearchController < ApplicationController
 	   end  
 	   # do we need to add some telecommute jobs in?
 	   if telecommute = "include"
-	     t = JobPostings.find_by_telecommute(true)
-		 @jobs += t if t.length > 0
+	     t = Array.new
+	     t = JobPosting.find_all_by_telecommute(true)
+		 # Merge the two arrays in case a job show up in both, apparently rails knows to use the id?
+		 
+		 @jobs = t | @jobs if t.length > 0
 	   end
 	   # successfully return w jobs
 	 else 
@@ -46,7 +49,7 @@ class SearchController < ApplicationController
    
    def telecommute
      # this is for telecommute "only"
-	 @jobs = Jobs.find_by_telecommute(true)
+	 @jobs = JobPosting.find_all_by_telecommute(true)
 	 render :action=>"index" # just renders it, doesn't run action first
    end
 end
