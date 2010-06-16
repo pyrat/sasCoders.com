@@ -34,7 +34,9 @@ class User < ActiveRecord::Base
       expected_password = encrypted_password(password, user.salt)
       if user.hashed_password != expected_password
         user = nil
-      end	  	
+      end	
+	  # additionally check if they have registered (activation should be nil)
+	  user = nil if !user.activation_code.nil?  	
     end
 	user
   end

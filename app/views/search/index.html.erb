@@ -1,8 +1,10 @@
 <h1>Jobs Matching Your Search</h1>
 <br>
-Search details:<br>
+<table>
+<tr><td><img src=<%=@img %> ></td><td>Search details:<br>
 <p>Full Address: <%= @geo.full_address %></p>
 <p>Precision: <%= @geo.precision %> </p>
+</td></tr></table>
 <hr>
 
 <% for job in @jobs %>

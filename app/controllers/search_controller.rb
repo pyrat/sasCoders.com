@@ -39,6 +39,7 @@ class SearchController < ApplicationController
 		 
 		 @jobs = t | @jobs if t.length > 0
 	   end
+	   @img = "http://maps.google.com/maps/api/staticmap?zoom=10&size=200x200&markers=color:blue|#{@geo.lat},#{@geo.lng}&sensor=false"
 	   # successfully return w jobs
 	 else 
 	   flash[:notice] = "That location could not be found."

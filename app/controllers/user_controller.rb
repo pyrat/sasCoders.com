@@ -13,14 +13,15 @@ class UserController < ApplicationController
 	# this is a stupid action just so it can render the template
   end
   def register
-    # how do i keep this from running when i just want the other
-	# page to call them template?
+    # when a user registers, they are not officially logged in/etc until they validate 
+	# with their email
+	
     @user = User.new
 	@user.email = params[:email]
 	@user.user_name = params[:user_name]
 	@user.password = params[:password]
 	@user.password_confirmation = params[:password_confirmation]
-	@user.create_activation_code # this might need to be moved to a before save or somehing?
+
 	if @user.save
 	  flash[:notice] = "You successfully registered."
 	  @user.activated_at = Time.now
@@ -38,6 +39,28 @@ class UserController < ApplicationController
 	end 
   end
   
+  def validate
+    # look up the user based on the validation param and then null it out in the db, additionally, 
+	# log them in
+	# i don't think there is any need for a view, just send to index
+	activation = params[:c]
+	@user = User.find_by_activation_code(activation)
+	if @user
+	  # log them in
+	  @user.activation_code = nil
+	  @user.activated_at = Time.now
+	  @user.save
+	  session[:user_id] = @user.id
+	  flash[:notice] = "Thank you for validating.  You are now logged in."
+	  
+	  else
+	  flash[:notice] = "Something went wrong.  That validation was incorrect."
+	end
+	render 'site/index'
+	
+  end
+
+  
   def edit
   end
   
@@ -54,13 +77,13 @@ class UserController < ApplicationController
 	  # call save to update activated_at in db
 	  @user.save
 	  session[:user_id] = @user.id
+	  flash[:notice] = "Hello #{@user.first_name}"
+	  
+	  else
+	  flash[:notice] = "Login failed."
 	end
 	render 'site/index' # in future this might be a parameter
   end
 end
 
-  def validate
-    # look up the user based on the validation param and then null it out in the db, additionally, 
-	# log them in
-	# i don't think there is any need for a view, just send to index
-  end
+  
