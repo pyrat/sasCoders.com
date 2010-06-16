@@ -66,6 +66,10 @@ class User < ActiveRecord::Base
   
   private
   
+  def create_activation_code
+    self.activaion_code = Digest::SHA1.hexdigest(self.object_id.to_s + rand.to_s)
+  end
+  
   def create_new_salt
     self.salt =self.object_id.to_s + rand.to_s
   end

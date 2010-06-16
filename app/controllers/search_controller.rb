@@ -32,7 +32,7 @@ class SearchController < ApplicationController
 		 return
 	   end  
 	   # do we need to add some telecommute jobs in?
-	   if telecommute = "include"
+	   if telecommute == "include"
 	     t = Array.new
 	     t = JobPosting.find_all_by_telecommute(true)
 		 # Merge the two arrays in case a job show up in both, apparently rails knows to use the id?

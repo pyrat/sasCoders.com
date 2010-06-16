@@ -20,6 +20,7 @@ class UserController < ApplicationController
 	@user.user_name = params[:user_name]
 	@user.password = params[:password]
 	@user.password_confirmation = params[:password_confirmation]
+	@user.create_activation_code # this might need to be moved to a before save or somehing?
 	if @user.save
 	  flash[:notice] = "You successfully registered."
 	  @user.activated_at = Time.now
@@ -57,3 +58,9 @@ class UserController < ApplicationController
 	render 'site/index' # in future this might be a parameter
   end
 end
+
+  def validate
+    # look up the user based on the validation param and then null it out in the db, additionally, 
+	# log them in
+	# i don't think there is any need for a view, just send to index
+  end
