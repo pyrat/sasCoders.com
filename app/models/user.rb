@@ -16,6 +16,9 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
   validate :password_conforms?  
   
+  def after_initialize
+    create_activation_code
+  end
   # Attribute accessors
 #  attr_accessor           :password_confirmation  # i dont think this attribute is used anywhere?
 
@@ -67,7 +70,7 @@ class User < ActiveRecord::Base
   private
   
   def create_activation_code
-    self.activaion_code = Digest::SHA1.hexdigest(self.object_id.to_s + rand.to_s)
+    self.activation_code = Digest::SHA1.hexdigest(self.object_id.to_s + rand.to_s)
   end
   
   def create_new_salt
