@@ -10,10 +10,7 @@
 		<div class="fields">
 
 		<%= label_tag "Email" %>
-		<%= text_field_tag :email, params[:email], :size=>40 %>
-
-		<%= label_tag "user_name" %>
-		<%= text_field_tag :user_name, params[:user_name] %>
+		<%= text_field_tag :email, params[:email], :size=>40 %>*
 
 		<%= label_tag "password" %>
 		<%= password_field_tag :password, params[:password] %>
@@ -21,9 +18,19 @@
 		<%= label_tag "password_confirmation" %>
 		<%= password_field_tag :password_confirmation, params[:password_confirmation] %>
 		<br><br>
+		
+		<%= label_tag "First Name" %>
+		<%= text_field_tag :first_name, params[:first_name], :size=>40 %>
+		<%= label_tag "Last Name" %>
+		<%= text_field_tag :last_name, params[:last_name], :size=>40 %>
+		<%= label_tag "Telephone #" %>
+		<%= text_field_tag :telephone, params[:telephone], :size=>40 %>*
+		<%= label_tag "Company Name" %>
+		<%= text_field_tag :company, params[:company], :size=>40 %>
+		
 		<%= submit_tag 'Register', :class => "button" %> 
-
-		</div>
+		<br><br>* Kept private.  Not shown on the site.
+  		</div>
 		<% end %>
 
 				</td>

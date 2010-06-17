@@ -1,7 +1,7 @@
 <h1>Jobs Matching Your Search</h1>
 <br>
 <table>
-<tr><td><img src=<%=@img %> ></td><td>Search details:<br>
+<tr><td><img src=<%= "#{@img}" %> ></td><td>Search details:<br>
 <p>Full Address: <%= @geo.full_address %></p>
 <p>Precision: <%= @geo.precision %> </p>
 </td></tr></table>
@@ -9,7 +9,7 @@
 
 <% for job in @jobs %>
   <div>
-    <h3>Title: <%= h job.title %></h3> Distance: <%= job.distance %>
+    <h3>Title: <%= h job.title %></h3>
     <p>Short description: <%= h job.short_description %> </p>
   </div>
 <% end %>

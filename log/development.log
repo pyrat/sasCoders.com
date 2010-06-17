@@ -3405,3 +3405,132 @@ Rendering rescues/layout (internal_server_error)
   [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
   [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-06-17 11:29:39) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (17.2ms)
+Rendered site/_content (25.3ms)
+Rendered shared/_sidebar (23.0ms)
+Completed in 142ms (View: 139, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-17 11:29:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-06-17 11:29:48) [GET]
+  Parameters: {"city"=>"", "within"=>"10", "zip"=>"90278", "commit"=>"Search!", "country"=>"", "telecommute"=>"include", "state"=>""}
+Google geocoding. Address:   90278 . Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  90278 </name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mJobPosting Load (1.0ms)[0m   [0;1mSELECT *, 
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>33.7213431471464 AND job_postings.lat<34.0104828528536 AND job_postings.lng>-118.549521327478 AND job_postings.lng<-118.201304872522)) AND (
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 10)) ORDER BY distance[0m
+  [4;35;1mJobPosting Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mJobPosting Load (0.5ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.`telecommute` = 1) [0m
+Rendering template within layouts/application
+Rendering search/index
+
+ActionView::TemplateError (undefined method `distance' for #<JobPosting:0x27f16e0>) on line #12 of app/views/search/index.html.erb:
+9: 
+10: <% for job in @jobs %>
+11:   <div>
+12:     <h3>Title: <%= h job.title %></h3> Distance: <%= job.distance %>
+13:     <p>Short description: <%= h job.short_description %> </p>
+14:   </div>
+15: <% end %>
+
+    app/views/search/index.html.erb:12
+    app/views/search/index.html.erb:10:in `each'
+    app/views/search/index.html.erb:10
+
+Rendered rescues/_trace (41.1ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-17 13:19:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-06-17 13:19:25) [GET]
+  Parameters: {"city"=>"", "within"=>"10", "zip"=>"90278", "commit"=>"Search!", "country"=>"", "telecommute"=>"include", "state"=>""}
+Google geocoding. Address:   90278 . Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  90278 </name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mJobPosting Load (0.8ms)[0m   [0mSELECT *, 
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>33.7213431471464 AND job_postings.lat<34.0104828528536 AND job_postings.lng>-118.549521327478 AND job_postings.lng<-118.201304872522)) AND (
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 10)) ORDER BY distance[0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`telecommute` = 1) [0m
+Rendering template within layouts/application
+Rendering search/index
+Completed in 381ms (View: 8, DB: 3) | 200 OK [http://localhost/search?city=&state=&zip=90278&country=&within=10&telecommute=include&commit=Search%21]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-17 13:19:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

@@ -2,7 +2,7 @@
 Set up a new app on heroku so we can test out the email plugin.
 is git set up on this one locally yet?
 done, http://hollow-meadow-93.heroku.com
-added the email addon check here: http://docs.heroku.com/smtp for test
+
 What other actions need to be done?
 Search for jobs is done AFAIK
 jobs admin page/ jobs edit page
@@ -18,3 +18,4 @@ working on search_controller, test telecommute == only, test index, create view
 Register recruiter page
  input fields form
  accept fields, send confirmation email?
+ confirmation email worked and actions tested.  now write the form and tie the emailer to the controller

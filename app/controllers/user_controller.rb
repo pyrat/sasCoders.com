@@ -18,21 +18,20 @@ class UserController < ApplicationController
 	
     @user = User.new
 	@user.email = params[:email]
-	@user.user_name = params[:user_name]
 	@user.password = params[:password]
 	@user.password_confirmation = params[:password_confirmation]
+	@user.first_name = params[:first_name]
+	@user.last_name = params[:last_name]	
+	@user.telephone = params[:telephone]
+	@user.company = params[:company]
+	
 
 	if @user.save
-	  flash[:notice] = "You successfully registered."
-	  @user.activated_at = Time.now
-	  # i think we need to save it (again) to write it to the db w the activated_at
-	  @user.save
-	  # we should also let them know they are logged in
-	  session[:user_id] = @user.id
-	# render does not actually run the method
-	  # so...
-	  self.index
-	  render :action => :index 
+	  
+	  # we do not want to log them in yet.
+	  #session[:user_id] = @user.id
+	  ApplicationMailer.deliver_signup_notification(@user)
+	
     else
 	  flash[:notice] = "There was an error creating that user."
 	  render :collect
