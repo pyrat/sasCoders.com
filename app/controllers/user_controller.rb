@@ -1,8 +1,9 @@
 class UserController < ApplicationController
-  before_filter :logged_in?, :only=> :edit
+  before_filter :logged_in?, :only=> [:edit, :index]
   
   def index
-    @users = User.find(:all)
+    @user = User.find(:session[:user_id])
+    flash[:notice] = nil
   end
   
   def show
@@ -24,6 +25,7 @@ class UserController < ApplicationController
 	@user.last_name = params[:last_name]	
 	@user.telephone = params[:telephone]
 	@user.company = params[:company]
+	@user.company_description[:company_description]
 	
 
 	if @user.save
@@ -61,10 +63,17 @@ class UserController < ApplicationController
 
   
   def edit
+    @user = User.find(:session[:user_id])
+    if @user.save
+      flash[:notice] = "Successfully updated"
+      render 'index'
+    else
+      flash[:notice] = "There was a problem."
+      flash[:error] = "The updates were not saved."
+    end
+    
   end
   
-  def update
-  end
   
   def delete
   end
@@ -83,6 +92,8 @@ class UserController < ApplicationController
 	end
 	render 'site/index' # in future this might be a parameter
   end
+  
+  
 end
 
   

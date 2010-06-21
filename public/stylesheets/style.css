@@ -1,3 +1,9 @@
+/*
+Colors used:
+background color: #f2fafd (light light blue)
+Container border: #002097 (dark blue)
+Header: #EEEEEE
+*/
 
 body {
     
@@ -81,6 +87,20 @@ div.admin{
 	font-size: 80%;
 	text-align: right;
 	}
+	
+#left{
+  float: left;
+  width: 50%;
+}
+
+#right{
+  float: right;
+  width: 50%;
+}
+
+ul.simple{
+  list-style-type: none;
+}
 	
 	
 h1 { 

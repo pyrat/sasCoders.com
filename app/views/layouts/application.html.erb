@@ -12,17 +12,6 @@
 
 <body>
 <center>
-<% if session[:user_id] %>
-  hello <%= @user.first_name %>
-<% else %>
-  Please sign in: 
-  <% form_tag :controller=> :user, :action=> :login do %>
-     <%= text_field_tag(:email, nil, :size=>5, :class=>"admin") %>
-	 <%= text_field_tag(:pw, nil, :size=>5, :class=>"admin") %>
-     <%= image_submit_tag "button.png" %>
-  <% end %>
-<% end %>
-<%= flash[:notice] %>
 <%= yield %>
 </center>
 </body>

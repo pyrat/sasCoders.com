@@ -1,18 +1,17 @@
-<h1>Listing users</h1>
-
-<table>
-  <th>Email</th>
-  <th>User Name</th>
-  
-<% @users.each do |user| %>
-  <tr>
-	<td><%= user.email %></td>
-	<td><%= user.user_name %></td>
-		
-  </tr>
-<% end %>
-</table>
-<br><br>
-<!-- i need this to just render the template, not run the controller method -->
-<%= link_to "register", :controller=>"user", :action=>"collect" %>
-<br />
+<div id="left">
+<strong>Your Profile</strong>
+  <br><br>
+    <p>Currently Running Ads: <a href="#">0</a></p>
+    <p>Saved Ads: <a href="#">0</a></p>
+    <a href="#">Edit</a>
+    <ul class="simple">
+      <li>Name: <%= "#{@user.first_name} #{@user.last_name}" %></li>
+      <li>Company: <%= @user.company %></li>
+      <li>Company Description: <%= @user.company_description %></li>
+    </ul>
+    
+  </div>
+  <div id="right">
+    <p>Credits Available: <%= @user.credits %></p>
+    <p><a href="#">Purchase Credits</a></p>
+  </div>

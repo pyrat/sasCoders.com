@@ -4,12 +4,17 @@
 <tr><td><img src=<%= "#{@img}" %> ></td><td>Search details:<br>
 <p>Full Address: <%= @geo.full_address %></p>
 <p>Precision: <%= @geo.precision %> </p>
+<p>There were <%= @jobs.length %> jobs found.</p>
 </td></tr></table>
 <hr>
-
+<table>
+<tr><th>Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
 <% for job in @jobs %>
-  <div>
-    <h3>Title: <%= h job.title %></h3>
-    <p>Short description: <%= h job.short_description %> </p>
-  </div>
+  <tr>
+    <td> <%= h job.start_run_date %> </td>
+    <td> <%= h job.title %> </td>
+	<td> <%= h job.job_type %> </td>
+	<td> <%= h job.zip %> </td>
+	<td> <%= h job.short_description %> </td>
+  </tr>
 <% end %>

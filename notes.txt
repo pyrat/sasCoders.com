@@ -1,7 +1,6 @@
-
-Set up a new app on heroku so we can test out the email plugin.
-is git set up on this one locally yet?
-done, http://hollow-meadow-93.heroku.com
+http://hollow-meadow-93.heroku.com
+heroku db:reset --app hollow-meadow-93
+heroku rake db:migrate
 
 What other actions need to be done?
 Search for jobs is done AFAIK

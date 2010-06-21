@@ -1,3 +1,15 @@
 <div id="header">
 sasCoders.com
 </div>
+<% if session[:user_id] %>
+  hello <%= @user.first_name %>
+<% else %>
+  Please sign in: 
+  <% form_tag :controller=> :user, :action=> :login do %>
+     <%= text_field_tag(:email, nil, :size=>10, :class=>"admin") %>
+	 <%= password_field_tag(:pw, nil, :size=>8, :class=>"admin") %>
+     <%= image_submit_tag "button.png" %>
+  <% end %>
+<% end %>
+<br>
+<%= flash[:notice] %>
