@@ -10,7 +10,8 @@ sasCoders.com<br>
   <% form_tag :controller=> :user, :action=> :login do %>
      Email <%= text_field_tag(:email, nil, :size=>10, :class=>"admin") %> &nbsp;
 	 Password <%= password_field_tag(:pw, nil, :size=>8, :class=>"admin") %>
-     <%= image_submit_tag "button.png" %>
+     <%= image_submit_tag "button.png" %> |
+	 <%= link_to 'register', :controller=>'user', :action=>'collect' %>
   <% end %>
 <% end %>
 <br>
