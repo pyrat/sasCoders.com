@@ -4,5 +4,6 @@ class AddOwnerIdToJobPosts < ActiveRecord::Migration
   end
 
   def self.down
+    remove_column :job_postings, :owner_id
   end
 end

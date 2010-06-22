@@ -29,7 +29,7 @@ class CreateUsers < ActiveRecord::Migration
     end
 	
 	admin_role = Role.create(:name => 'admin')
-	admin = User.new (:user_name=>'admin', :email=>'admin@sasCoders.com', :first_name=>'Stephen', :last_name=>'Philp')
+	admin = User.new (:user_name=>'admin', :email=>'swelltrain@gmail.com', :first_name=>'Stephen', :last_name=>'Philp')
 	admin.password = 'mos2es'
 	admin.roles<<admin_role
     admin.save!

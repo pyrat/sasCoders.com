@@ -5,5 +5,7 @@ class ModifyUserTable < ActiveRecord::Migration
   end
 
   def self.down
+    remove_column :users, :company_description
+	remove_column :users, :credits
   end
 end

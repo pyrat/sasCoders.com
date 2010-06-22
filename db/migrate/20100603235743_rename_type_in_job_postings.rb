@@ -5,5 +5,7 @@ class RenameTypeInJobPostings < ActiveRecord::Migration
   end
 
   def self.down
+    rename_column :job_postings, :job_type, :type
+	remove_column :job_postings, :telecommute
   end
 end

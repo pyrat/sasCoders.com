@@ -6,5 +6,7 @@ class ModifyJobPostingsTable < ActiveRecord::Migration
   end
 
   def self.down
+    remove_column :job_postings, :days_to_run
+	remove_column :job_postings, :start_run_date
   end
 end
