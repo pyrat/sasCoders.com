@@ -5,7 +5,7 @@ class JobPostingController < ApplicationController
   def index
     # just get all the job_postings where approved_at is not blank
 	@postings = Array.new
-	@postings = JobPosting.find(:all, :conditions=>)
+	@postings = JobPosting.find(:all)
 	
 	# loop through them and see if they're approved
 	
