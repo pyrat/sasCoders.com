@@ -27,6 +27,8 @@ class SearchController < ApplicationController
 	 ######################
 	 if @geo.success?
   	   @jobs = JobPosting.find(:all, :origin=>@geo, :within=>within, :order=>'distance')
+	   # add in the loop for valid jobs
+	   @jobs.delete_if {|job| !job.approved?}
 	   if @jobs.length == 0
 	     flash[:notice] = "Unfortunately there were no jobs found within #{within} miles of #{location}."
 		 return

@@ -25,7 +25,7 @@ class UserController < ApplicationController
 	@user.last_name = params[:last_name]	
 	@user.telephone = params[:telephone]
 	@user.company = params[:company]
-	@user.company_description[:company_description]
+	@user.company_description = [:company_description]
 	
 
 	if @user.save
