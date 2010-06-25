@@ -2,8 +2,8 @@
 
 <% form_for :jobPosting, :url => {:action=>:create} do |form| %>
   <p>Title: <%= form.text_field :title, :size=>30 %></p>
-  <p>Your Company Name: <%= form.text_field :company_name, :size=>30 %> </p>
-  <p>Your Company Type: <%= form.select(:company_type, %w{Primary Recruiter}) %> </p>
+  <p>Your Company Name: <%= @user.company %> </p>
+  <p>Your Company Type: <%= @user.company_type %> </p>
   <p>Short Description: <%= form.text_area :short_description, :rows=>3 %> </p>
   <p>Long Description: <%= form.text_area :long_description, :rows=>6 %> </p>
   <p>Telecommute? <%= form.check_box :telecommute %>
@@ -15,7 +15,7 @@
   <hr>
   <p>Start Date For Ad: <%= form.text_field :start_run_date, :size=>9 %> Leave blank if you want it to start
   as soon as it's approved.</p>
-  <p>Days To Run: <%= form.select(:days_to_run, %w{15 30}) %>
+  
   <p><%= submit_tag %></p>
   
 <% end %>

@@ -18,3 +18,6 @@ Register recruiter page
  input fields form
  accept fields, send confirmation email?
  confirmation email worked and actions tested.  now write the form and tie the emailer to the controller
+ 
+ 
+ <p>Days To Run: <%= form.select(:days_to_run, %w{15 30}) %>

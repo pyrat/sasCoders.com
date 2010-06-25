@@ -15,6 +15,7 @@ class JobPostingController < ApplicationController
   
   def addJob
     @jobPosting = JobPosting.new # for our form
+	
   end
   
   def manage
@@ -43,6 +44,8 @@ class JobPostingController < ApplicationController
   
   def edit
   end
+  
+ 
   
   def delete
   end

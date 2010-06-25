@@ -2,7 +2,7 @@ class UserController < ApplicationController
   before_filter :logged_in?, :only=> [:edit, :index]
   
   def index
-    @user = User.find(:session[:user_id])
+    @user = User.find(session[:user_id])
     flash[:notice] = nil
   end
   
@@ -25,6 +25,7 @@ class UserController < ApplicationController
 	@user.last_name = params[:last_name]	
 	@user.telephone = params[:telephone]
 	@user.company = params[:company]
+	@user.company_type = params[:company_type]
 	@user.company_description = [:company_description]
 	
 

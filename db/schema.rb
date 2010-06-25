@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100621231040) do
+ActiveRecord::Schema.define(:version => 20100623180921) do
 
   create_table "invoices", :force => true do |t|
     t.integer  "amount"
@@ -23,12 +23,11 @@ ActiveRecord::Schema.define(:version => 20100621231040) do
     t.string   "reference_id"
     t.string   "title"
     t.string   "company_name"
-    t.string   "company_type"
     t.text     "short_description"
     t.text     "long_description"
     t.string   "zip"
     t.string   "job_type"
-    t.string   "experience"
+    t.text     "experience"
     t.string   "pay"
     t.text     "addl_instructions"
     t.datetime "created_at"
@@ -70,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20100621231040) do
     t.datetime "updated_at"
     t.text     "company_description"
     t.integer  "credits",                   :default => 0
+    t.string   "company_type"
   end
 
 end

@@ -55,4 +55,16 @@ class SearchController < ApplicationController
 	 @jobs = JobPosting.find_all_by_telecommute(true)
 	 render :action=>"index" # just renders it, doesn't run action first
    end
+   
+   def show
+     @job = JobPosting.find(params[:id])
+	 @geo = MultiGeocoder.geocode("#{@job.lat},#{@job.lng}")
+	 @city = @geo.city
+	 
+	 # i know i know this should be a linked table...
+	 u = User.find(@job.owner_id)
+	 @companyName = u.company
+	 @companyDescription = u.company_description
+
+   end
 end
