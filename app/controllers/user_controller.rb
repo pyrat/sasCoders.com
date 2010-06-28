@@ -53,6 +53,7 @@ class UserController < ApplicationController
 	  logger.info("The activation code was set to => #{@user.activation_code}")
 	  @user.activated_at = Time.now
 	  @user.save!
+	  logger.info("The user is #{@user.id}, #{@user.first_name}")
 	  session[:user_id] = @user.id
 	  flash[:notice] = "Thank you for validating.  You are now logged in."
 	  
