@@ -26,7 +26,7 @@ class UserController < ApplicationController
 	@user.telephone = params[:telephone]
 	@user.company = params[:company]
 	@user.company_type = params[:company_type]
-	@user.company_description = [:company_description]
+	@user.company_description = params[:company_description]
 	
 
 	if @user.save
@@ -50,8 +50,9 @@ class UserController < ApplicationController
 	if @user
 	  # log them in
 	  @user.activation_code = ""
+	  logger.info("The activation code was set to => #{@user.activation_code}")
 	  @user.activated_at = Time.now
-	  @user.save
+	  @user.save!
 	  session[:user_id] = @user.id
 	  flash[:notice] = "Thank you for validating.  You are now logged in."
 	  
