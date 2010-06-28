@@ -49,7 +49,7 @@ class UserController < ApplicationController
 	@user = User.find_by_activation_code(activation)
 	if @user
 	  # log them in
-	  @user.activation_code = nil
+	  @user.activation_code = ""
 	  @user.activated_at = Time.now
 	  @user.save
 	  session[:user_id] = @user.id
