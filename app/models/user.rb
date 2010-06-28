@@ -31,15 +31,14 @@ class User < ActiveRecord::Base
   def self.authenticate(email, password)
     user = self.find_by_email(email)
     if user
-	  logger.info("Found the user in authenticate")
+	 # logger.info("Found the user in authenticate")
       expected_password = encrypted_password(password, user.salt)
       if user.hashed_password != expected_password
-	    logger.info("The passwords did not match: #{expected_password} != #{user.hashed_password}")
+	  #  logger.info("The passwords did not match: #{expected_password} != #{user.hashed_password}")
         user = nil
       end	
-	  # additionally check if they have registered (activation should be nil)
-	  logger.info("user activication code not nil=>#{user.activation_code}") if !user.activation_code.blank?  	
-	  user = nil if !user.activation_code.blank?  	
+	  # additionally check if they have registered
+	  user = nil if !user.activation_code.include? 'validated' 	
     end
 	user
   end
@@ -75,7 +74,10 @@ class User < ActiveRecord::Base
   private
   
   def create_activation_code
-    self.activation_code = Digest::SHA1.hexdigest(self.object_id.to_s + rand.to_s)
+    # since this is run after_initialize it has the potential to keep recreating activation codes
+    if self.activation_code.blank?
+      self.activation_code = Digest::SHA1.hexdigest(self.object_id.to_s + rand.to_s)
+	end
   end
   
   def create_new_salt
