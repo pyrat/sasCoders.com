@@ -38,8 +38,8 @@ class User < ActiveRecord::Base
         user = nil
       end	
 	  # additionally check if they have registered (activation should be nil)
-	  logger.info("user activication code not nil") if !user.activation_code.nil?  	
-	  user = nil if !user.activation_code.nil?  	
+	  logger.info("user activication code not nil") if !user.activation_code.blank?  	
+	  user = nil if !user.activation_code.blank?  	
     end
 	user
   end
