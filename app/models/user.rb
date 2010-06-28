@@ -31,11 +31,14 @@ class User < ActiveRecord::Base
   def self.authenticate(email, password)
     user = self.find_by_email(email)
     if user
+	  logger.debug("Found the user in authenticate")
       expected_password = encrypted_password(password, user.salt)
       if user.hashed_password != expected_password
+	    logger.deug("The passwords did not match: #{expected_password} != #{user.hashed_password}")
         user = nil
       end	
 	  # additionally check if they have registered (activation should be nil)
+	  logger.debug("user activication code not nil") if !user.activation_code.nil?  	
 	  user = nil if !user.activation_code.nil?  	
     end
 	user

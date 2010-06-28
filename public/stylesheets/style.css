@@ -22,7 +22,11 @@ body {
 body, p, h1, h2, h3, h4, table, td, th, ul, ol, textarea, input {
   font-family:verdana,helvetica,arial,sans-serif;
 }
-	
+
+textarea {
+  font-size: 100%;
+  width: 600px;
+}
 
 input.admin {
   height: 8px;
