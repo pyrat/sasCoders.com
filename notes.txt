@@ -3,21 +3,15 @@ heroku db:reset --app hollow-meadow-93
 heroku rake db:migrate
 
 What other actions need to be done?
-Search for jobs is done AFAIK
-jobs admin page/ jobs edit page
+jobs admin(manage) page/ jobs edit page
+
+add a table to the db--> user has a job posting, job posting belongs to a user
+  job_posting_user table? or jobPosting_user?
+  and then when a job is added we need to user.job_posting << @job  (?)
+
++add company web site to user
 
 Recruiter display page
-update the look of the homepage.
 
-Lets tackle search for jobs.
-working on search_controller, test telecommute == only, test index, create view
-
-** search controller does not handle include/exclude telecommite jobs yet. now it does.
-
-Register recruiter page
- input fields form
- accept fields, send confirmation email?
- confirmation email worked and actions tested.  now write the form and tie the emailer to the controller
- 
  
  <p>Days To Run: <%= form.select(:days_to_run, %w{15 30}) %>

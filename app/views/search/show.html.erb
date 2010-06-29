@@ -4,36 +4,7 @@
 </div>
 
 <div id="content">
-<div id="left">
-    <strong>Senior Project Manager</strong><br><br>
-    
-    <ul class="simple">
-      <li><strong>Location:</strong> <%= @city %> </li>
-      <li><strong>Job Type:</strong> <%= @job.job_type %> </li>
-      <li><strong>Pay: </strong> <%= @job.pay %></li>
-    </ul>
-    <p><strong>Short Description:</strong><%= simple_format(@job.short_description) %> <br>
-    <p><strong>Experience:</strong><br>
-	<%= simple_format(@job.experience) %>
-    </p>
-<p><strong>Description:</strong><br>
-<%= simple_format(@job.long_description) %> </p>
-<p><strong>Company Name:</strong><br><%= @companyName %></p>
-
-<p><strong>Company Description:</strong><br>
-<%= simple_format(@companyDescription) %>
-</p>
-
-
-
-  </div>
-  <div id="right">
-    <p>Interested In This Job?</p>
-    <p>Be sure to include the job Reference: <%= @job.reference_id %></p>
-    <p>Email It To Yourself</p>
-    <p>Apply Online</p>
-    
-  </div>
+ <%= render(:partial => "show") %>
 </div>
 <div id="sidebar">
   <%= render(:partial => "shared/sidebar") %>
@@ -43,6 +14,3 @@
 </div>
 
 </div>
-
-------------------------
-

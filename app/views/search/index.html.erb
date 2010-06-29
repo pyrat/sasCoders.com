@@ -1,20 +1,16 @@
-<h1>Jobs Matching Your Search</h1>
-<br>
-<table>
-<tr><td><img src=<%= "#{@img}" %> ></td><td>Search details:<br>
-<p>Full Address: <%= @geo.full_address %></p>
-<p>Precision: <%= @geo.precision %> </p>
-<p>There were <%= @jobs.length %> jobs found.</p>
-</td></tr></table>
-<hr>
-<table>
-<tr><th>Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
-<% for job in @jobs %>
-  <tr>
-    <td> <%= h job.start_run_date %> </td>
-    <td> <%= link_to job.title, {:controller=>'search', :action=>'show', :id=>job.id} %> </td>
-	<td> <%= h job.job_type %> </td>
-	<td> <%= h job.zip %> </td>
-	<td> <%= h job.short_description %> </td>
-  </tr>
-<% end %>
+<div id="container">
+<div id="header">
+<%= render(:partial => "shared/header") %>
+</div>
+
+<div id="content">
+ <%= render(:partial => "index") %>
+</div>
+<div id="sidebar">
+  <%= render(:partial => "shared/sidebar") %>
+</div>
+
+<div id="footer">
+</div>
+
+</div>
