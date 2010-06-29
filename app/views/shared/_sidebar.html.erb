@@ -4,10 +4,10 @@ but you can be as specific as you want.<br>To see all jobs in a particular state
 
 <% form_tag( {:controller=>'search', :action=>'index'}, {:method => :get} ) do %>
   <fieldset class="inner">
-  <%= label_tag 'City:'<br> %> <%= text_field_tag :city, params[:city], :size=>15 %><br><br>
-  <%= label_tag 'State:'<br> %>  <%= text_field_tag :state, params[:state], :size=>2 %><br><br>
-  <%= label_tag 'Zipcode:'<br> %>  <%= text_field_tag :zip, params[:zip], :size=>7 %><br><br>
-  <%= label_tag 'Country:'<br> %>  <%= text_field_tag :country, params[:country], :size=>3 %><br><br>
+  <%= label_tag 'City:' %><br> <%= text_field_tag :city, params[:city], :size=>15 %><br><br>
+  <%= label_tag 'State:' %><br>  <%= text_field_tag :state, params[:state], :size=>2 %><br><br>
+  <%= label_tag 'Zipcode:' %><br>  <%= text_field_tag :zip, params[:zip], :size=>7 %><br><br>
+  <%= label_tag 'Country:' %><br>  <%= text_field_tag :country, params[:country], :size=>3 %><br><br>
   
   <%= label_tag 'Distance:'<br> %></td>
   <%= select_tag "within", options_for_select(%w{5 10 15 25},"10") %><br>Miles<br><br>
