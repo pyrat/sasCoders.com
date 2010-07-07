@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100629193201) do
+ActiveRecord::Schema.define(:version => 20100707213035) do
 
   create_table "invoices", :force => true do |t|
     t.integer  "amount"
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(:version => 20100629193201) do
     t.float    "lng"
     t.boolean  "telecommute"
     t.integer  "user_id"
-    t.integer  "days_to_run"
     t.datetime "start_run_date"
+    t.datetime "end_date"
   end
 
   create_table "roles", :force => true do |t|

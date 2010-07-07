@@ -3,7 +3,7 @@ sasCoders.com<br>
 <% if session[:user_id] %>
   hello <%= @user.first_name %>
   <%= link_to "Create New Ad", :controller=>'job_posting', :action=>"addJob" %> | 
-  <%= link_to "Manage Ads", :controller=>'job_posting', :action=>'manage' %> | 
+  <%= link_to "Manage Ads", :controller=>'user', :action=>'manage_ads' %> | 
   <%= link_to "View Profile", :controller=>'user', :action=>'index' %>
 <% else %>
   Please sign in: 
