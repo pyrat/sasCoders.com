@@ -7,7 +7,9 @@
     <ul class="simple">
       <li>Name: <%= "#{@user.first_name} #{@user.last_name}" %></li>
       <li>Company: <%= @user.company %></li>
+	  <li>Web Site: <%= @user.web_site %></li>
       <li>Company Description: <%= @user.company_description %></li>
+	  <li><%= link_to 'edit profile', :controller=>'user', :action=>'edit' %></li>
     </ul>
     
   </div>

@@ -1,7 +1,7 @@
 include Geokit::Geocoders
 
 class JobPostingController < ApplicationController
-  before_filter :logged_in?
+  before_filter :logged_in? # logged in returns a valid @user or false
   def index
     # just get all the job_postings where approved_at is not blank
 	@postings = Array.new
@@ -24,7 +24,7 @@ class JobPostingController < ApplicationController
   
   def create
     @job = JobPosting.new(params[:jobPosting])
-	@job.owner_id = session[:user_id]
+	
 	@job.start_run_date = Date.parse(@job.start_run_date.to_s) unless @job.start_run_date.nil?
 	
 	#logger.debug
@@ -40,12 +40,16 @@ class JobPostingController < ApplicationController
 	@job.save # there is no job.id until it is saved
 	@job.reference_id = "#{@job.id}sasCoders#{@job.owner_id}"
 	@job.save
+	@user.jobPostings << @job  # i dont think user needs to be saved again?
   end
   
   def edit
   end
   
- 
+  def preview
+    # just a stub for the template?
+	# in that case how do we get the parameters?
+  end
   
   def delete
   end

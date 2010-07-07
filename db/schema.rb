@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100623180921) do
+ActiveRecord::Schema.define(:version => 20100629193201) do
 
   create_table "invoices", :force => true do |t|
     t.integer  "amount"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20100623180921) do
     t.text     "long_description"
     t.string   "zip"
     t.string   "job_type"
-    t.text     "experience"
+    t.string   "experience"
     t.string   "pay"
     t.text     "addl_instructions"
     t.datetime "created_at"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20100623180921) do
     t.float    "lat"
     t.float    "lng"
     t.boolean  "telecommute"
-    t.integer  "owner_id"
+    t.integer  "user_id"
     t.integer  "days_to_run"
     t.datetime "start_run_date"
   end
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20100623180921) do
     t.text     "company_description"
     t.integer  "credits",                   :default => 0
     t.string   "company_type"
+    t.string   "web_site"
   end
 
 end

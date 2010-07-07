@@ -26,6 +26,7 @@ class SearchController < ApplicationController
 	 
 	 ######################
 	 if @geo.success?
+	   @img = "http://maps.google.com/maps/api/staticmap?zoom=10&size=200x200&markers=color:blue|#{@geo.lat},#{@geo.lng}&sensor=false"
   	   @jobs = JobPosting.find(:all, :origin=>@geo, :within=>within, :order=>'distance')
 	   # add in the loop for valid jobs
 	   @jobs.delete_if {|job| !job.approved?}
@@ -41,7 +42,7 @@ class SearchController < ApplicationController
 		 
 		 @jobs = t | @jobs if t.length > 0
 	   end
-	   @img = "http://maps.google.com/maps/api/staticmap?zoom=10&size=200x200&markers=color:blue|#{@geo.lat},#{@geo.lng}&sensor=false"
+	   
 	   # successfully return w jobs
 	 else 
 	   flash[:notice] = "That location could not be found."

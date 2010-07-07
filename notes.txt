@@ -5,12 +5,11 @@ heroku rake db:migrate
 What other actions need to be done?
 jobs admin(manage) page/ jobs edit page
 
-add a table to the db--> user has a job posting, job posting belongs to a user
-  job_posting_user table? or jobPosting_user?
-  and then when a job is added we need to user.job_posting << @job  (?)
 
-+add company web site to user
-
+  
+- link edit profile to user index
++ addJob preview page
+- remove job_posting_id from user
 Recruiter display page
 
  

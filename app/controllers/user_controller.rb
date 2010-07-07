@@ -25,6 +25,7 @@ class UserController < ApplicationController
 	@user.last_name = params[:last_name]	
 	@user.telephone = params[:telephone]
 	@user.company = params[:company]
+	@user.web_site = params[:web_site]
 	@user.company_type = params[:company_type]
 	@user.company_description = params[:company_description]
 	
@@ -65,7 +66,11 @@ class UserController < ApplicationController
 
   
   def edit
-    @user = User.find(:session[:user_id])
+   # not really anything to be done here since this just stubs the template
+    
+  end
+  
+  def save
     if @user.save
       flash[:notice] = "Successfully updated"
       render 'index'
@@ -73,9 +78,8 @@ class UserController < ApplicationController
       flash[:notice] = "There was a problem."
       flash[:error] = "The updates were not saved."
     end
-    
+
   end
-  
   
   def delete
   end

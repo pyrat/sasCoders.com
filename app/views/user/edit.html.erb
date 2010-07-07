@@ -13,18 +13,20 @@
 		<%= form.text_field :email, {:size=>40, :value=>@user.email} %>*</p>
 
 		
-		<p>"First Name"
+		<p>"First Name"<br>
 		<%= form.text_field :first_name,  {:size=>40, :value=>@user.first_name} %></p>
-		<p>"First Name"
+		<p>"Last Name"<br>
 		<%= form.text_field :last_name,  {:size=>40, :value=>@user.last_name} %></p>
-		<p>"Telephone #"
+		<p>"Telephone #"<br>
 		<%= form.text_field :telephone, { :size=>40, :value=>@user.telephone} %>*</p>
-		<p>"Company Name"
+		<p>"Company Name"<br>
 		<%= form.text_field :company, {:size=>40, :value=>@user.company} %></p>
-		<p>"Company Description"
+		<p>"Web Site"<br>
+		<%= form.text_field :web_site, {:size=>40, :value=>@user.web_site} %></p>
+		<p>"Company Description"<br>
 		<%= form.text_field :company_description, {:size=>40, :value=>@user.company_description} %></p>
 		
-		<%= submit_tag 'Register', :class => "button" %> 
+		<%= submit_tag 'Save', :class => "button" %> 
 		<br><br>* Kept private.  Not shown on the site.
   		</div>
 		<% end %>
