@@ -1,4 +1,4 @@
-<div id="left">
+<span id="left">
 <strong>Your Profile</strong>
   <br><br>
     <p>Currently Running Ads: <a href="#">0</a></p>
@@ -11,8 +11,8 @@
 	  <li><%= link_to 'edit profile', :controller=>'user', :action=>'edit' %></li>
     </ul>
     
-  </div>
-  <div id="right">
+  </span>
+  <span id="right">
     <p>Credits Available: <%= @user.credits %></p>
     <p><a href="#">Purchase Credits</a></p>
-  </div>
+  </span>

@@ -20,6 +20,8 @@ class ApplicationController < ActionController::Base
       redirect_to :controller => "site", :action => "index"
       return false
 	else
+	  @user.activated_at = Time.now # update since they are using the site and not idling
+	  @user.save
 	  return true
 	end
   end

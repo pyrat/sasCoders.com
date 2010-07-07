@@ -1,25 +1,21 @@
-<h1>JobPosting#create</h1>
-<p>Find me in app/views/job_posting/create.html.erb</p>
-
-<p>this will just show the newly created job posting or whatever error</p>
 
 <p>
  job title: <%= @job.title %>
 </p>
 
 
-<div id="left">
+<span id="left">
 <strong>Job Successfully Created</strong>
   <br><br>
     <p>Currently Running Ads: <a href="#">0</a></p>
-    <p>Saved Ads: <a href="#">1</a></p>
-    <p>Next Steps:<br><a href="#">Buy Credits</a><br><a href="#">Apply Credits</a></p>
-    <ul class="simple">
-      <li>Create Another Ad?</li>
-      <li>View Your Profile?</li>
-    </ul>
+    <p>Saved Ads: <a href="#"><%= @user.jobPostings.length %></a></p>
+    <p><strong>Next Steps:</strong><br><a href="#">Buy Credits</a><br><a href="#">Apply Credits</a></p>
+
+      
     
-  </div>
-  <div id="right">
-    <p>What content should be over here?</p>
-  </div>
+  </span>
+  <span id="right">
+    <p><%= link_to "Create Another Ad?", :controller=>'job_posting', :action=>"addJob" %>
+      <%= link_to "View Your Profile?", :controller=>'user', :action=>'index' %>
+</p>
+  </span>

@@ -66,12 +66,16 @@ class UserController < ApplicationController
 
   
   def edit
-   # not really anything to be done here since this just stubs the template
+   # we cant use the :user object since it will be fetched again in the save and 
+   # overwrite the parameters that were assigned in the template
+   # create a model for the form
+   @u = @user
     
   end
   
   def save
-    if @user.save
+    # @u comes from the form on the view
+	if @user.update_attributes(@u.attributes)
       flash[:notice] = "Successfully updated"
       render 'index'
     else
@@ -99,7 +103,11 @@ class UserController < ApplicationController
 	render 'site/index' # in future this might be a parameter
   end
   
-  
+  def manage_ads
+    # maybe get all the active ads in one array
+	# and all the inactive ones in another array?
+	
+  end
 end
 
   

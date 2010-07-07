@@ -27,6 +27,7 @@ class JobPostingController < ApplicationController
 	@job.user_id = @user.id # does this need to happen?
 	
 	@job.start_run_date = Date.parse(@job.start_run_date.to_s) unless @job.start_run_date.nil?
+	# otherwise the start_run_date gets set in the approved code
 	
 	#logger.debug
 	if @job.zip.blank?
