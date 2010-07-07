@@ -24,6 +24,7 @@ class JobPostingController < ApplicationController
   
   def create
     @job = JobPosting.new(params[:jobPosting])
+	@job.user_id = @user.id # does this need to happen?
 	
 	@job.start_run_date = Date.parse(@job.start_run_date.to_s) unless @job.start_run_date.nil?
 	
@@ -38,7 +39,7 @@ class JobPostingController < ApplicationController
 	  @job.lng = geo.lng
 	end
 	@job.save # there is no job.id until it is saved
-	@job.reference_id = "#{@job.id}sasCoders#{@job.owner_id}"
+	@job.reference_id = "#{@job.id}sasCoders#{@job.user_id}"
 	@job.save
 	@user.jobPostings << @job  # i dont think user needs to be saved again?
   end

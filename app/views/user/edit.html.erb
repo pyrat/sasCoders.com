@@ -4,27 +4,27 @@
 
 <tr>
 	<td valign=top>
-		<h3>Register with sasCoders.com</h3>
-		<% form_for :user, :url => {:action => :register} do |form| %>
+		<h3>Edit Your Profile</h3>
+		<% form_for :user, :url => {:action => :save} do |form| %>
 		  
 		<div class="fields">
 
-		<p>"Email" 
-		<%= form.text_field :email, {:size=>40, :value=>@user.email} %>*</p>
+		<p>Email 
+		<%= @user.email %></p>
 
 		
-		<p>"First Name"<br>
+		<p>First Name<br>
 		<%= form.text_field :first_name,  {:size=>40, :value=>@user.first_name} %></p>
-		<p>"Last Name"<br>
+		<p>Last Name<br>
 		<%= form.text_field :last_name,  {:size=>40, :value=>@user.last_name} %></p>
-		<p>"Telephone #"<br>
+		<p>Telephone #<br>
 		<%= form.text_field :telephone, { :size=>40, :value=>@user.telephone} %>*</p>
-		<p>"Company Name"<br>
+		<p>Company Name<br>
 		<%= form.text_field :company, {:size=>40, :value=>@user.company} %></p>
-		<p>"Web Site"<br>
+		<p>Web Site<br>
 		<%= form.text_field :web_site, {:size=>40, :value=>@user.web_site} %></p>
-		<p>"Company Description"<br>
-		<%= form.text_field :company_description, {:size=>40, :value=>@user.company_description} %></p>
+		<p>Company Description<br>
+		<%= form.text_area :company_description, {:rows=>3, :value=>@user.company_description} %></p>
 		
 		<%= submit_tag 'Save', :class => "button" %> 
 		<br><br>* Kept private.  Not shown on the site.

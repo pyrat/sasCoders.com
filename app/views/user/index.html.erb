@@ -2,9 +2,8 @@
 <strong>Your Profile</strong>
   <br><br>
     <p>Currently Running Ads: <a href="#">0</a></p>
-    <p>Saved Ads: <a href="#">0</a></p>
-    <a href="#">Edit</a>
-    <ul class="simple">
+    <p>Saved Ads: <a href="#"><%= @user.jobPostings.length %></a></p>
+	<ul class="simple">
       <li>Name: <%= "#{@user.first_name} #{@user.last_name}" %></li>
       <li>Company: <%= @user.company %></li>
 	  <li>Web Site: <%= @user.web_site %></li>

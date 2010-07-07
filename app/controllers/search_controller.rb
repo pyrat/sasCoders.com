@@ -62,8 +62,8 @@ class SearchController < ApplicationController
 	 @geo = MultiGeocoder.geocode("#{@job.lat},#{@job.lng}")
 	 @city = @geo.city
 	 
-	 # i know i know this should be a linked table...
-	 u = User.find(@job.owner_id)
+     # should this be something more like @job.user_id.company ?
+	 u = User.find(@job.user_id)
 	 @companyName = u.company
 	 @companyDescription = u.company_description
 
