@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-  before_filter :logged_in?, :only=> [:edit, :index]
+  before_filter :logged_in?, :only=> [:edit, :index, :save]
   
   def index
     @user = User.find(session[:user_id])
@@ -74,8 +74,8 @@ class UserController < ApplicationController
   end
   
   def save
-    # @u comes from the form on the view
-	if @user.update_attributes(@u.attributes)
+	u = User.new(params[:u])
+	if @user.update_attributes(u.attributes)
       flash[:notice] = "Successfully updated"
       render 'index'
     else
