@@ -81,6 +81,7 @@ class UserController < ApplicationController
     else
       flash[:notice] = "There was a problem."
       flash[:error] = "The updates were not saved."
+	  render 'index'
     end
 
   end
