@@ -46,6 +46,29 @@ class JobPostingController < ApplicationController
   end
   
   def edit
+    @job = JobPosting.find(params[:id])
+  end
+  
+  def update
+    # updates the job that came from the edit template
+	job = JobPosting.new(params[:jobPosting]) # this gets the job with the updated parameters
+	job.start_run_date = Date.parse(job.start_run_date.to_s) unless job.start_run_date.nil?
+	# otherwise the start_run_date gets set in the approved code
+	
+	#logger.debug
+	if job.zip.blank?
+	  # we will have to change this for out-of-US jobs
+	  job.lat = -18.271835
+	  job.lng = 177.90255
+	else
+	  geo = MultiGeocoder.geocode(job.zip)
+	  job.lat = geo.lat
+	  job.lng = geo.lng
+	end
+	currentJob = JobPosting.find(params[:id])
+	currentJob.update_attributes(job.attributes)
+	render 'manage'
+	
   end
   
   def preview

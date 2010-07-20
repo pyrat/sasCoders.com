@@ -74,7 +74,8 @@ class UserController < ApplicationController
   end
   
   def save
-	u = User.new(params[:u])
+    # in future need to figure out how to check to make sure the update was applied successfully
+=begin	
 	if @user.update_attributes(u.attributes)
       flash[:notice] = "Successfully updated"
       render 'index'
@@ -83,7 +84,10 @@ class UserController < ApplicationController
       flash[:error] = "The updates were not saved."
 	  render 'index'
     end
-
+=end
+    u = User.new(params[:u])
+    @user.update_attributes(u.attributes)
+    render 'index'
   end
   
   def delete
