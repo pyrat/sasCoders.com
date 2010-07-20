@@ -24,7 +24,7 @@ class JobPostingController < ApplicationController
   
   def create
     @job = JobPosting.new(params[:jobPosting])
-	@job.user_id = @user.id # does this need to happen?
+	@job.user_id = @user.id # does this need to happen?, yes i think so
 	
 	@job.start_run_date = Date.parse(@job.start_run_date.to_s) unless @job.start_run_date.nil?
 	# otherwise the start_run_date gets set in the approved code
@@ -53,6 +53,7 @@ class JobPostingController < ApplicationController
     # updates the job that came from the edit template
 	job = JobPosting.new(params[:jobPosting]) # this gets the job with the updated parameters
 	job.start_run_date = Date.parse(job.start_run_date.to_s) unless job.start_run_date.nil?
+	job.user_id = @user.id # does this need to happen?, yes i think so
 	# otherwise the start_run_date gets set in the approved code
 	
 	#logger.debug
