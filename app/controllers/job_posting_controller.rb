@@ -67,7 +67,7 @@ class JobPostingController < ApplicationController
 	end
 	currentJob = JobPosting.find(params[:id])
 	currentJob.update_attributes(job.attributes)
-	render 'manage'
+	render 'user/manage_ads'
 	
   end
   
