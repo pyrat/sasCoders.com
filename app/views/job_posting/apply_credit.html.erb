@@ -5,7 +5,11 @@
 	<p>This job is set to expire on <%= @job.end_date %>.</p>
 	<p>Any credits you apply to this job will extend the expiration date by 30 days per credit.  If the expiration date is in the past, then the credit will apply to the job starting today.
 	 (The expiration date will be reset to today and the credit will then be applied).</p>
-    <p>The status for this job is <%= @job.status %>.</p>
+   <% if @job.approved_at.blank? %>
+     <p>This job has not been approved.</p>
+   <% else %>
+     <p>This job is approved.</p>
+   <% end %>
     <ul class="simple">
       <li><strong>Job Type:</strong> <%= @job.job_type %> </li>
       <li><strong>Pay: </strong> <%= @job.pay %></li>
