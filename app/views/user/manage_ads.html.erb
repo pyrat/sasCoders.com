@@ -1,6 +1,6 @@
 <h1>Your Ads</h1>
 <br>
-We have to put in links to edit the job details, and apply credits to a job.<br>
+You have <%= @user.credits %> credits.<br>
 <table>
 <tr><th>Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
 <% for job in @user.jobPostings %>
@@ -10,6 +10,7 @@ We have to put in links to edit the job details, and apply credits to a job.<br>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.job_type %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.zip %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.short_description %> </td>
+	<td style="border-bottom-style: solid; border-width: 1px;"> <%= button_to "Apply Credits" {:controller=>'job_posting', :action=>'apply_credit', :id=>job.id %> but only include this if the job has been approved </td>
   </tr>
 <% end %>
 </table>

@@ -1,9 +1,12 @@
 
 <div id="left">
     <strong><%= @job.title %></strong><br><br>
-    
+	
+	<p>This job is set to expire on <%= @job.end_date %>.</p>
+	<p>Any credits you apply to this job will extend the expiration date by 30 days per credit.  If the expiration date is in the past, then the credit will apply to the job starting today.
+	 (The expiration date will be reset to today and the credit will then be applied).</p>
+    <p>The status for this job is <%= @job.status %>.</p>
     <ul class="simple">
-      <li><strong>Location:</strong> <%= @city %> </li>
       <li><strong>Job Type:</strong> <%= @job.job_type %> </li>
       <li><strong>Pay: </strong> <%= @job.pay %></li>
     </ul>
@@ -24,15 +27,12 @@
 </div>
 
   <div id="right">
-    <p>Interested In This Job?</p>
-    <p>Be sure to include the job Reference: <strong><%= @job.reference_id %></strong></p>
-    <p>Email It To Yourself</p>
-    <p>Apply Online</p>
+    <p>You have <%= @user.credits %> credits.</p>
+    <p><% form_tag :controller=>:job_posting, :action=>:apply_credit_final, :id = @job do %>
+	     Apply <%= text_field_tag :quantity, '1' %> credits to this job.
+		 <%= submit_tag %>
+	   <% end %>
+	</p>
     
   </div>
-
-
-
-
-------------------------
 

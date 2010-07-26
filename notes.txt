@@ -12,5 +12,7 @@ jobs admin(manage) page/ jobs edit page
 - remove job_posting_id from user
 Recruiter display page
 
+## how are we going to handle the merchant stuff?
+  ActiveMerchant/ payPal gateway?
  
  <p>Days To Run: <%= form.select(:days_to_run, %w{15 30}) %>
