@@ -10,7 +10,7 @@ You have <%= @user.credits %> credits.<br>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.job_type %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.zip %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.short_description %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= button_to "Apply Credits" {:controller=>'job_posting', :action=>'apply_credit', :id=>job.id %> but only include this if the job has been approved </td>
+	<td style="border-bottom-style: solid; border-width: 1px;"> <%= button_to "Apply Credits" {:controller=>'job_posting', :action=>'apply_credit', :id=>job.id} %> but only include this if the job has been approved </td>
   </tr>
 <% end %>
 </table>
