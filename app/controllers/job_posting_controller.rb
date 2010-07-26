@@ -83,7 +83,7 @@ class JobPostingController < ApplicationController
   
   def apply_credit_final
     @job = JobPosting.find(params[:id])
-	quantity = params[:quantity]
+	quantity = params[:quantity].to_i
 	redirect_to :back and return if quantity < 1
 	# make sure the user has enough credits
 	if @user.credits < quantity
@@ -108,7 +108,7 @@ class JobPostingController < ApplicationController
 	
 	@job.end_date += quantity.days
 	flash[:notice] = "Successfully applied the credit"
-	redirect_to :back
+	redirect_to :back and return
 	
 	
   end
