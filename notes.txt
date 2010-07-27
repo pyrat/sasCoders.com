@@ -13,6 +13,6 @@ jobs admin(manage) page/ jobs edit page
 Recruiter display page
 
 ## how are we going to handle the merchant stuff?
-  ActiveMerchant/ payPal gateway?
- 
- <p>Days To Run: <%= form.select(:days_to_run, %w{15 30}) %>
+  ActiveMerchant/ payPal gateway?-- website payment pro
+  sudo gem install and installed plugin
+  adding to gem manifest file  

@@ -5,12 +5,15 @@ class JobPosting < ActiveRecord::Base
 
  # should this be private? 
  def approved?
-   # if today >= start_date + posting.days_to_run.day
-   # and approved_at is not blank
-   
-   # nope, we now have an end_date so that credits can be applied while a job is running
-   if today <= end_date and approved_at is not blank
-   true
+   if !approved_at.blank? 
+     true
+   end
+ end
+ 
+ def active?
+   if !end_date.blank? and Time.now <= end_date and start_date <= Time.now
+     true
+   end
  end
  
  def approve!

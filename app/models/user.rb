@@ -65,7 +65,7 @@ class User < ActiveRecord::Base
   # next three virtual attributes, just getters
   def jobs_awaiting_approval
     a = Array.new
-	self.jobPostings.each do |j|
+	jobPostings.each do |j|
 	  a.push(j) if !j.approved?
 	end
 	a
@@ -73,16 +73,16 @@ class User < ActiveRecord::Base
   
   def jobs_expired
     a = Array.new
-	self.jobPostings.each do |j|
-	  a.push(j) if j.end_date < Time.now
+	jobPostings.each do |j|
+	  a.push(j) if !j.active?
 	end
 	a
   end
   
   def jobs_running
     a = Array.new
-	self.jobPostings.each do |j|
-	  a.push(j) if j.end_date >= Time.now
+	jobPostings.each do |j|
+	  a.push(j) if j.active? and j.approved?
 	end
 	a
   end
