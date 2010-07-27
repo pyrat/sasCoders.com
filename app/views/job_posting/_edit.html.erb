@@ -1,0 +1,21 @@
+
+<strong>Edit Job</strong>
+<% form_for :jobPosting, :url => {:action=>:update, :id=>@job.id} do |form| %>
+  <p>Title:<br> <%= form.text_field :title, :size=>30, :value=>@job.title %></p>
+  <p>Your Company Name:<br> <%= @user.company %> </p>
+  <p>Your Company Type:<br> <%= @user.company_type %> </p>
+  <p>Short Description:<br> <%= form.text_area :short_description, :rows=>5, :value=>@job.short_description %> </p>
+  <p>Experience Required:<br> <%= form.text_area :experience, :rows=>15, :value=>@job.experience %> </p>
+  <p>Long Description:<br> <%= form.text_area :long_description, :rows=>15, :value=>@job.long_description %> </p>
+  <p>Telecommute? <%= form.check_box :telecommute%> how do i set this to checked? </p>
+  <p>Zip:<br> <%= form.text_field :zip, :size=> 6, :value=>@job.zip %> </p>
+  <p>Job Type:<br> <%= form.text_field :job_type, :size=>30, :value=>@job.job_type %> </p>
+  <p>Pay:<br> <%= form.text_field :pay, :size=>7, :value=>@job.pay %> </p>
+  <p>Additional Instructions:<br> <%= form.text_area :addl_instructions, :rows=>6, :value=>@job.addl_instructions %> </p>
+  <hr>
+  <p>Start Date For Ad: <%= form.text_field :start_run_date, :size=>9, :value=>@job.start_run_date %> Leave blank if you want it to start
+  as soon as it's approved.</p>
+  
+  <p><%= submit_tag %></p>
+  
+<% end %>

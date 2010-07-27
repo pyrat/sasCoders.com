@@ -1,42 +1,11 @@
-
-<div id="left">
-    <strong><%= @job.title %></strong><br><br>
-	
-	<p>This job is set to expire on <%= @job.end_date %>.</p>
-	<p>Any credits you apply to this job will extend the expiration date by 30 days per credit.  If the expiration date is in the past, then the credit will apply to the job starting today.
-	 (The expiration date will be reset to today and the credit will then be applied).</p>
-   <% if @job.approved_at.blank? %>
-     <p>This job has not been approved.</p>
-   <% else %>
-     <p>This job is approved.</p>
-   <% end %>
-    <ul class="simple">
-      <li><strong>Job Type:</strong> <%= @job.job_type %> </li>
-      <li><strong>Pay: </strong> <%= @job.pay %></li>
-    </ul>
-    <p><strong>Short Description:</strong><%= simple_format(@job.short_description) %> <br>
-    <p><strong>Experience:</strong><br>
-	<%= simple_format(@job.experience) %>
-    </p>
-<p><strong>Description:</strong><br>
-<%= simple_format(@job.long_description) %> </p>
-<p><strong>Company Name:</strong><br><%= @companyName %></p>
-
-<p><strong>Company Description:</strong><br>
-<%= simple_format(@companyDescription) %>
-</p>
+<div id="container">
+<%= render(:partial => "shared/header") %>
 
 
-
+<div id="content">
+ <%= render(:partial => "apply_credit") %>
+</div>
+<div id="footer">
 </div>
 
-  <div id="right">
-    <p>You have <%= @user.credits %> credits.</p>
-    <p><% form_tag :controller=>:job_posting, :action=>:apply_credit_final, :id => @job do %>
-	     Apply <%= text_field_tag :quantity, '1' %> credits to this job.
-		 <%= submit_tag %>
-	   <% end %>
-	</p>
-    
-  </div>
-
+</div>

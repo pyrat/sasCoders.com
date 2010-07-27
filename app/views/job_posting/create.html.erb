@@ -1,21 +1,11 @@
-
-<p>
- job title: <%= @job.title %>
-</p>
+<div id="container">
+<%= render(:partial => "shared/header") %>
 
 
-<span id="left">
-<strong>Job Successfully Created</strong>
-  <br><br>
-    <p>Currently Running Ads: <a href="#">0</a></p>
-    <p>Saved Ads: <a href="#"><%= @user.jobPostings.length %></a></p>
-    <p><strong>Next Steps:</strong><br><a href="#">Buy Credits</a><br><a href="#">Apply Credits</a></p>
+<div id="content">
+ <%= render(:partial => "create") %>
+</div>
+<div id="footer">
+</div>
 
-      
-    
-  </span>
-  <span id="right">
-    <p><%= link_to "Create Another Ad?", :controller=>'job_posting', :action=>"addJob" %>
-      <%= link_to "View Your Profile?", :controller=>'user', :action=>'index' %>
-</p>
-  </span>
+</div>

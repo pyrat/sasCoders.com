@@ -45,11 +45,11 @@ class User < ActiveRecord::Base
   end
 
   #'password' is a virtual attribute i.e. not in the db
-  def password
+  def password # getter
     @password
   end
 
-  def password=(pwd)
+  def password=(pwd) # setter
     @password = pwd
     return if pwd.blank?
     create_new_salt
@@ -60,6 +60,31 @@ class User < ActiveRecord::Base
   def password_confirmation=(p)
     return if p.blank?
     @password_confirmation = p
+  end
+  
+  # next three virtual attributes, just getters
+  def jobs_awaiting_approval
+    a = Array.new
+	self.jobPostings.each do |j|
+	  a.push(j) if !j.approved?
+	end
+	a
+  end
+  
+  def jobs_expired
+    a = Array.new
+	self.jobPostings.each do |j|
+	  a.push(j) if j.end_date < Time.now
+	end
+	a
+  end
+  
+  def jobs_running
+    a = Array.new
+	self.jobPostings.each do |j|
+	  a.push(j) if j.end_date >= Time.now
+	end
+	a
   end
 
     

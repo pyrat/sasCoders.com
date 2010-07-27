@@ -1,0 +1,21 @@
+
+<p>
+ job title: <%= @job.title %>
+</p>
+
+
+<span id="left">
+<strong>Job Successfully Created</strong>
+  <br><br>
+    <p>Currently Running Ads: <%= link_to "#{@user.jobs_running.length}", :controller=>'user', :action=>'manage_ads' %></p>
+    <p>Saved Ads: <%= link_to "#{@user.jobPostings.length}", :controller=>'user', :action=>'manage_ads' %></a></p>
+    <p><strong>Next Steps:</strong><br><a href="#">Buy Credits</a><br><<%= link_to "Apply Credits To This Job", :action=>'apply_credit', :id=>@job %></p>
+
+      
+    
+  </span>
+  <span id="right">
+    <p><%= link_to "Create Another Ad?", :controller=>'job_posting', :action=>"addJob" %>
+      <%= link_to "View Your Profile?", :controller=>'user', :action=>'index' %>
+</p>
+  </span>

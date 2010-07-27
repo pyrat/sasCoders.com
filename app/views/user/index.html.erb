@@ -1,19 +1,11 @@
-<span id="left">
-<strong>Your Profile</strong>
-  <br><br>
-    <p>Currently Running Ads: <a href="#">0</a></p>
-    <p>Saved Ads: <a href="#"><%= @user.jobPostings.length %></a></p>
-	<p><%= link_to "Manage Ads", :controller=>'user', :action=>'manage_ads' %></p>
-	<ul class="simple">
-      <li>Name: <%= "#{@user.first_name} #{@user.last_name}" %></li>
-      <li>Company: <%= @user.company %></li>
-	  <li>Web Site: <%= @user.web_site %></li>
-      <li>Company Description: <%= @user.company_description %></li>
-	  <li><%= link_to 'edit profile', :controller=>'user', :action=>'edit' %></li>
-    </ul>
-    
-  </span>
-  <span id="right">
-    <p>Credits Available: <%= @user.credits %></p>
-    <p><a href="#">Purchase Credits</a></p>
-  </span>
+<div id="container">
+<%= render(:partial => "shared/header") %>
+
+
+<div id="content">
+ <%= render(:partial => "index") %>
+</div>
+<div id="footer">
+</div>
+
+</div>

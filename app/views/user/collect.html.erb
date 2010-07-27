@@ -1,43 +1,11 @@
-<%= flash[:notice] %><br><br>
-<%= flash[:error] %>
-<table>
+<div id="container">
+<%= render(:partial => "shared/header") %>
 
-<tr>
-	<td valign=top>
-		<h3>Register with sasCoders.com</h3>
-		<% form_tag :controller=>:user, :action=>:register do %>
-		  
-		<div class="fields">
 
-		<p><%= label_tag "Email" %>
-		<%= text_field_tag :email, params[:email], :size=>40 %>*</p>
+<div id="content">
+ <%= render(:partial => "collect") %>
+</div>
+<div id="footer">
+</div>
 
-		<p><%= label_tag "password" %>
-		<%= password_field_tag :password, params[:password] %></p>
-
-		<p><%= label_tag "password_confirmation" %>
-		<%= password_field_tag :password_confirmation, params[:password_confirmation] %></p>
-		<br><br>
-		
-		<p><%= label_tag "First Name" %>
-		<%= text_field_tag :first_name, params[:first_name], :size=>40 %></p>
-		<p><%= label_tag "Last Name" %>
-		<%= text_field_tag :last_name, params[:last_name], :size=>40 %></p>
-		<p><%= label_tag "Telephone #" %>
-		<%= text_field_tag :telephone, params[:telephone], :size=>40 %>*</p>
-		<p><%= label_tag "Company Name" %>
-		<%= text_field_tag :company, params[:company], :size=>40 %></p>
-		<p><%= label_tag "Web Site" %>
-		<%= text_field_tag :web_site, params[:web_site], :size=>40 %></p>
-		<p>Your Company Type: <%= select_tag(:company_type, options_for_select( %w{Primary Recruiter}) ) %> </p>
-		<p><%= label_tag "Company Description" %>
-		<%= text_area_tag :company_description, params[:company_description], :rows=>3 %></p>
-		
-		<%= submit_tag 'Register', :class => "button" %> 
-		<br><br>* Kept private.  Not shown on the site.
-  		</div>
-		<% end %>
-
-				</td>
-	</tr>
-</table>
+</div>

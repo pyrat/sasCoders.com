@@ -1,16 +1,11 @@
-<h1>Your Ads</h1>
-<br>
-You have <%= @user.credits %> credits.<br>
-<table>
-<tr><th>Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
-<% for job in @user.jobPostings %>
-  <tr>
-    <td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.start_run_date %> </td>
-    <td style="border-bottom-style: solid; border-width: 1px;"> <%= link_to job.title, {:controller=>'job_posting', :action=>'edit', :id=>job.id} %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.job_type %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.zip %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.short_description %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= button_to "Apply Credits", {:controller=>'job_posting', :action=>'apply_credit', :id=>job.id} %> but only include this if the job has been approved </td>
-  </tr>
-<% end %>
-</table>
+<div id="container">
+<%= render(:partial => "shared/header") %>
+
+
+<div id="content">
+ <%= render(:partial => "manage_ads") %>
+</div>
+<div id="footer">
+</div>
+
+</div>

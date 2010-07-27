@@ -84,32 +84,27 @@ class JobPostingController < ApplicationController
   def apply_credit_final
     @job = JobPosting.find(params[:id])
 	quantity = params[:quantity].to_i
-	redirect_to :back and return if quantity < 1
+	redirect_to 'user/manage_ads' and return if quantity < 1
 	# make sure the user has enough credits
 	if @user.credits < quantity
 	  flash[:notice] = "You do not have enough credits"
-	  redirect_to :back
+	  redirect_to 'user/manage_ads'
 	  return
 	end
 	if @job.approved_at.blank?
 	  flash[:notice] = "You can't apply credit to a job that hasn't been approved."
-	  redirect_to :back
+	  redirect_to 'user/manage_ads'
 	  return
 	end
 	# should we check to make sure the job actually belongs to the user?
 	# maybe in future
 	
 	# apply the credit
-	q = quantity *= 30 # each credit is 30 days
-	# if the job is expired then reset it
-	if @job.end_date.blank? || Time.today > @job.end_date
-	  @job.end_date = Time.now
-	end
-	
-	@job.end_date += q.days
+	@job.apply_credit!(quantity)
 	flash[:notice] = "Successfully applied the credit"
 	@user.credits -= quantity
-	redirect_to :back and return
+	@user.save
+	redirect_to 'user/manage_ads' and return
 	
 	
   end
