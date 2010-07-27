@@ -100,14 +100,15 @@ class JobPostingController < ApplicationController
 	# maybe in future
 	
 	# apply the credit
-	quantity *= 30 # each credit is 30 days
+	q = quantity *= 30 # each credit is 30 days
 	# if the job is expired then reset it
 	if @job.end_date.blank? || Time.today > @job.end_date
-	  @job.end_date = Time.today
+	  @job.end_date = Time.now
 	end
 	
-	@job.end_date += quantity.days
+	@job.end_date += q.days
 	flash[:notice] = "Successfully applied the credit"
+	@user.credits -= quantity
 	redirect_to :back and return
 	
 	
