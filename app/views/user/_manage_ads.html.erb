@@ -17,7 +17,7 @@ You have <%= @user.credits %> credits.<br>
 <hr>
 <strong>Expired Ads</strong>
 <table>
-<tr>th>Start Date</th> <th>Expiration Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
+<tr><th>Start Date</th> <th>Expiration Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
 <% for job in @user.jobs_expired %>
   <tr>
     <td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.start_run_date %> </td>

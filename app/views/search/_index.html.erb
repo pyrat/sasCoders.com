@@ -14,7 +14,7 @@
     <td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.start_run_date %> </td>
     <td style="border-bottom-style: solid; border-width: 1px;"> <%= link_to job.title, {:controller=>'search', :action=>'show', :id=>job.id} %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.job_type %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h "#{job.geo.city}, #{job.zip}" %> </td>
+	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h "#{job.city}, #{job.zip}" %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.short_description %> </td>
   </tr>
 <% end %>

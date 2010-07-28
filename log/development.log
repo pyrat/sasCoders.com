@@ -6024,3 +6024,76 @@ Migrating to AddEndToJob (20100707213035)
   [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
   [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 1) [0m
   [4;35;1mJobPosting Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Google geocoding. Address: 90278. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>90278</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (41.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+Migrating to CreateJobPostings (20100224234214)
+Migrating to CreateInvoices (20100224234307)
+Migrating to AddLatLngToJobPosting (20100603230333)
+Migrating to RenameTypeInJobPostings (20100603235743)
+Migrating to AddOwnerIdToJobPosts (20100604204939)
+Migrating to ModifyJobPostingsTable (20100608175854)
+Migrating to ModifyUserTable (20100621231040)
+Migrating to UpdateJobPostings (20100623180921)
+Migrating to CreateUserJobJoin (20100629193201)
+Migrating to AddEndToJob (20100707213035)
+Migrating to AddCityToJob (20100727233847)
+  [4;36;1mSQL (98.7ms)[0m   [0;1mALTER TABLE `job_postings` ADD `city` varchar(255)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100727233847')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW FIELDS FROM `invoices`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `invoices`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW KEYS FROM `invoices`[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mdescribe `job_postings`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `job_postings`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJobPosting Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mJobPosting Update (0.5ms)[0m   [0mUPDATE `job_postings` SET `start_run_date` = '2010-07-28 18:09:27', `approved_at` = '2010-07-28 18:09:27', `updated_at` = '2010-07-28 18:09:27' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJobPosting Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.7ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJobPosting Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (1.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mJobPosting Update (0.3ms)[0m   [0mUPDATE `job_postings` SET `start_run_date` = '2010-07-28 18:46:28', `end_date` = '2010-08-27 18:46:28', `updated_at` = '2010-07-28 18:46:28' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m

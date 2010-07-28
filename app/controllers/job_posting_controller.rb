@@ -34,10 +34,12 @@ class JobPostingController < ApplicationController
 	  # we will have to change this for out-of-US jobs
 	  @job.lat = -18.271835
 	  @job.lng = 177.90255
+	  @job.city = 'telecommute'
 	else
 	  geo = MultiGeocoder.geocode(@job.zip)
 	  @job.lat = geo.lat
 	  @job.lng = geo.lng
+	  @job.city = geo.city
 	end
 	@job.save # there is no job.id until it is saved
 	@job.reference_id = "#{@job.id}sasCoders#{@job.user_id}"
@@ -61,10 +63,12 @@ class JobPostingController < ApplicationController
 	  # we will have to change this for out-of-US jobs
 	  job.lat = -18.271835
 	  job.lng = 177.90255
+	  job.city = 'telecommute'
 	else
 	  geo = MultiGeocoder.geocode(job.zip)
 	  job.lat = geo.lat
 	  job.lng = geo.lng
+	  job.city = geo.city
 	end
 	currentJob = JobPosting.find(params[:id])
 	currentJob.update_attributes(job.attributes)
@@ -84,16 +88,16 @@ class JobPostingController < ApplicationController
   def apply_credit_final
     @job = JobPosting.find(params[:id])
 	quantity = params[:quantity].to_i
-	redirect_to 'user/manage_ads' and return if quantity < 1
+	redirect_to '/user/manage_ads' and return if quantity < 1
 	# make sure the user has enough credits
 	if @user.credits < quantity
 	  flash[:notice] = "You do not have enough credits"
-	  redirect_to 'user/manage_ads'
+	  redirect_to '/user/manage_ads' and return
 	  return
 	end
 	if @job.approved_at.blank?
 	  flash[:notice] = "You can't apply credit to a job that hasn't been approved."
-	  redirect_to 'user/manage_ads'
+	  redirect_to '/user/manage_ads' and return
 	  return
 	end
 	# should we check to make sure the job actually belongs to the user?
@@ -104,7 +108,7 @@ class JobPostingController < ApplicationController
 	flash[:notice] = "Successfully applied the credit"
 	@user.credits -= quantity
 	@user.save
-	redirect_to 'user/manage_ads' and return
+	redirect_to '/user/manage_ads' and return
 	
 	
   end
