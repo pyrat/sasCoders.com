@@ -41,6 +41,7 @@ class JobPostingController < ApplicationController
 	  @job.lng = geo.lng
 	  @job.city = geo.city
 	end
+	@job.approve!  # just approving all new jobs for now
 	@job.save # there is no job.id until it is saved
 	@job.reference_id = "#{@job.id}sasCoders#{@job.user_id}"
 	@job.save

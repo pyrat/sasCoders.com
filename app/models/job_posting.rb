@@ -11,7 +11,7 @@ class JobPosting < ActiveRecord::Base
  end
  
  def active?
-   if !end_date.blank? and Time.now <= end_date and start_date <= Time.now
+   if !end_date.blank? and Time.now <= end_date and start_run_date <= Time.now
      true
    end
  end

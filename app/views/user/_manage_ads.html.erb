@@ -1,4 +1,4 @@
-<h1>Your Ads</h1>
+<h1>Your Ads</h1> <%= link_to "Create New Ad", :controller=>'job_posting', :action=>"addJob" %>
 <br>
 You have <%= @user.credits %> credits.<br>
 <strong>Jobs Awaiting Approval</strong>
@@ -6,10 +6,10 @@ You have <%= @user.credits %> credits.<br>
 <tr><th>Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
 <% for job in @user.jobs_awaiting_approval %>
   <tr>
-    <td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.start_run_date %> </td>
+    <td style="border-bottom-style: solid; border-width: 1px;"> <%= job.start_run_date.strftime("%m/%d/%y") %> </td>
     <td style="border-bottom-style: solid; border-width: 1px;"> <%= link_to job.title, {:controller=>'job_posting', :action=>'edit', :id=>job.id} %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.job_type %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.zip %> </td>
+	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h "#{job.city},#{job.zip}" %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.short_description %> </td>
   </tr>
 <% end %>
@@ -20,11 +20,11 @@ You have <%= @user.credits %> credits.<br>
 <tr><th>Start Date</th> <th>Expiration Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
 <% for job in @user.jobs_expired %>
   <tr>
-    <td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.start_run_date %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.end_date %> </td>
+    <td style="border-bottom-style: solid; border-width: 1px;"> <%= job.start_run_date.strftime("%m/%d/%y") %> </td>
+	<td style="border-bottom-style: solid; border-width: 1px;"> <%= job.end_date.strftime("%m/%d/%y") %> </td>
     <td style="border-bottom-style: solid; border-width: 1px;"> <%= link_to job.title, {:controller=>'job_posting', :action=>'edit', :id=>job.id} %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.job_type %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.zip %> </td>
+	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h "#{job.city},#{job.zip}" %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.short_description %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= button_to "Apply Credits", {:controller=>'job_posting', :action=>'apply_credit', :id=>job.id} %></td>
   </tr>
@@ -33,14 +33,14 @@ You have <%= @user.credits %> credits.<br>
 <hr>
 <strong>Currently Running Ads</strong>
 <table>
-<tr><th>Start Date</th><th>Expiration Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
+<tr><th>Start Date</th><th>Expires In</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
 <% for job in @user.jobs_running %>
   <tr>
     <td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.start_run_date %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.end_date %> </td>
+	<td style="border-bottom-style: solid; border-width: 1px;"> <%= distance_of_time_in_words(Time.now, job.end_date) %> </td>
     <td style="border-bottom-style: solid; border-width: 1px;"> <%= link_to job.title, {:controller=>'job_posting', :action=>'edit', :id=>job.id} %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.job_type %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.zip %> </td>
+	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h "#{job.city},#{job.zip}" %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.short_description %> </td>
 	<td style="border-bottom-style: solid; border-width: 1px;"> <%= button_to "Apply Credits", {:controller=>'job_posting', :action=>'apply_credit', :id=>job.id} %>  </td>
   </tr>

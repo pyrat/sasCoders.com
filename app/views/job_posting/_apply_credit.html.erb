@@ -33,7 +33,7 @@
   <div id="right">
     <p>You have <%= @user.credits %> credits.</p>
     <p><% form_tag :controller=>:job_posting, :action=>:apply_credit_final, :id => @job do %>
-	     Apply <%= text_field_tag :quantity, '1' %> credits to this job.
+	     Apply <%= text_field_tag :quantity, '1', :size=>2 %> credits to this job.
 		 <%= submit_tag %>
 	   <% end %>
 	</p>

@@ -6097,3 +6097,50 @@ Migrating to AddCityToJob (20100727233847)
   [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
   [4;35;1mJobPosting Update (0.3ms)[0m   [0mUPDATE `job_postings` SET `start_run_date` = '2010-07-28 18:46:28', `end_date` = '2010-08-27 18:46:28', `updated_at` = '2010-07-28 18:46:28' WHERE `id` = 1[0m
   [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mJobPosting Columns (3.4ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.5ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-07-29 16:44:15) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (2.4ms)
+Rendered site/_content (1.5ms)
+Rendered shared/_sidebar (2.4ms)
+Completed in 43ms (View: 41, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#coders (for 127.0.0.1 at 2010-07-29 16:44:46) [GET]
+Rendering template within layouts/application
+Rendering site/coders
+Rendered shared/_header (9.0ms)
+Rendered site/_coders (0.4ms)
+Rendered shared/_sidebar (0.9ms)
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/site/coders]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-07-29 16:44:55) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (0.8ms)
+Rendered site/_employers (0.4ms)
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-07-29 16:47:30) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (2.0ms)
+Rendered site/_content (1.4ms)
+Rendered shared/_sidebar (0.8ms)
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/]

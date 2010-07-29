@@ -1,5 +1,5 @@
 <div id="header">
-sasCoders.com<br>
+sasCoders.com  Specializing in SAS jobs for SAS Coders and Programmers<br>
 <% if session[:user_id] %>
   hello <%= @user.first_name %>
   <%= link_to "Create New Ad", :controller=>'job_posting', :action=>"addJob" %> | 
@@ -10,8 +10,8 @@ sasCoders.com<br>
   <% form_tag :controller=> :user, :action=> :login do %>
      Email <%= text_field_tag(:email, nil, :size=>10, :class=>"admin") %> &nbsp;
 	 Password <%= password_field_tag(:pw, nil, :size=>8, :class=>"admin") %>
-     <%= submit_tag "login" %> |
-	 <%= link_to 'register', :controller=>'user', :action=>'collect' %>
+     <%= submit_tag "login" %> or
+	 <%= button_to 'register', :controller=>'user', :action=>'collect' %>
   <% end %>
 <% end %>
 <br>
