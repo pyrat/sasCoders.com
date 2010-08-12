@@ -11,8 +11,8 @@ sasCoders.com  Specializing in SAS jobs for SAS Coders and Programmers<br>
      Email <%= text_field_tag(:email, nil, :size=>10, :class=>"admin") %> &nbsp;
 	 Password <%= password_field_tag(:pw, nil, :size=>8, :class=>"admin") %>
      <%= submit_tag "login" %> or
-	 <%= button_to 'register', :controller=>'user', :action=>'collect' %>
   <% end %>
+  <%= button_to 'register', :controller=>'user', :action=>'collect' %>
 <% end %>
 <br>
 <%= flash[:notice] %><br>

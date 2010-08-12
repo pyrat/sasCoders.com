@@ -3,8 +3,9 @@ heroku db:reset --app hollow-meadow-93
 heroku rake db:migrate
 
 What other actions need to be done?
-jobs admin(manage) page/ jobs edit page
-
+Are telecommute handled correctly?
+Allow searchers to apply for jobs through the site.
+User Profile-- show all invoices, delete any pending invoices
 
   
 - link edit profile to user index
@@ -16,3 +17,13 @@ Recruiter display page
   ActiveMerchant/ payPal gateway?-- website payment pro
   sudo gem install and installed plugin
   adding to gem manifest file  
+  
+  Signed up for sandbox account: swelltrain@gmail.com/cracker8
+  buyer acct:swellt_1280946228_per@gmail.com/ 280946180
+  merchant account: stephen@stephenphilp.com/cracker8
+  API signature: stephen_api1.stephenphilp.com
+  API password: 	CXUEKU4HPWQMHDZH
+  Signature: AFrZExOj4oZJL0pjnjNubvZe6wS.AkaUXiolJyCCQulCZGN5GdaacSOy
+## Right now just using express checkout, implement payment pro next
+
+  

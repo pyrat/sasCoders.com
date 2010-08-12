@@ -6144,3 +6144,869 @@ Rendered shared/_header (2.0ms)
 Rendered site/_content (1.4ms)
 Rendered shared/_sidebar (0.8ms)
 Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (73.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-11 11:23:40) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (21.4ms)
+Rendered site/_content (20.7ms)
+Rendered shared/_sidebar (6.6ms)
+Completed in 129ms (View: 126, DB: 77) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-11 11:23:48) [GET]
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/buy_credits]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-11 13:37:35) [GET]
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://localhost/buy_credits]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-11 13:44:12) [GET]
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/buy_credits]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-11 13:45:04) [GET]
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/buy_credits]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-11 16:21:13) [GET]
+
+SyntaxError (/Users/stephen/Desktop/rails/sasCoders/app/controllers/buy_credits_controller.rb:62: syntax error, unexpected tSYMBEG, expecting ')'
+	  :password  => 'CXUEKU4HPWQMHDZH'
+	   ^
+/Users/stephen/Desktop/rails/sasCoders/app/controllers/buy_credits_controller.rb:63: syntax error, unexpected tASSOC, expecting kEND
+	  :signature => 'AFrZExOj4oZJL0pjnjNubvZe6wS....
+	               ^
+/Users/stephen/Desktop/rails/sasCoders/app/controllers/buy_credits_controller.rb:64: syntax error, unexpected ')', expecting kEND):
+  
+
+Rendered rescues/_trace (54.0ms)
+Rendered rescues/_request_and_response (2.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-11 16:22:00) [GET]
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/buy_credits]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#checkout (for 127.0.0.1 at 2010-08-11 16:22:09) [POST]
+  Parameters: {"x"=>"79", "n"=>"2", "y"=>"10", "authenticity_token"=>"WRZ/dNQjGP7DKguJTRju70xyt+NMfXrwdLs4zVQVO/c="}
+
+NameError (undefined local variable or method `n' for #<BuyCreditsController:0x273a210>):
+  app/controllers/buy_credits_controller.rb:10:in `checkout'
+
+Rendered rescues/_trace (31.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#checkout (for 127.0.0.1 at 2010-08-11 16:23:11) [POST]
+  Parameters: {"x"=>"79", "n"=>"2", "y"=>"10", "authenticity_token"=>"WRZ/dNQjGP7DKguJTRju70xyt+NMfXrwdLs4zVQVO/c="}
+
+ArgumentError (illegal radix 99):
+  app/controllers/buy_credits_controller.rb:10:in `to_i'
+  app/controllers/buy_credits_controller.rb:10:in `checkout'
+
+Rendered rescues/_trace (35.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#checkout (for 127.0.0.1 at 2010-08-11 16:27:13) [POST]
+  Parameters: {"x"=>"79", "n"=>"2", "y"=>"10", "authenticity_token"=>"WRZ/dNQjGP7DKguJTRju70xyt+NMfXrwdLs4zVQVO/c="}
+Redirected to https://www.paypal.com/cgibin/webscr?cmd=_express-checkout&token=
+Completed in 544ms (DB: 0) | 302 Found [http://localhost/buy_credits/checkout]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#checkout (for 127.0.0.1 at 2010-08-11 16:28:49) [POST]
+  Parameters: {"x"=>"106", "n"=>"2", "y"=>"9", "authenticity_token"=>"WRZ/dNQjGP7DKguJTRju70xyt+NMfXrwdLs4zVQVO/c="}
+Redirected to https://www.paypal.com/cgibin/webscr?cmd=_express-checkout&token=
+Completed in 436ms (DB: 0) | 302 Found [http://localhost/buy_credits/checkout]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-11 16:31:37) [GET]
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/buy_credits]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#checkout (for 127.0.0.1 at 2010-08-11 16:31:44) [POST]
+  Parameters: {"x"=>"111", "n"=>"2", "y"=>"13", "authenticity_token"=>"WRZ/dNQjGP7DKguJTRju70xyt+NMfXrwdLs4zVQVO/c="}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-12X35979L56968045
+Completed in 900ms (DB: 0) | 302 Found [http://localhost/buy_credits/checkout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#confirm (for 127.0.0.1 at 2010-08-11 16:32:57) [GET]
+  Parameters: {"token"=>"EC-12X35979L56968045", "PayerID"=>"ZD8KCEW47BFAG"}
+#<ActiveMerchant::Billing::PaypalExpressResponse:0x2640800 @test=true, @authorization=nil, @message="Success", @cvv_result={"message"=>nil, "code"=>nil}, @fraud_review=false, @params={"order_total_currency_id"=>"USD", "name"=>"Test User", "timestamp"=>"2010-08-11T23:32:58Z", "shipping_total_currency_id"=>"USD", "shipping_total"=>"0.00", "state_or_province"=>"CA", "payer_country"=>"US", "address_owner"=>"PayPal", "postal_code"=>"95131", "salutation"=>nil, "correlation_id"=>"a5ba99e89793f", "insurance_total"=>"0.00", "payer_business"=>nil, "build"=>"1421734", "token"=>"EC-12X35979L56968045", "handling_total"=>"0.00", "payer"=>"swellt_1280946228_per@gmail.com", "street1"=>"1 Main St", "tax_total_currency_id"=>"USD", "street2"=>nil, "external_address_id"=>nil, "country"=>"US", "tax_total"=>"0.00", "shipping_discount_currency_id"=>"USD", "version"=>"59.0", "payer_status"=>"verified", "address_id"=>nil, "shipping_discount"=>"0.00", "address_status"=>"Confirmed", "phone"=>nil, "order_total"=>"50.00", "first_name"=>"Test", "country_name"=>"United States", "insurance_total_currency_id"=>"USD", "city_name"=>"San Jose", "handling_total_currency_id"=>"USD", "payer_id"=>"ZD8KCEW47BFAG", "ack"=>"Success", "last_name"=>"User", "suffix"=>nil, "middle_name"=>nil}, @success=true, @avs_result={"message"=>nil, "code"=>nil, "street_match"=>nil, "postal_match"=>nil}>
+Rendering template within layouts/application
+Rendering buy_credits/confirm
+Completed in 954ms (View: 5, DB: 0) | 200 OK [http://localhost/buy_credits/confirm?token=EC-12X35979L56968045&PayerID=ZD8KCEW47BFAG]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#complete (for 127.0.0.1 at 2010-08-11 16:33:11) [POST]
+  Parameters: {"commit"=>"Complete Payment", "token"=>"EC-12X35979L56968045", "authenticity_token"=>"WRZ/dNQjGP7DKguJTRju70xyt+NMfXrwdLs4zVQVO/c=", "payer_id"=>"ZD8KCEW47BFAG"}
+Rendering template within layouts/application
+Rendering buy_credits/complete
+Completed in 3567ms (View: 4, DB: 0) | 200 OK [http://localhost/buy_credits/complete?payer_id=ZD8KCEW47BFAG&token=EC-12X35979L56968045]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-11 16:45:32) [GET]
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/buy_credits]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#checkout (for 127.0.0.1 at 2010-08-11 16:45:39) [POST]
+  Parameters: {"x"=>"117", "n"=>"2", "y"=>"9", "authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5A6889662P8334439
+Completed in 854ms (DB: 0) | 302 Found [http://localhost/buy_credits/checkout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#confirm (for 127.0.0.1 at 2010-08-11 16:47:07) [GET]
+  Parameters: {"token"=>"EC-5A6889662P8334439", "PayerID"=>"ZD8KCEW47BFAG"}
+#<ActiveMerchant::Billing::PaypalExpressResponse:0x27926e0 @test=true, @authorization=nil, @message="Success", @cvv_result={"message"=>nil, "code"=>nil}, @fraud_review=false, @params={"order_total_currency_id"=>"USD", "name"=>"Test User", "timestamp"=>"2010-08-11T23:47:08Z", "order_description"=>"This is the description", "shipping_total_currency_id"=>"USD", "shipping_total"=>"0.00", "state_or_province"=>"CA", "payer_country"=>"US", "address_owner"=>"PayPal", "postal_code"=>"95131", "salutation"=>nil, "correlation_id"=>"967a633b57ef5", "insurance_total"=>"0.00", "payer_business"=>nil, "build"=>"1421734", "token"=>"EC-5A6889662P8334439", "handling_total"=>"0.00", "payer"=>"swellt_1280946228_per@gmail.com", "street1"=>"1 Main St", "tax_total_currency_id"=>"USD", "street2"=>nil, "external_address_id"=>nil, "country"=>"US", "tax_total"=>"0.00", "shipping_discount_currency_id"=>"USD", "version"=>"59.0", "payer_status"=>"verified", "address_id"=>nil, "shipping_discount"=>"0.00", "address_status"=>"Confirmed", "phone"=>nil, "order_total"=>"50.00", "first_name"=>"Test", "country_name"=>"United States", "insurance_total_currency_id"=>"USD", "city_name"=>"San Jose", "handling_total_currency_id"=>"USD", "payer_id"=>"ZD8KCEW47BFAG", "ack"=>"Success", "last_name"=>"User", "suffix"=>nil, "middle_name"=>nil}, @success=true, @avs_result={"message"=>nil, "code"=>nil, "street_match"=>nil, "postal_match"=>nil}>
+Rendering template within layouts/application
+Rendering buy_credits/confirm
+Completed in 1011ms (View: 1, DB: 0) | 200 OK [http://localhost/buy_credits/confirm?token=EC-5A6889662P8334439&PayerID=ZD8KCEW47BFAG]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#paypal_cancel (for 127.0.0.1 at 2010-08-11 16:47:30) [GET]
+  Parameters: {"token"=>"EC-5A6889662P8334439"}
+Rendering template within layouts/application
+Rendering buy_credits/paypal_cancel
+Completed in 23ms (View: 21, DB: 0) | 200 OK [http://localhost/buy_credits/paypal_cancel?token=EC-5A6889662P8334439]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-11 16:55:03) [GET]
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/buy_credits/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#checkout (for 127.0.0.1 at 2010-08-11 16:55:09) [POST]
+  Parameters: {"x"=>"121", "n"=>"2", "y"=>"12", "authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-4TB42105FK9284354
+Completed in 835ms (DB: 0) | 302 Found [http://localhost/buy_credits/checkout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-11 21:27:37) [GET]
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/buy_credits]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#checkout (for 127.0.0.1 at 2010-08-11 21:27:47) [POST]
+  Parameters: {"x"=>"102", "n"=>"2", "y"=>"14", "authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5Y624647FN0910528
+Completed in 935ms (DB: 0) | 302 Found [http://localhost/buy_credits/checkout]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+Migrating to CreateJobPostings (20100224234214)
+Migrating to CreateInvoices (20100224234307)
+Migrating to AddLatLngToJobPosting (20100603230333)
+Migrating to RenameTypeInJobPostings (20100603235743)
+Migrating to AddOwnerIdToJobPosts (20100604204939)
+Migrating to ModifyJobPostingsTable (20100608175854)
+Migrating to ModifyUserTable (20100621231040)
+Migrating to UpdateJobPostings (20100623180921)
+Migrating to CreateUserJobJoin (20100629193201)
+Migrating to AddEndToJob (20100707213035)
+Migrating to AddCityToJob (20100727233847)
+Migrating to AddUserToInvoice (20100812044606)
+  [4;36;1mSQL (141.5ms)[0m   [0;1mALTER TABLE `invoices` ADD `user_id` int(11)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100812044606')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `invoices`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `invoices`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `invoices`[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mdescribe `job_postings`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `job_postings`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (4.9ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+Migrating to CreateJobPostings (20100224234214)
+Migrating to CreateInvoices (20100224234307)
+Migrating to AddLatLngToJobPosting (20100603230333)
+Migrating to RenameTypeInJobPostings (20100603235743)
+Migrating to AddOwnerIdToJobPosts (20100604204939)
+Migrating to ModifyJobPostingsTable (20100608175854)
+Migrating to ModifyUserTable (20100621231040)
+Migrating to UpdateJobPostings (20100623180921)
+Migrating to CreateUserJobJoin (20100629193201)
+Migrating to AddEndToJob (20100707213035)
+Migrating to AddCityToJob (20100727233847)
+Migrating to AddUserToInvoice (20100812044606)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (71.0ms)[0m   [0mSHOW FIELDS FROM `invoices`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mdescribe `invoices`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `invoices`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mdescribe `job_postings`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW KEYS FROM `job_postings`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddUserToInvoice (20100812044606)
+  [4;36;1mSQL (111.6ms)[0m   [0;1mALTER TABLE `invoices` DROP `user_id`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100812044606'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW FIELDS FROM `invoices`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mdescribe `invoices`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `invoices`[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mdescribe `job_postings`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `job_postings`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+Migrating to CreateJobPostings (20100224234214)
+Migrating to CreateInvoices (20100224234307)
+Migrating to AddLatLngToJobPosting (20100603230333)
+Migrating to RenameTypeInJobPostings (20100603235743)
+Migrating to AddOwnerIdToJobPosts (20100604204939)
+Migrating to ModifyJobPostingsTable (20100608175854)
+Migrating to ModifyUserTable (20100621231040)
+Migrating to UpdateJobPostings (20100623180921)
+Migrating to CreateUserJobJoin (20100629193201)
+Migrating to AddEndToJob (20100707213035)
+Migrating to AddCityToJob (20100727233847)
+Migrating to AddUserToInvoice (20100812044606)
+  [4;36;1mSQL (186.4ms)[0m   [0;1mALTER TABLE `invoices` ADD `user_id` int(11)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100812044606')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSHOW FIELDS FROM `invoices`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `invoices`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `invoices`[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mdescribe `job_postings`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `job_postings`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddUserToInvoice (20100812044606)
+  [4;36;1mSQL (188.8ms)[0m   [0;1mALTER TABLE `invoices` DROP `user_id`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100812044606'[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW FIELDS FROM `invoices`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mdescribe `invoices`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `invoices`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mdescribe `job_postings`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `job_postings`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `roles_users`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW KEYS FROM `roles_users`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+Migrating to CreateJobPostings (20100224234214)
+Migrating to CreateInvoices (20100224234307)
+Migrating to AddLatLngToJobPosting (20100603230333)
+Migrating to RenameTypeInJobPostings (20100603235743)
+Migrating to AddOwnerIdToJobPosts (20100604204939)
+Migrating to ModifyJobPostingsTable (20100608175854)
+Migrating to ModifyUserTable (20100621231040)
+Migrating to UpdateJobPostings (20100623180921)
+Migrating to CreateUserJobJoin (20100629193201)
+Migrating to AddEndToJob (20100707213035)
+Migrating to AddCityToJob (20100727233847)
+Migrating to AddUserToInvoice (20100812044606)
+  [4;36;1mSQL (428.6ms)[0m   [0;1mALTER TABLE `invoices` ADD `user_id` int(11)[0m
+  [4;35;1mSQL (140.6ms)[0m   [0mALTER TABLE `invoices` ADD `status` varchar(255)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100812044606')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `invoices`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `invoices`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `invoices`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mdescribe `job_postings`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `job_postings`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-12 10:20:50) [GET]
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 286ms (View: 284, DB: 0) | 200 OK [http://localhost/buy_credits]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#checkout (for 127.0.0.1 at 2010-08-12 10:20:59) [POST]
+  Parameters: {"x"=>"108", "n"=>"2", "y"=>"14", "authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+  [4;36;1mInvoice Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `invoices`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mInvoice Create (0.4ms)[0m   [0;1mINSERT INTO `invoices` (`billed_date`, `status`, `updated_at`, `product`, `amount`, `user_id`, `created_at`) VALUES(NULL, 'pending', '2010-08-12 17:20:59', '2', 198000, 1, '2010-08-12 17:20:59')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+
+NoMethodError (undefined method `amt' for #<Invoice:0x2704a70>):
+  app/controllers/buy_credits_controller.rb:21:in `checkout'
+
+Rendered rescues/_trace (32.6ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#checkout (for 127.0.0.1 at 2010-08-12 11:19:09) [POST]
+  Parameters: {"x"=>"94", "n"=>"2", "y"=>"12", "authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+  [4;36;1mInvoice Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `invoices`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mInvoice Create (0.3ms)[0m   [0;1mINSERT INTO `invoices` (`billed_date`, `status`, `updated_at`, `product`, `amount`, `user_id`, `created_at`) VALUES(NULL, 'pending', '2010-08-12 18:19:09', '2', 198000, 1, '2010-08-12 18:19:09')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7T8971853F854532K
+Completed in 931ms (DB: 3) | 302 Found [http://localhost/buy_credits/checkout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#confirm (for 127.0.0.1 at 2010-08-12 11:20:50) [GET]
+  Parameters: {"token"=>"EC-7T8971853F854532K", "PayerID"=>"ZD8KCEW47BFAG"}
+#<ActiveMerchant::Billing::PaypalExpressResponse:0x24fdd6c @test=true, @authorization=nil, @message="Success", @cvv_result={"message"=>nil, "code"=>nil}, @fraud_review=false, @params={"shipping_total_currency_id"=>"USD", "name"=>"Test User", "timestamp"=>"2010-08-12T18:20:51Z", "order_total_currency_id"=>"USD", "address_owner"=>"PayPal", "payer_country"=>"US", "postal_code"=>"95131", "shipping_total"=>"0.00", "state_or_province"=>"CA", "insurance_total"=>"0.00", "salutation"=>nil, "correlation_id"=>"50da1ef4e12c", "build"=>"1421734", "handling_total"=>"0.00", "payer"=>"swellt_1280946228_per@gmail.com", "street1"=>"1 Main St", "payer_business"=>nil, "token"=>"EC-7T8971853F854532K", "street2"=>nil, "external_address_id"=>nil, "tax_total_currency_id"=>"USD", "country"=>"US", "tax_total"=>"0.00", "payer_status"=>"verified", "version"=>"59.0", "address_id"=>nil, "shipping_discount_currency_id"=>"USD", "address_status"=>"Confirmed", "phone"=>nil, "shipping_discount"=>"0.00", "first_name"=>"Test", "order_total"=>"1980.00", "ack"=>"Success", "payer_id"=>"ZD8KCEW47BFAG", "country_name"=>"United States", "insurance_total_currency_id"=>"USD", "last_name"=>"User", "city_name"=>"San Jose", "handling_total_currency_id"=>"USD", "suffix"=>nil, "middle_name"=>nil}, @success=true, @avs_result={"message"=>nil, "code"=>nil, "street_match"=>nil, "postal_match"=>nil}>
+Rendering template within layouts/application
+Rendering buy_credits/confirm
+Completed in 1015ms (View: 69, DB: 0) | 200 OK [http://localhost/buy_credits/confirm?token=EC-7T8971853F854532K&PayerID=ZD8KCEW47BFAG]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#complete (for 127.0.0.1 at 2010-08-12 11:29:37) [POST]
+  Parameters: {"commit"=>"Complete Payment", "token"=>"EC-7T8971853F854532K", "authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE=", "payer_id"=>"ZD8KCEW47BFAG"}
+
+NameError (uninitialized constant BuyCreditsController::Invoices):
+  app/controllers/buy_credits_controller.rb:47:in `complete'
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mInvoice Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `invoices`[0m
+  [4;35;1mInvoice Load (0.9ms)[0m   [0mSELECT * FROM `invoices` WHERE (`invoices`.`id` = 1) [0m
+  [4;36;1mInvoice Load (0.4ms)[0m   [0;1mSELECT * FROM `invoices` WHERE (`invoices`.`id` = 2) [0m
+  [4;35;1mInvoice Delete all (1.1ms)[0m   [0mDELETE FROM `invoices` WHERE (`id` IN (2)) [0m
+  [4;36;1mInvoice Load (0.4ms)[0m   [0;1mSELECT * FROM `invoices` WHERE (`invoices`.`id` = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-12 11:37:59) [GET]
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/buy_credits/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#checkout (for 127.0.0.1 at 2010-08-12 11:38:08) [POST]
+  Parameters: {"x"=>"91", "n"=>"2", "y"=>"15", "authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+  [4;36;1mInvoice Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `invoices`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mInvoice Create (0.3ms)[0m   [0;1mINSERT INTO `invoices` (`billed_date`, `status`, `updated_at`, `product`, `amount`, `user_id`, `created_at`) VALUES(NULL, 'pending', '2010-08-12 18:38:08', '2', 19800, 1, '2010-08-12 18:38:08')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-8FL51809CT606605Y
+Completed in 851ms (DB: 3) | 302 Found [http://localhost/buy_credits/checkout]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#confirm (for 127.0.0.1 at 2010-08-12 11:38:50) [GET]
+  Parameters: {"token"=>"EC-8FL51809CT606605Y", "PayerID"=>"ZD8KCEW47BFAG"}
+
+NoMethodError (undefined method `order_total' for #<ActiveMerchant::Billing::PaypalExpressResponse:0x2601e34>):
+  app/controllers/buy_credits_controller.rb:41:in `confirm'
+
+Rendered rescues/_trace (36.4ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mInvoice Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `invoices`[0m
+  [4;35;1mInvoice Load (0.3ms)[0m   [0mSELECT * FROM `invoices` WHERE (`invoices`.`id` = 1) [0m
+  [4;36;1mInvoice Load (0.4ms)[0m   [0;1mSELECT * FROM `invoices` WHERE (`invoices`.`id` = 2) [0m
+  [4;35;1mInvoice Load (0.5ms)[0m   [0mSELECT * FROM `invoices` WHERE (`invoices`.`id` = 3) [0m
+  [4;36;1mInvoice Delete all (1.2ms)[0m   [0;1mDELETE FROM `invoices` WHERE (`id` IN (3)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-12 11:47:15) [GET]
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/buy_credits/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#checkout (for 127.0.0.1 at 2010-08-12 11:47:21) [POST]
+  Parameters: {"x"=>"94", "n"=>"2", "y"=>"11", "authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+  [4;36;1mInvoice Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `invoices`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mInvoice Create (0.3ms)[0m   [0;1mINSERT INTO `invoices` (`billed_date`, `status`, `updated_at`, `product`, `amount`, `user_id`, `created_at`) VALUES(NULL, 'pending', '2010-08-12 18:47:21', '2', 19800, 1, '2010-08-12 18:47:21')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-28J431105N806125R
+Completed in 927ms (DB: 3) | 302 Found [http://localhost/buy_credits/checkout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#confirm (for 127.0.0.1 at 2010-08-12 11:47:56) [GET]
+  Parameters: {"token"=>"EC-28J431105N806125R", "PayerID"=>"ZD8KCEW47BFAG"}
+
+NoMethodError (undefined method `order_total' for #<Hash:0x2601e20>):
+  app/controllers/buy_credits_controller.rb:41:in `confirm'
+
+Rendered rescues/_trace (36.7ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-12 11:54:43) [GET]
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/buy_credits/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#checkout (for 127.0.0.1 at 2010-08-12 11:55:58) [POST]
+  Parameters: {"x"=>"112", "n"=>"2", "y"=>"0", "authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+  [4;36;1mInvoice Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `invoices`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mInvoice Create (0.2ms)[0m   [0;1mINSERT INTO `invoices` (`billed_date`, `status`, `updated_at`, `product`, `amount`, `user_id`, `created_at`) VALUES(NULL, 'pending', '2010-08-12 18:55:58', '2', 19800, 1, '2010-08-12 18:55:58')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-2N419960L0731062P
+Completed in 1654ms (DB: 3) | 302 Found [http://localhost/buy_credits/checkout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#confirm (for 127.0.0.1 at 2010-08-12 11:56:24) [GET]
+  Parameters: {"token"=>"EC-2N419960L0731062P", "PayerID"=>"ZD8KCEW47BFAG"}
+  [4;36;1mInvoice Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `invoices`[0m
+  [4;35;1mInvoice Load (1.4ms)[0m   [0mSELECT * FROM `invoices` WHERE (`invoices`.`id` = 5) [0m
+Rendering template within layouts/application
+Rendering buy_credits/confirm
+Completed in 947ms (View: 6, DB: 3) | 200 OK [http://localhost/buy_credits/confirm?token=EC-2N419960L0731062P&PayerID=ZD8KCEW47BFAG]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#complete (for 127.0.0.1 at 2010-08-12 11:57:29) [POST]
+  Parameters: {"commit"=>"Complete Payment", "token"=>"EC-2N419960L0731062P", "authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE=", "payer_id"=>"ZD8KCEW47BFAG"}
+  [4;36;1mInvoice Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `invoices`[0m
+  [4;35;1mInvoice Load (1.3ms)[0m   [0mSELECT * FROM `invoices` WHERE (`invoices`.`id` = 5) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mInvoice Update (0.4ms)[0m   [0mUPDATE `invoices` SET `billed_date` = '2010-08-12 18:57:33', `status` = 'paid', `updated_at` = '2010-08-12 18:57:34' WHERE `id` = 5[0m
+  [4;36;1mSQL (30.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering buy_credits/complete
+Completed in 4296ms (View: 6, DB: 34) | 200 OK [http://localhost/buy_credits/complete?payer_id=ZD8KCEW47BFAG&token=EC-2N419960L0731062P]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-12 12:18:17) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (2.3ms)
+Rendered site/_content (1.6ms)
+Rendered shared/_sidebar (2.4ms)
+Completed in 27ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-08-12 12:18:22) [POST]
+  Parameters: {"authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (0.8ms)
+Rendered user/_collect (3.3ms)
+Completed in 15ms (View: 14, DB: 2) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-08-12 12:23:03) [POST]
+  Parameters: {"authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (0.8ms)
+Rendered user/_collect (3.4ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-08-12 12:26:24) [POST]
+  Parameters: {"authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (0.8ms)
+Rendered user/_collect (3.4ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-08-12 12:27:28) [POST]
+  Parameters: {"authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (0.8ms)
+Rendered user/_collect (1.2ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-08-12 12:27:47) [POST]
+  Parameters: {"authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (0.9ms)
+Rendered user/_collect (3.6ms)
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-08-12 12:27:56) [POST]
+  Parameters: {"authenticity_token"=>"pDAAK0HglYAt1X2vjF2Q9bX1Ujgz9rA1T883stWLTVE="}
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (0.8ms)
+Rendered user/_collect (3.5ms)
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-12 12:29:36) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.8ms)
+Rendered site/_content (0.3ms)
+Rendered shared/_sidebar (59.8ms)
+Completed in 64ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-08-12 12:29:41) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.2ms)
+Rendered site/_employers (8.6ms)
+Completed in 41ms (View: 39, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-08-12 13:14:59) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (0.8ms)
+Rendered site/_employers (0.8ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-08-12 13:16:16) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (0.8ms)
+Rendered site/_employers (0.8ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-08-12 13:32:15) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (0.9ms)
+Rendered site/_employers (1.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#coders (for 127.0.0.1 at 2010-08-12 13:33:39) [GET]
+Rendering template within layouts/application
+Rendering site/coders
+Rendered shared/_header (0.7ms)
+Rendered site/_coders (0.5ms)
+Rendered shared/_sidebar (0.8ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/site/coders]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-08-12 13:34:48) [GET]
+  Parameters: {"city"=>"", "within"=>"10", "zip"=>"", "commit"=>"Search", "country"=>"", "telecommute"=>"include", "state"=>""}
+Google geocoding. Address:    . Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>   </name>
+  <Status>
+    <code>602</code>
+    <request>geocode</request>
+  </Status>
+</Response></kml>
+Google was unable to geocode address:    
+Geocoder.us geocoding. Address:    . Result: 2: couldn't find this address! sorry
+geocoder.us was unable to geocode address:    
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (1.2ms)
+Rendered search/_index (18.8ms)
+Rendered shared/_sidebar (1.4ms)
+Completed in 1001ms (View: 54, DB: 0) | 200 OK [http://localhost/search?city=&state=&zip=&country=&within=10&telecommute=include&commit=Search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-08-12 13:35:18) [GET]
+  Parameters: {"city"=>"", "within"=>"10", "zip"=>"92315", "commit"=>"Search", "country"=>"", "telecommute"=>"include", "state"=>""}
+Google geocoding. Address:   92315 . Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  92315 </name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Big Bear Lake, CA 92315, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>San Bernardino</SubAdministrativeAreaName><Locality><LocalityName>Big Bear Lake</LocalityName><PostalCode><PostalCodeNumber>92315</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.2547370" south="34.2326720" east="-116.8737920" west="-116.9359010" />
+    </ExtendedData>
+    <Point><coordinates>-116.8998680,34.2423893,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mJobPosting Load (1.1ms)[0m   [0;1mSELECT *, 
+ (ACOS(least(1,COS(0.597642437034676)*COS(-2.04028759174676)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.597642437034676)*SIN(-2.04028759174676)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.597642437034676)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>34.0978194471464 AND job_postings.lat<34.3869591528536 AND job_postings.lng>-117.074751172877 AND job_postings.lng<-116.724984827123)) AND (
+ (ACOS(least(1,COS(0.597642437034676)*COS(-2.04028759174676)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.597642437034676)*SIN(-2.04028759174676)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.597642437034676)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 10)) ORDER BY distance[0m
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (1.1ms)
+Rendered search/_index (0.1ms)
+Rendered shared/_sidebar (1.2ms)
+Completed in 406ms (View: 5, DB: 1) | 200 OK [http://localhost/search?city=&state=&zip=92315&country=&within=10&telecommute=include&commit=Search]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-08-12 13:35:27) [GET]
+  Parameters: {"city"=>"", "within"=>"10", "zip"=>"90278", "commit"=>"Search", "country"=>"", "telecommute"=>"include", "state"=>""}
+Google geocoding. Address:   90278 . Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  90278 </name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mJobPosting Load (0.6ms)[0m   [0mSELECT *, 
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>33.7213431471464 AND job_postings.lat<34.0104828528536 AND job_postings.lng>-118.549521327478 AND job_postings.lng<-118.201304872522)) AND (
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 10)) ORDER BY distance[0m
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (0.8ms)
+Rendered search/_index (0.1ms)
+Rendered shared/_sidebar (0.8ms)
+Completed in 440ms (View: 3, DB: 1) | 200 OK [http://localhost/search?city=&state=&zip=90278&country=&within=10&telecommute=include&commit=Search]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-08-12 14:21:29) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:logged_in?] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/buy_credits]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-12 14:21:29) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.8ms)
+Rendered site/_content (0.2ms)
+Rendered shared/_sidebar (0.8ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-12 14:26:04) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (0.8ms)
+Rendered site/_content (0.9ms)
+Rendered shared/_sidebar (0.8ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]

@@ -1,0 +1,9 @@
+<h1>Buy Credits</h1>
+Each credit costs $99 and is for 30 day increments.  
+The credits stay in your account until they are used.
+<p>
+<% form_tag :action=> :checkout do |f| %>
+     Purchase <%= text_field_tag(:n, nil, :size=>2) %> credits.<br>
+     <%= image_submit_tag "https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" %>
+  <% end %>
+</p>

@@ -9,6 +9,8 @@
 
 		<p><%= label_tag "Email" %>
 		<%= text_field_tag :email, params[:email], :size=>40 %>*</p>
+		<p>This is the email address our system will use to communicate with you (invoices, etc). We will also 
+		use this email address as the response address for job ads. <strong>But this address is kept private and never shown on our site.</strong></p>
 
 		<p><%= label_tag "password" %>
 		<%= password_field_tag :password, params[:password] %></p>
@@ -23,13 +25,15 @@
 		<%= text_field_tag :last_name, params[:last_name], :size=>40 %></p>
 		<p><%= label_tag "Telephone #" %>
 		<%= text_field_tag :telephone, params[:telephone], :size=>40 %>*</p>
+		<hr>
+		<p><strong>Company Information</strong><br>This information is included with the ads you create.</p>
 		<p><%= label_tag "Company Name" %>
 		<%= text_field_tag :company, params[:company], :size=>40 %></p>
 		<p><%= label_tag "Web Site" %>
 		<%= text_field_tag :web_site, params[:web_site], :size=>40 %></p>
 		<p>Your Company Type: <%= select_tag(:company_type, options_for_select( %w{Primary Recruiter}) ) %> </p>
-		<p><%= label_tag "Company Description" %>
-		<%= text_area_tag :company_description, params[:company_description], :rows=>3 %></p>
+		<p><%= label_tag "Please tell us about your company:" %>
+		<%= text_area_tag :company_description, params[:company_description], :rows=>8 %></p>
 		
 		<%= submit_tag 'Register', :class => "button" %> 
 		<br><br>* Kept private.  Not shown on the site.
