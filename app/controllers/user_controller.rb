@@ -2,7 +2,6 @@ class UserController < ApplicationController
   before_filter :logged_in?, :only=> [:edit, :index, :save]
   
   def index
-    @user = User.find(session[:user_id])
     flash[:notice] = nil
   end
   
