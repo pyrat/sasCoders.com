@@ -1,8 +1,8 @@
 <h1>Your Invoice</h1>
 <table>
   <tr><td>Items Purchased: </td><td><%= @invoice.product %></td></tr>
-  <tr><td>Total Amount Paid: </td><td><%= number_to_currency(@invoice.amount*100) %></td></tr>
-  <tr><td>Invoice Date: </td><td><%= @invoice.billed_date %></td></tr>
+  <tr><td>Total Amount Paid: </td><td><%= number_to_currency(@invoice.amount/100) %></td></tr>
+  <tr><td>Invoice Date: </td><td><%= @invoice.billed_date.strftime("%m/%d/%y") %></td></tr>
   <tr><td>Invoice Status: </td><td><%= @invoice.status %></td></tr>
 </table>
 

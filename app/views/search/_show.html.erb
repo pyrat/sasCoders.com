@@ -7,7 +7,8 @@
       <li><strong>Job Type:</strong> <%= @job.job_type %> </li>
       <li><strong>Pay: </strong> <%= @job.pay %></li>
     </ul>
-    <p><strong>Short Description:</strong><%= simple_format(@job.short_description) %> <br>
+	<hr>
+    <p><%= simple_format(@job.short_description) %> <br>
     <p><strong>Experience:</strong><br>
 	<%= simple_format(@job.experience) %>
     </p>

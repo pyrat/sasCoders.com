@@ -12,7 +12,7 @@ Important: Your order is not completed until you click <strong>Complete Payment<
   <tr><td>Country:</td><td><%= @address['country'] %></td></tr>
   <tr><td>Zip:</td><td><%= @address['zip'] %></td></tr>
   <tr><td><strong>Number Of Credits To Be Purchased:</strong></td><td><strong><%= @invoice.product %></strong></td></tr>
-  <tr><td><strong>Total To Be Charged:</strong></td><td><strong><%= number_to_currency(@invoice.amount*100) %></strong></td></tr>
+  <tr><td><strong>Total To Be Charged:</strong></td><td><strong><%= number_to_currency(@invoice.amount/100) %></strong></td></tr>
 </table>
 
 <% form_tag :action => 'complete', :token => params[:token], :payer_id => params[:PayerID] do %>
