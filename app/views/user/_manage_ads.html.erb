@@ -2,7 +2,7 @@
 <br>
 You have <%= @user.credits %> credits.<br>
 <strong>Jobs Awaiting Approval</strong>
-<table>
+<table border="1">
 <tr><th>Reference ID</th><th>Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
 <% for job in @user.jobs_awaiting_approval %>
   <tr>
@@ -17,7 +17,7 @@ You have <%= @user.credits %> credits.<br>
 </table>
 <hr>
 <strong>Expired Ads</strong>
-<table>
+<table border="1">
 <tr><th>Reference ID</th><th>Start Date</th> <th>Expiration Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
 <% for job in @user.jobs_expired %>
   <tr>
@@ -34,7 +34,7 @@ You have <%= @user.credits %> credits.<br>
 </table>
 <hr>
 <strong>Currently Running Ads</strong>
-<table>
+<table border="1">
 <tr><th>Reference ID</th><th>Start Date</th><th>Expires In</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
 <% for job in @user.jobs_running %>
   <tr>
