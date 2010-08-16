@@ -1,6 +1,7 @@
 class ChangeInvoiceProduct < ActiveRecord::Migration
   def self.up
-    change_column :invoices, :product, :integer
+    drop_column :invoices, :product
+	add_column :invoices, :product, :integer
   end
 
   def self.down
