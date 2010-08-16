@@ -63,7 +63,7 @@ class User < ActiveRecord::Base
     @password_confirmation = p
   end
   
-  # next three virtual attributes, just getters
+  # next few virtual attributes, just getters
   def jobs_awaiting_approval
     a = Array.new
 	jobPostings.each do |j|

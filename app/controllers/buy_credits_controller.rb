@@ -81,7 +81,7 @@ class BuyCreditsController < ApplicationController
 	@invoice.save
 	@user.credits += @invoice.product
 	@user.save
-	ApplicationMailer.deliver_signup_notification(@user,@invoice)
+	ApplicationMailer.deliver_signup_notification(@invoice)
 	
   end
 
