@@ -10,7 +10,7 @@ class ApplicationMailer < ActionMailer::Base
 	end  
 
     def payment_notification(invoice)
-	  recipients "#{invoice.user.first_name} #{invoice.user.last_name} <#{invoince.user.email}>"
+	  recipients "#{invoice.user.first_name} #{invoice.user.last_name} <#{invoice.user.email}>"
 	  from       "SasCoders.com"
 	  subject    "Your Payment Was Received"
 	  sent_on    Time.now
