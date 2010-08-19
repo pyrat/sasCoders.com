@@ -10,12 +10,14 @@ class BuyCreditsController < ApplicationController
     n = params[:n]
 	amt = ((n.to_i) *99 ) * 100 # cents!
 	invoice = Invoice.new(:status=>"pending", :product=>n, :amount=>amt, :user_id=>@user.id)
+	logger.debug("invoice created")
 	begin
 	  invoice.save!
 	rescue ActiveRecord::RecordInvalid
 	  @message = "The invoice for this transaction could not be created."
 	  render :action => 'error'
 	end
+	logger.debug("Invoice saved.")
 	# and put the invoice id into a cookie so we can see the number of items selected when they :complete
 	session[:i] = invoice.id
 	# what can we put in the setup_purchase?  can we put n? and then use it as
@@ -27,6 +29,9 @@ class BuyCreditsController < ApplicationController
 	  :return_url        => url_for(:action=> 'confirm', :only_path=>false),
 	  :cancel_return_url => url_for(:action=> 'paypal_cancel', :only_path=>false)
 	)
+	
+	logger.debug("the gateway was set up.")
+	
 	redirect_to gateway.redirect_url_for(setup_response.token)
   end
 

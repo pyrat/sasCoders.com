@@ -6,6 +6,7 @@ What other actions need to be done?
 Are telecommute handled correctly?
 Allow searchers to apply for jobs through the site.
 User Profile-- show all invoices, delete any pending invoices
+Logout button!
 
   
 - link edit profile to user index

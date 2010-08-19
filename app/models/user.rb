@@ -9,20 +9,20 @@ class User < ActiveRecord::Base
   # when do validations occur? before the model is saved.
   validates_presence_of :email
   validates_uniqueness_of :email, :case_sensitive => false
-  validates_uniqueness_of :user_name, :case_sensitive => false
+ # validates_uniqueness_of :user_name, :case_sensitive => false
   
   validates_format_of :email,
                       :with => /^[A-Z0-9._%-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i,
                       :message => "Improperly formatted email address"
 
-  validates_confirmation_of :password
+#  validates_confirmation_of :password
   validate :password_conforms?  
   
   def after_initialize
     create_activation_code
   end
   # Attribute accessors
-#  attr_accessor           :password_confirmation  # i dont think this attribute is used anywhere?
+  attr_accessor           :password_confirmation  
 
   def password_conforms?
     return false if @password.blank? 

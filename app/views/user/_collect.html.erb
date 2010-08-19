@@ -31,6 +31,7 @@
 		<%= text_field_tag :company, params[:company], :size=>40 %></p>
 		<p><%= label_tag "Web Site" %>
 		<%= text_field_tag :web_site, params[:web_site], :size=>40 %></p>
+		<p>Do you do the primary hiring, or work for a recruiting company? </p>
 		<p>Your Company Type: <%= select_tag(:company_type, options_for_select( %w{Primary Recruiter}) ) %> </p>
 		<p><%= label_tag "Please tell us about your company:" %>
 		<%= text_area_tag :company_description, params[:company_description], :rows=>8 %></p>
