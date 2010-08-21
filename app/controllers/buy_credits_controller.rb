@@ -27,7 +27,7 @@ class BuyCreditsController < ApplicationController
 	    :ip                => request.remote_ip,
 	    :return_url        => url_for(:action=> 'confirm', :only_path=>false),
 	    :cancel_return_url => url_for(:action=> 'paypal_cancel', :only_path=>false),
-	    :name => "this is the name"	  }
+	    :description => "this is description 1"	  }
 	)
 		
 	redirect_to gateway.redirect_url_for(setup_response.token)
