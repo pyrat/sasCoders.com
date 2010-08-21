@@ -23,11 +23,11 @@ class BuyCreditsController < ApplicationController
 	# no, they are ignored
 	# it looks like we will have to store the info in a transaction model
     setup_response = gateway.setup_purchase(invoice.amount,
-	  {
+	  
 	    :ip                => request.remote_ip,
 	    :return_url        => url_for(:action=> 'confirm', :only_path=>false),
 	    :cancel_return_url => url_for(:action=> 'paypal_cancel', :only_path=>false),
-	    :description => "this is description 1"	  }
+	    :description => "this is description 1"	  
 	)
 		
 	redirect_to gateway.redirect_url_for(setup_response.token)
