@@ -10,14 +10,12 @@ class BuyCreditsController < ApplicationController
     n = params[:n]
 	amt = ((n.to_i) *99 ) * 100 # cents!
 	invoice = Invoice.new(:status=>"pending", :product=>n, :amount=>amt, :user_id=>@user.id)
-	logger.debug("invoice created")
 	begin
 	  invoice.save!
 	rescue ActiveRecord::RecordInvalid
 	  @message = "The invoice for this transaction could not be created."
 	  render :action => 'error'
 	end
-	logger.debug("Invoice saved.")
 	# and put the invoice id into a cookie so we can see the number of items selected when they :complete
 	session[:i] = invoice.id
 	# what can we put in the setup_purchase?  can we put n? and then use it as
@@ -25,13 +23,16 @@ class BuyCreditsController < ApplicationController
 	# no, they are ignored
 	# it looks like we will have to store the info in a transaction model
     setup_response = gateway.setup_purchase(invoice.amount,
-	  :ip                => request.remote_ip,
-	  :return_url        => url_for(:action=> 'confirm', :only_path=>false),
-	  :cancel_return_url => url_for(:action=> 'paypal_cancel', :only_path=>false)
+	  {
+	    :ip                => request.remote_ip,
+	    :return_url        => url_for(:action=> 'confirm', :only_path=>false),
+	    :cancel_return_url => url_for(:action=> 'paypal_cancel', :only_path=>false),
+	    :Name => "this is the name",
+	    :Description => "this is the description",
+		:OrderTotal => "99"
+	  }
 	)
-	
-	logger.debug("the gateway was set up.")
-	
+		
 	redirect_to gateway.redirect_url_for(setup_response.token)
   end
 
@@ -96,6 +97,11 @@ class BuyCreditsController < ApplicationController
   def paypal_cancel
   end
   
+  def error
+    # ideally this should 
+	# log the error in the db
+	# send a message to me
+  end
 private 
   def gateway
     @gateway ||= PaypalExpressGateway.new(
