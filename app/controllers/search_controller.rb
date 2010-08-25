@@ -8,7 +8,7 @@ class SearchController < ApplicationController
 	 telecommute = params[:telecommute] # select list include|exclude|only
 	 city = params[:city]
 	 state = params[:state]
-	 country = params[:country]
+
 	 within = params[:within]
 	 
 	 within = "10" if within.to_i < 1
@@ -19,7 +19,7 @@ class SearchController < ApplicationController
 	   redirect_to "/search/telecommute/"
 	 end
 	 
-	 location = "#{city} #{state} #{zip} #{country}"
+	 location = "#{city} #{state} #{zip}"
 	 
 	 @geo = MultiGeocoder.geocode(location)
 	 

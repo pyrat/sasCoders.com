@@ -36,7 +36,7 @@ class UserController < ApplicationController
 	  ApplicationMailer.deliver_signup_notification(@user)
 	
     else
-	  flash[:notice] = "There was an error creating that user."
+	  flash[:error] = "There was an error creating that user."
 	  render :collect
 	end 
   end
@@ -57,7 +57,7 @@ class UserController < ApplicationController
 	  flash[:notice] = "Thank you for validating.  You are now logged in."
 	  
 	  else
-	  flash[:notice] = "Something went wrong.  That validation was incorrect."
+	  flash[:error] = "Something went wrong.  That validation was incorrect."
 	end
 	render 'site/index'
 	
@@ -99,10 +99,10 @@ class UserController < ApplicationController
 	  # call save to update activated_at in db
 	  @user.save
 	  session[:user_id] = @user.id
-	  flash[:notice] = "Hello #{@user.first_name}"
+	  flash[:notice] = "Hello #{@user.first_name}. You are now logged in."
 	  
 	  else
-	  flash[:notice] = "Login failed."
+	  flash[:error] = "Sorry.  The name/password you provided was invalid."
 	end
 	render 'site/index' # in future this might be a parameter
   end

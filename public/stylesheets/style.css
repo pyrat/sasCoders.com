@@ -1,8 +1,8 @@
 /*
 Colors used:
-background color: #f2fafd (light light blue)
-Container border: #002097 (dark blue)
-Header: #EEEEEE
+background color: 
+Container border: 
+Header: 
 */
 
 body {
@@ -11,16 +11,13 @@ body {
 	margin-left: 5;
 	margin-right: 5;
 	padding: 0;
-	/*background-color: #336699; */
-	background-color: #f2fafd;
-	/*text-align: center; */  
-	
-	font-size: 70%;
+	background-color: #ffffff;	
+	font-size: 16px;
 
 }
 
 body, p, h1, h2, h3, h4, table, td, th, ul, ol, textarea, input {
-  font-family:verdana,helvetica,arial,sans-serif;
+  font-family: tahoma, arial,sans-serif;
 }
 
 textarea {
@@ -28,19 +25,37 @@ textarea {
   width: 600px;
 }
 
-input.admin {
-  height: 8px;
-  font-size: 8px;
+.small{
+ /* height: 8px; */
+  font-size: 10px;
+}
+fieldset.notes{
+	background-color: #ffffe1;
+	width: 148px;
+}
+div.notes h4 {
+	
+	background-image: url("/images/icon_info.gif");
+	background-position: left top;
+	background-repeat: no-repeat;
+	border-color: #666666;
+	border-style: solid;
+	border-width: 0 0 1px;
+	color: #666666;
+	font-size: 100%;
+	padding: 3px 0 3px 27px;
 }
 
-div.admin{
-  background-color: #FFFFFF;
+.last {
+	margin: 0;
+	font-size: 70%;
+	color: #666666;
 }
 
 #container {
 	position: relative;
-	width: 860px;
-	border: 2px solid #002097;
+	width: 1024px;
+/*	border: 2px solid #ffffff; */
 	top: 10px;
 	clear: both;
 	padding: 0;
@@ -49,15 +64,30 @@ div.admin{
 	}
 
 #header {
-	 height: 100px; 
-	background-color: #EEEEEE;
-	border-bottom: 2px solid #002097;
+	 height: 100px; /* 60 for pic + 32 for both flash[:] + 100 for top */
+	 top: 10px;
+	background-color: #ffffff;
+/*	border-bottom: 2px solid #002097; */
 	/* border-top: 2px solid #002097; */
 	}
+td.employer{
+	width: 500px;
+}
 
+#notice_error{
+	background-color: #ffff99;
+	color: #e85163;
+}
+#notice_notice{
+	background-color: #bac2c7;
+}
+
+.employer-nav{
+  font-size: 80%;
+}
 #content {
 	float: right;
-	width: 650px;
+	width: 768px;
    /*     height: 600px; */
 	background-color: #FFFFFF;
 	padding: 3px;
@@ -72,16 +102,16 @@ div.admin{
 /*	height: 600px; */
 	top: 0;
 	right: 0;
-	background-color: #f2fafd;
+	background-color: #eeeeee;
 	margin: 3;
 	text-align: left;
 	padding-left: 3px;
 	padding-right: 3px;
 	padding-top: 15px;
-/*	border: 2px solid #336699; */
+/*	border: 2px solid #336699; 
 	border-right: 2px solid #002097;
-/*	border-left:  2px solid #336699; */
-	border-bottom:  2px solid #002097;
+	border-left:  2px solid #336699; 
+	border-bottom:  2px solid #002097; */
 	}
 
 #footer {
@@ -108,7 +138,7 @@ ul.simple{
 	
 	
 h1 { 
-  color: #6586A7;
+  color: #616a71;
  /* height: 30px; */
   text-align: left;
   padding-left: 3px;
@@ -117,14 +147,10 @@ h1 {
 }
 
 h3 { 
-  color: #FFC652;  
+  color: #616a71;  
   padding-left:40px;
   text-align: left;
   font-size: 140%;
-}
-
-ul.schools{
-  list-style-type:none;
 }
 
 .indent{
@@ -133,13 +159,24 @@ ul.schools{
 }
 
 .important {
-  color: #0E426C;
+  color: #616a71;
   font-size: 120%;
 }
 
 fieldset {
-  border: 1px solid #002097;
+  border: 1px solid #bac2c7;
 }
+
+
+div.required{
+	font-weight:bold;
+
+}
+
+div.optional{
+	font-weight:normal;
+}
+
 
 div.column_header {
   color: #002097;
@@ -154,49 +191,35 @@ td.top_align {
   vertical-align: top;
 }
 
+th.small{
+	width:100px;
+}
+th.medium{
+	width: 200px;
+}
+th.large{
+	width:400px;
+}
+
+span.jobText{
+	font-family: Verdana, sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+}
 
 fieldset.inner{
-  background-color: #bde6f5;
+  background-color: #ffffff;
 }
 
 fieldset.optional{
-  background-color: #eca388;
-  border: 2px solid #d75323;
-}
-
-fieldset.dontWait{
-  background-color: #eca388;
-  border: 2px solid #d75323;
-  font-size: 18px;
-  color: #d75323;
-}
-
-fieldset.content{
-  background-color: #eeeeee;
-}
-
-div#adContainer{
-  /* background-color: #FFFFCC; */
-  border: 2px solid #002097;
-}
-
-.adTextTitle {
-  color: #002097;
-  font-size: 24px;
-  font-style: oblique;
-  margin-left:6px;
-}
-.adText123 {
-  font-size: 18px;
-  margin-left:24px;
-  color: #002097;
-}
-
-div#onlineSchools{
-  background-color: #889988;
-  width: 190px;
+  background-color: #ffffff;
+  border: 1px solid #bac2c7;
 }
 
 div.hidden {
   visibility: hidden;
+}
+
+table.bordered{
+	border: 1px solid #bac2c7;
 }

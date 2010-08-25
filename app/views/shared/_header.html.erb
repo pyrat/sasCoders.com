@@ -1,21 +1,40 @@
 <div id="header">
-sasCoders.com  Specializing in SAS jobs for SAS Coders and Programmers<br>
+	<table>
+		<tr>
+			<td>
+               <%= link_to image_tag("sascoder_logo_tagline.gif", :alt=>"Specializing in SAS jobs for  SAS Coders and Programmers", :border=>0), :controller=>'site', :action=>'index' %>
+            </td>
+<td class="employer">
 <% if session[:user_id] %>
+<span class="employer-nav">
   hello <%= @user.first_name %>
-  <%= link_to "Create New Ad", :controller=>'job_posting', :action=>"addJob" %> | 
-  <%= link_to "Manage Ads", :controller=>'user', :action=>'manage_ads' %> | 
+  <%= link_to "Create New Ad", :controller=>'job_posting', :action=>"addJob", :class=>"small" %> | 
+  <%= link_to "Manage Ads", :controller=>'user', :action=>'manage_ads', :class=>"small" %> | 
   <%= link_to "View Profile", :controller=>'user', :action=>'index' %>
+</span>
 <% else %>
-  Please sign in: 
-  <% form_tag :controller=> :user, :action=> :login do %>
-     Email <%= text_field_tag(:email, nil, :size=>10, :class=>"admin") %> &nbsp;
-	 Password <%= password_field_tag(:pw, nil, :size=>8, :class=>"admin") %>
-     <%= submit_tag "login" %> or
-  <% end %>
-  <%= button_to 'register', :controller=>'user', :action=>'collect' %>
-<% end %>
-<br>
-<%= flash[:notice] %><br>
-<%= flash[:error] %>
 
+			<fieldset class="employer">
+				<span class="small">
+                Employer Login:
+                <% form_tag :controller=> :user, :action=> :login do %>
+                Email <%= text_field_tag(:email, nil, :size=>10) %>      &nbsp;
+	            Password <%= password_field_tag(:pw, nil, :size=>8) %> 
+                <%= submit_tag "login" %>
+                </span>
+                </fieldset>
+
+                <% end %>
+
+
+<% end %>
+</td>
+</tr>
+</table>
+<% flash.each do |key,msg| %>
+  <%= content_tag :div, msg, :class => "flash", :id => "notice_#{key}" %>
+  <% content_tag :script, :type => "text/javascript" do %>
+  setTimeout("new Effect.Fade('notice_<%= key %>');", 8000)
+  <% end %>
+<% end %>
 </div>

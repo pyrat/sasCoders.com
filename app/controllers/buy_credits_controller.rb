@@ -17,6 +17,11 @@ class BuyCreditsController < ApplicationController
 	  render :action => 'error'
 	end
 	# and put the invoice id into a cookie so we can see the number of items selected when they :complete
+	
+	# ha ha this may be terrible, but looks like the best way to hold things up so the user can see the page
+	# with the un-hidden div price
+	sleep 3
+	
 	session[:i] = invoice.id
 	# what can we put in the setup_purchase?  can we put n? and then use it as
 	# a param in confirm?

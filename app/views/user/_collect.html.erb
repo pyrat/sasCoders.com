@@ -1,46 +1,63 @@
-<table>
-
-<tr>
-	<td valign=top>
+<span id="left">
 		<h3>Register with sasCoders.com</h3>
 		<% form_tag :controller=>:user, :action=>:register do %>
 		  
-		<div class="fields">
-
-		<p><%= label_tag "Email" %>
-		<%= text_field_tag :email, params[:email], :size=>40 %>*</p>
-		<p>This is the email address our system will use to communicate with you (invoices, etc). We will also 
-		use this email address as the response address for job ads. <strong>But this address is kept private and never shown on our site.</strong></p>
-
-		<p><%= label_tag "password" %>
-		<%= password_field_tag :password, params[:password] %></p>
-
-		<p><%= label_tag "password_confirmation" %>
-		<%= password_field_tag :password_confirmation, params[:password_confirmation] %></p>
-		<br><br>
+		<div class="required"><%= label_tag "Email:" %></div>
+		 <%= text_field_tag :email, params[:email], :size=>40 %>* 
 		
-		<p><%= label_tag "First Name" %>
-		<%= text_field_tag :first_name, params[:first_name], :size=>40 %></p>
-		<p><%= label_tag "Last Name" %>
-		<%= text_field_tag :last_name, params[:last_name], :size=>40 %></p>
-		<p><%= label_tag "Telephone #" %>
-		<%= text_field_tag :telephone, params[:telephone], :size=>40 %>*</p>
+
+		<div class="required"> <%= label_tag "password:" %></div>
+		<%= password_field_tag :password, params[:password] %>
+
+		<div class="required"> <%= label_tag "password_confirmation:" %></div>
+		<%= password_field_tag :password_confirmation, params[:password_confirmation] %>
+		<br><br><br><br>
 		<hr>
-		<p><strong>Company Information</strong><br>This information is included with the ads you create.</p>
-		<p><%= label_tag "Company Name" %>
-		<%= text_field_tag :company, params[:company], :size=>40 %></p>
-		<p><%= label_tag "Web Site" %>
-		<%= text_field_tag :web_site, params[:web_site], :size=>40 %></p>
-		<p>Do you do the primary hiring, or work for a recruiting company? </p>
-		<p>Your Company Type: <%= select_tag(:company_type, options_for_select( %w{Primary Recruiter}) ) %> </p>
-		<p><%= label_tag "Please tell us about your company:" %>
-		<%= text_area_tag :company_description, params[:company_description], :rows=>8 %></p>
 		
+		<div class="optional"><%= label_tag "First Name" %></div>
+		<%= text_field_tag :first_name, params[:first_name], :size=>40 %>
+		
+		<div class="optional"><%= label_tag "Last Name" %></div>
+		<%= text_field_tag :last_name, params[:last_name], :size=>40 %>
+		<div class="optional"><%= label_tag "Telephone #" %></div>
+		<%= text_field_tag :telephone, params[:telephone], :size=>40 %>*
+		<br><br><br><br><br>
+		<hr>
+		
+		<div class="optional"><%= label_tag "Company Name" %></div>
+		<%= text_field_tag :company, params[:company], :size=>40 %>
+		<div class="optional"><%= label_tag "Web Site" %></div>
+		<%= text_field_tag :web_site, params[:web_site], :size=>40 %>
+		<div class="optional">Do you do the primary hiring, or work for a recruiting company?</div>
+		<div class="optional">Your Company Type: <%= select_tag(:company_type, options_for_select( %w{Primary Recruiter}) ) %> </div>
+		<div class="optional"><%= label_tag "Please tell us about your company:" %></div>
+		<%= text_area_tag :company_description, params[:company_description], :rows=>8 %>
+		<br>
 		<%= submit_tag 'Register', :class => "button" %> 
 		<br><br>* Kept private.  Not shown on the site.
-  		</div>
 		<% end %>
 
-				</td>
-	</tr>
-</table>
+</span>
+<span id="right">
+	<fieldset class="notes">
+		<div class="notes">
+			<h4>Email</h4>
+	<p class="last">This is the email address our system will use to communicate with you (invoices, etc). We will also 
+			use this email address as the response address for job ads. <strong>But this address is kept private and never shown on our site.</strong></p>
+	</div>
+	</fieldset>
+	<br><br>
+	<fieldset class="notes">
+		<div class="notes">
+			<h4>Telephone</h4>
+	<p class="last">We only ask for a phone number so we can contact you if there are any questions with billing, ad layout, etc.  We <strong>do NOT</strong> share your phone number with anyone.</p>
+	</div>
+	</fieldset>
+	<br><br>
+	<fieldset class="notes">
+		<div class="notes">
+			<h4>Your Company</h4>
+	<p class="last">This information is included with the ads you create.</p>
+	</div>
+	</fieldset>
+</span>

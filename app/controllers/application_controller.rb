@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   before_filter :fetch_logged_user
+  before_filter :cleanup
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
@@ -32,5 +33,10 @@ class ApplicationController < ActionController::Base
 	  @user = User.find(session[:user_id])
 	end
 	rescue ActiveRecord::RecordNotFound
+  end
+  
+  def cleanup
+    flash[:error] = nil
+    flash[:notice] = nil
   end
 end

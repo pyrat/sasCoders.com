@@ -7,15 +7,17 @@
 <p>There were <%= @jobs.length %> jobs found.</p>
 </td></tr></table>
 <hr>
+<span class="jobText">
 <table>
-<tr><th>Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
+<tr><th class="small">Date</th> <th class="medium">Title</th> <th class="medium">Duration/Job Type</th> <th class="medium">Location</th> <th class="large">Description</th> </tr>
 <% for job in @jobs %>
   <tr>
-    <td style="border-bottom-style: solid; border-width: 1px;"> <%= job.start_run_date.strftime("%m/%d/%y") %> </td>
-    <td style="border-bottom-style: solid; border-width: 1px;"> <%= link_to job.title, {:controller=>'search', :action=>'show', :id=>job.id} %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.job_type %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h "#{job.city}, #{job.zip}" %> </td>
-	<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.short_description %> </td>
+    <td> <%= job.start_run_date.strftime("%m/%d/%y") %> </td>
+    <td> <%= link_to job.title, {:controller=>'search', :action=>'show', :id=>job.id} %> </td>
+	<td> <%= h job.job_type %> </td>
+	<td> <%= h "#{job.city}, #{job.zip}" %> </td>
+	<td> <%= h job.short_description %> </td>
   </tr>
 <% end %>
 </table>
+</span>
