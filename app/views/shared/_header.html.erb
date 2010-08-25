@@ -8,8 +8,8 @@
 <% if session[:user_id] %>
 <span class="employer-nav">
   hello <%= @user.first_name %>
-  <%= link_to "Create New Ad", :controller=>'job_posting', :action=>"addJob", :class=>"small" %> | 
-  <%= link_to "Manage Ads", :controller=>'user', :action=>'manage_ads', :class=>"small" %> | 
+  <%= link_to "Create New Ad", :controller=>'job_posting', :action=>"addJob" %> | 
+  <%= link_to "Manage Ads", :controller=>'user', :action=>'manage_ads' %> | 
   <%= link_to "View Profile", :controller=>'user', :action=>'index' %>
 </span>
 <% else %>
