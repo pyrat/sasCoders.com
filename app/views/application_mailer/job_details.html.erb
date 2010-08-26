@@ -1,0 +1,20 @@
+Hello!
+
+Thank you for using sasCoders.com to search for your next job.  
+To apply for this job send an email to <%= "#{@job.user.first_name} #{@job.user.last_name} at #{@job.user.email}" %> and 
+be sure to include the job reference id in the subject: <%= @job.reference_id %>.
+
+Contact Name:
+<%= "#{@job.user.first_name} #{@job.user.last_name}" %>
+Contact Email:
+<%= @job.user.email %>
+Job Title:
+<%= @job.title %>
+Job Type:
+<%= @job.job_type %>
+Short Description:
+<%= @job.short_description %>
+Experience:
+<%= @job.experience %>
+Long Description:
+<%= @job.experience %>

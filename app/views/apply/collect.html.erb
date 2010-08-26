@@ -1,0 +1,21 @@
+!! not being used at the moment !!
+!! in future will be used for ajax resume upload !!
+
+
+<div class="left">
+	<% form_for (:jobSeeker, 
+	            :url => {:action => "apply" },
+				:html => {:multipart => true } ) do |form| %>
+	<div class="required">Email Address:</div>
+	<%= form.text_field("email") %>
+	<div class="required">Your Message:</div>
+	<%= form.text_area("cover_letter")%>
+	<div id = "ajax">
+		<%= render :partial => "upload" %>
+	</div>
+	<div class="required">Upload Your Resume:</div>
+	
+</div>
+	
+<div class="right">
+</div>
