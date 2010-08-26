@@ -9,16 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100813025159) do
+ActiveRecord::Schema.define(:version => 20100826044415) do
 
-  create_table "Invoices", :force => true do |t|
+  create_table "invoices", :force => true do |t|
     t.integer  "amount"
     t.datetime "billed_date"
-    t.integer  "product"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "status"
+    t.integer  "product"
   end
 
   create_table "job_postings", :force => true do |t|
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20100813025159) do
     t.text     "long_description"
     t.string   "zip"
     t.string   "job_type"
-    t.string   "experience"
+    t.text     "experience"
     t.string   "pay"
     t.text     "addl_instructions"
     t.datetime "created_at"
@@ -42,6 +42,11 @@ ActiveRecord::Schema.define(:version => 20100813025159) do
     t.datetime "start_run_date"
     t.datetime "end_date"
     t.string   "city"
+  end
+
+  create_table "job_seekers", :force => true do |t|
+    t.string "email"
+    t.binary "cv",    :limit => 16777215
   end
 
   create_table "roles", :force => true do |t|

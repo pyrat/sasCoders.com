@@ -26,15 +26,10 @@
 </div>
 
   <div id="right">
-    <p>Interested In This Job?</p>
-    <p>Be sure to include the job Reference: <strong><%= @job.reference_id %></strong></p>
-    <p>Email It To Yourself</p>
-    <p>Apply Online</p>
-    
+		<% form_tag :controller=> :apply, :action=> :email, :id => @job.id  do %>
+		<p>Email this job to yourself to get the contact details</p>
+           Email <%= text_field_tag(:email, nil, :size=>10) %>
+      <%= submit_tag "Send Details" %>
+      <% end %>
+	
   </div>
-
-
-
-
-------------------------
-

@@ -22,4 +22,12 @@ class ApplicationMailer < ActionMailer::Base
 	  # the body method takes a hash which generates an instance variable/value per key/value pair
 	end  
 
+  def job_details(email, job)
+    recipients "<#{email}>"
+    from "sasCoders.com"
+    subject "Job Details For Job #{job.title} => #{job.reference_id}"
+    sent_on Time.now
+    body :job => job   
+     
+  end
 end
