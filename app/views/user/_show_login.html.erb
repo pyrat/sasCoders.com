@@ -1,0 +1,13 @@
+<div class="roundedcornr_box_659996">
+   <div class="roundedcornr_top_659996"><div></div></div>
+      <div class="roundedcornr_content_659996">
+		Employer Login:<br>
+		<% form_tag :controller=> :user, :action=> :login do %>
+		  Email:<br> <%= text_field_tag(:email, nil, :size=>10) %>
+		  Password:<br> <%= password_field_tag(:pw, nil, :size=>8) %> <br>
+		<%= submit_tag "login" %>
+		<% end %>
+
+      </div>
+   <div class="roundedcornr_bottom_659996"><div></div></div>
+</div>

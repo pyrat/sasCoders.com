@@ -1,0 +1,105 @@
+/******************************************************************/
+/* big white box */
+
+.roundedcornr_box_613150 {
+   background: #ffffff;
+}
+.roundedcornr_top_613150 div {
+   background: url(roundedcornr_613150_tl.png) no-repeat top left;
+}
+.roundedcornr_top_613150 {
+   background: url(roundedcornr_613150_tr.png) no-repeat top right;
+}
+.roundedcornr_bottom_613150 div {
+   background: url(roundedcornr_613150_bl.png) no-repeat bottom left;
+}
+.roundedcornr_bottom_613150 {
+   background: url(roundedcornr_613150_br.png) no-repeat bottom right;
+}
+
+.roundedcornr_top_613150 div, .roundedcornr_top_613150, 
+.roundedcornr_bottom_613150 div, .roundedcornr_bottom_613150 {
+   width: 100%;
+   height: 20px;
+   font-size: 1px;
+}
+.roundedcornr_content_613150 { margin: 0 20px; }
+/*****
+<div class="roundedcornr_box_613150">
+   <div class="roundedcornr_top_613150"><div></div></div>
+      <div class="roundedcornr_content_613150">
+         Lorem ipsum dolor sit amet, consectetur 
+         adipisicing elit, sed do eiusmod tempor incididunt 
+         ut labore et dolore magna aliqua. Ut enim ad minim 
+         veniam, quis nostrud exercitation ullamco laboris 
+         nisi ut aliquip ex ea commodo consequat. Duis aute 
+         irure dolor in reprehenderit in voluptate velit esse 
+         cillum dolore eu fugiat nulla pariatur. Excepteur 
+         sint occaecat cupidatat non proident, sunt in culpa 
+         qui officia deserunt mollit anim id est laborum.
+      </div>
+   <div class="roundedcornr_bottom_613150"><div></div></div>
+</div>
+********/
+/*******************************************************************/
+/* darker box */
+
+
+.roundedcornr_box_218416 {
+   background: #eeeeee url(/images/roundedcornr_218416_grad.gif) repeat-x top left;
+}
+.roundedcornr_top_218416 div {
+   background: url(/images/roundedcornr_218416_tl.gif) no-repeat top left;
+}
+.roundedcornr_top_218416 {
+   background: transparent url(/images/roundedcornr_218416_tr.gif) no-repeat top right;
+}
+.roundedcornr_bottom_218416 div {
+   background: url(/images/roundedcornr_218416_bl.gif) no-repeat bottom left;
+}
+.roundedcornr_bottom_218416 {
+   background: transparent url(/images/roundedcornr_218416_br.gif) no-repeat bottom right;
+}
+
+.roundedcornr_top_218416 div, .roundedcornr_top_218416,
+.roundedcornr_bottom_218416 div, .roundedcornr_bottom_218416 {
+   width: 100%;
+   height: 20px;
+   font-size: 1px;
+}
+.roundedcornr_content_218416 { margin: 0 20px; }
+
+/*******************************************************************/
+/* lighter box */
+.roundedcornr_box_659996 {
+   background: #eeeeee;
+}
+.roundedcornr_top_659996 div {
+   background: url(/images/roundedcornr_659996_tl.png) no-repeat top left;
+}
+.roundedcornr_top_659996 {
+   background: url(/images/roundedcornr_659996_tr.png) no-repeat top right;
+}
+.roundedcornr_bottom_659996 div {
+   background: url(/images/roundedcornr_659996_bl.png) no-repeat bottom left;
+}
+.roundedcornr_bottom_659996 {
+   background: url(/images/roundedcornr_659996_br.png) no-repeat bottom right;
+}
+
+.roundedcornr_top_659996 div, .roundedcornr_top_659996, 
+.roundedcornr_bottom_659996 div, .roundedcornr_bottom_659996 {
+   width: 100%;
+   height: 20px;
+   font-size: 1px;
+}
+.roundedcornr_content_659996 { margin: 0 20px; }
+/*
+<div class="roundedcornr_box_659996">
+   <div class="roundedcornr_top_659996"><div></div></div>
+      <div class="roundedcornr_content_659996">
+content here
+      </div>
+   <div class="roundedcornr_bottom_659996"><div></div></div>
+</div>
+*/

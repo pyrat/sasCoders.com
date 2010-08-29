@@ -1,0 +1,29 @@
+<% form_tag( {:controller=>'search', :action=>'index'}, {:method => :get} ) do %>
+
+
+<div class="roundedcornr_box_218416">
+   <div class="roundedcornr_top_218416"><div></div></div>
+      <div class="roundedcornr_content_218416">
+
+		Search By Zip: <%= text_field_tag :zip, params[:zip], :size=>7 %> <%= label_tag 'Within:' %>
+		<%= select_tag "within", options_for_select(%w{5 10 15 25 40},"10") %> Miles.
+
+
+		<div class="body-text">-Or-</div> 
+
+		Search by City: <%= text_field_tag :city, params[:city], :size=>18 %>
+		and State:
+		<%= text_field_tag :state, params[:state], :size=>2 %> 
+
+
+		  <%= label_tag 'Telecommute Jobs:' %>
+		  <%= select_tag 'telecommute', options_for_select(%w{include exclude only}, "include") %>
+
+		<div style="float: right;">
+		  <%= submit_tag "Search For Jobs" %>
+		</div>
+
+
+		<% end %>      </div>
+   <div class="roundedcornr_bottom_218416"><div></div></div>
+</div>

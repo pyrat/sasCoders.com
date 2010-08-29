@@ -1,37 +1,16 @@
-<fieldset class="notes">
-	<div class="notes">
-		<h4>Search Jobs</h4>
-<p class="last">For most searches a simple <strong>zip code</strong> will suffice,
-but you can be as specific as you want.  To see all jobs in a particular state, just enter that state. </p>
+<div class="roundedcornr_box_659996">
+   <div class="roundedcornr_top_659996"><div></div></div>
+      <div class="roundedcornr_content_659996">
+		This is going to have some links and stuff.
+		<ul>
+			<li>link one</li>
+			<li>link two</li>
+			<li>link three</li>
+			<li>link four</li>
+		</ul>
+      </div>
+   <div class="roundedcornr_bottom_659996"><div></div></div>
 </div>
-</fieldset>
 
 
-<% form_tag( {:controller=>'search', :action=>'index'}, {:method => :get} ) do %>
-  <fieldset class="inner">
-	<legend>Address</legend>
-	<span class="small">
-		<table>
-			<tr><td><%= label_tag 'City:' %></td> 
-                <td><%= text_field_tag :city, params[:city], :size=>18 %></td>
-            </tr>
-            <tr><td><%= label_tag 'State:' %></td> 
-                <td><%= text_field_tag :state, params[:state], :size=>2 %>&nbsp; <%= label_tag 'Zip:' %> <%= text_field_tag :zip, params[:zip], :size=>7 %>
-	        </tr>
-            <tr><td><%= label_tag 'Within:' %></td>
-                <td><%= select_tag "within", options_for_select(%w{5 10 15 25 40},"10") %> Miles</td>
-       </table>  
-  </span>
-  </fieldset>
-  
-  
-  
-    <fieldset class="optional">
-  <legend>Optional</legend>
-<span class="small">
-  <%= label_tag 'Telecommute Jobs:' %>
-  <%= select_tag 'telecommute', options_for_select(%w{include exclude only}, "include") %>
-  </span>
-  </fieldset><hr>
-  <%= submit_tag "Search" %>
-<% end %>
+		

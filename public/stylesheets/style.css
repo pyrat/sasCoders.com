@@ -10,10 +10,14 @@ body {
 	margin-top: 5;
 	margin-left: 5;
 	margin-right: 5;
-	padding: 0;
-	background-color: #ffffff;	
+	padding: 2em;
+	background-color: #bac2c7;	
 	font-size: 16px;
 
+}
+
+.body-text{
+	font-size: 16px;
 }
 
 body, p, h1, h2, h3, h4, table, td, th, ul, ol, textarea, input {
@@ -25,8 +29,13 @@ textarea {
   width: 600px;
 }
 
+.search-block{
+	background-color: #bac2c7;
+	padding: 8px;
+	width: 90%;
+	font-size: 16px;
+}
 .small{
- /* height: 8px; */
   font-size: 10px;
 }
 fieldset.notes{
@@ -55,11 +64,12 @@ div.notes h4 {
 #container {
 	position: relative;
 	width: 1024px;
-/*	border: 2px solid #ffffff; */
+	border: 2px solid #eeeeee;  
 	top: 10px;
 	clear: both;
-	padding: 0;
+	padding: 2em; 
 	text-align: left;
+	min-height: 600px;
 	background-color: #FFFFFF;
 	}
 
@@ -71,7 +81,7 @@ div.notes h4 {
 	/* border-top: 2px solid #002097; */
 	}
 td.employer{
-	width: 500px;
+	width: 550px;
 }
 
 #notice_error{
@@ -102,7 +112,7 @@ td.employer{
 /*	height: 600px; */
 	top: 0;
 	right: 0;
-	background-color: #eeeeee;
+/*	background-color: #eeeeee; */
 	margin: 3;
 	text-align: left;
 	padding-left: 3px;
