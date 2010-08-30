@@ -7,7 +7,7 @@
 		You have <%= @user.credits %> credits.<br>
 		<strong>Jobs Awaiting Approval</strong>
 		<table border="1">
-		<tr><th>Reference ID</th><th>Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
+		<tr><th>Reference ID</th><th>Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th><th>Apply Credits</th> </tr>
 		<% for job in @user.jobs_awaiting_approval %>
 		  <tr>
 		    <td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.reference_id %> </td>
@@ -22,7 +22,7 @@
 		<hr>
 		<strong>Expired Ads</strong>
 		<table border="1">
-		<tr><th>Reference ID</th><th>Start Date</th> <th>Expiration Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
+		<tr><th>Reference ID</th><th>Start Date</th> <th>Expiration Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th><th>Apply Credits</th> </tr>
 		<% for job in @user.jobs_expired %>
 		  <tr>
 		    <td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.reference_id %> </td>
@@ -39,7 +39,7 @@
 		<hr>
 		<strong>Currently Running Ads</strong>
 		<table border="1">
-		<tr><th>Reference ID</th><th>Start Date</th><th>Expires In</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th> </tr>
+		<tr><th>Reference ID</th><th>Start Date</th><th>Expires In</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th><th>Apply Credits</th> </tr>
 		<% for job in @user.jobs_running %>
 		  <tr>
 		    <td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.reference_id %> </td>

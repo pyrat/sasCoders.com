@@ -31,7 +31,7 @@ class SearchController < ApplicationController
 	   # add in the loop for valid jobs
 	   @jobs.delete_if {|job| !job.approved? and (job.end_date.blank? or job.end_date < Time.now)}
 	   if @jobs.length == 0
-	     flash[:notice] = "Unfortunately there were no jobs found within #{within} miles of #{location}."
+	     flash[:error] = "There were no jobs found within #{within} miles of #{location}."
 		 return
 	   end  
 	   # do we need to add some telecommute jobs in?
@@ -45,7 +45,7 @@ class SearchController < ApplicationController
 	   
 	   # successfully return w jobs
 	 else 
-	   flash[:notice] = "That location could not be found."
+	   flash[:error] = "That location could not be found."
 	 end
 	 ######################
 	 

@@ -87,9 +87,11 @@ td.employer{
 #notice_error{
 	background-color: #ffff99;
 	color: #e85163;
+	text-align: center;
 }
 #notice_notice{
 	background-color: #bac2c7;
+	text-align: center;
 }
 
 .employer-nav{

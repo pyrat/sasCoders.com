@@ -8,6 +8,8 @@ Allow searchers to apply for jobs through the site.
 User Profile-- show all invoices, delete any pending invoices
 Logout button!
 
+TODO ** EXPIRED jobs MATCHING Search!!
+
   
 - link edit profile to user index
 + addJob preview page

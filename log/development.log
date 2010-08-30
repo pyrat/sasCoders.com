@@ -13636,3 +13636,853 @@ ActionController::RoutingError (No route matches "/stylesheets/roundedcornr_6131
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-08-29 00:05:06) [GET]
+  Parameters: {"within"=>"10", "city"=>"", "zip"=>"90278", "commit"=>"Search For Jobs", "telecommute"=>"include", "state"=>""}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Google geocoding. Address:   90278. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  90278</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mJobPosting Load (0.6ms)[0m   [0;1mSELECT *, 
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>33.7213431471464 AND job_postings.lat<34.0104828528536 AND job_postings.lng>-118.549521327478 AND job_postings.lng<-118.201304872522)) AND (
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 10)) ORDER BY distance[0m
+  [4;35;1mJobPosting Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mJobPosting Load (0.3ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.`telecommute` = 1) [0m
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (1.8ms)
+Rendered search/_index (2.2ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 414ms (View: 11, DB: 6) | 200 OK [http://localhost/search?zip=90278&within=10&city=&state=&telecommute=include&commit=Search+For+Jobs]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-08-29 00:05:22) [GET]
+  Parameters: {"within"=>"10", "city"=>"", "zip"=>"90278", "commit"=>"Search For Jobs", "telecommute"=>"include", "state"=>""}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Google geocoding. Address:   90278. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  90278</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mJobPosting Load (0.5ms)[0m   [0mSELECT *, 
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>33.7213431471464 AND job_postings.lat<34.0104828528536 AND job_postings.lng>-118.549521327478 AND job_postings.lng<-118.201304872522)) AND (
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 10)) ORDER BY distance[0m
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`telecommute` = 1) [0m
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (1.8ms)
+Rendered search/_index (2.3ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 168ms (View: 11, DB: 6) | 200 OK [http://localhost/search?zip=90278&within=10&city=&state=&telecommute=include&commit=Search+For+Jobs]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-08-29 00:06:23) [GET]
+  Parameters: {"within"=>"10", "city"=>"", "zip"=>"90278", "commit"=>"Search For Jobs", "telecommute"=>"include", "state"=>""}
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Google geocoding. Address:   90278. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  90278</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mJobPosting Load (0.5ms)[0m   [0;1mSELECT *, 
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>33.7213431471464 AND job_postings.lat<34.0104828528536 AND job_postings.lng>-118.549521327478 AND job_postings.lng<-118.201304872522)) AND (
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 10)) ORDER BY distance[0m
+  [4;35;1mJobPosting Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mJobPosting Load (0.2ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.`telecommute` = 1) [0m
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (1.7ms)
+Rendered search/_index (2.0ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 465ms (View: 11, DB: 6) | 200 OK [http://localhost/search?zip=90278&within=10&city=&state=&telecommute=include&commit=Search+For+Jobs]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-08-29 00:08:11) [GET]
+  Parameters: {"within"=>"10", "city"=>"", "zip"=>"90278", "commit"=>"Search For Jobs", "telecommute"=>"include", "state"=>""}
+  [4;35;1mUser Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Google geocoding. Address:   90278. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  90278</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mJobPosting Load (0.6ms)[0m   [0mSELECT *, 
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>33.7213431471464 AND job_postings.lat<34.0104828528536 AND job_postings.lng>-118.549521327478 AND job_postings.lng<-118.201304872522)) AND (
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 10)) ORDER BY distance[0m
+  [4;36;1mJobPosting Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`telecommute` = 1) [0m
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (1.7ms)
+Rendered search/_index (2.4ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 267ms (View: 84, DB: 8) | 200 OK [http://localhost/search?zip=90278&within=10&city=&state=&telecommute=include&commit=Search+For+Jobs]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#show (for 127.0.0.1 at 2010-08-29 00:09:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.8ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+Google geocoding. Address: 33.865913,-118.3754131. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>33.865913,-118.3754131</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>2016 Clark Ln, Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><Thoroughfare><ThoroughfareName>2016 Clark Ln</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8690436" south="33.8627484" east="-118.3723034" west="-118.3785986" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754510,33.8658960,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Redondo Beach Unified, California, USA</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Redondo Beach Unified</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8945140" south="33.8152150" east="-118.3526070" west="-118.3976713" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Redondo Beach, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8946530" south="33.8146149" east="-118.3523330" west="-118.4019510" />
+    </ExtendedData>
+    <Point><coordinates>-118.3884078,33.8491816,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>South Bay Cities, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>South Bay Cities</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.9314950" south="33.8146149" east="-118.3523330" west="-118.4989890" />
+    </ExtendedData>
+    <Point><coordinates>-118.4163103,33.8813225,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address></address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"/>
+    <ExtendedData>
+      <LatLonBox north="34.0469020" south="33.7098190" east="-118.2208020" west="-118.4829419" />
+    </ExtendedData>
+    <Point><coordinates>-118.3812562,33.8593233,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p7">
+    <address>Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8231929" south="32.7500400" east="-117.6456040" west="-118.9517210" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.3871821,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p8">
+    <address>Greater Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Greater Los Angeles</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8229740" south="32.8005950" east="-117.4129870" west="-118.9448870" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.0596149,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p9">
+    <address>California, USA</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.0095169" south="32.5288320" east="-114.1312110" west="-124.4820030" />
+    </ExtendedData>
+    <Point><coordinates>-119.4179324,36.7782610,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p10">
+    <address>United States</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="71.5388000" south="18.7763000" east="-66.8850749" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-95.7128910,37.0902400,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p11">
+    <address>North America</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>North America</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="85.4117930" south="5.5613000" east="-4.0430000" west="177.1436000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p12">
+    <address>Americas</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Americas</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="83.6381000" south="-59.9109760" east="-25.4663086" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering search/show
+Rendered shared/_header (1.9ms)
+Rendered search/_show (1.7ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 639ms (View: 8, DB: 7) | 200 OK [http://localhost/search/show/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-29 00:12:08) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.7ms)
+Rendered shared/_search (1.5ms)
+Rendered site/_content (0.6ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-08-29 00:12:28) [GET]
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (1.8ms)
+Rendered user/_collect (25.9ms)
+Completed in 142ms (View: 141, DB: 1) | 200 OK [http://localhost/user/collect]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show_login (for 127.0.0.1 at 2010-08-29 00:13:19) [GET]
+Rendering template within layouts/application
+Rendering user/show_login
+Rendered user/_show_login (1.3ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/user/show_login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-08-29 00:13:32) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7uyuxXGLcPfErIZ6y9wy2M0BVi/ordOVxKQelLctBEk=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;35;1mUser Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `activated_at` = '2010-08-29 07:13:32', `updated_at` = '2010-08-29 07:13:32' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.7ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 27ms (View: 7, DB: 5) | 200 OK [http://localhost/user/login]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-08-29 00:13:56) [GET]
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `activated_at` = '2010-08-29 07:13:56', `updated_at` = '2010-08-29 07:13:56' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mJobPosting Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering job_posting/addJob
+Rendered shared/_header (1.7ms)
+Rendered job_posting/_addJob (7.2ms)
+Completed in 38ms (View: 12, DB: 7) | 200 OK [http://localhost/job_posting/addJob]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-29 14:04:13) [GET]
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.9ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 25ms (View: 8, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#addJob (for 127.0.0.1 at 2010-08-29 14:04:45) [GET]
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:logged_in?] rendered_or_redirected.
+Completed in 14ms (DB: 4) | 302 Found [http://localhost/job_posting/addJob]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-29 14:04:45) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.7ms)
+Rendered shared/_search (1.5ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 83ms (View: 81, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-30 09:49:41) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.7ms)
+Rendered shared/_search (2.1ms)
+Rendered site/_content (0.6ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show_login (for 127.0.0.1 at 2010-08-30 09:49:46) [GET]
+Rendering template within layouts/application
+Rendering user/show_login
+Rendered user/_show_login (1.4ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/user/show_login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show_login (for 127.0.0.1 at 2010-08-30 09:50:52) [GET]
+Rendering template within layouts/application
+Rendering user/show_login
+Rendered user/_show_login (1.3ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/user/show_login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-08-30 09:51:14) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"k0FfV4Il2HuOUUj+1E4Dxyp075FVTPA5Ng2wHViP9rE=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `activated_at` = '2010-08-30 16:51:14', `updated_at` = '2010-08-30 16:51:14' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.8ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 26ms (View: 7, DB: 3) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-08-30 09:51:54) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"k0FfV4Il2HuOUUj+1E4Dxyp075FVTPA5Ng2wHViP9rE=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `activated_at` = '2010-08-30 16:51:54', `updated_at` = '2010-08-30 16:51:54' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (2.0ms)
+Rendered shared/_search (2.9ms)
+Rendered site/_content (0.6ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 108ms (View: 13, DB: 4) | 200 OK [http://localhost/user/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-08-30 09:52:28) [GET]
+  Parameters: {"within"=>"10", "city"=>"", "zip"=>"90278", "commit"=>"Search For Jobs", "telecommute"=>"include", "state"=>""}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Something has gone very wrong during geocoding, OR you have configured an invalid class name in Geokit::Geocoders::provider_order. Address:   90278. Provider: google
+Caught an error during geocoder.us geocoding call: getaddrinfo: nodename nor servname provided, or not known
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (1.8ms)
+Rendered search/_index (0.1ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 26ms (View: 5, DB: 4) | 200 OK [http://localhost/search?zip=90278&within=10&city=&state=&telecommute=include&commit=Search+For+Jobs]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-08-30 09:53:53) [GET]
+  Parameters: {"within"=>"10", "city"=>"", "zip"=>"90278", "commit"=>"Search For Jobs", "telecommute"=>"include", "state"=>""}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Something has gone very wrong during geocoding, OR you have configured an invalid class name in Geokit::Geocoders::provider_order. Address:   90278. Provider: google
+Caught an error during geocoder.us geocoding call: getaddrinfo: nodename nor servname provided, or not known
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (1.8ms)
+Rendered search/_index (0.1ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 26ms (View: 5, DB: 3) | 200 OK [http://localhost/search?zip=90278&within=10&city=&state=&telecommute=include&commit=Search+For+Jobs]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-08-30 09:55:22) [GET]
+  Parameters: {"within"=>"10", "city"=>"", "zip"=>"90278", "commit"=>"Search For Jobs", "telecommute"=>"include", "state"=>""}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Something has gone very wrong during geocoding, OR you have configured an invalid class name in Geokit::Geocoders::provider_order. Address:   90278. Provider: google
+Caught an error during geocoder.us geocoding call: getaddrinfo: nodename nor servname provided, or not known
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (1.7ms)
+Rendered search/_index (0.1ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 26ms (View: 5, DB: 3) | 200 OK [http://localhost/search?zip=90278&within=10&city=&state=&telecommute=include&commit=Search+For+Jobs]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#manage_ads (for 127.0.0.1 at 2010-08-30 09:56:11) [GET]
+  [4;35;1mUser Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering user/manage_ads
+Rendered shared/_header (2.0ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 1) [0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Rendered user/_manage_ads (13.4ms)
+Completed in 36ms (View: 16, DB: 7) | 200 OK [http://localhost/user/manage_ads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-30 10:04:43) [GET]
+  [4;35;1mUser Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (2.0ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 24ms (View: 8, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#manage_ads (for 127.0.0.1 at 2010-08-30 10:07:56) [GET]
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering user/manage_ads
+Rendered shared/_header (2.5ms)
+  [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 1) [0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Rendered user/_manage_ads (16.5ms)
+Completed in 41ms (View: 23, DB: 6) | 200 OK [http://localhost/user/manage_ads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-30 10:08:37) [GET]
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (2.5ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 24ms (View: 8, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (1.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-08-30 10:08:41) [GET]
+  [4;35;1mUser Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `activated_at` = '2010-08-30 17:08:41', `updated_at` = '2010-08-30 17:08:41' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.9ms)
+  [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 1) [0m
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Rendered user/_index (12.4ms)
+Completed in 39ms (View: 15, DB: 9) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-08-30 10:17:17) [GET]
+  [4;35;1mUser Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `activated_at` = '2010-08-30 17:17:17', `updated_at` = '2010-08-30 17:17:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.7ms)
+  [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 1) [0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Rendered user/_index (13.0ms)
+Completed in 43ms (View: 20, DB: 8) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-08-30 10:18:57) [GET]
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `activated_at` = '2010-08-30 17:18:57', `updated_at` = '2010-08-30 17:18:57' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.8ms)
+  [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 1) [0m
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Rendered user/_index (13.0ms)
+Completed in 40ms (View: 19, DB: 6) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-08-30 10:19:17) [GET]
+  [4;35;1mUser Columns (103.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `activated_at` = '2010-08-30 17:19:17', `updated_at` = '2010-08-30 17:19:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (2.1ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 1) [0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Rendered user/_index (85.6ms)
+Completed in 219ms (View: 93, DB: 108) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-30 11:23:03) [GET]
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (2.6ms)
+Rendered shared/_search (1.6ms)
+Rendered site/_content (0.6ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 25ms (View: 8, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-08-30 11:26:26) [GET]
+  [4;35;1mUser Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:logged_in?] rendered_or_redirected.
+Completed in 15ms (DB: 4) | 302 Found [http://localhost/user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-30 11:26:26) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.6ms)
+Rendered shared/_search (1.6ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-08-30 11:26:30) [GET]
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (1.6ms)
+Rendered user/_collect (3.6ms)
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-30 11:37:26) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.6ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-08-30 11:37:33) [GET]
+  Parameters: {"within"=>"10", "city"=>"", "zip"=>"90278", "commit"=>"Search For Jobs", "telecommute"=>"include", "state"=>""}
+Google geocoding. Address:   90278. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  90278</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mJobPosting Load (0.7ms)[0m   [0mSELECT *, 
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>33.7213431471464 AND job_postings.lat<34.0104828528536 AND job_postings.lng>-118.549521327478 AND job_postings.lng<-118.201304872522)) AND (
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 10)) ORDER BY distance[0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`telecommute` = 1) [0m
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (1.6ms)
+Rendered search/_index (0.7ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 340ms (View: 6, DB: 3) | 200 OK [http://localhost/search?zip=90278&within=10&city=&state=&telecommute=include&commit=Search+For+Jobs]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#show (for 127.0.0.1 at 2010-08-30 11:37:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mJobPosting Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+Google geocoding. Address: 33.865913,-118.3754131. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>33.865913,-118.3754131</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>2016 Clark Ln, Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><Thoroughfare><ThoroughfareName>2016 Clark Ln</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8690436" south="33.8627484" east="-118.3723034" west="-118.3785986" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754510,33.8658960,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Redondo Beach Unified, California, USA</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Redondo Beach Unified</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8945140" south="33.8152150" east="-118.3526070" west="-118.3976713" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Redondo Beach, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8946530" south="33.8146149" east="-118.3523330" west="-118.4019510" />
+    </ExtendedData>
+    <Point><coordinates>-118.3884078,33.8491816,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>South Bay Cities, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>South Bay Cities</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.9314950" south="33.8146149" east="-118.3523330" west="-118.4989890" />
+    </ExtendedData>
+    <Point><coordinates>-118.4163103,33.8813225,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address></address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"/>
+    <ExtendedData>
+      <LatLonBox north="34.0469020" south="33.7098190" east="-118.2208020" west="-118.4829419" />
+    </ExtendedData>
+    <Point><coordinates>-118.3812562,33.8593233,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p7">
+    <address>Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8231929" south="32.7500400" east="-117.6456040" west="-118.9517210" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.3871821,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p8">
+    <address>Greater Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Greater Los Angeles</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8229740" south="32.8005950" east="-117.4129870" west="-118.9448870" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.0596149,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p9">
+    <address>California, USA</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.0095169" south="32.5288320" east="-114.1312110" west="-124.4820030" />
+    </ExtendedData>
+    <Point><coordinates>-119.4179324,36.7782610,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p10">
+    <address>United States</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="71.5388000" south="18.7763000" east="-66.8850749" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-95.7128910,37.0902400,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p11">
+    <address>North America</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>North America</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="85.4117930" south="5.5613000" east="-4.0430000" west="177.1436000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p12">
+    <address>Americas</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Americas</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="83.6381000" south="-59.9109760" east="-25.4663086" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering search/show
+Rendered shared/_header (1.6ms)
+Rendered search/_show (2.1ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 827ms (View: 7, DB: 7) | 200 OK [http://localhost/search/show/1]

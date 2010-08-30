@@ -1,23 +1,37 @@
-<h1>Jobs Matching Your Search</h1>
-<br>
-<table>
-<tr><td><img src=<%= "#{@img}" %> ></td><td>Search details:<br>
-<p>Full Address: <%= @geo.full_address %></p>
-<p>Precision: <%= @geo.precision %> </p>
-<p>There were <%= @jobs.length %> jobs found.</p>
-</td></tr></table>
+<div class="roundedcornr_box_659996">
+   <div class="roundedcornr_top_659996"><div></div></div>
+      <div class="roundedcornr_content_659996">
+		<h1>Jobs Matching Your Search</h1>
+		<br>
+		<table>
+		<tr><td><img src=<%= "#{@img}" %> ></td><td>Search details:<br>
+		<p>Full Address: <%= @geo.full_address %></p>
+		<p>Precision: <%= @geo.precision %> </p>
+		<p>There were <%= @jobs.length %> jobs found.</p>
+		</td></tr></table>
+
+      </div>
+   <div class="roundedcornr_bottom_659996"><div></div></div>
+</div>
 <hr>
-<span class="jobText">
-<table>
-<tr><th class="small">Date</th> <th class="medium">Title</th> <th class="medium">Duration/Job Type</th> <th class="medium">Location</th> <th class="large">Description</th> </tr>
-<% for job in @jobs %>
-  <tr>
-    <td> <%= job.start_run_date.strftime("%m/%d/%y") %> </td>
-    <td> <%= link_to job.title, {:controller=>'search', :action=>'show', :id=>job.id} %> </td>
-	<td> <%= h job.job_type %> </td>
-	<td> <%= h "#{job.city}, #{job.zip}" %> </td>
-	<td> <%= h job.short_description %> </td>
-  </tr>
-<% end %>
-</table>
-</span>
+<div class="roundedcornr_box_218416">
+   <div class="roundedcornr_top_218416"><div></div></div>
+      <div class="roundedcornr_content_218416">
+		<span class="jobText">
+		<table>
+		<tr><th class="small">Date</th> <th class="medium">Title</th> <th class="medium">Duration/Job Type</th> <th class="medium">Location</th> <th class="large">Description</th> </tr>
+		<% for job in @jobs %>
+		  <tr>
+		    <td> <%= job.start_run_date.strftime("%m/%d/%y") %> </td>
+		    <td> <%= link_to job.title, {:controller=>'search', :action=>'show', :id=>job.id} %> </td>
+			<td> <%= h job.job_type %> </td>
+			<td> <%= h "#{job.city}, #{job.zip}" %> </td>
+			<td> <%= h job.short_description %> </td>
+		  </tr>
+		<% end %>
+		</table>
+		</span>
+      </div>
+   <div class="roundedcornr_bottom_218416"><div></div></div>
+</div>
+

@@ -1,6 +1,5 @@
+<h1>Your Profile</h1>
 <span id="left">
-<strong>Your Profile</strong>
-  <br><br>
     <p>Currently Running Ads: <%= link_to "#{@user.jobs_running.length}", :controller=>'user', :action=>'manage_ads' %></p>
     <p>Saved Ads: <a href="#"><%= link_to "#{@user.jobPostings.length}", :controller=>'user', :action=>'manage_ads' %></p>
 	<p><%= link_to "Manage Ads", :controller=>'user', :action=>'manage_ads' %></p>
