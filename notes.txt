@@ -2,19 +2,18 @@ http://hollow-meadow-93.heroku.com
 heroku db:reset --app hollow-meadow-93
 heroku rake db:migrate
 
-What other actions need to be done?
-Are telecommute handled correctly?
-Allow searchers to apply for jobs through the site.
-User Profile-- show all invoices, delete any pending invoices
-Logout button!
 
-TODO ** EXPIRED jobs MATCHING Search!!
 
+
++ User Profile-- show all invoices, delete any pending invoices
++ Logout button!
++ Are telecommute handled correctly?
++ create ajax email success div class so it can be shown nicely
   
 - link edit profile to user index
-+ addJob preview page
 - remove job_posting_id from user
-Recruiter display page
+-Allow searchers to apply for jobs through the site.
+
 
 ## how are we going to handle the merchant stuff?
   ActiveMerchant/ payPal gateway?-- website payment pro

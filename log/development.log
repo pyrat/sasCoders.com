@@ -14486,3 +14486,1065 @@ Rendered shared/_header (1.6ms)
 Rendered search/_show (2.1ms)
 Rendered shared/_sidebar (0.1ms)
 Completed in 827ms (View: 7, DB: 7) | 200 OK [http://localhost/search/show/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-30 22:04:42) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (6.0ms)
+Rendered shared/_search (3.1ms)
+Rendered site/_content (1.5ms)
+Rendered shared/_sidebar (0.8ms)
+Completed in 201ms (View: 198, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-08-30 22:04:49) [GET]
+  Parameters: {"within"=>"10", "city"=>"", "zip"=>"90278", "commit"=>"Search For Jobs", "telecommute"=>"include", "state"=>""}
+Google geocoding. Address:   90278. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  90278</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mJobPosting Load (0.8ms)[0m   [0;1mSELECT *, 
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>33.7213431471464 AND job_postings.lat<34.0104828528536 AND job_postings.lng>-118.549521327478 AND job_postings.lng<-118.201304872522)) AND (
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 10)) ORDER BY distance[0m
+  [4;35;1mJobPosting Columns (5.5ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (2.5ms)
+Rendered search/_index (3.0ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 325ms (View: 45, DB: 7) | 200 OK [http://localhost/search?zip=90278&within=10&city=&state=&telecommute=include&commit=Search+For+Jobs]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show_login (for 127.0.0.1 at 2010-08-30 22:05:00) [GET]
+Rendering template within layouts/application
+Rendering user/show_login
+Rendered user/_show_login (2.8ms)
+Completed in 32ms (View: 31, DB: 0) | 200 OK [http://localhost/user/show_login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-08-30 22:05:06) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"k0FfV4Il2HuOUUj+1E4Dxyp075FVTPA5Ng2wHViP9rE=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `activated_at` = '2010-08-31 05:05:06', `updated_at` = '2010-08-31 05:05:06' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (2.0ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.6ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 217ms (View: 8, DB: 4) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#manage_ads (for 127.0.0.1 at 2010-08-30 22:06:21) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering user/manage_ads
+Rendered shared/_header (1.8ms)
+  [4;36;1mJobPosting Load (0.5ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 1) [0m
+  [4;35;1mJobPosting Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Rendered user/_manage_ads (44.8ms)
+Completed in 73ms (View: 56, DB: 6) | 200 OK [http://localhost/user/manage_ads]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#apply_credit (for 127.0.0.1 at 2010-08-30 22:06:26) [POST]
+  Parameters: {"authenticity_token"=>"k0FfV4Il2HuOUUj+1E4Dxyp075FVTPA5Ng2wHViP9rE=", "id"=>"1"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `activated_at` = '2010-08-31 05:06:26', `updated_at` = '2010-08-31 05:06:26' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.8ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering job_posting/apply_credit
+Rendered shared/_header (2.8ms)
+Rendered job_posting/_apply_credit (29.2ms)
+Completed in 168ms (View: 82, DB: 7) | 200 OK [http://localhost/job_posting/apply_credit/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#apply_credit_final (for 127.0.0.1 at 2010-08-30 22:06:40) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"k0FfV4Il2HuOUUj+1E4Dxyp075FVTPA5Ng2wHViP9rE=", "quantity"=>"1", "id"=>"1"}
+  [4;36;1mUser Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `activated_at` = '2010-08-31 05:06:40', `updated_at` = '2010-08-31 05:06:40' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.8ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mJobPosting Update (0.2ms)[0m   [0mUPDATE `job_postings` SET `start_run_date` = '2010-08-31 05:06:40', `end_date` = '2010-09-30 05:06:40', `updated_at` = '2010-08-31 05:06:40' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `credits` = 8, `updated_at` = '2010-08-31 05:06:40' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/user/manage_ads
+Completed in 36ms (DB: 9) | 302 Found [http://localhost/job_posting/apply_credit_final/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#manage_ads (for 127.0.0.1 at 2010-08-30 22:06:40) [GET]
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering user/manage_ads
+Rendered shared/_header (2.5ms)
+  [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 1) [0m
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Rendered user/_manage_ads (30.1ms)
+Completed in 53ms (View: 35, DB: 5) | 200 OK [http://localhost/user/manage_ads]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-30 22:06:52) [GET]
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.8ms)
+Rendered shared/_search (1.6ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 24ms (View: 8, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-08-30 22:06:58) [GET]
+  Parameters: {"within"=>"10", "city"=>"", "zip"=>"90278", "commit"=>"Search For Jobs", "telecommute"=>"include", "state"=>""}
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Google geocoding. Address:   90278. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>  90278</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mJobPosting Load (0.6ms)[0m   [0mSELECT *, 
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ AS distance FROM `job_postings` WHERE (((job_postings.lat>33.7213431471464 AND job_postings.lat<34.0104828528536 AND job_postings.lng>-118.549521327478 AND job_postings.lng<-118.201304872522)) AND (
+ (ACOS(least(1,COS(0.59107168604395)*COS(-2.06604071200343)*COS(RADIANS(job_postings.lat))*COS(RADIANS(job_postings.lng))+
+ COS(0.59107168604395)*SIN(-2.06604071200343)*COS(RADIANS(job_postings.lat))*SIN(RADIANS(job_postings.lng))+
+ SIN(0.59107168604395)*SIN(RADIANS(job_postings.lat))))*3963.19)
+ <= 10)) ORDER BY distance[0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`telecommute` = 1) [0m
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (1.8ms)
+Rendered search/_index (0.9ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 244ms (View: 6, DB: 6) | 200 OK [http://localhost/search?zip=90278&within=10&city=&state=&telecommute=include&commit=Search+For+Jobs]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#show (for 127.0.0.1 at 2010-08-30 22:07:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.8ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+Google geocoding. Address: 33.865913,-118.3754131. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>33.865913,-118.3754131</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>2016 Clark Ln, Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><Thoroughfare><ThoroughfareName>2016 Clark Ln</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8690436" south="33.8627484" east="-118.3723034" west="-118.3785986" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754510,33.8658960,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Redondo Beach Unified, California, USA</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Redondo Beach Unified</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8945140" south="33.8152150" east="-118.3526070" west="-118.3976713" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Redondo Beach, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8946530" south="33.8146149" east="-118.3523330" west="-118.4019510" />
+    </ExtendedData>
+    <Point><coordinates>-118.3884078,33.8491816,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>South Bay Cities, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>South Bay Cities</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.9314950" south="33.8146149" east="-118.3523330" west="-118.4989890" />
+    </ExtendedData>
+    <Point><coordinates>-118.4163103,33.8813225,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address></address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"/>
+    <ExtendedData>
+      <LatLonBox north="34.0469020" south="33.7098190" east="-118.2208020" west="-118.4829419" />
+    </ExtendedData>
+    <Point><coordinates>-118.3812562,33.8593233,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p7">
+    <address>Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8231929" south="32.7500400" east="-117.6456040" west="-118.9517210" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.3871821,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p8">
+    <address>Greater Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Greater Los Angeles</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8229740" south="32.8005950" east="-117.4129870" west="-118.9448870" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.0596149,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p9">
+    <address>California, USA</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.0095169" south="32.5288320" east="-114.1312110" west="-124.4820030" />
+    </ExtendedData>
+    <Point><coordinates>-119.4179324,36.7782610,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p10">
+    <address>United States</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="71.5388000" south="18.7763000" east="-66.8850749" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-95.7128910,37.0902400,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p11">
+    <address>North America</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>North America</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="85.4117930" south="5.5613000" east="-4.0430000" west="177.1436000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p12">
+    <address>Americas</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Americas</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="83.6381000" south="-59.9109760" east="-25.4663086" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering search/show
+Rendered shared/_header (2.9ms)
+Rendered search/_show (6.0ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 653ms (View: 50, DB: 6) | 200 OK [http://localhost/search/show/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplyController#email (for 127.0.0.1 at 2010-08-30 22:07:09) [POST]
+  Parameters: {"commit"=>"Send Details", "authenticity_token"=>"k0FfV4Il2HuOUUj+1E4Dxyp075FVTPA5Ng2wHViP9rE=", "id"=>"1", "email"=>"swelltrain@gmail.com"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mJobPosting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mJobPosting Load (0.7ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Sent mail to <swelltrain@gmail.com>
+
+Date: Mon, 30 Aug 2010 22:07:09 -0700
+From: sasCoders.com
+To: swelltrain@gmail.com
+Subject: Job Details For Job Data Analyst- SAS/R => 1sasCoders1
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hello!
+
+Thank you for using sasCoders.com to search for your next job.  
+To apply for this job send an email to Stephen Philp at swelltrain@gmail.com and 
+be sure to include the job reference id in the subject: 1sasCoders1.
+
+Contact Name:
+Stephen Philp
+Contact Email:
+swelltrain@gmail.com
+Job Title:
+Data Analyst- SAS/R
+Job Type:
+Full Time
+Short Description:
+This is a good job.
+Experience:
+This job takes a lot of experience.
+Long Description:
+This job takes a lot of experience.
+Completed in 172ms (View: 2, DB: 7) | 200 OK [http://localhost/apply/email/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#show (for 127.0.0.1 at 2010-08-30 22:15:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJobPosting Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.8ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+Google geocoding. Address: 33.865913,-118.3754131. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>33.865913,-118.3754131</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>2016 Clark Ln, Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><Thoroughfare><ThoroughfareName>2016 Clark Ln</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8690436" south="33.8627484" east="-118.3723034" west="-118.3785986" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754510,33.8658960,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Redondo Beach Unified, California, USA</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Redondo Beach Unified</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8945140" south="33.8152150" east="-118.3526070" west="-118.3976713" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Redondo Beach, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8946530" south="33.8146149" east="-118.3523330" west="-118.4019510" />
+    </ExtendedData>
+    <Point><coordinates>-118.3884078,33.8491816,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>South Bay Cities, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>South Bay Cities</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.9314950" south="33.8146149" east="-118.3523330" west="-118.4989890" />
+    </ExtendedData>
+    <Point><coordinates>-118.4163103,33.8813225,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address></address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"/>
+    <ExtendedData>
+      <LatLonBox north="34.0469020" south="33.7098190" east="-118.2208020" west="-118.4829419" />
+    </ExtendedData>
+    <Point><coordinates>-118.3812562,33.8593233,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p7">
+    <address>Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8231929" south="32.7500400" east="-117.6456040" west="-118.9517210" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.3871821,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p8">
+    <address>Greater Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Greater Los Angeles</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8229740" south="32.8005950" east="-117.4129870" west="-118.9448870" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.0596149,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p9">
+    <address>California, USA</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.0095169" south="32.5288320" east="-114.1312110" west="-124.4820030" />
+    </ExtendedData>
+    <Point><coordinates>-119.4179324,36.7782610,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p10">
+    <address>United States</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="71.5388000" south="18.7763000" east="-66.8850749" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-95.7128910,37.0902400,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p11">
+    <address>North America</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>North America</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="85.4117930" south="5.5613000" east="-4.0430000" west="177.1436000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p12">
+    <address>Americas</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Americas</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="83.6381000" south="-59.9109760" east="-25.4663086" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering search/show
+Rendered shared/_header (1.7ms)
+Rendered search/_show (2.0ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 1269ms (View: 7, DB: 7) | 200 OK [http://localhost/search/show/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplyController#email (for 127.0.0.1 at 2010-08-30 22:15:13) [POST]
+  Parameters: {"commit"=>"Send Details", "authenticity_token"=>"k0FfV4Il2HuOUUj+1E4Dxyp075FVTPA5Ng2wHViP9rE=", "id"=>"1", "email"=>"swelltrain@gmail.com"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mJobPosting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mJobPosting Load (0.8ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Sent mail to <swelltrain@gmail.com>
+
+Date: Mon, 30 Aug 2010 22:15:13 -0700
+From: sasCoders.com
+To: swelltrain@gmail.com
+Subject: Job Details For Job Data Analyst- SAS/R => 1sasCoders1
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hello!
+
+Thank you for using sasCoders.com to search for your next job.  
+To apply for this job send an email to Stephen Philp at swelltrain@gmail.com and 
+be sure to include the job reference id in the subject: 1sasCoders1.
+
+Contact Name:
+Stephen Philp
+Contact Email:
+swelltrain@gmail.com
+Job Title:
+Data Analyst- SAS/R
+Job Type:
+Full Time
+Short Description:
+This is a good job.
+Experience:
+This job takes a lot of experience.
+Long Description:
+This job takes a lot of experience.
+Completed in 34ms (View: 1, DB: 6) | 200 OK [http://localhost/apply/email/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#show (for 127.0.0.1 at 2010-08-30 22:17:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.7ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+Google geocoding. Address: 33.865913,-118.3754131. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>33.865913,-118.3754131</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>2016 Clark Ln, Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><Thoroughfare><ThoroughfareName>2016 Clark Ln</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8690436" south="33.8627484" east="-118.3723034" west="-118.3785986" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754510,33.8658960,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Redondo Beach Unified, California, USA</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Redondo Beach Unified</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8945140" south="33.8152150" east="-118.3526070" west="-118.3976713" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Redondo Beach, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8946530" south="33.8146149" east="-118.3523330" west="-118.4019510" />
+    </ExtendedData>
+    <Point><coordinates>-118.3884078,33.8491816,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>South Bay Cities, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>South Bay Cities</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.9314950" south="33.8146149" east="-118.3523330" west="-118.4989890" />
+    </ExtendedData>
+    <Point><coordinates>-118.4163103,33.8813225,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address></address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"/>
+    <ExtendedData>
+      <LatLonBox north="34.0469020" south="33.7098190" east="-118.2208020" west="-118.4829419" />
+    </ExtendedData>
+    <Point><coordinates>-118.3812562,33.8593233,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p7">
+    <address>Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8231929" south="32.7500400" east="-117.6456040" west="-118.9517210" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.3871821,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p8">
+    <address>Greater Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Greater Los Angeles</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8229740" south="32.8005950" east="-117.4129870" west="-118.9448870" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.0596149,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p9">
+    <address>California, USA</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.0095169" south="32.5288320" east="-114.1312110" west="-124.4820030" />
+    </ExtendedData>
+    <Point><coordinates>-119.4179324,36.7782610,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p10">
+    <address>United States</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="71.5388000" south="18.7763000" east="-66.8850749" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-95.7128910,37.0902400,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p11">
+    <address>North America</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>North America</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="85.4117930" south="5.5613000" east="-4.0430000" west="177.1436000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p12">
+    <address>Americas</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Americas</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="83.6381000" south="-59.9109760" east="-25.4663086" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering search/show
+Rendered shared/_header (1.7ms)
+Rendered search/_show (4.2ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 987ms (View: 13, DB: 6) | 200 OK [http://localhost/search/show/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplyController#email (for 127.0.0.1 at 2010-08-30 22:18:04) [POST]
+  Parameters: {"commit"=>"Send Details", "authenticity_token"=>"k0FfV4Il2HuOUUj+1E4Dxyp075FVTPA5Ng2wHViP9rE=", "id"=>"1", "email"=>"swelltrain@gmail.com"}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mJobPosting Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mJobPosting Load (0.8ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Sent mail to <swelltrain@gmail.com>
+
+Date: Mon, 30 Aug 2010 22:18:04 -0700
+From: sasCoders.com
+To: swelltrain@gmail.com
+Subject: Job Details For Job Data Analyst- SAS/R => 1sasCoders1
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hello!
+
+Thank you for using sasCoders.com to search for your next job.  
+To apply for this job send an email to Stephen Philp at swelltrain@gmail.com and 
+be sure to include the job reference id in the subject: 1sasCoders1.
+
+Contact Name:
+Stephen Philp
+Contact Email:
+swelltrain@gmail.com
+Job Title:
+Data Analyst- SAS/R
+Job Type:
+Full Time
+Short Description:
+This is a good job.
+Experience:
+This job takes a lot of experience.
+Long Description:
+This job takes a lot of experience.
+Completed in 35ms (View: 1, DB: 6) | 200 OK [http://localhost/apply/email/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#show (for 127.0.0.1 at 2010-08-30 22:23:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJobPosting Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.7ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+Google geocoding. Address: 33.865913,-118.3754131. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>33.865913,-118.3754131</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>2016 Clark Ln, Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><Thoroughfare><ThoroughfareName>2016 Clark Ln</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8690436" south="33.8627484" east="-118.3723034" west="-118.3785986" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754510,33.8658960,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Redondo Beach Unified, California, USA</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Redondo Beach Unified</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8945140" south="33.8152150" east="-118.3526070" west="-118.3976713" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Redondo Beach, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8946530" south="33.8146149" east="-118.3523330" west="-118.4019510" />
+    </ExtendedData>
+    <Point><coordinates>-118.3884078,33.8491816,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>South Bay Cities, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>South Bay Cities</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.9314950" south="33.8146149" east="-118.3523330" west="-118.4989890" />
+    </ExtendedData>
+    <Point><coordinates>-118.4163103,33.8813225,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address></address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"/>
+    <ExtendedData>
+      <LatLonBox north="34.0469020" south="33.7098190" east="-118.2208020" west="-118.4829419" />
+    </ExtendedData>
+    <Point><coordinates>-118.3812562,33.8593233,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p7">
+    <address>Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8231929" south="32.7500400" east="-117.6456040" west="-118.9517210" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.3871821,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p8">
+    <address>Greater Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Greater Los Angeles</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8229740" south="32.8005950" east="-117.4129870" west="-118.9448870" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.0596149,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p9">
+    <address>California, USA</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.0095169" south="32.5288320" east="-114.1312110" west="-124.4820030" />
+    </ExtendedData>
+    <Point><coordinates>-119.4179324,36.7782610,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p10">
+    <address>United States</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="71.5388000" south="18.7763000" east="-66.8850749" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-95.7128910,37.0902400,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p11">
+    <address>North America</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>North America</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="85.4117930" south="5.5613000" east="-4.0430000" west="177.1436000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p12">
+    <address>Americas</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Americas</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="83.6381000" south="-59.9109760" east="-25.4663086" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering search/show
+Rendered shared/_header (1.7ms)
+Rendered search/_show (2.0ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 1128ms (View: 7, DB: 6) | 200 OK [http://localhost/search/show/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#show (for 127.0.0.1 at 2010-08-30 22:24:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mJobPosting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+  [4;36;1mJobPosting Load (0.8ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+Google geocoding. Address: 33.865913,-118.3754131. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>33.865913,-118.3754131</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>2016 Clark Ln, Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><Thoroughfare><ThoroughfareName>2016 Clark Ln</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8690436" south="33.8627484" east="-118.3723034" west="-118.3785986" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754510,33.8658960,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Redondo Beach Unified, California, USA</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Redondo Beach Unified</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8945140" south="33.8152150" east="-118.3526070" west="-118.3976713" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Redondo Beach, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8946530" south="33.8146149" east="-118.3523330" west="-118.4019510" />
+    </ExtendedData>
+    <Point><coordinates>-118.3884078,33.8491816,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>South Bay Cities, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>South Bay Cities</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.9314950" south="33.8146149" east="-118.3523330" west="-118.4989890" />
+    </ExtendedData>
+    <Point><coordinates>-118.4163103,33.8813225,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address></address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"/>
+    <ExtendedData>
+      <LatLonBox north="34.0469020" south="33.7098190" east="-118.2208020" west="-118.4829419" />
+    </ExtendedData>
+    <Point><coordinates>-118.3812562,33.8593233,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p7">
+    <address>Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8231929" south="32.7500400" east="-117.6456040" west="-118.9517210" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.3871821,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p8">
+    <address>Greater Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Greater Los Angeles</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8229740" south="32.8005950" east="-117.4129870" west="-118.9448870" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.0596149,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p9">
+    <address>California, USA</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.0095169" south="32.5288320" east="-114.1312110" west="-124.4820030" />
+    </ExtendedData>
+    <Point><coordinates>-119.4179324,36.7782610,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p10">
+    <address>United States</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="71.5388000" south="18.7763000" east="-66.8850749" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-95.7128910,37.0902400,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p11">
+    <address>North America</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>North America</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="85.4117930" south="5.5613000" east="-4.0430000" west="177.1436000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p12">
+    <address>Americas</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Americas</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="83.6381000" south="-59.9109760" east="-25.4663086" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering search/show
+Rendered shared/_header (1.8ms)
+Rendered search/_show (4.0ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 731ms (View: 13, DB: 7) | 200 OK [http://localhost/search/show/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-30 22:24:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/email.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#show (for 127.0.0.1 at 2010-08-30 22:24:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mJobPosting Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.8ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 1) [0m
+Google geocoding. Address: 33.865913,-118.3754131. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>33.865913,-118.3754131</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>2016 Clark Ln, Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><Thoroughfare><ThoroughfareName>2016 Clark Ln</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8690436" south="33.8627484" east="-118.3723034" west="-118.3785986" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754510,33.8658960,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Redondo Beach, CA 90278, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName><PostalCode><PostalCodeNumber>90278</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8979010" south="33.8543559" east="-118.3523330" west="-118.3913710" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Redondo Beach Unified, California, USA</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Redondo Beach Unified</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8945140" south="33.8152150" east="-118.3526070" west="-118.3976713" />
+    </ExtendedData>
+    <Point><coordinates>-118.3754131,33.8659130,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Redondo Beach, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>Redondo Beach</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.8946530" south="33.8146149" east="-118.3523330" west="-118.4019510" />
+    </ExtendedData>
+    <Point><coordinates>-118.3884078,33.8491816,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>South Bay Cities, CA, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName><Locality><LocalityName>South Bay Cities</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="33.9314950" south="33.8146149" east="-118.3523330" west="-118.4989890" />
+    </ExtendedData>
+    <Point><coordinates>-118.4163103,33.8813225,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address></address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"/>
+    <ExtendedData>
+      <LatLonBox north="34.0469020" south="33.7098190" east="-118.2208020" west="-118.4829419" />
+    </ExtendedData>
+    <Point><coordinates>-118.3812562,33.8593233,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p7">
+    <address>Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Los Angeles</SubAdministrativeAreaName></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8231929" south="32.7500400" east="-117.6456040" west="-118.9517210" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.3871821,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p8">
+    <address>Greater Los Angeles, California, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Greater Los Angeles</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="34.8229740" south="32.8005950" east="-117.4129870" west="-118.9448870" />
+    </ExtendedData>
+    <Point><coordinates>-118.1122679,34.0596149,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p9">
+    <address>California, USA</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>CA</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="42.0095169" south="32.5288320" east="-114.1312110" west="-124.4820030" />
+    </ExtendedData>
+    <Point><coordinates>-119.4179324,36.7782610,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p10">
+    <address>United States</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="71.5388000" south="18.7763000" east="-66.8850749" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-95.7128910,37.0902400,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p11">
+    <address>North America</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>North America</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="85.4117930" south="5.5613000" east="-4.0430000" west="177.1436000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p12">
+    <address>Americas</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Americas</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="83.6381000" south="-59.9109760" east="-25.4663086" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering search/show
+Rendered shared/_header (1.9ms)
+Rendered search/_show (4.0ms)
+Rendered shared/_sidebar (0.1ms)
+Completed in 712ms (View: 13, DB: 7) | 200 OK [http://localhost/search/show/1]

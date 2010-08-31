@@ -29,7 +29,9 @@ class SearchController < ApplicationController
 	   @img = "http://maps.google.com/maps/api/staticmap?zoom=10&size=200x200&markers=color:blue|#{@geo.lat},#{@geo.lng}&sensor=false"
   	   @jobs = JobPosting.find(:all, :origin=>@geo, :within=>within, :order=>'distance')
 	   # add in the loop for valid jobs
-	   @jobs.delete_if {|job| !job.approved? and (job.end_date.blank? or job.end_date < Time.now)}
+	   # um, yuck. even better would be to stick this in the find
+	   @jobs.delete_if {|job| job.end_date < Time.now }
+	   @jobs.delete_if {|job| (!job.approved? or job.end_date.blank?)}
 	   if @jobs.length == 0
 	     flash[:error] = "There were no jobs found within #{within} miles of #{location}."
 		 return

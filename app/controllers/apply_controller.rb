@@ -10,7 +10,7 @@ class ApplyController < ApplicationController
      # save the email and the file in the db
      # create a new email and include the cover letter, cc, job.reference_id, etc
   end
-
+  
   def collect
     # not used yet
     # do we need anything here?  this will be called from the /show page
@@ -24,8 +24,15 @@ class ApplyController < ApplicationController
     @email = params[:email]
     @job = JobPosting.find(params[:id])
     
-    ApplicationMailer.deliver_job_details(@email,@job)
-    
+    if (request.xhr?)
+      ApplicationMailer.deliver_job_details(@email,@job)
+      flash[:notice] = "Email sent to <#{@email}>."
+      render :text => "Email sent." 
+    else    
+     ApplicationMailer.deliver_job_details(@email,@job)
+     render :action => :email
+    end
+        
   end
       
   def success

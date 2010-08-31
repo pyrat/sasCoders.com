@@ -26,10 +26,13 @@
 </div>
 
   <div id="right">
-		<% form_tag :controller=> :apply, :action=> :email, :id => @job.id  do %>
-		<p>Email this job to yourself to get the contact details</p>
+		<%= image_tag "mail.png" %>
+		<% form_remote_tag :update => "email",  :url=> {:controller=> :apply, :action=> :email, :id => @job.id}  do %>
+		<div id="email">
+		<p>Email this job to yourself to get the contact details.</p>
            Email <%= text_field_tag(:email, nil, :size=>10) %>
-      <%= submit_tag "Send Details" %>
+           <%= submit_tag "Send Details" %>
+         </div>
       <% end %>
 	
   </div>
