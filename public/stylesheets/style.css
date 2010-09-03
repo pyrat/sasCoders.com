@@ -44,7 +44,7 @@ fieldset.notes{
 }
 div.notes h4 {
 	
-	background-image: url("/images/icon_info.gif");
+	background-image: url("/images/icon_info.gif"); 
 	background-position: left top;
 	background-repeat: no-repeat;
 	border-color: #666666;
@@ -53,6 +53,39 @@ div.notes h4 {
 	color: #666666;
 	font-size: 100%;
 	padding: 3px 0 3px 27px;
+}
+
+.star-img{
+	
+	background-image: url("/images/star.png"); 
+	background-position: left top;
+	background-repeat: no-repeat;
+	min-height: 64px; 
+
+}
+
+.mail-img{
+	background-image: url("/images/mail.png"); 
+	background-position: left top;
+	background-repeat: no-repeat;
+	min-height: 64px; 	
+}
+
+
+.question-img{
+	
+	background-image: url("/images/questionmark.png"); 
+	background-position: left top;
+	background-repeat: no-repeat;
+	min-height: 64px; 
+
+}
+.question-title-text{
+	text-align: center;
+}
+.question-text{
+	font-size:10px;
+/*	padding: 3px 0 3px 64px; */
 }
 
 .last {
@@ -136,11 +169,12 @@ td.employer{
 #left{
   float: left;
   width: 50%;
+  padding: 0 20px 0 0;
 }
 
 #right{
   float: right;
-  width: 50%;
+  width: 40%;
 }
 
 ul.simple{

@@ -5,16 +5,22 @@ To apply for this job send an email to <%= "#{@job.user.first_name} #{@job.user.
 be sure to include the job reference id in the subject: <%= @job.reference_id %>.
 
 Contact Name:
-<%= "#{@job.user.first_name} #{@job.user.last_name}" %>
+  <%= "#{@job.user.first_name} #{@job.user.last_name}" %>
+
 Contact Email:
-<%= @job.user.email %>
+  <%= @job.user.email %>
+
 Job Title:
-<%= @job.title %>
+  <%= @job.title %>
+
 Job Type:
-<%= @job.job_type %>
+  <%= @job.job_type %>
+
 Short Description:
-<%= @job.short_description %>
+  <%= @job.short_description %>
+
 Experience:
-<%= @job.experience %>
+  <%= @job.experience %>
+
 Long Description:
-<%= @job.experience %>
+  <%= @job.experience %>

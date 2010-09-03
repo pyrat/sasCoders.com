@@ -13,6 +13,8 @@ class SearchController < ApplicationController
 	 
 	 within = "10" if within.to_i < 1
 	 
+	 within = "40" if zip.blank?
+	 
 	 if telecommute == "only"
 	   # make the front end so it never gets here but links to search/telecommute
 	   # keep this code here just in case though...

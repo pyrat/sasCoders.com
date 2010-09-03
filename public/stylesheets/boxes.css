@@ -103,3 +103,38 @@ content here
    <div class="roundedcornr_bottom_659996"><div></div></div>
 </div>
 */
+
+/********************************************************************
+  darker blue box
+*/
+.roundedcornr_box_615465 {
+   background: #3c6681;
+}
+.roundedcornr_top_615465 div {
+   background: url(roundedcornr_615465_tl.png) no-repeat top left;
+}
+.roundedcornr_top_615465 {
+   background: url(roundedcornr_615465_tr.png) no-repeat top right;
+}
+.roundedcornr_bottom_615465 div {
+   background: url(roundedcornr_615465_bl.png) no-repeat bottom left;
+}
+.roundedcornr_bottom_615465 {
+   background: url(roundedcornr_615465_br.png) no-repeat bottom right;
+}
+
+.roundedcornr_top_615465 div, .roundedcornr_top_615465, 
+.roundedcornr_bottom_615465 div, .roundedcornr_bottom_615465 {
+   width: 100%;
+   height: 20px;
+   font-size: 1px;
+}
+.roundedcornr_content_615465 { margin: 0 20px; }
+/*
+<div class="roundedcornr_box_615465">
+   <div class="roundedcornr_top_615465"><div></div></div>
+      <div class="roundedcornr_content_615465">
+      </div>
+   <div class="roundedcornr_bottom_615465"><div></div></div>
+</div>
+*/

@@ -1,38 +1,68 @@
 
 <div id="left">
-	<span class="jobText">
-    <strong><%= @job.title %></strong><br><br>
-    
-    <ul class="simple">
-      <li><strong>Location:</strong> <%= @city %> </li>
-      <li><strong>Job Type:</strong> <%= @job.job_type %> </li>
-      <li><strong>Pay: </strong> <%= @job.pay %></li>
-    </ul>
-	<hr>
-    <p><%= simple_format(@job.short_description) %> <br>
-    <p><strong>Experience:</strong><br>
-	<%= simple_format(@job.experience) %>
-    </p>
-<p><strong>Description:</strong><br>
-<%= simple_format(@job.long_description) %> </p>
-<p><strong>Company Name:</strong><br><%= @companyName %></p>
+	<div class="roundedcornr_box_659996">
+	   <div class="roundedcornr_top_659996"><div></div></div>
+	      <div class="roundedcornr_content_659996">
+		        <strong><%= @job.title %></strong><br><br>
+	      		<span class="jobText">
 
-<p><strong>Company Description:</strong><br>
-<%= simple_format(@companyDescription) %>
-</p>
+			    <ul class="simple">
+			      <li><strong>Location:</strong> <%= @city %> </li>
+			      <li><strong>Job Type:</strong> <%= @job.job_type %> </li>
+			      <li><strong>Pay: </strong> <%= @job.pay %></li>
+			    </ul>
+				<hr>
+			    <p><%= simple_format(@job.short_description) %> <br>
+			    <p><strong>Experience:</strong><br>
+				<%= simple_format(@job.experience) %>
+			    </p>
+			<p><strong>Description:</strong><br>
+			<%= simple_format(@job.long_description) %> </p>
+			<p><strong>Company Name:</strong><br><%= @companyName %></p>
 
-</span>
+			<p><strong>Company Description:</strong><br>
+			<%= simple_format(@companyDescription) %>
+			</p>
+
+			</span>
+		
+	      </div>
+	   <div class="roundedcornr_bottom_659996"><div></div></div>
+	</div>
+	
 
 </div>
 
   <div id="right">
-		<%= image_tag "mail.png" %>
+	<div class="roundedcornr_box_659996">
+	   <div class="roundedcornr_top_659996"><div></div></div>
+	      <div class="roundedcornr_content_659996">
+	
+		<div class="mail-img"></div>
 		<% form_remote_tag :update => "email",  :url=> {:controller=> :apply, :action=> :email, :id => @job.id}  do %>
 		<div id="email">
 		<p>Email this job to yourself to get the contact details.</p>
-           Email <%= text_field_tag(:email, nil, :size=>10) %>
-           <%= submit_tag "Send Details" %>
-         </div>
-      <% end %>
+         Email <%= text_field_tag(:email, nil, :size=>10) %>
+         <%= submit_tag "Send Details" %>
+        </div>
+        <% end %>
 	
+
+	      </div>
+	   <div class="roundedcornr_bottom_659996"><div></div></div>
+	</div>
+	<br><br>
+	<div class="roundedcornr_box_659996">
+	   <div class="roundedcornr_top_659996"><div></div></div>
+	      <div class="roundedcornr_content_659996">
+		<div class="question-img"></div>
+	    Privacy Policy
+	    <div class="small">
+		We take your privacy seriously.  We won't use your email for anything other than sending you the details 
+		of this job.  In fact, we don't even store your email address.  So it can never be sold, shared with others 
+		or otherwise abused.<br><br>We even value the privacy of the recruiters.  That is why we don't post their contact details on our site.  
+		</div>
+	      </div>
+	   <div class="roundedcornr_bottom_659996"><div></div></div>
+	</div>
   </div>

@@ -95,8 +95,7 @@ class UserController < ApplicationController
   def login
     @user = User.authenticate(params[:email],params[:pw])
 	if @user
-  	  @user.activated_at = Time.now # does this get saved to the table? or do we have to 
-	  # call save to update activated_at in db
+    @user.activated_at = Time.now 
 	  @user.save
 	  session[:user_id] = @user.id
 	  flash[:notice] = "Hello #{@user.first_name}. You are now logged in."
@@ -105,6 +104,13 @@ class UserController < ApplicationController
 	  flash[:error] = "Sorry.  The name/password you provided was invalid."
 	end
 	render 'site/index' # in future this might be a parameter
+  end
+  
+  def logout
+    @user = nil
+    session[:user_id] = nil
+    flash[:notice] = "You have logged out of the site."
+    render 'site/index'
   end
   
   def manage_ads

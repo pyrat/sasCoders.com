@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 	   (@user.updated_at.to_i < 1.hour.ago.to_i)
 	  # then it was over an hour ago since they last signed in
 	  session[:user_id] = nil
-	  flash[:notice] = "Please login to continue"
+	  flash[:error] = "Please login to continue"
       redirect_to :controller => "site", :action => "index"
       return false
 	else

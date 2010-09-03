@@ -4,12 +4,14 @@ heroku rake db:migrate
 
 
 
-
++ Create rounded help box
 + User Profile-- show all invoices, delete any pending invoices
-+ Logout button!
+
 + Are telecommute handled correctly?
 + create ajax email success div class so it can be shown nicely
-  
+
+- Logout button!
+- add 40 miles if just city  
 - link edit profile to user index
 - remove job_posting_id from user
 -Allow searchers to apply for jobs through the site.
