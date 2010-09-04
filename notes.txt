@@ -3,10 +3,11 @@ heroku db:reset --app hollow-meadow-93
 heroku rake db:migrate
 
 
-
++ Registration collect needs to be styled
 + Create rounded help box
 + User Profile-- show all invoices, delete any pending invoices
-
++ move search details to the bottom for REGISTER page
++ Edit job needs to have styling applied
 + Are telecommute handled correctly?
 + create ajax email success div class so it can be shown nicely
 
