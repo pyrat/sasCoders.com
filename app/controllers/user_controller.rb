@@ -1,11 +1,17 @@
 class UserController < ApplicationController
-  before_filter :logged_in?, :only=> [:edit, :index, :save]
+  before_filter :logged_in?, :only=> [:edit, :index, :save, :save_company, :edit_company]
   
   def index
     flash[:notice] = nil
   end
+    
+  def edit_company
+  end
   
-  def show
+  def save_company
+    @user.company_description = params[:company_description]
+    @user.save
+    render 'index'
   end
   
   def collect
@@ -55,11 +61,12 @@ class UserController < ApplicationController
 	  @user.save!
 	  session[:user_id] = @user.id
 	  flash[:notice] = "Thank you for validating.  You are now logged in."
-	  
+	  render :action => :validated
 	  else
 	  flash[:error] = "Something went wrong.  That validation was incorrect."
+	  render 'site/index'
 	end
-	render 'site/index'
+	
 	
   end
 

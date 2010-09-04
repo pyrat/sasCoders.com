@@ -64,7 +64,40 @@ div.notes h4 {
 
 }
 
+.tools-img{
+	
+	background-image: url("/images/tools.png"); 
+	background-position: left top;
+	background-repeat: no-repeat;
+	min-height: 64px; 
+
+}
+
+.info-img{
+	
+	background-image: url("/images/info.png"); 
+	background-position: left top;
+	background-repeat: no-repeat;
+	min-height: 64px; 
+
+}
+
+.doc-img{
+	background-image: url("/images/doc.png"); 
+	background-position: left top;
+	background-repeat: no-repeat;
+	min-height: 64px; 	
+	
+}
+
 .mail-img{
+	background-image: url("/images/mail.png"); 
+	background-position: left top;
+	background-repeat: no-repeat;
+	min-height: 64px; 	
+}
+
+.cash-img{
 	background-image: url("/images/mail.png"); 
 	background-position: left top;
 	background-repeat: no-repeat;
@@ -161,7 +194,6 @@ td.employer{
 
 #footer {
 	clear: both;
-	border-top: 2px solid #bac2c7;
 	font-size: 80%;
 	text-align: center;
 	}

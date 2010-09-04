@@ -17,11 +17,7 @@ class JobPostingController < ApplicationController
     @jobPosting = JobPosting.new # for our form
 	
   end
-  
-  def manage
-    # just get all the jobs where the owners id matches the session[id]
-  end
-  
+ 
   def create
     @job = JobPosting.new(params[:jobPosting])
 	@job.user_id = @user.id # does this need to happen?, yes i think so

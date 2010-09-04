@@ -1,0 +1,24 @@
+<div id="container">
+<%= render(:partial => "shared/header") %>
+
+
+<div id="content">
+ Your company description is displayed along with your ads.<br><br>
+<% form_tag :controller=>:user, :action=>:save_company do %>
+<div class="roundedcornr_box_659996">
+   <div class="roundedcornr_top_659996"><div></div></div>
+      <div class="roundedcornr_content_659996">
+      		<div class="optional"><%= label_tag "Please tell us about your company:" %></div>
+		<%= text_area_tag :company_description, params[:company_description], :rows=>8 %>
+
+		
+      </div>
+   <div class="roundedcornr_bottom_659996"><div></div></div>
+</div>
+<%= submit_tag 'Submit', :class => "button" %>
+<% end %>
+</div>
+<div id="footer">
+</div>
+
+</div>
