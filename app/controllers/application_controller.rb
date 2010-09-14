@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
   end
   
   def cleanup
-    flash[:error] = nil
-    flash[:notice] = nil
+#    flash[:error] = nil
+#    flash[:notice] = nil
   end
 end

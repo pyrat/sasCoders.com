@@ -6,6 +6,8 @@
 		      <div class="roundedcornr_content_659996">
 				<div class="required"><%= label_tag "Email:" %></div>
 				 <%= text_field_tag :email, params[:email], :size=>40 %>* 
+				<p class="last">* This is the email address our system will use to communicate with you (invoices, etc). We will also 
+						use this email address as the response address for job ads. <strong>But this address is kept private and never shown on our site.</strong></p>
 
 
 				<div class="required"> <%= label_tag "password:" %></div>
@@ -27,6 +29,7 @@
 				<%= text_field_tag :last_name, params[:last_name], :size=>40 %>
 				<div class="optional"><%= label_tag "Telephone #:" %></div>
 				<%= text_field_tag :telephone, params[:telephone], :size=>40 %>*
+				<p class="last">*We only ask for a phone number so we can contact you if there are any questions with billing, ad layout, etc.  We <strong>do NOT</strong> share your phone number with anyone.</p>
 				</div>
 				
 		     
@@ -40,8 +43,8 @@
 				<%= text_field_tag :company, params[:company], :size=>40 %>
 				<div class="optional"><%= label_tag "Web Site:" %></div>
 				<%= text_field_tag :web_site, params[:web_site], :size=>40 %>
-				<div class="optional">Do you do the primary hiring, or work for a recruiting company?</div>
-				<div class="optional">Your Company Type: <%= select_tag(:company_type, options_for_select( %w{Primary Recruiter}) ) %></div>
+				<div class="optional">Do you do the primary hiring, or work for a recruiting company?
+				<%= select_tag(:company_type, options_for_select( %w{Primary Recruiter}) ) %></div>
 		      </div>
 		   <div class="roundedcornr_bottom_659996"><div></div></div>
 		</div>
@@ -59,23 +62,14 @@
 	   <div class="roundedcornr_top_659996"><div></div></div>
 	      <div class="roundedcornr_content_659996">
 		<div class="question-img"></div>
-		<fieldset class="notes">
+
 			<div class="notes">
-				<h4>Email</h4>
-		<p class="last">This is the email address our system will use to communicate with you (invoices, etc). We will also 
-				use this email address as the response address for job ads. <strong>But this address is kept private and never shown on our site.</strong></p>
-		</div>
-		</fieldset>
-		<br><br>
-		<fieldset class="notes">
-			<div class="notes">
-				<h4>Telephone</h4>
-		<p class="last">We only ask for a phone number so we can contact you if there are any questions with billing, ad layout, etc.  We <strong>do NOT</strong> share your phone number with anyone.</p>
-		</div>
-		</fieldset>
+				<h4>Questions</h4>
+				Feel free to contact us with any questions:<br> support at sas coders dot com </br> 310-896-5638
 		
-	      </div>
-	   <div class="roundedcornr_bottom_659996"><div></div></div>
-	</div>
+		    </div>
+		</div>
+		<div class="roundedcornr_bottom_659996"><div></div></div>
+		</div>
 	
 </span>

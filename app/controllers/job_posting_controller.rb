@@ -39,7 +39,7 @@ class JobPostingController < ApplicationController
 	end
 	@job.approve!  # just approving all new jobs for now
 	@job.save # there is no job.id until it is saved
-	@job.reference_id = "#{@job.id}sasCoders#{@job.user_id}"
+	@job.reference_id = "#{@job.id}.#{@job.user_id}"
 	@job.save
 	@user.jobPostings << @job  # i dont think user needs to be saved again?
   end
@@ -88,12 +88,12 @@ class JobPostingController < ApplicationController
 	redirect_to '/user/manage_ads' and return if quantity < 1
 	# make sure the user has enough credits
 	if @user.credits < quantity
-	  flash[:notice] = "You do not have enough credits"
+	  flash[:error] = "You do not have enough credits"
 	  redirect_to '/user/manage_ads' and return
 	  return
 	end
 	if @job.approved_at.blank?
-	  flash[:notice] = "You can't apply credit to a job that hasn't been approved."
+	  flash[:error] = "You can't apply credit to a job that hasn't been approved."
 	  redirect_to '/user/manage_ads' and return
 	  return
 	end
@@ -102,7 +102,7 @@ class JobPostingController < ApplicationController
 	
 	# apply the credit
 	@job.apply_credit!(quantity)
-	flash[:notice] = "Successfully applied the credit"
+	flash[:notice] = "Successfully applied the credit."
 	@user.credits -= quantity
 	@user.save
 	redirect_to '/user/manage_ads' and return

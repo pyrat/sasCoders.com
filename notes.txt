@@ -3,14 +3,24 @@ heroku db:reset --app hollow-meadow-93
 heroku rake db:migrate
 
 
-+ Registration collect needs to be styled
-+ Create rounded help box
-+ User Profile-- show all invoices, delete any pending invoices
-+ move search details to the bottom for REGISTER page
+
+
++ all the purchase stuff needs to be styled
 + Edit job needs to have styling applied
 + Are telecommute handled correctly?
 + create ajax email success div class so it can be shown nicely
++ admin pane
+   * review invoices and delete pending ones
+   *
 
+- apply_credit needs to be styled
+- move search details to the bottom 
+- User Profile-- show all invoices, delete any pending invoices
+- change the reference id to 1.1
+- Create rounded help box
+- why is this letting the new job through?
+  @jobs.delete_if {|job| job.end_date.blank? or job.end_date < Time.now }
+- Registration collect needs to be styled
 - Logout button!
 - add 40 miles if just city  
 - link edit profile to user index

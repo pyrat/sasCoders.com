@@ -1,26 +1,21 @@
 <h1>Your Ads</h1>
-<div class="roundedcornr_box_659996">
-   <div class="roundedcornr_top_659996"><div></div></div>
-      <div class="roundedcornr_content_659996">
-		 <%= link_to "Create New Ad", :controller=>'job_posting', :action=>"addJob" %>
-		<br><br>
-		You have <%= @user.credits %> credits.<br><br>
-      </div>
-   <div class="roundedcornr_bottom_659996"><div></div></div>
-</div>
-<br><br>
 
+<br><br>
+<span class="jobText">
 		<div class="roundedcornr_box_659996">
 		   <div class="roundedcornr_top_659996"><div></div></div>
 		      <div class="roundedcornr_content_659996">
-				<strong>Expired Ads</strong>
+				<strong>Ads Not Running</strong>
 				<table border="1">
-				<tr><th>Reference ID</th><th>Date</th><th>Expired Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th><th>Apply Credits</th></tr>
+				<tr><th>Reference ID</th><th>Last Visible Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th><th>Apply Credits</th></tr>
 				<% for job in @user.jobs_expired %>
 				  <tr>
 				    <td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.reference_id %> </td>
-				    <td style="border-bottom-style: solid; border-width: 1px;"> <%= job.start_run_date.strftime("%m/%d/%y") %> </td>
-				<td style="border-bottom-style: solid; border-width: 1px;"> <%= job.end_date.strftime("%m/%d/%y") %> </td>    
+				    <% if job.end_date.blank? %>
+				      <td style="border-bottom-style: solid; border-width: 1px;">none</td>
+				    <% else %>
+				      <td style="border-bottom-style: solid; border-width: 1px;"> <%= job.end_date.strftime("%m/%d/%y") %> </td>    
+				   <% end %>
 				<td style="border-bottom-style: solid; border-width: 1px;"> <%= link_to job.title, {:controller=>'job_posting', :action=>'edit', :id=>job.id} %> </td>
 					<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.job_type %> </td>
 					<td style="border-bottom-style: solid; border-width: 1px;"> <%= h "#{job.city},#{job.zip}" %> </td>
@@ -61,5 +56,5 @@
 		      </div>
 		   <div class="roundedcornr_bottom_659996"><div></div></div>
 		</div>
-		
+</span>
 			

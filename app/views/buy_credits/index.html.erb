@@ -1,12 +1,43 @@
-<h1>Buy Credits</h1>
-Each credit costs $99 and is for 30 day increments.  
-The credits stay in your account until they are used.
-<p>
+<div id="container">
+
+<h1>Purchase Credits</h1>
+
 <% form_tag :action=> :checkout do |f| %>
-     Purchase <%= text_field_tag(:n, nil, :size=>2) %> credits.<br><br>
-     <%= image_submit_tag "https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif", :onclick=>"showPrice('n')" %>
-  <% end %>
+<div class="roundedcornr_box_659996" style="width:35%;">
+   <div class="roundedcornr_top_659996"><div></div></div>
+      <div class="roundedcornr_content_659996">
+	  <div class="cash-img"></div>
+		Each credit costs $99 and is for 30 day increments.  
+		The credits stay in your account until they are used.<br><br>
+		Purchase <%= text_field_tag(:n, nil, :size=>2) %> credits.<br><br>
+	    <input type="button" value="next" onclick="showPrice('n')" />
+      </div>
+   <div class="roundedcornr_bottom_659996"><div></div></div>
+</div>
 <br><br>
-<div class="hidden" id="showPrice">
-	</div>
-</p>
+<div class="hidden" id="payOptions">
+<div class="roundedcornr_box_659996">
+   <div class="roundedcornr_top_659996"><div></div></div>
+      <div class="roundedcornr_content_659996">
+		
+			<%= image_submit_tag "https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" %>
+
+		<div id="payDetails"></div>
+		<hr>
+		<div>
+			<div class="info-img"></div>
+			Paying with Paypal involves three steps.
+			<ol>
+				<li>Click the "Checkout With Paypal" button.  This takes you to Paypal's site.</li>
+				<li>Choose your method of payment on Paypal's site.  Click next to return to this site and review your order.</li>
+				<li>On the final payment page you can review your order and finalize your payment.</li>
+			</ol>
+			** Feel free to call with any questions: stephen at (310) 896-5638. **
+		</div>
+
+      </div>
+   <div class="roundedcornr_bottom_659996"><div></div></div>
+</div>
+</div>
+<% end %>
+</div>

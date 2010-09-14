@@ -3,8 +3,10 @@
 
 function showPrice(element){
 	var e = document.getElementById(element);
-	var div = document.getElementById('showPrice');
+	var details = document.getElementById('payDetails');
+	var options = document.getElementById('payOptions');
 	var price = e.value * 99;
-	div.innerHTML = "Your total price will be <strong>$" + price + ".00</strong>.";
-	div.style.visibility = 'visible'	
+	details.innerHTML = "Your total will be <strong>$" + price + ".00</strong>.";
+	options.style.visibility = 'visible';
+	details.style.visibility = 'visible';	
 }

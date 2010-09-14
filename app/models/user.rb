@@ -64,6 +64,18 @@ class User < ActiveRecord::Base
   end
   
   # next few virtual attributes, just getters
+  def total_amt_purchased
+    total = 0
+    invoices.each { |i| total += i.amount if i.status == "paid" }
+    return total
+  end
+  
+  def total_product_purchased
+      total = 0
+      invoices.each {|i| total += i.product if i.status == "paid" }
+      return total
+  end
+  
   def jobs_awaiting_approval
     a = Array.new
 	jobPostings.each do |j|

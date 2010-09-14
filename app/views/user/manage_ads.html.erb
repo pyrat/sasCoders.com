@@ -5,6 +5,23 @@
 <div id="content">
  <%= render(:partial => "manage_ads") %>
 </div>
+<div id="sidebar" style="padding-top: 4cm;">
+  	<div class="roundedcornr_box_659996">
+	   <div class="roundedcornr_top_659996"><div></div></div>
+	      <div class="roundedcornr_content_659996">
+		  <div class="info-img"></div>
+		This page shows all the ads you have created.  <strong>Ads Not Running</strong> shows ads that need credit applied to be shown.
+		  
+			<br><br>
+			
+			You have <%= @user.credits %> credits.<br><br>
+			<div class="doc-img"></div>
+				 <%= link_to "Create New Ad", :controller=>'job_posting', :action=>"addJob" %>
+	      </div>
+	   <div class="roundedcornr_bottom_659996"><div></div></div>
+	</div>
+</div>
+
 <div id="footer">
 </div>
 

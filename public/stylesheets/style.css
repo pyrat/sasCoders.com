@@ -42,6 +42,14 @@ fieldset.notes{
 	background-color: #ffffe1;
 	width: 148px;
 }
+.invoices {
+	border: 2px solid #c09377;
+	border-collapse: collapse;
+	color: #4d3223;
+}
+th.invoices, td.invoices {
+	padding: 15px;
+}
 div.notes h4 {
 	
 	background-image: url("/images/icon_info.gif"); 
@@ -98,7 +106,7 @@ div.notes h4 {
 }
 
 .cash-img{
-	background-image: url("/images/mail.png"); 
+	background-image: url("/images/cash.png"); 
 	background-position: left top;
 	background-repeat: no-repeat;
 	min-height: 64px; 	

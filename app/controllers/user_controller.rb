@@ -1,8 +1,7 @@
 class UserController < ApplicationController
-  before_filter :logged_in?, :only=> [:edit, :index, :save, :save_company, :edit_company]
+  before_filter :logged_in?, :only=> [:edit, :index, :save, :save_company, :edit_company, :invoices]
   
   def index
-    flash[:notice] = nil
   end
     
   def edit_company
@@ -124,6 +123,11 @@ class UserController < ApplicationController
     # maybe get all the active ads in one array
 	# and all the inactive ones in another array?
 	
+  end
+  
+  def invoices
+      # this deletes them from the array, but since the user isn't saved, it doesn't change the db
+     @invoices = @user.invoices.delete_if{ |i| i.status == "pending" } 
   end
 end
 

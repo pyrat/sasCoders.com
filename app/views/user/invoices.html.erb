@@ -1,0 +1,25 @@
+<div id="container">
+<div class="content">
+<h1>Your Invoices</h1>
+<div class="roundedcornr_box_615465">
+   <div class="roundedcornr_top_615465"><div></div></div>
+      <div class="roundedcornr_content_615465">
+
+	<table class="invoices">
+		<th class="invoices">Reference #</th><th class="invoices">Amount</th><th class="invoices">Billing Date</th>
+		<th class="invoices">Number Of Credits Purchased</th>
+		<% for invoice in @user.invoices %>
+		<tr><td class="invoices"><%= invoice.id %></td>
+			<td class="invoices"> <%= number_to_currency(invoice.amount/100) %></td>
+			<td class="invoices"><%= invoice.billed_date.strftime("%m/%d/%y") %></td>
+			<td class="invoices"><%= invoice.product %> </td>
+			</tr>
+		<% end %>
+		<tr><td class="invoices"><strong>totals:</strong></td><td class="invoices"><strong><%= @user.total_amt_purchased %></strong></td><td class="invoices">&nbsp;</td><td class="invoices"><strong><%= @user.total_product_purchased %></strong></td></tr>
+	</table>
+
+      </div>
+   <div class="roundedcornr_bottom_615465"><div></div></div>
+</div>
+</div>
+</div>

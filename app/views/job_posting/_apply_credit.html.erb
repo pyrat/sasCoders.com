@@ -1,10 +1,10 @@
 
 <div id="left">
     <strong><%= @job.title %></strong><br><br>
-	
-	<p>This job is set to expire on <%= @job.end_date %>.</p>
-	<p>Any credits you apply to this job will extend the expiration date by 30 days per credit.  If the expiration date is in the past, then the credit will apply to the job starting today.
-	 (The expiration date will be reset to today and the credit will then be applied).</p>
+	<% if !@job.end_date.blank? %>
+	  <p>This job is set to expire on <%= @job.end_date %>.</p>
+	<% end %>
+	<p>Any credits you apply to this job will extend the expiration date by <strong>30 days per credit</strong>.  If the ad has already expired, then the credit will apply to the job starting today.</p>
    <% if @job.approved_at.blank? %>
      <p>This job has not been approved.</p>
    <% else %>
@@ -20,23 +20,32 @@
     </p>
 <p><strong>Description:</strong><br>
 <%= simple_format(@job.long_description) %> </p>
-<p><strong>Company Name:</strong><br><%= @companyName %></p>
+<p><strong>Company Name:</strong><br><%= @user.company %></p>
 
 <p><strong>Company Description:</strong><br>
-<%= simple_format(@companyDescription) %>
+<%= simple_format(@user.company_description) %>
 </p>
 
 
 
 </div>
 
-  <div id="right">
-    <p>You have <%= @user.credits %> credits.</p>
-    <p><% form_tag :controller=>:job_posting, :action=>:apply_credit_final, :id => @job do %>
-	     Apply <%= text_field_tag :quantity, '1', :size=>2 %> credits to this job.
-		 <%= submit_tag %>
-	   <% end %>
-	</p>
-    
-  </div>
+<div id="right">
+	<div class="roundedcornr_box_659996">
+	   <div class="roundedcornr_top_659996"><div></div></div>
+	      <div class="roundedcornr_content_659996">
+			<p>You have <%= @user.credits %> credits.</p>
+		    <p><% form_tag :controller=>:job_posting, :action=>:apply_credit_final, :id => @job do %>
+			     Apply <%= text_field_tag :quantity, '1', :size=>2 %> credits to this job.
+				 <%= submit_tag %>
+			   <% end %>
 
+			</p>
+	      </div>
+	   <div class="roundedcornr_bottom_659996"><div></div></div>
+	</div>
+</div>
+    
+    
+
+	

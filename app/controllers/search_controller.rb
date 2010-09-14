@@ -32,8 +32,8 @@ class SearchController < ApplicationController
   	   @jobs = JobPosting.find(:all, :origin=>@geo, :within=>within, :order=>'distance')
 	   # add in the loop for valid jobs
 	   # um, yuck. even better would be to stick this in the find
-	   @jobs.delete_if {|job| job.end_date < Time.now }
-	   @jobs.delete_if {|job| (!job.approved? or job.end_date.blank?)}
+	   @jobs.delete_if {|job| job.end_date.blank? or (job.end_date < Time.now) }
+	   @jobs.delete_if {|job| !job.approved?}
 	   if @jobs.length == 0
 	     flash[:error] = "There were no jobs found within #{within} miles of #{location}."
 		 return
@@ -42,12 +42,15 @@ class SearchController < ApplicationController
 	   if telecommute == "include"
 	     t = Array.new
 	     t = JobPosting.find_all_by_telecommute(true)
-		 # Merge the two arrays in case a job show up in both, apparently rails knows to use the id?
 		 
+		 t.delete_if {|job| job.end_date.blank? or (job.end_date < Time.now) }
+ 	   t.delete_if {|job| !job.approved?}
+ 	   # Merge the two arrays in case a job show up in both, apparently rails knows to use the id?
 		 @jobs = t | @jobs if t.length > 0
 	   end
 	   
 	   # successfully return w jobs
+	   flash[:notice] = "There were #{@jobs.length} jobs found."
 	 else 
 	   flash[:error] = "That location could not be found."
 	 end
