@@ -2,14 +2,11 @@
 <%= render(:partial => "shared/header") %>
 
 <%= render(:partial => "quickStart" )%>
-<div id="content">
+
   
  <%= render(:partial => "index") %>
-</div>
-<div class="roundedcornr_box_659996" style="clear:both;">
-   <div class="roundedcornr_top_659996"><div></div></div>
-      <div class="roundedcornr_content_659996">
-	    <div class="info-img"></div>
+
+<div style="clear:both;">
 		<ul class="simple">
 	      <li><strong>Name:</strong><br> <%= "#{@user.first_name} #{@user.last_name}" %><br><br></li>
 	      <li><strong>Company:</strong><br> <%= @user.company %><br><br></li>
@@ -18,10 +15,4 @@
 		  <li><%= link_to 'edit profile', :controller=>'user', :action=>'edit' %><br><br></li>
 	    </ul>
       </div>
-   <div class="roundedcornr_bottom_659996"><div></div></div>
-</div>
-<div id="footer">
-	this is the footer
-</div>
-
 </div>

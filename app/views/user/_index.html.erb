@@ -1,8 +1,8 @@
 <h1>Your Profile</h1>
 <span id="left">
-	<div class="roundedcornr_box_659996">
+	<div class="roundedcornr_box_659996" >
 	   <div class="roundedcornr_top_659996"><div></div></div>
-	      <div class="roundedcornr_content_659996">
+	      <div class="roundedcornr_content_659996" style="height:200px;">
 		    <div class= "tools-img"></div>
 			<p>Currently Running Ads: <%= link_to "#{@user.jobs_running.length}", :controller=>'user', :action=>'manage_ads' %></p>
 		    <p>Saved Ads: <a href="#"><%= link_to "#{@user.jobPostings.length}", :controller=>'user', :action=>'manage_ads' %></p>
@@ -18,7 +18,7 @@
   <span id="right">
 	<div class="roundedcornr_box_659996" >
 	   <div class="roundedcornr_top_659996"><div></div></div>
-	      <div class="roundedcornr_content_659996">
+	      <div class="roundedcornr_content_659996" style="height:200px;">
 		    <div class="cash-img"></div>
 			<p>Credits Available: <%= link_to "#{@user.credits}", :action=>'invoices' %> </p> 
 		    <p><%= link_to 'Purchase Credits', :controller=>'buy_credits' %></p>
