@@ -5,13 +5,17 @@
   <p><strong>Short Description:</strong><br> <%= form.text_area :short_description, :rows=>5, :value=>@job.short_description %> </p>
   <p><strong>Experience Required:</strong><br> <%= form.text_area :experience, :rows=>15, :value=>@job.experience %> </p>
   <p><strong>Long Description:</strong><br> <%= form.text_area :long_description, :rows=>15, :value=>@job.long_description %> </p>
-  <p><strong>Telecommute?</strong> <%= form.check_box :telecommute %> how do i set this to checked? </p>
+  <% if @job.telecommute %>
+  <p><strong>Telecommute?</strong> <%= check_box 'job', 'telecommute' %> wtf is this set this to checked? </p>
+  <% else %>
+  <p><strong>Telecommute?</strong> <%= form.check_box :telecommute %></p>
+  <% end %>
   <p><strong>Zip:</strong><br> <%= form.text_field :zip, :size=> 6, :value=>@job.zip %> </p>
   <p><strong>Job Type:</strong><br> <%= form.text_field :job_type, :size=>30, :value=>@job.job_type %> </p>
   <p><strong>Pay:</strong><br> <%= form.text_field :pay, :size=>7, :value=>@job.pay %> </p>
   <p><strong>Additional Instructions:</strong><br> <%= form.text_area :addl_instructions, :rows=>6, :value=>@job.addl_instructions %> </p>
   <hr>
-  <p>Start Date For Ad: <%= form.text_field :start_run_date, :size=>9, :value=>@job.start_run_date..strftime("%m/%d/%y") %> Leave blank if you want it to start
+  <p>Start Date For Ad: <%= form.text_field :start_run_date, :size=>9, :value=>@job.formatted_start_run_date %> Leave blank if you want it to start
   as soon as it's approved.</p>
   	      </div>
 	   <div class="roundedcornr_bottom_659996"><div></div></div>

@@ -2,6 +2,23 @@ class JobPosting < ActiveRecord::Base
  # acts_as_mappable :auto_geocode=>{:field=>:zip}
  acts_as_mappable
  belongs_to :user
+ 
+
+ def formatted_end_date
+   if end_date.blank?
+     return 'blank'
+   else
+     return end_date.strftime("%m/%d/%y")
+   end
+ end
+ 
+ def formatted_start_run_date
+    if start_run_date.blank?
+      return 'blank'
+    else
+      return start_run_date.strftime("%m/%d/%y")
+    end
+  end
 
  # should this be private? 
  def approved?

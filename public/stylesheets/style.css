@@ -135,6 +135,10 @@ div.notes h4 {
 	color: #666666;
 }
 
+.emailSent{
+	color: #3e7c3e;
+}
+
 #container {
 	position: relative;
 	width: 1024px;

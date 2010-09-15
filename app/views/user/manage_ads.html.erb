@@ -3,7 +3,7 @@
 
 
 <div id="content">
- <%= render(:partial => "manage_ads") %>
+ <%= render(:partial => "user/manage_ads") %>
 </div>
 <div id="sidebar" style="padding-top: 4cm;">
   	<div class="roundedcornr_box_659996">
@@ -14,9 +14,14 @@
 		  
 			<br><br>
 			
-			You have <%= @user.credits %> credits.<br><br>
 			<div class="doc-img"></div>
 				 <%= link_to "Create New Ad", :controller=>'job_posting', :action=>"addJob" %>
+				<br><br>
+				
+				<p>You have <strong><%= "#{@user.credits}" %></strong> credits to apply to your ads.</p>
+				<div class="cash-img"></div>
+			    <%= link_to "Purchase", :controller=>'buy_credits' %> credits.</p>
+			
 	      </div>
 	   <div class="roundedcornr_bottom_659996"><div></div></div>
 	</div>
