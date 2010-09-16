@@ -26,7 +26,7 @@ class ApplyController < ApplicationController
     
     if (request.xhr?)
       ApplicationMailer.deliver_job_details(@email,@job)
-      flash[:notice] = "Email sent to <#{@email}>."
+      flash.now[:notice] = "Email sent to <#{@email}>."
       render :text => "Email sent." 
     else    
      ApplicationMailer.deliver_job_details(@email,@job)

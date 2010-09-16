@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
   # when do validations occur? before the model is saved.
   validates_presence_of :email
   validates_uniqueness_of :email, :case_sensitive => false
- # validates_uniqueness_of :user_name, :case_sensitive => false
   
   validates_format_of :email,
                       :with => /^[A-Z0-9._%-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i,
@@ -18,8 +17,10 @@ class User < ActiveRecord::Base
 #  validates_confirmation_of :password
   validate :password_conforms?  
   
-  def after_initialize
-    create_activation_code
+  def after_save
+    # apparently this gets run whether the model passes validation or not
+    # this kind of makes the validation useless    
+    create_activation_code 
   end
   # Attribute accessors
   attr_accessor           :password_confirmation  
@@ -114,9 +115,12 @@ class User < ActiveRecord::Base
   
   def create_activation_code
     # since this is run after_initialize it has the potential to keep recreating activation codes
-    if self.activation_code.blank?
-      self.activation_code = Digest::SHA1.hexdigest(self.object_id.to_s + rand.to_s)
-	end
+    # this will be run whether the object passed validation or not so... there will be no activation_code
+    # attribute since it didn't get saved to the db
+    
+      if self.activation_code.blank?
+        self.activation_code = Digest::SHA1.hexdigest(self.object_id.to_s + rand.to_s)
+	    end
   end
   
   def create_new_salt

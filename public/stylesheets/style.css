@@ -12,16 +12,35 @@ body {
 	margin-right: 5;
 	padding: 2em;
 	background-color: #bac2c7;	
-	font-size: 16px;
+	font-size: 14px;
 
 }
 
 .body-text{
-	font-size: 16px;
+	font-size: 14px;
 }
 
-body, p, h1, h2, h3, h4, table, td, th, ul, ol, textarea, input {
+body, hr, p, h1, h2, h3, h4, table, td, th, ul, ol, textarea, input {
   font-family: tahoma, arial,sans-serif;
+  color: #303030;
+}
+
+.fieldWithErrors{
+	padding: 2px;
+	background-color: red;
+	display: table;
+}
+
+.formError {
+	color: red;
+}
+
+a:link {
+	color: #1a48a5;
+}
+
+a:visited{
+	color:#9b4d4d;
 }
 
 textarea {
@@ -33,7 +52,7 @@ textarea {
 	background-color: #bac2c7;
 	padding: 8px;
 	width: 90%;
-	font-size: 16px;
+/*	font-size: 14px; */
 }
 .small{
   font-size: 10px;

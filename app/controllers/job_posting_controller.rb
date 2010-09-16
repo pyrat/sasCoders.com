@@ -89,7 +89,7 @@ class JobPostingController < ApplicationController
 	redirect_to '/user/manage_ads' and return if quantity < 1
 	# make sure the user has enough credits
 	if @user.credits < quantity
-	  flash[:error] = "You do not have enough credits"
+	  flash[:error] = "You do not have enough credits."
 	  redirect_to '/user/manage_ads' and return
 	  return
 	end

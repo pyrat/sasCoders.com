@@ -1,15 +1,27 @@
+<div id="container">
+<div class="content">
 <h1>Your Invoice</h1>
-<table>
-  <tr><td>Items Purchased: </td><td><%= @invoice.product %></td></tr>
-  <tr><td>Total Amount Paid: </td><td><%= number_to_currency(@invoice.amount/100) %></td></tr>
-  <tr><td>Invoice Date: </td><td><%= @invoice.billed_date.strftime("%m/%d/%y") %></td></tr>
-  <tr><td>Invoice Status: </td><td><%= @invoice.status %></td></tr>
+<div class="roundedcornr_box_615465">
+   <div class="roundedcornr_top_615465"><div></div></div>
+      <div class="roundedcornr_content_615465">
+
+
+<table class="invoices">
+  <tr><td class="invoices">Items Purchased: </td><td class="invoices"><%= @invoice.product %></td></tr>
+  <tr><td class="invoices">Total Amount Paid: </td><td class="invoices"><%= number_to_currency(@invoice.amount/100) %></td></tr>
+  <tr><td class="invoices">Invoice Date: </td><td class="invoices"><%= @invoice.billed_date.strftime("%m/%d/%y") %></td></tr>
+  <tr><td class="invoices">Invoice Status: </td><td class="invoices"><%= @invoice.status %></td></tr>
 </table>
 
-<p>Thank you for your purchase!<br>If you have any questions please call Stephen at 310-738-5495.</p>
+      </div>
+   <div class="roundedcornr_bottom_615465"><div></div></div>
+</div>
+<p>Thank you for your purchase!<br>If you have any questions please call Stephen at 310-896-5638.</p>
 <p>Next steps:<br>
 Apply your credit to a <%= link_to "saved ad", :controller=>'user', :action=>'manage_ads' %>.<br>
 <%= link_to "Create new ad", :controller=>'job_posting', :action=>"addJob" %>.<br>
 <%= link_to "View your profile", :controller=>'user', :action=>'index' %>.<br>
 </p>
 
+</div>
+</div>

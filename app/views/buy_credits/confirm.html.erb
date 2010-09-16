@@ -1,20 +1,35 @@
+<div id="container">
+<div class="content">
 <h1>Please Confirm Your Payment Details</h1>
 <p>
 Important: Your order is not completed until you click <strong>Complete Payment</strong>.
 </p>
-<table>
-  <tr><td>Name:</td><td><%= @address['name'] %></td></tr>
-  <tr><td>Company:</td><td><%= @address['company'] %></td></tr>
-  <tr><td>Address 1:</td><td><%= @address['address1'] %></td></tr>
-  <tr><td>Address 2:</td><td><%= @address['address2'] %></td></tr>
-  <tr><td>City:</td><td><%= @address['city'] %></td></tr>
-  <tr><td>State:</td><td><%= @address['state'] %></td></tr>
-  <tr><td>Country:</td><td><%= @address['country'] %></td></tr>
-  <tr><td>Zip:</td><td><%= @address['zip'] %></td></tr>
-  <tr><td><strong>Number Of Credits To Be Purchased:</strong></td><td><strong><%= @invoice.product %></strong></td></tr>
-  <tr><td><strong>Total To Be Charged:</strong></td><td><strong><%= number_to_currency(@invoice.amount/100) %></strong></td></tr>
+<div class="roundedcornr_box_615465">
+   <div class="roundedcornr_top_615465"><div></div></div>
+      <div class="roundedcornr_content_615465">
+
+
+
+  <strong>Name:</strong> <%= @address['name'] %><br><br>
+  <strong>Company:</strong> <%= @address['company'] %><br><br>
+  <strong>Address 1:</strong> <%= @address['address1'] %><br><br>
+  <strong>Address 2:</strong> <%= @address['address2'] %><br><br>
+  <strong>City:</strong> <%= @address['city'] %><br><br>
+  <strong>State:</strong> <%= @address['state'] %><br><br>
+  <strong>Country:</strong> <%= @address['country'] %><br><br>
+  <strong>Zip:</strong> <%= @address['zip'] %><br><br>
+<table class="invoices">
+  <tr><td class="invoices"><strong>Number Of Credits To Be Purchased:</strong></td><td class="invoices"><strong><%= @invoice.product %></strong></td></tr>
+  <tr><td class="invoices" ><strong>Total To Be Charged:</strong></td><td class="invoices"><strong><%= number_to_currency(@invoice.amount/100) %></strong></td></tr>
 </table>
+
+      </div>
+   <div class="roundedcornr_bottom_615465"><div></div></div>
+</div>
 
 <% form_tag :action => 'complete', :token => params[:token], :payer_id => params[:PayerID] do %>
   <%= submit_tag 'Complete Payment' %>
 <% end %>
+
+</div>
+</div>

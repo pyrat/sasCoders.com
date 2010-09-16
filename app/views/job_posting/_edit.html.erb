@@ -6,7 +6,7 @@
   <p><strong>Experience Required:</strong><br> <%= form.text_area :experience, :rows=>15, :value=>@job.experience %> </p>
   <p><strong>Long Description:</strong><br> <%= form.text_area :long_description, :rows=>15, :value=>@job.long_description %> </p>
   <% if @job.telecommute %>
-  <p><strong>Telecommute?</strong> <%= check_box 'job', 'telecommute' %> wtf is this set this to checked? </p>
+  <p><strong>Telecommute?</strong> <%= check_box 'job', 'telecommute' %> </p>
   <% else %>
   <p><strong>Telecommute?</strong> <%= form.check_box :telecommute %></p>
   <% end %>
