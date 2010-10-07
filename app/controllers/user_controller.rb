@@ -104,7 +104,7 @@ class UserController < ApplicationController
     @user.activated_at = Time.now 
 	  @user.save
 	  session[:user_id] = @user.id
-	  flash.now[:notice] = "Hello #{@user.first_name}. You are now logged in."
+	  flash.now[:notice] = "Hello #{@user.first_name}. You are logged in."
 	  
 	  else
 	  flash.now[:error] = "Sorry.  The name/password you provided was invalid."

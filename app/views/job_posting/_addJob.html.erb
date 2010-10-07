@@ -8,14 +8,14 @@
 		  <p><strong>Short Description of Job:</strong><br> <%= form.text_area :short_description, :rows=>5 %> </p>
 		  <p><strong>Experience Required:</strong><br> <%= form.text_area :experience, :rows=>15 %> </p>
 		  <p><strong>Long Description:</strong><br> <%= form.text_area :long_description, :rows=>15 %> </p>
-		  <p><strong>Telecommute?</strong> <%= form.check_box :telecommute %></p>Checking telecommute indicates that most of the work can be performed off-site.
-		  <p><strong>Zip:</strong><br> <%= form.text_field :zip, :size=> 6 %> </p>
-		  <p><strong>Job Type:</strong><br> <%= form.text_field :job_type, :size=>30 %> </p>
-		  <p><strong>Pay:</strong><br> <%= form.text_field :pay, :size=>7 %> </p>Please do your best to put something useful like an average or a range.  DOE is not useful.
+		  <p><strong>Telecommute?</strong> <%= form.check_box :telecommute %>Telecommute indicates most of the work can be performed off-site.</p>
+		  <p><strong>Zip:</strong><br> <%= form.text_field :zip, :size=> 6 %> Important: please put in the zip code of the job.  <strong>Not</strong> the zip of the recruiting agency!</p>
+		  <p><strong>Job Type:</strong><br> <%= form.text_field :job_type, :size=>30 %> <span class="small">(full time, hourly, 6 mos, etc)</span></p>
+		  <p><strong>Pay:</strong><br> <%= form.text_field :pay, :size=>7 %> <span class="small">Please do your best to put something useful like an average or a range.  DOE is not useful.</span></p>
 		  <p><strong>Any Additional Instructions:</strong><br> <%= form.text_area :addl_instructions, :rows=>6 %> </p>
 		  <hr>
 		  <p><strong>Start Date For Ad:</strong> <%= form.text_field :start_run_date, :size=>9 %> You can put a future date here if you are creating ads to run at a later date.  
-		  Or Leave blank if you want it to start as soon as credits are applied.</p>
+		  Or Leave blank if you want it to show as soon as credits are applied.</p>
 
 		  <p><%= submit_tag 'Create Ad' %></p>
 		  <br>Note: The ad won't appear in the searches until you apply credits to it.

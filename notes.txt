@@ -5,8 +5,7 @@ heroku rake db:migrate
 
 
 
-+ buy_credits/paypal cancel needs to be styled and cleanup the invoice table?
-+ confirm payment needs to be styled as well as thank you for your invoice
++paypal cancel need to be styled and cleanup invoice table
 + create/ needs to be changed around
 + Edit job needs to have styling applied
 
@@ -14,7 +13,8 @@ heroku rake db:migrate
 + admin pane
    * review invoices and delete pending ones
    *
-
+- buy_credits/paypal cancel needs to be styled and cleanup the invoice table?
+- confirm payment needs to be styled as well as thank you for your invoice
 - Are telecommute handled correctly?
 - create ajax email success div class so it can be shown nicely
 - apply_credit needs to be styled

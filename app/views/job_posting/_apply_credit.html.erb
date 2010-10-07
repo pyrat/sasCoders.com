@@ -34,13 +34,16 @@
 	<div class="roundedcornr_box_659996">
 	   <div class="roundedcornr_top_659996"><div></div></div>
 	      <div class="roundedcornr_content_659996">
-			<p>You have <%= @user.credits %> credits.</p>
-		    <p><% form_tag :controller=>:job_posting, :action=>:apply_credit_final, :id => @job do %>
-			     Apply <%= text_field_tag :quantity, '1', :size=>2 %> credits to this job.
-				 <%= submit_tag %>
-			   <% end %>
-
-			</p>
+		    <% if @user.credits > 0 %>
+				<p>You have <%= @user.credits %> credits.</p>
+			    <p><% form_tag :controller=>:job_posting, :action=>:apply_credit_final, :id => @job do %>
+				     Apply <%= text_field_tag :quantity, '1', :size=>2 %> credits to this job.<br><br>
+					<%= submit_tag "Apply Credit" %>
+				   <% end %>
+				</p>
+			<% else %>
+			    <p>You need to <%= link_to 'purchase credits', :controller=>'buy_credits' %> before you can apply credits</p>
+			<% end %>
 	      </div>
 	   <div class="roundedcornr_bottom_659996"><div></div></div>
 	</div>

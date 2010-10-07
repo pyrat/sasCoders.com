@@ -85,12 +85,13 @@ class JobPostingController < ApplicationController
   
   def apply_credit_final
     @job = JobPosting.find(params[:id])
+    # might be a good idea to stick the job id in a cookie also and check it here
 	quantity = params[:quantity].to_i
 	redirect_to '/user/manage_ads' and return if quantity < 1
 	# make sure the user has enough credits
 	if @user.credits < quantity
 	  flash[:error] = "You do not have enough credits."
-	  redirect_to '/user/manage_ads' and return
+	  redirect_to '/buy_credits/index' and return
 	  return
 	end
 	if @job.approved_at.blank?
