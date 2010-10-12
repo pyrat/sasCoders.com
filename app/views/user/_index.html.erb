@@ -1,30 +1,22 @@
-<h1>Your Profile</h1>
-<span id="left">
+
+<span id="right">
 	<div class="roundedcornr_box_659996" >
 	   <div class="roundedcornr_top_659996"><div></div></div>
-	      <div class="roundedcornr_content_659996" style="height:200px;">
-		    <div class= "tools-img"></div>
+	      <div class="roundedcornr_content_659996">
+		    <div class= "doc-img"></div>
 			<p>Currently Running Ads: <%= link_to "#{@user.jobs_running.length}", :controller=>'user', :action=>'manage_ads' %></p>
 		    <p>Saved Ads: <a href="#"><%= link_to "#{@user.jobPostings.length}", :controller=>'user', :action=>'manage_ads' %></p>
 			<p><%= link_to "Manage Ads", :controller=>'user', :action=>'manage_ads' %></p>
-	      </div>
-	   <div class="roundedcornr_bottom_659996"><div></div></div>
-	</div>
-	
-    
-	
-    
-  </span>
-  <span id="right">
-	<div class="roundedcornr_box_659996" >
-	   <div class="roundedcornr_top_659996"><div></div></div>
-	      <div class="roundedcornr_content_659996" style="height:200px;">
-		    <div class="cash-img"></div>
+			<hr>
+			<div class="cash-img"></div>
 			<p>Credits Available: <%= link_to "#{@user.credits}", :action=>'invoices' %> </p> 
 		    <p><%= link_to 'Purchase Credits', :controller=>'buy_credits' %></p>
-		<br>
 	      </div>
 	   <div class="roundedcornr_bottom_659996"><div></div></div>
 	</div>
+	    
+    
+
+		    
     
   </span>

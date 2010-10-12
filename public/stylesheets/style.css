@@ -199,8 +199,9 @@ td.employer{
 	width: 768px;
    /*     height: 600px; */
 	background-color: #FFFFFF;
-	padding: 3px;
-	margin: 3; 
+	padding-left: 3px;
+	padding-right: 3px;
+/*	margin: 3; */
 /*	border-top: 2px solid #336699; 
 	border-bottom: 2px solid #336699; */
 	}
@@ -214,9 +215,7 @@ td.employer{
 /*	background-color: #eeeeee; */
 	margin: 3;
 	text-align: left;
-	padding-left: 3px;
-	padding-right: 3px;
-	padding-top: 15px;
+	padding: 3px;
 /*	border: 2px solid #336699; 
 	border-right: 2px solid #002097;
 	border-left:  2px solid #336699; 
@@ -256,7 +255,7 @@ h1 {
 
 h3 { 
   color: #616a71;  
-  padding-left:40px;
+  padding-left:22px;
   text-align: left;
   font-size: 140%;
 }
