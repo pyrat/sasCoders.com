@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100826044415) do
+ActiveRecord::Schema.define(:version => 20101017223317) do
 
   create_table "invoices", :force => true do |t|
     t.integer  "amount"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20100826044415) do
     t.datetime "start_run_date"
     t.datetime "end_date"
     t.string   "city"
+    t.string   "state"
   end
 
   create_table "job_seekers", :force => true do |t|

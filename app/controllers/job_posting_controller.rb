@@ -36,6 +36,7 @@ class JobPostingController < ApplicationController
 	  @job.lat = geo.lat
 	  @job.lng = geo.lng
 	  @job.city = geo.city
+	  @job.state = geo.state
 	end
 	@job.approve!  # just approving all new jobs for now
 	@job.save # there is no job.id until it is saved
@@ -113,6 +114,11 @@ class JobPostingController < ApplicationController
   end
   
   def delete
+    # jobs are linked to users, do we need to take care of this?
+    j = JobPosting.find(params[:id])
+    j.delete
+    flash[:notice] = "The ad has been deleted."
+    redirect_to '/user/manage_ads' and return
   end
   
   

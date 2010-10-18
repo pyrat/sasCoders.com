@@ -3,6 +3,11 @@ class JobPosting < ActiveRecord::Base
  acts_as_mappable
  belongs_to :user
  
+ def find_by_state(state)
+   a = JobPosting.find(:all)
+   a.delete_if{ |job| job.state != state }
+   return a
+ end
 
  def formatted_end_date
    if end_date.blank?

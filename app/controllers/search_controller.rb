@@ -64,6 +64,13 @@ class SearchController < ApplicationController
 	 render :action=>"index" # just renders it, doesn't run action first
    end
    
+   def by_state
+     state = params[:state]
+     @jobs = JobPostings.find_by_state(state)
+     flash[:notice] = "There were #{@jobs.length} jobs found in #{state}"
+     render :action=>"index"
+   end
+   
    def show
      @job = JobPosting.find(params[:id])
 	 @geo = MultiGeocoder.geocode("#{@job.lat},#{@job.lng}")

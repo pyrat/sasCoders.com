@@ -23156,3 +23156,176 @@ Rendered shared/_header (1.5ms)
 Rendered search/_show (2.5ms)
 Rendered shared/_sidebar (0.6ms)
 Completed in 853ms (View: 8, DB: 9) | 200 OK [http://localhost/search/show/2]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (72.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+Migrating to CreateJobPostings (20100224234214)
+Migrating to CreateInvoices (20100224234307)
+Migrating to AddLatLngToJobPosting (20100603230333)
+Migrating to RenameTypeInJobPostings (20100603235743)
+Migrating to AddOwnerIdToJobPosts (20100604204939)
+Migrating to ModifyJobPostingsTable (20100608175854)
+Migrating to ModifyUserTable (20100621231040)
+Migrating to UpdateJobPostings (20100623180921)
+Migrating to CreateUserJobJoin (20100629193201)
+Migrating to AddEndToJob (20100707213035)
+Migrating to AddCityToJob (20100727233847)
+Migrating to AddUserToInvoice (20100812044606)
+Migrating to ChangeInvoiceProduct (20100813025159)
+Migrating to JobSeekers (20100826044415)
+Migrating to AddStateToJob (20101017223317)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Table 'sascoders_development.jobpostings' doesn't exist: ALTER TABLE `jobPostings` ADD `state` varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+Migrating to CreateJobPostings (20100224234214)
+Migrating to CreateInvoices (20100224234307)
+Migrating to AddLatLngToJobPosting (20100603230333)
+Migrating to RenameTypeInJobPostings (20100603235743)
+Migrating to AddOwnerIdToJobPosts (20100604204939)
+Migrating to ModifyJobPostingsTable (20100608175854)
+Migrating to ModifyUserTable (20100621231040)
+Migrating to UpdateJobPostings (20100623180921)
+Migrating to CreateUserJobJoin (20100629193201)
+Migrating to AddEndToJob (20100707213035)
+Migrating to AddCityToJob (20100727233847)
+Migrating to AddUserToInvoice (20100812044606)
+Migrating to ChangeInvoiceProduct (20100813025159)
+Migrating to JobSeekers (20100826044415)
+Migrating to AddStateToJob (20101017223317)
+  [4;36;1mSQL (191.5ms)[0m   [0;1mALTER TABLE `job_postings` ADD `state` varchar(255)[0m
+  [4;35;1mSQL (41.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101017223317')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW FIELDS FROM `invoices`[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mdescribe `invoices`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `invoices`[0m
+  [4;36;1mSQL (36.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mdescribe `job_postings`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `job_postings`[0m
+  [4;35;1mSQL (15.1ms)[0m   [0mSHOW FIELDS FROM `job_seekers`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `job_seekers`[0m
+  [4;35;1mSQL (382.1ms)[0m   [0mSHOW KEYS FROM `job_seekers`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddStateToJob (20101017223317)
+  [4;36;1mSQL (368.8ms)[0m   [0;1mALTER TABLE `job_postings` DROP `state`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20101017223317'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `invoices`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `invoices`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `invoices`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mdescribe `job_postings`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `job_postings`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `job_seekers`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `job_seekers`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW KEYS FROM `job_seekers`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100102164457)
+Migrating to CreateJobPostings (20100224234214)
+Migrating to CreateInvoices (20100224234307)
+Migrating to AddLatLngToJobPosting (20100603230333)
+Migrating to RenameTypeInJobPostings (20100603235743)
+Migrating to AddOwnerIdToJobPosts (20100604204939)
+Migrating to ModifyJobPostingsTable (20100608175854)
+Migrating to ModifyUserTable (20100621231040)
+Migrating to UpdateJobPostings (20100623180921)
+Migrating to CreateUserJobJoin (20100629193201)
+Migrating to AddEndToJob (20100707213035)
+Migrating to AddCityToJob (20100727233847)
+Migrating to AddUserToInvoice (20100812044606)
+Migrating to ChangeInvoiceProduct (20100813025159)
+Migrating to JobSeekers (20100826044415)
+Migrating to AddStateToJob (20101017223317)
+  [4;36;1mSQL (131.7ms)[0m   [0;1mALTER TABLE `job_postings` ADD `state` varchar(255)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101017223317')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `invoices`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `invoices`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `invoices`[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mdescribe `job_postings`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `job_postings`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `job_seekers`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `job_seekers`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `job_seekers`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (189.6ms)[0m   [0mCREATE TABLE `invoices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `amount` int(11), `billed_date` datetime, `created_at` datetime, `updated_at` datetime, `user_id` int(11), `status` varchar(255), `product` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (157.9ms)[0m   [0mCREATE TABLE `job_postings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `reference_id` varchar(255), `title` varchar(255), `company_name` varchar(255), `short_description` text, `long_description` text, `zip` varchar(255), `job_type` varchar(255), `experience` text, `pay` varchar(255), `addl_instructions` text, `created_at` datetime, `approved_at` datetime, `updated_at` datetime, `lat` float, `lng` float, `telecommute` tinyint(1), `user_id` int(11), `start_run_date` datetime, `end_date` datetime, `city` varchar(255), `state` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (120.2ms)[0m   [0mCREATE TABLE `job_seekers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `cv` blob(16777215)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (119.7ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (110.1ms)[0m   [0mCREATE TABLE `roles_users` (`role_id` int(11), `user_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (150.3ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `user_name` varchar(255), `display_name` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `remember_token` varchar(255), `activation_code` varchar(255), `state` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `first_name` varchar(255), `last_name` varchar(255), `telephone` varchar(255), `company` varchar(255), `created_at` datetime, `updated_at` datetime, `company_description` text, `credits` int(11) DEFAULT 0, `company_type` varchar(255), `web_site` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (120.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (158.3ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101017223317')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100102164457')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100224234214')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100224234307')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100603230333')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100603235743')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100604204939')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100608175854')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100621231040')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100623180921')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100629193201')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100707213035')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100727233847')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100812044606')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100813025159')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100826044415')[0m

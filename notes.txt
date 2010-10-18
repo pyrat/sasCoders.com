@@ -2,7 +2,9 @@ http://hollow-meadow-93.heroku.com
 heroku db:reset --app hollow-meadow-93
 heroku rake db:migrate
 
+colorCons Smoke icon pack
 
+** add state to jobPosting using migration, then finish jobPosting.rb
 
 
 +paypal cancel need to be styled and cleanup invoice table

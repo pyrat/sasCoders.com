@@ -3,7 +3,7 @@
 
 
 <div id="content">
-	<h1>Edit Job</h1>
+	<h1>Edit Job / <%= button_to "Delete Job", {:controller=>'job_posting', :action=>'delete', :id=>@job.id}, {:method=>:delete, :confirm=>"Delete this job, are you sure?"} %></h1>
 	
 	<div class="roundedcornr_box_659996">
 	   <div class="roundedcornr_top_659996"><div></div></div>
