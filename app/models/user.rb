@@ -120,6 +120,7 @@ class User < ActiveRecord::Base
     
       if self.activation_code.blank?
         self.activation_code = Digest::SHA1.hexdigest(self.object_id.to_s + rand.to_s)
+        save! # jeesh
 	    end
   end
   

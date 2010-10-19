@@ -23329,3 +23329,135 @@ Migrating to AddStateToJob (20101017223317)
   [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100812044606')[0m
   [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100813025159')[0m
   [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100826044415')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-10-17 20:49:29) [POST]
+  Parameters: {"company"=>"3", "commit"=>"Register", "password_confirmation"=>"cracker8", "authenticity_token"=>"BkkIdv3m/fGUIZuHEg2KbBMfLxQXMYzKTukqE/aEWAw=", "company_type"=>"Primary", "last_name"=>"r", "web_site"=>"4", "telephone"=>"3", "password"=>"cracker8", "email"=>"stephen@stephenphilp.com", "first_name"=>"st"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'stephen@stephenphilp.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (4.7ms)
+Rendered user/_collect (9.3ms)
+Completed in 288ms (View: 66, DB: 3) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-10-17 20:49:43) [POST]
+  Parameters: {"company"=>"3", "commit"=>"Register", "password_confirmation"=>"cracker8", "authenticity_token"=>"BkkIdv3m/fGUIZuHEg2KbBMfLxQXMYzKTukqE/aEWAw=", "company_type"=>"Primary", "last_name"=>"r", "web_site"=>"4", "telephone"=>"3", "password"=>"2lcre8r", "email"=>"stephen.philp", "first_name"=>"st"}
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'stephen.philp') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (1.5ms)
+Rendered user/_collect (6.2ms)
+Completed in 31ms (View: 11, DB: 3) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-10-17 20:50:01) [POST]
+  Parameters: {"company"=>"3", "commit"=>"Register", "password_confirmation"=>"cracker8", "authenticity_token"=>"BkkIdv3m/fGUIZuHEg2KbBMfLxQXMYzKTukqE/aEWAw=", "company_type"=>"Primary", "last_name"=>"r", "web_site"=>"4", "telephone"=>"3", "password"=>"2lcre8r", "email"=>"e@e.com", "first_name"=>"st"}
+  [4;36;1mUser Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'e@e.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`salt`, `company`, `activated_at`, `created_at`, `remember_token_expires_at`, `updated_at`, `hashed_password`, `activation_code`, `company_description`, `company_type`, `user_name`, `remember_token`, `last_name`, `web_site`, `display_name`, `telephone`, `credits`, `email`, `state`, `first_name`) VALUES('186447000.800649709778932', '3', NULL, '2010-10-18 03:50:01', NULL, '2010-10-18 03:50:01', '119b8893fd8f9eeb75202de0bdca3a1ca277c74c', NULL, NULL, 'Primary', NULL, NULL, 'r', '4', NULL, '3', 0, 'e@e.com', NULL, 'st')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Sent mail to st r <e@e.com>
+
+Date: Sun, 17 Oct 2010 20:50:01 -0700
+From: SasCoders.com
+To: st r <e@e.com>
+Subject: Please Activate Your New Account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hello st,
+Thank you for registering with sasCoders.com.  Please follow this link to finish the 
+registration process.
+
+http://hollow-meadow-93.heroku.com/user/validate?c=87380592ef1a3d7794a4b637d2968dd5c2e875e1
+
+Looking forward to working with you,
+-Stephen Philp
+www.sasCoders.com
+Rendering template within layouts/application
+Rendering user/register
+Completed in 79ms (View: 9, DB: 5) | 200 OK [http://localhost/user/register]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (273.4ms)[0m   [0mCREATE TABLE `invoices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `amount` int(11), `billed_date` datetime, `created_at` datetime, `updated_at` datetime, `user_id` int(11), `status` varchar(255), `product` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (147.3ms)[0m   [0mCREATE TABLE `job_postings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `reference_id` varchar(255), `title` varchar(255), `company_name` varchar(255), `short_description` text, `long_description` text, `zip` varchar(255), `job_type` varchar(255), `experience` text, `pay` varchar(255), `addl_instructions` text, `created_at` datetime, `approved_at` datetime, `updated_at` datetime, `lat` float, `lng` float, `telecommute` tinyint(1), `user_id` int(11), `start_run_date` datetime, `end_date` datetime, `city` varchar(255), `state` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (114.2ms)[0m   [0mCREATE TABLE `job_seekers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `cv` blob(16777215)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (119.4ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (109.0ms)[0m   [0mCREATE TABLE `roles_users` (`role_id` int(11), `user_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (108.2ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `user_name` varchar(255), `display_name` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `remember_token` varchar(255), `activation_code` varchar(255), `state` varchar(255), `remember_token_expires_at` datetime, `activated_at` datetime, `first_name` varchar(255), `last_name` varchar(255), `telephone` varchar(255), `company` varchar(255), `created_at` datetime, `updated_at` datetime, `company_description` text, `credits` int(11) DEFAULT 0, `company_type` varchar(255), `web_site` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (109.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (125.5ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20101017223317')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100102164457')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100224234214')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100224234307')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100603230333')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100603235743')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100604204939')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100608175854')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100621231040')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100623180921')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100629193201')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100707213035')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100727233847')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100812044606')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100813025159')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100826044415')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#register (for 127.0.0.1 at 2010-10-17 20:53:55) [POST]
+  Parameters: {"company"=>"3", "commit"=>"Register", "password_confirmation"=>"cracker8", "authenticity_token"=>"BkkIdv3m/fGUIZuHEg2KbBMfLxQXMYzKTukqE/aEWAw=", "company_type"=>"Primary", "last_name"=>"r", "web_site"=>"4", "telephone"=>"3", "password"=>"2lcre8r", "email"=>"e@e.com", "first_name"=>"st"}
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'e@e.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`salt`, `company`, `activated_at`, `created_at`, `remember_token_expires_at`, `updated_at`, `hashed_password`, `activation_code`, `company_description`, `company_type`, `user_name`, `remember_token`, `last_name`, `web_site`, `display_name`, `telephone`, `credits`, `email`, `state`, `first_name`) VALUES('175143000.256319253837346', '3', NULL, '2010-10-18 03:53:55', NULL, '2010-10-18 03:53:55', '0e5a1b13d7ba3d746530413c24c3500ce2e2cf64', NULL, NULL, 'Primary', NULL, NULL, 'r', '4', NULL, '3', 0, 'e@e.com', NULL, 'st')[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'e@e.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-18 03:53:55', `salt` = '175143000.256319253837346', `company_type` = 'Primary', `created_at` = '2010-10-18 03:53:55', `web_site` = '4', `activation_code` = 'bf316e8671edfb997fbc317bf4261aa64d6d0dde', `company` = '3', `last_name` = 'r', `first_name` = 'st', `telephone` = '3', `email` = 'e@e.com', `hashed_password` = '0e5a1b13d7ba3d746530413c24c3500ce2e2cf64' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Sent mail to st r <e@e.com>
+
+Date: Sun, 17 Oct 2010 20:53:55 -0700
+From: SasCoders.com
+To: st r <e@e.com>
+Subject: Please Activate Your New Account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hello st,
+Thank you for registering with sasCoders.com.  Please follow this link to finish the 
+registration process.
+
+http://hollow-meadow-93.heroku.com/user/validate?c=bf316e8671edfb997fbc317bf4261aa64d6d0dde
+
+Looking forward to working with you,
+-Stephen Philp
+www.sasCoders.com
+Rendering template within layouts/application
+Rendering user/register
+Completed in 206ms (View: 12, DB: 5) | 200 OK [http://localhost/user/register]
