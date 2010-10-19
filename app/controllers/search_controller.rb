@@ -66,7 +66,7 @@ class SearchController < ApplicationController
    
    def by_state
      state = params[:state]
-     @jobs = JobPostings.find_by_state(state)
+     @jobs = JobPosting.find_by_state(state)
      flash[:notice] = "There were #{@jobs.length} jobs found in #{state}"
      render :action=>"index"
    end

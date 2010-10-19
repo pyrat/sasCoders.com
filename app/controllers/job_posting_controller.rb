@@ -43,6 +43,7 @@ class JobPostingController < ApplicationController
 	@job.reference_id = "#{@job.id}.#{@job.user_id}"
 	@job.save
 	@user.jobPostings << @job  # i dont think user needs to be saved again?
+	flash[:notice] = "Job Successfully Created."
   end
   
   def edit
