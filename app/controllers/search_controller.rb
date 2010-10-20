@@ -13,7 +13,7 @@ class SearchController < ApplicationController
 	 
 	 within = "10" if within.to_i < 1
 	 
-	 within = "40" if zip.blank?
+#	 within = "40" if zip.blank?
 	 
 	 if telecommute == "only"
 	   # make the front end so it never gets here but links to search/telecommute
@@ -29,7 +29,11 @@ class SearchController < ApplicationController
 	 ######################
 	 if @geo.success?
 	   @img = "http://maps.google.com/maps/api/staticmap?zoom=10&size=200x200&markers=color:blue|#{@geo.lat},#{@geo.lng}&sensor=false"
+	   if !(zip.blank? and city.blank?)
   	   @jobs = JobPosting.find(:all, :origin=>@geo, :within=>within, :order=>'distance')
+	   elsif zip.blank? and city.blank? and !state.blank?
+	     @jobs = JobPosting.search_by_state(state)
+	   end
 	   # add in the loop for valid jobs
 	   # um, yuck. even better would be to stick this in the find
 	   @jobs.delete_if {|job| job.end_date.blank? or (job.end_date < Time.now) }
@@ -61,13 +65,26 @@ class SearchController < ApplicationController
    def telecommute
      # this is for telecommute "only"
 	 @jobs = JobPosting.find_all_by_telecommute(true)
+	 @jobs.delete_if {|job| job.end_date.blank? or (job.end_date < Time.now) }
+	 @jobs.delete_if {|job| !job.approved?}
 	 render :action=>"index" # just renders it, doesn't run action first
    end
    
    def by_state
+     @jobs = Array.new
      state = params[:state]
-     @jobs = JobPosting.find_by_state(state)
-     flash[:notice] = "There were #{@jobs.length} jobs found in #{state}"
+     @geo = MultiGeocoder.geocode(state)
+     @img = "http://maps.google.com/maps/api/staticmap?zoom=5&size=200x200&markers=color:blue|#{@geo.lat},#{@geo.lng}&sensor=false"
+     @jobs = JobPosting.search_by_state(state)
+     @jobs.delete_if {|job| job.end_date.blank? or (job.end_date < Time.now) }
+ 	   @jobs.delete_if {|job| !job.approved?}
+ 	   if @jobs.length == 0
+ 	     flash.now[:error] = "There were no jobs found within #{state}."
+ 	     render :action=>"index"
+ 		   return
+	   end
+      
+     flash.now[:notice] = "There were #{@jobs.length} jobs found in #{state}"
      render :action=>"index"
    end
    

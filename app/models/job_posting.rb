@@ -3,7 +3,8 @@ class JobPosting < ActiveRecord::Base
  acts_as_mappable
  belongs_to :user
  
- def find_by_state(state)
+ def self.search_by_state(state)
+   a = Array.new
    a = JobPosting.find(:all)
    a.delete_if{ |job| job.state != state }
    return a

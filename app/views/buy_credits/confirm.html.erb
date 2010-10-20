@@ -1,12 +1,13 @@
 <div id="container">
+	<%= image_tag("sascoder_logo_tagline.gif") %>
 <div class="content">
 <h1>Please Confirm Your Payment Details</h1>
 <p>
-Important: Your order is not completed until you click <strong>Complete Payment</strong>.
+<strong>Important:</strong> Your order is not completed until you click <strong>Complete Payment</strong>.
 </p>
-<div class="roundedcornr_box_615465">
-   <div class="roundedcornr_top_615465"><div></div></div>
-      <div class="roundedcornr_content_615465">
+<div class="roundedcornr_box_659996">
+   <div class="roundedcornr_top_659996"><div></div></div>
+      <div class="roundedcornr_content_659996">
 
 
 
@@ -24,11 +25,11 @@ Important: Your order is not completed until you click <strong>Complete Payment<
 </table>
 
       </div>
-   <div class="roundedcornr_bottom_615465"><div></div></div>
+   <div class="roundedcornr_bottom_659996"><div></div></div>
 </div>
 
 <% form_tag :action => 'complete', :token => params[:token], :payer_id => params[:PayerID] do %>
-  <%= submit_tag 'Complete Payment' %>
+ &nbsp;&nbsp; <%= submit_tag 'Complete Payment' %>
 <% end %>
 
 </div>

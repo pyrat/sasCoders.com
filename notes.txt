@@ -4,8 +4,7 @@ heroku rake db:migrate
 
 colorCons Smoke icon pack
 
-** add state to jobPosting using migration, then finish jobPosting.rb
-
++ need to add javacript for search form
 
 +paypal cancel need to be styled and cleanup invoice table
 + create/ needs to be changed around
