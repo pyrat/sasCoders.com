@@ -3,6 +3,8 @@ class JobPosting < ActiveRecord::Base
  acts_as_mappable
  belongs_to :user
  
+ validates_presence_of :title
+ 
  def self.search_by_state(state)
    a = Array.new
    a = JobPosting.find(:all)

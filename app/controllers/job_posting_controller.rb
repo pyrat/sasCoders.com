@@ -39,11 +39,15 @@ class JobPostingController < ApplicationController
 	  @job.state = geo.state
 	end
 	@job.approve!  # just approving all new jobs for now
-	@job.save # there is no job.id until it is saved
-	@job.reference_id = "#{@job.id}.#{@job.user_id}"
-	@job.save
-	@user.jobPostings << @job  # i dont think user needs to be saved again?
-	flash[:notice] = "Job Successfully Created."
+	if @job.save # there is no job.id until it is saved
+	  @job.reference_id = "#{@job.id}.#{@job.user_id}"
+	  @job.save
+	  @user.jobPostings << @job  # i dont think user needs to be saved again?
+	  flash.now[:notice] = "Job Successfully Created."
+  else
+    flash.now[:error] = "That job could not be created."
+    render :addJob
+  end
   end
   
   def edit
