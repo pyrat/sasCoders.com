@@ -89,6 +89,15 @@ class BuyCreditsController < ApplicationController
 	ApplicationMailer.deliver_payment_notification(@invoice)
 	
   end
+  
+  def beta_purchase
+    if SITE_BETA == true
+      @user.credits += 1
+      @user.save
+      flash.now[:notice] = "One credit was added to your account."
+    end
+    render "user/index"
+  end
 
   def paypal_success
   end
