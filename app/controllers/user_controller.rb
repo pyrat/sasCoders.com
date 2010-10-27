@@ -91,7 +91,7 @@ class UserController < ApplicationController
     end
 =end
     u = User.new(params[:u])
-    @user.update_attributes(u.attributes)
+    @user.update_attributes!(u.attributes)
     render 'index'
   end
   

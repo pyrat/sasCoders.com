@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   has_many :jobPostings
   has_many :invoices
   
+  attr_protected :email # protects against mass assignment (update attributes)
+  
   # validations
   # when do validations occur? before the model is saved.
   validates_presence_of :email

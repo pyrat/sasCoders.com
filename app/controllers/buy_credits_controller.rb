@@ -94,9 +94,15 @@ class BuyCreditsController < ApplicationController
     if SITE_BETA == true
       @user.credits += 1
       @user.save
+      @invoice = Invoice.new
+      @invoice.product = 1
+      @invoice.amount = 0
+      @invoice.billed_date = Time.now
+      @invoice.status = "beta purchase"
+      # no need to save it
       flash.now[:notice] = "One credit was added to your account."
     end
-    render "user/index"
+    render "complete"
   end
 
   def paypal_success

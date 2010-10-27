@@ -1,4 +1,5 @@
 <div id="container">
+	<%= render(:partial => "shared/header") %>
 <div class="content">
 <h1>Your Invoice</h1>
 <div class="roundedcornr_box_659996">
@@ -22,6 +23,8 @@ Apply your credit to a <%= link_to "saved ad", :controller=>'user', :action=>'ma
 <%= link_to "Create new ad", :controller=>'job_posting', :action=>"addJob" %>.<br>
 <%= link_to "View your profile", :controller=>'user', :action=>'index' %>.<br>
 </p>
+
+<p>You now have <%= @user.credits %> credits in your account.<p>
 
 </div>
 </div>

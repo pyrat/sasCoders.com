@@ -3,17 +3,16 @@
 <h1>Your Profile</h1>
 <span id="left">
 <div style="clear:both;">
-		<ul class="simple">
-	      <li><strong>Name:</strong><br> <%= "#{@user.first_name} #{@user.last_name}" %><br><br></li>
-	      <li><strong>Company:</strong><br> <%= @user.company %><br><br></li>
-		  <li><strong>Web Site:</strong><br> <%= @user.web_site %><br><br></li>
-	      <li><strong>Company Description:</strong><br> <%= @user.company_description %><br><br></li>
-		  <li><%= link_to image_tag("tools.png", :border=>0), :controller=>'user', :action=>'edit' %><%= link_to 'edit profile', :controller=>'user', :action=>'edit' %><br><br></li>
-	    </ul>
+		
+	      <strong>Name:</strong><br> <%= "#{@user.first_name} #{@user.last_name}" %><br><br>
+	      <strong>Company:</strong><br> <%= @user.company %><br><br>
+		  <strong>Web Site:</strong><br> <%= @user.web_site %><br><br>
+	      <strong>Company Description:</strong><br> <%= simple_format(@user.company_description) %><br><br>
+		  <%= link_to image_tag("tools.png", :border=>0), :controller=>'user', :action=>'edit' %><%= link_to 'edit profile', :controller=>'user', :action=>'edit' %><br><br>
+	    
       </div>
 </span>
 
   
  <%= render(:partial => "user/index") %>
-
 </div>
