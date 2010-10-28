@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_many :jobPostings
   has_many :invoices
   
-  attr_protected :email # protects against mass assignment (update attributes)
+  attr_protected :email, :salt, :hashed_password # protects against mass assignment (update attributes)
   
   # validations
   # when do validations occur? before the model is saved.
@@ -37,6 +37,7 @@ class User < ActiveRecord::Base
     user = self.find_by_email(email)
     if user
 	 # logger.info("Found the user in authenticate")
+	 logger.info("**** the password is #{password} and the salt is #{user.salt}  ****")
       expected_password = encrypted_password(password, user.salt)
       if user.hashed_password != expected_password
 	  #  logger.info("The passwords did not match: #{expected_password} != #{user.hashed_password}")

@@ -27494,3 +27494,279 @@ Rendered shared/_header (1.4ms)
   [4;35;1mJobPosting Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
 Rendered user/_index (12.9ms)
 Completed in 42ms (View: 19, DB: 7) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-10-28 10:14:50) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (10.9ms)
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show_login (for 127.0.0.1 at 2010-10-28 10:14:53) [GET]
+Rendering template within layouts/application
+Rendering user/show_login
+Rendered user/_show_login (12.1ms)
+Completed in 25ms (View: 23, DB: 0) | 200 OK [http://localhost/user/show_login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-10-28 10:14:57) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"YDG1xkF7kryKN22Lu3KE9kydT/JI7Rl6/kFcCY/v+bo=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+
+TypeError (can't convert nil into String):
+  app/models/user.rb:134:in `+'
+  app/models/user.rb:134:in `encrypted_password'
+  app/models/user.rb:40:in `authenticate'
+  app/controllers/user_controller.rb:102:in `login'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-10-28 10:24:08) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_search (1.5ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (11.0ms)
+Completed in 19ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show_login (for 127.0.0.1 at 2010-10-28 10:24:11) [GET]
+Rendering template within layouts/application
+Rendering user/show_login
+Rendered user/_show_login (1.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/user/show_login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-10-28 10:24:14) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"jMN180hVYGtjOeFsmsO+grg+USK1Q8jUkcMtkYFAQRo=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+
+TypeError (can't convert nil into String):
+  app/models/user.rb:134:in `+'
+  app/models/user.rb:134:in `encrypted_password'
+  app/models/user.rb:40:in `authenticate'
+  app/controllers/user_controller.rb:102:in `login'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (103.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-10-28 10:28:58) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"jMN180hVYGtjOeFsmsO+grg+USK1Q8jUkcMtkYFAQRo=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+**** the password is cracker8 ****
+
+TypeError (can't convert nil into String):
+  app/models/user.rb:135:in `+'
+  app/models/user.rb:135:in `encrypted_password'
+  app/models/user.rb:41:in `authenticate'
+  app/controllers/user_controller.rb:102:in `login'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.7ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-10-28 10:29:53) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"jMN180hVYGtjOeFsmsO+grg+USK1Q8jUkcMtkYFAQRo=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+**** the password is cracker8 and the salt is   ****
+
+TypeError (can't convert nil into String):
+  app/models/user.rb:135:in `+'
+  app/models/user.rb:135:in `encrypted_password'
+  app/models/user.rb:41:in `authenticate'
+  app/controllers/user_controller.rb:102:in `login'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-10-28 11:08:09) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"jMN180hVYGtjOeFsmsO+grg+USK1Q8jUkcMtkYFAQRo=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+**** the password is cracker8 and the salt is 237967093082000.888320996543733  ****
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 18:08:10', `activated_at` = '2010-10-28 18:08:09' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (3.5ms)
+Rendered shared/_search (2.5ms)
+Rendered site/_content (1.4ms)
+Rendered shared/_sidebar (15.2ms)
+Completed in 213ms (View: 50, DB: 4) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 11:08:21) [GET]
+  [4;36;1mUser Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 18:08:21', `activated_at` = '2010-10-28 18:08:21' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.5ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Rendered user/_index (8.6ms)
+Completed in 41ms (View: 22, DB: 4) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (1.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2010-10-28 11:24:40) [GET]
+  [4;35;1mUser Columns (6.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 18:24:40', `activated_at` = '2010-10-28 18:24:40' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/edit
+Rendered shared/_header (2.4ms)
+Rendered user/_edit (5.9ms)
+Completed in 78ms (View: 46, DB: 10) | 200 OK [http://localhost/user/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#save (for 127.0.0.1 at 2010-10-28 11:24:57) [POST]
+  Parameters: {"commit"=>"Save", "authenticity_token"=>"jMN180hVYGtjOeFsmsO+grg+USK1Q8jUkcMtkYFAQRo=", "u"=>{"company"=>"pelican programming", "company_description"=>"UnitedHealth Group is among the most ambitious Fortune 25 companies you'll ever meet. Through our family of businesses, we're working to make the health care system performs better for more people, in more ways than ever.\r\n\r\nSimply put, we think the entire system can be greater than it's ever been. And that drives us to work harder, aim higher, and expect more from one another.\r\n\r\nHere, you'll be empowered to make an immediate impact for millions of others. And you'll achieve more than you ever expected. How does that fit with your plans?\r\n\r\nUnitedHealth Group is an innovative leader in the health and well-being industry, serving more than 55 million Americans. Through our family of companies, we contribute outstanding clinical insight with consumer-friendly services and advanced technology to help people achieve optimal health.\r\n\r\nWhat makes your Healthcare Economics career greater with UnitedHealth Group? Advancement, access to data, variety of product lines, and rewards for delivering on our mission.", "web_site"=>"www.sp.com", "last_name"=>"philp", "telephone"=>"", "first_name"=>"stephen"}}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 18:24:57', `activated_at` = '2010-10-28 18:24:57' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+WARNING: Can't mass-assign these protected attributes: salt, hashed_password, email
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 18:24:57', `activated_at` = NULL, `company_type` = NULL, `created_at` = NULL, `web_site` = 'www.sp.com', `activation_code` = NULL, `company` = 'pelican programming', `last_name` = 'philp', `first_name` = 'stephen', `company_description` = 'UnitedHealth Group is among the most ambitious Fortune 25 companies you\'ll ever meet. Through our family of businesses, we\'re working to make the health care system performs better for more people, in more ways than ever.\r\n\r\nSimply put, we think the entire system can be greater than it\'s ever been. And that drives us to work harder, aim higher, and expect more from one another.\r\n\r\nHere, you\'ll be empowered to make an immediate impact for millions of others. And you\'ll achieve more than you ever expected. How does that fit with your plans?\r\n\r\nUnitedHealth Group is an innovative leader in the health and well-being industry, serving more than 55 million Americans. Through our family of companies, we contribute outstanding clinical insight with consumer-friendly services and advanced technology to help people achieve optimal health.\r\n\r\nWhat makes your Healthcare Economics career greater with UnitedHealth Group? Advancement, access to data, variety of product lines, and rewards for delivering on our mission.' WHERE `id` = 2[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 18:24:57', `activated_at` = NULL, `company_type` = NULL, `created_at` = NULL, `web_site` = 'www.sp.com', `activation_code` = 'a95c9ad4b395958559e2969677607609e12f3b62', `company` = 'pelican programming', `last_name` = 'philp', `first_name` = 'stephen', `company_description` = 'UnitedHealth Group is among the most ambitious Fortune 25 companies you\'ll ever meet. Through our family of businesses, we\'re working to make the health care system performs better for more people, in more ways than ever.\r\n\r\nSimply put, we think the entire system can be greater than it\'s ever been. And that drives us to work harder, aim higher, and expect more from one another.\r\n\r\nHere, you\'ll be empowered to make an immediate impact for millions of others. And you\'ll achieve more than you ever expected. How does that fit with your plans?\r\n\r\nUnitedHealth Group is an innovative leader in the health and well-being industry, serving more than 55 million Americans. Through our family of companies, we contribute outstanding clinical insight with consumer-friendly services and advanced technology to help people achieve optimal health.\r\n\r\nWhat makes your Healthcare Economics career greater with UnitedHealth Group? Advancement, access to data, variety of product lines, and rewards for delivering on our mission.' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Rendered user/_index (6.4ms)
+Completed in 39ms (View: 12, DB: 6) | 200 OK [http://localhost/user/save]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#save (for 127.0.0.1 at 2010-10-28 11:30:58) [POST]
+  Parameters: {"commit"=>"Save", "authenticity_token"=>"jMN180hVYGtjOeFsmsO+grg+USK1Q8jUkcMtkYFAQRo=", "u"=>{"company"=>"pelican programming", "company_description"=>"UnitedHealth Group is among the most ambitious Fortune 25 companies you'll ever meet. Through our family of businesses, we're working to make the health care system performs better for more people, in more ways than ever.\r\n\r\nSimply put, we think the entire system can be greater than it's ever been. And that drives us to work harder, aim higher, and expect more from one another.\r\n\r\nHere, you'll be empowered to make an immediate impact for millions of others. And you'll achieve more than you ever expected. How does that fit with your plans?\r\n\r\nUnitedHealth Group is an innovative leader in the health and well-being industry, serving more than 55 million Americans. Through our family of companies, we contribute outstanding clinical insight with consumer-friendly services and advanced technology to help people achieve optimal health.\r\n\r\nWhat makes your Healthcare Economics career greater with UnitedHealth Group? Advancement, access to data, variety of product lines, and rewards for delivering on our mission.", "web_site"=>"www.sp.com", "last_name"=>"philp", "telephone"=>"", "first_name"=>"stephen"}}
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 18:30:58', `activated_at` = '2010-10-28 18:30:58' WHERE `id` = 2[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCOMMIT[0m
+WARNING: Can't mass-assign these protected attributes: salt, hashed_password, email
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 18:30:58', `activated_at` = NULL, `activation_code` = NULL WHERE `id` = 2[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 18:30:58', `activated_at` = NULL, `activation_code` = '59c3696b21d82eca353fed89ea3e499e0fe33af4' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.5ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Rendered user/_index (6.3ms)
+Completed in 48ms (View: 15, DB: 7) | 200 OK [http://localhost/user/save]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 11:31:04) [GET]
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 18:31:04', `activated_at` = '2010-10-28 18:31:04' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Rendered user/_index (6.1ms)
+Completed in 30ms (View: 11, DB: 5) | 200 OK [http://localhost/user]
