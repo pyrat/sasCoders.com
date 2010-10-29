@@ -1,18 +1,33 @@
 <div id="container">
 <%= render(:partial => "shared/header") %>
 <h1>Your Profile</h1>
-<span id="left">
-<div style="clear:both;">
-	<p>	
-	      <strong>Name:</strong><br> <%= "#{@user.first_name} #{@user.last_name}" %><br><br>
-	      <strong>Company:</strong><br> <%= @user.company %><br><br>
-		  <strong>Web Site:</strong><br> <%= @user.web_site %><br><br>
-	      <strong>Company Description:</strong><br> <%= simple_format(@user.company_description) %><br><br>
-		  <%= link_to image_tag("tools.png", :border=>0), :controller=>'user', :action=>'edit' %><%= link_to 'edit profile', :controller=>'user', :action=>'edit' %>
-	</p>  
-      </div>
-</span>
 
-  
- <%= render(:partial => "user/index") %>
+<div id="left">
+	<strong>Name:</strong><br> <%= "#{@user.first_name} #{@user.last_name}" %><br><br>
+    <strong>Company:</strong><br> <%= @user.company %><br><br>
+	  <strong>Web Site:</strong><br> <%= @user.web_site %><br><br>
+	<div style="height:190px; overflow:auto; border-style:solid; border-width:1px; border-color:#bac2c7;padding-left:4px;">
+    <strong>Company Description:</strong><br> <%= simple_format(@user.company_description) %>
+   </div><br>
+	  <%= link_to image_tag("tools.png", :border=>0), :controller=>'user', :action=>'edit' %><%= link_to 'edit profile', :controller=>'user', :action=>'edit' %>
+	
+</div>
+
+<div id="right">
+	<div class="roundedcornr_box_659996" >
+	   <div class="roundedcornr_top_659996"><div></div></div>
+	      <div class="roundedcornr_content_659996">
+		    <%= link_to image_tag("doc.png", :border=>0), :controller=>'user', :action=>'manage_ads' %>
+			<p>Currently Running Ads: <%= link_to "#{@user.jobs_running.length}", :controller=>'user', :action=>'manage_ads' %></p>
+		    <p>Saved Ads: <a href="#"><%= link_to "#{@user.jobPostings.length}", :controller=>'user', :action=>'manage_ads' %></p>
+			<p><%= link_to "Manage Ads", :controller=>'user', :action=>'manage_ads' %></p>
+			<hr>
+			<%= link_to image_tag('cash.png', :border=>0), :controller=>'buy_credits' %>
+			<p>Credits Available: <%= link_to "#{@user.credits}", :action=>'invoices' %> </p> 
+		    <p><%= link_to 'Purchase Credits', :controller=>'buy_credits' %></p>
+	      </div>
+	   <div class="roundedcornr_bottom_659996"><div></div></div>
+	</div>
+    
+  </div>
 </div>

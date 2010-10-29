@@ -91,7 +91,15 @@ class UserController < ApplicationController
     end
 =end
     u = User.new(params[:u])
-    @user.update_attributes!(u.attributes)
+   # @user.update_attributes!(u.attributes)
+   @user.first_name          = u.first_name
+   @user.last_name           = u.last_name 
+   @user.telephone           = u.telephone
+   @user.company             = u.company
+   @user.web_site            = u.web_site
+   @user.company_description = u.company_description
+   @user.save!
+    
     render 'index'
   end
   

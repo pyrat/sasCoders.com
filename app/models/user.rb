@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_many :jobPostings
   has_many :invoices
   
-  attr_protected :email, :salt, :hashed_password # protects against mass assignment (update attributes)
+  attr_protected :email, :salt, :hashed_password, :created_at # protects against mass assignment (update attributes)
   
   # validations
   # when do validations occur? before the model is saved.

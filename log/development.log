@@ -27770,3 +27770,734 @@ Rendered shared/_header (1.4ms)
   [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
 Rendered user/_index (6.1ms)
 Completed in 30ms (View: 11, DB: 5) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 11:36:38) [GET]
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 18:36:38', `activated_at` = '2010-10-28 18:36:38' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Rendered user/_index (6.3ms)
+Completed in 35ms (View: 15, DB: 4) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 11:38:37) [GET]
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 18:38:37', `activated_at` = '2010-10-28 18:38:37' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Rendered user/_index (6.3ms)
+Completed in 33ms (View: 15, DB: 4) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 11:39:03) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 18:39:03', `activated_at` = '2010-10-28 18:39:03' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Rendered user/_index (6.5ms)
+Completed in 33ms (View: 15, DB: 5) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 11:39:11) [GET]
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 18:39:11', `activated_at` = '2010-10-28 18:39:11' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.5ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Rendered user/_index (6.2ms)
+Completed in 31ms (View: 11, DB: 5) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 11:45:29) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 18:45:29', `activated_at` = '2010-10-28 18:45:29' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Rendered user/_index (1.6ms)
+Completed in 40ms (View: 20, DB: 5) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 11:47:07) [GET]
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 18:47:07', `activated_at` = '2010-10-28 18:47:07' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Rendered user/_index (7.2ms)
+Completed in 40ms (View: 19, DB: 5) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-10-28 11:48:37) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_search (1.3ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (10.7ms)
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show_login (for 127.0.0.1 at 2010-10-28 11:48:42) [GET]
+Rendering template within layouts/application
+Rendering user/show_login
+Rendered user/_show_login (22.8ms)
+Completed in 41ms (View: 38, DB: 0) | 200 OK [http://localhost/user/show_login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-10-28 11:48:52) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"Xh7qNpqsCmNzT2XyvXM8JJQb6Fr5DBlBpNxns/+TzUQ=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+**** the password is cracker8 and the salt is 237967093082000.888320996543733  ****
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.3ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (10.6ms)
+Completed in 33ms (View: 17, DB: 3) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show_login (for 127.0.0.1 at 2010-10-28 11:48:59) [GET]
+Rendering template within layouts/application
+Rendering user/show_login
+Rendered user/_show_login (1.6ms)
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/user/show_login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-10-28 11:49:09) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"Xh7qNpqsCmNzT2XyvXM8JJQb6Fr5DBlBpNxns/+TzUQ=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+**** the password is cracker8 and the salt is 237967093082000.888320996543733  ****
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.4ms)
+Rendered shared/_search (1.5ms)
+Rendered site/_content (0.6ms)
+Rendered shared/_sidebar (10.6ms)
+Completed in 32ms (View: 18, DB: 3) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2010-10-28 11:50:48) [GET]
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.4ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (11.5ms)
+Completed in 31ms (View: 19, DB: 3) | 200 OK [http://localhost/user/logout]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show_login (for 127.0.0.1 at 2010-10-28 11:50:50) [GET]
+Rendering template within layouts/application
+Rendering user/show_login
+Rendered user/_show_login (1.1ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/user/show_login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-10-28 11:50:54) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"jMN180hVYGtjOeFsmsO+grg+USK1Q8jUkcMtkYFAQRo=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+**** the password is cracker8 and the salt is 237967093082000.888320996543733  ****
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.3ms)
+Rendered shared/_search (1.5ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (10.9ms)
+Completed in 32ms (View: 18, DB: 3) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show_login (for 127.0.0.1 at 2010-10-28 15:45:16) [GET]
+Rendering template within layouts/application
+Rendering user/show_login
+Rendered user/_show_login (1.1ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/user/show_login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-10-28 15:45:20) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"jMN180hVYGtjOeFsmsO+grg+USK1Q8jUkcMtkYFAQRo=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+**** the password is cracker8 and the salt is 237967093082000.888320996543733  ****
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 22:45:20', `activated_at` = '2010-10-28 22:45:20' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.7ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.6ms)
+Rendered shared/_sidebar (10.9ms)
+Completed in 37ms (View: 18, DB: 4) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 15:45:24) [GET]
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 22:45:24', `activated_at` = '2010-10-28 22:45:24' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Rendered user/_index (25.0ms)
+Completed in 49ms (View: 30, DB: 5) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2010-10-28 15:45:27) [GET]
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 22:45:27', `activated_at` = '2010-10-28 22:45:27' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/edit
+Rendered shared/_header (1.5ms)
+Rendered user/_edit (2.2ms)
+Completed in 25ms (View: 7, DB: 4) | 200 OK [http://localhost/user/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#save (for 127.0.0.1 at 2010-10-28 15:46:26) [POST]
+  Parameters: {"commit"=>"Save", "authenticity_token"=>"jMN180hVYGtjOeFsmsO+grg+USK1Q8jUkcMtkYFAQRo=", "u"=>{"company"=>"pelican programming", "company_description"=>"UnitedHealth Group is among the most ambitious Fortune 25 companies you'll ever meet. Through our family of businesses, we're working to make the health care system performs better for more people, in more ways than ever.\r\n\r\nSimply put, we think the entire system can be greater than it's ever been. And that drives us to work harder, aim higher, and expect more from one another.\r\n\r\nHere, you'll be empowered to make an immediate impact for millions of others. And you'll achieve more than you ever expected. How does that fit with your plans?\r\n\r\nUnitedHealth Group is an innovative leader in the health and well-being industry, serving more than 55 million Americans. Through our family of companies, we contribute outstanding clinical insight with consumer-friendly services and advanced technology to help people achieve optimal health.\r\n\r\nWhat makes your Healthcare Economics career greater with UnitedHealth Group? Advancement, access to data, variety of product lines, and rewards for delivering on our mission.", "web_site"=>"www.sp.com", "last_name"=>"philp", "telephone"=>"", "first_name"=>"stephen"}}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 22:46:26', `activated_at` = '2010-10-28 22:46:26' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 22:46:26', `web_site` = 'www.sp.com', `company` = 'pelican programming', `last_name` = 'philp', `first_name` = 'stephen', `company_description` = 'UnitedHealth Group is among the most ambitious Fortune 25 companies you\'ll ever meet. Through our family of businesses, we\'re working to make the health care system performs better for more people, in more ways than ever.\r\n\r\nSimply put, we think the entire system can be greater than it\'s ever been. And that drives us to work harder, aim higher, and expect more from one another.\r\n\r\nHere, you\'ll be empowered to make an immediate impact for millions of others. And you\'ll achieve more than you ever expected. How does that fit with your plans?\r\n\r\nUnitedHealth Group is an innovative leader in the health and well-being industry, serving more than 55 million Americans. Through our family of companies, we contribute outstanding clinical insight with consumer-friendly services and advanced technology to help people achieve optimal health.\r\n\r\nWhat makes your Healthcare Economics career greater with UnitedHealth Group? Advancement, access to data, variety of product lines, and rewards for delivering on our mission.' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.5ms)
+  [4;35;1mJobPosting Load (0.3ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Rendered user/_index (6.2ms)
+Completed in 33ms (View: 11, DB: 5) | 200 OK [http://localhost/user/save]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#logout (for 127.0.0.1 at 2010-10-28 15:47:00) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_search (1.3ms)
+Rendered site/_content (0.6ms)
+Rendered shared/_sidebar (10.8ms)
+Completed in 29ms (View: 17, DB: 3) | 200 OK [http://localhost/user/logout]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show_login (for 127.0.0.1 at 2010-10-28 15:47:03) [GET]
+Rendering template within layouts/application
+Rendering user/show_login
+Rendered user/_show_login (1.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/user/show_login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-10-28 15:47:06) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"jMN180hVYGtjOeFsmsO+grg+USK1Q8jUkcMtkYFAQRo=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+**** the password is cracker8 and the salt is 237967093082000.888320996543733  ****
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 22:47:06', `activated_at` = '2010-10-28 22:47:06' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.7ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (10.9ms)
+Completed in 37ms (View: 18, DB: 4) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 15:47:13) [GET]
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 22:47:13', `activated_at` = '2010-10-28 22:47:13' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;36;1mJobPosting Load (0.3ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Rendered user/_index (6.3ms)
+Completed in 30ms (View: 11, DB: 4) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 15:49:09) [GET]
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 22:49:09', `activated_at` = '2010-10-28 22:49:09' WHERE `id` = 2[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 37ms (View: 16, DB: 6) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 15:49:35) [GET]
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 22:49:35', `activated_at` = '2010-10-28 22:49:35' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 34ms (View: 15, DB: 4) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 15:52:03) [GET]
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 22:52:03', `activated_at` = '2010-10-28 22:52:03' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.5ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 38ms (View: 16, DB: 4) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 15:52:53) [GET]
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 22:52:53', `activated_at` = '2010-10-28 22:52:53' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 34ms (View: 15, DB: 4) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 15:53:25) [GET]
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 22:53:25', `activated_at` = '2010-10-28 22:53:25' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 35ms (View: 15, DB: 4) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:22:06) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 23:22:06', `activated_at` = '2010-10-28 23:22:06' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 34ms (View: 15, DB: 5) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:23:33) [GET]
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 23:23:33', `activated_at` = '2010-10-28 23:23:33' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.5ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 35ms (View: 15, DB: 5) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:24:17) [GET]
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 23:24:17', `activated_at` = '2010-10-28 23:24:17' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.6ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 34ms (View: 15, DB: 4) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:25:00) [GET]
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 23:25:00', `activated_at` = '2010-10-28 23:25:00' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 34ms (View: 15, DB: 4) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:25:14) [GET]
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 23:25:14', `activated_at` = '2010-10-28 23:25:14' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 34ms (View: 15, DB: 4) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:26:29) [GET]
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 23:26:29', `activated_at` = '2010-10-28 23:26:29' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.5ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 37ms (View: 16, DB: 4) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:27:01) [GET]
+  [4;36;1mUser Columns (13.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (74.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 23:27:01', `activated_at` = '2010-10-28 23:27:01' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.8ms)
+  [4;36;1mJobPosting Load (0.5ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 127ms (View: 19, DB: 89) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:35:24) [GET]
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 23:35:24', `activated_at` = '2010-10-28 23:35:24' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.6ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 35ms (View: 16, DB: 5) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:37:22) [GET]
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 23:37:22', `activated_at` = '2010-10-28 23:37:22' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.5ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 34ms (View: 15, DB: 4) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:39:51) [GET]
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 23:39:51', `activated_at` = '2010-10-28 23:39:51' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 34ms (View: 15, DB: 4) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show_login (for 127.0.0.1 at 2010-10-28 16:40:21) [GET]
+Rendering template within layouts/application
+Rendering user/show_login
+Rendered user/_show_login (1.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/user/show_login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-10-28 16:40:32) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"Xh7qNpqsCmNzT2XyvXM8JJQb6Fr5DBlBpNxns/+TzUQ=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+**** the password is cracker8 and the salt is 237967093082000.888320996543733  ****
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 23:40:32', `activated_at` = '2010-10-28 23:40:32' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.9ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (10.9ms)
+Completed in 101ms (View: 18, DB: 4) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:40:35) [GET]
+  [4;36;1mUser Columns (3.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 23:40:35', `activated_at` = '2010-10-28 23:40:35' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (2.3ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 43ms (View: 14, DB: 6) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#edit (for 127.0.0.1 at 2010-10-28 16:40:47) [GET]
+  [4;35;1mUser Columns (152.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 23:40:47', `activated_at` = '2010-10-28 23:40:47' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/edit
+Rendered shared/_header (2.3ms)
+Rendered user/_edit (3.1ms)
+Completed in 184ms (View: 10, DB: 154) | 200 OK [http://localhost/user/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#save (for 127.0.0.1 at 2010-10-28 16:41:00) [POST]
+  Parameters: {"commit"=>"Save", "authenticity_token"=>"Xh7qNpqsCmNzT2XyvXM8JJQb6Fr5DBlBpNxns/+TzUQ=", "u"=>{"company"=>"pelican programming", "company_description"=>"UnitedHealth Group is among the most ambitious Fortune 25 companies you'll ever meet. Through our family of businesses, we're working to make the health care system performs better for more people, in more ways than ever.", "web_site"=>"www.sp.com", "last_name"=>"philp", "telephone"=>"", "first_name"=>"stephen"}}
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 23:41:00', `activated_at` = '2010-10-28 23:41:00' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 23:41:00', `company_description` = 'UnitedHealth Group is among the most ambitious Fortune 25 companies you\'ll ever meet. Through our family of businesses, we\'re working to make the health care system performs better for more people, in more ways than ever.' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 33ms (View: 11, DB: 6) | 200 OK [http://localhost/user/save]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:41:43) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 23:41:43', `activated_at` = '2010-10-28 23:41:43' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;36;1mJobPosting Load (0.4ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 34ms (View: 15, DB: 5) | 200 OK [http://localhost/user]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:41:47) [GET]
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-28 23:41:47', `activated_at` = '2010-10-28 23:41:47' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.5ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 109ms (View: 11, DB: 5) | 200 OK [http://localhost/user]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BuyCreditsController#index (for 127.0.0.1 at 2010-10-28 16:41:50) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 23:41:50', `activated_at` = '2010-10-28 23:41:50' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering buy_credits/index
+Completed in 29ms (View: 10, DB: 5) | 200 OK [http://localhost/buy_credits]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#index (for 127.0.0.1 at 2010-10-28 16:41:53) [GET]
+  [4;36;1mUser Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-28 23:41:53', `activated_at` = '2010-10-28 23:41:53' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/index
+Rendered shared/_header (1.4ms)
+  [4;36;1mJobPosting Load (0.3ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 2) [0m
+Completed in 32ms (View: 11, DB: 5) | 200 OK [http://localhost/user]
