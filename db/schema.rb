@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(:version => 20101017223317) do
 
   create_table "job_seekers", :force => true do |t|
     t.string "email"
-    t.binary "cv",    :limit => 16777215
+    t.binary "cv"
   end
 
   create_table "roles", :force => true do |t|

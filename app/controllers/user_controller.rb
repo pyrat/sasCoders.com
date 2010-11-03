@@ -14,8 +14,8 @@ class UserController < ApplicationController
   end
   
   def collect
-    # i know this is retarded, but i just am not sure how to do it correctly
-	# this is a stupid action just so it can render the template
+    # collect the new users details
+    response.headers['Cache-Control'] = 'public, max-age=1440'
   end
   def register
     # when a user registers, they are not officially logged in/etc until they validate 

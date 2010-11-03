@@ -37,7 +37,6 @@ class User < ActiveRecord::Base
     user = self.find_by_email(email)
     if user
 	 # logger.info("Found the user in authenticate")
-	 logger.info("**** the password is #{password} and the salt is #{user.salt}  ****")
       expected_password = encrypted_password(password, user.salt)
       if user.hashed_password != expected_password
 	  #  logger.info("The passwords did not match: #{expected_password} != #{user.hashed_password}")

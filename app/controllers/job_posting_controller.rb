@@ -20,6 +20,10 @@ class JobPostingController < ApplicationController
  
   def create
     @job = JobPosting.new(params[:jobPosting])
+    # we dont want to recreate the job
+    # if the u;ser hit the back button, or somehow refreshed the form with the same info
+   render "user/index" and return if @job.duplicate?(@user)
+    
 	@job.user_id = @user.id # does this need to happen?, yes i think so
 	
 	@job.start_run_date = Date.parse(@job.start_run_date.to_s) unless @job.start_run_date.nil?

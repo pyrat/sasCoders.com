@@ -11,6 +11,28 @@ class JobPosting < ActiveRecord::Base
    a.delete_if{ |job| job.state != state }
    return a
  end
+ 
+ def ==(other)
+   return false if self.class != other.class # make sure they are the same type
+  # if (self.attributes.values == other.attributes.values)
+   if (self.title == other.title and
+       self.short_description == other.short_description and
+       self.long_description == other.long_description and
+       self.experience == other.experience and 
+       self.telecommute == other.telecommute and
+       self.addl_instructions == other.addl_instructions)
+     return true  
+   else
+     return false
+   end
+ end
+ 
+ def duplicate?(u)
+   u.jobPostings.each do |j|
+    return true if self == j
+   end
+   return false
+ end
 
  def formatted_end_date
    if end_date.blank?
