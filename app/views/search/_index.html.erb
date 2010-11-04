@@ -20,6 +20,9 @@
    <div class="roundedcornr_bottom_218416"><div></div></div>
 </div>
 <hr>
+<% if @telecommute == "only" %>
+<div style="padding-left:20px">Showing telecommute jobs.</div>
+<% else %>
 <div class="roundedcornr_box_659996">
    <div class="roundedcornr_top_659996"><div></div></div>
       <div class="roundedcornr_content_659996">
@@ -34,4 +37,4 @@
       </div>
    <div class="roundedcornr_bottom_659996"><div></div></div>
 </div>
-
+<% end %>

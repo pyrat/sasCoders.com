@@ -5,7 +5,7 @@ class SearchController < ApplicationController
      @jobs = Array.new  # array that is returned to the view
 	 
 	 zip = params[:zip]
-	 telecommute = params[:telecommute] # select list include|exclude|only
+	 @telecommute = params[:telecommute] # select list include|exclude|only
 	 city = params[:city]
 	 state = params[:state]
 
@@ -13,12 +13,16 @@ class SearchController < ApplicationController
 	 
 	 within = "10" if within.to_i < 1
 	 
+	 if zip.blank? and city.blank? and state.blank? 
+	   telecommute = "only"
+	 end
 #	 within = "40" if zip.blank?
 	 
 	 if telecommute == "only"
 	   # make the front end so it never gets here but links to search/telecommute
 	   # keep this code here just in case though...
 	   redirect_to "/search/telecommute/"
+	   return
 	 end
 	 
 	 location = "#{city} #{state} #{zip}"
@@ -43,7 +47,7 @@ class SearchController < ApplicationController
 		 return
 	   end  
 	   # do we need to add some telecommute jobs in?
-	   if telecommute == "include"
+	   if @telecommute == "include"
 	     t = Array.new
 	     t = JobPosting.find_all_by_telecommute(true)
 		 
@@ -67,6 +71,7 @@ class SearchController < ApplicationController
 	 @jobs = JobPosting.find_all_by_telecommute(true)
 	 @jobs.delete_if {|job| job.end_date.blank? or (job.end_date < Time.now) }
 	 @jobs.delete_if {|job| !job.approved?}
+	 @telecommute = "only"
 	 render :action=>"index" # just renders it, doesn't run action first
    end
    

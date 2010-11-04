@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-  before_filter :logged_in?, :only=> [:edit, :index, :save, :save_company, :edit_company, :invoices]
+  before_filter :logged_in?, :only=> [:edit, :index, :save, :save_company, :edit_company, :invoices, :manage_ads]
   
   def index
   end

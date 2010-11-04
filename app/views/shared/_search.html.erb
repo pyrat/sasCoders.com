@@ -3,7 +3,7 @@
    <div class="roundedcornr_top_218416"><div></div></div>
       <div class="roundedcornr_content_218416">
 
-		Search By Zip: <%= text_field_tag :zip, params[:zip], :size=>7 %> <%= label_tag 'Within:' %>
+		Search By Zip: &nbsp;<%= text_field_tag :zip, params[:zip], :size=>7 %> <%= label_tag 'Within:' %>
 		<%= select_tag "within", options_for_select(%w{5 10 15 25 40},"10") %> Miles.
 
 
