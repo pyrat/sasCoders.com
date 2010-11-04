@@ -61,7 +61,9 @@ class JobPostingController < ApplicationController
   def update
     # updates the job that came from the edit template
 	job = JobPosting.new(params[:jobPosting]) # this gets the job with the updated parameters
-	job.start_run_date = Date.parse(job.start_run_date.to_s) unless job.start_run_date.nil?
+	#job.start_run_date = Date.parse(job.start_run_date.to_s) unless job.start_run_date.nil?
+	# the start run date is too confusing, and probably useless
+	job.start_run_date = nil
 	job.reference_id = "#{job.id}.#{job.user_id}"
 	job.user_id = @user.id # does this need to happen?, yes i think so
 	# otherwise the start_run_date gets set in the approved code
