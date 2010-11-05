@@ -10,8 +10,12 @@
 		    <td> <%= job.start_run_date.strftime("%m/%d/%y") %> </td>
 		    <td> <%= link_to job.title, {:controller=>'search', :action=>'show', :id=>job.id} %> </td>
 			<td> <%= h job.job_type %> </td>
-			<td> <%= h "#{job.city}, #{job.zip}" %> </td>
-			<td> <%= h job.short_description %> </td>
+			<td> <%= h "#{job.city}, #{job.zip}" %>
+				<% if job.telecommute? %>
+				  /<br><strong>Telecommute</strong>
+				<% end %>
+				 </td>
+			<td style="border-bottom: solid 1px;"> <%= h job.short_description %> </td>
 		  </tr>
 		<% end %>
 		</table>
@@ -28,7 +32,7 @@
       <div class="roundedcornr_content_659996">
 	
 		<table>
-		<tr><td><img src=<%= "#{@img}" %> ></td><td>Search details:<br>
+		<tr><td><img src=<%= "\"#{@img}\"" %> ></td><td>Search details:<br>
 		<p>Full Address: <%= @geo.full_address %></p>
 		<p>Precision: <%= @geo.precision %> </p>
 		<p>There were <%= @jobs.length %> jobs found.</p>
