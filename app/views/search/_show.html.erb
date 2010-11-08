@@ -8,7 +8,7 @@
 
 			    <ul class="simple">
 			      <li><strong>Location:</strong> <%= @city %> </li>
-			      <% if job.telecommute? %>
+			      <% if @job.telecommute? %>
 			        <li><strong>Telecommute</strong>: Yes <div class="small">Telecommute means most of the work can be performed off-site</div></li>
 				  <% else %>
 				     <li><strong>Telecommute</strong>: No</li>
