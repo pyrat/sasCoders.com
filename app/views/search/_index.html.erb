@@ -6,7 +6,7 @@
 		<table>
 		<tr><th class="medium">Date</th> <th class="medium">Title</th> <th class="medium">Duration/Job Type</th> <th class="medium">Location</th> <th class="large">Description</th> </tr>
 		<% for job in @jobs %>
-		  <tr>
+		  <tr class="<%= cycle("even", "odd") %>">
 		    <td> <%= job.start_run_date.strftime("%m/%d/%y") %> </td>
 		    <td> <%= link_to job.title, {:controller=>'search', :action=>'show', :id=>job.id} %> </td>
 			<td> <%= h job.job_type %> </td>
@@ -15,7 +15,7 @@
 				  /<br><strong>Telecommute</strong>
 				<% end %>
 				 </td>
-			<td style="border-bottom: solid 1px;"> <%= h job.short_description %> </td>
+			<td> <%= h job.short_description %> </td>
 		  </tr>
 		<% end %>
 		</table>
@@ -34,7 +34,11 @@
 		<table>
 		<tr><td><img src=<%= "\"#{@img}\"" %> ></td><td>Search details:<br>
 		<p>Full Address: <%= @geo.full_address %></p>
-		<p>Precision: <%= @geo.precision %> </p>
+		<% if @geo.precision == "state" %>
+		  <p>Showing all jobs in the state.</p>
+		<% else %>
+		  <p>Showing jobs near <%= @geo.city %>.</p>
+		<% end %>
 		<p>There were <%= @jobs.length %> jobs found.</p>
 		</td></tr></table>
 

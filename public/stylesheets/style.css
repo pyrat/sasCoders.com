@@ -243,7 +243,16 @@ ul.simple{
   list-style-type: none;
 }
 	
+tr.even{
+	background-color:#dbe0e3;
+	min-height: 30px;
+}
 	
+tr.odd{
+	background-color:#aab2b8;
+	min-height: 30px;
+}
+
 h1 { 
   color: #616a71;
  /* height: 30px; */
