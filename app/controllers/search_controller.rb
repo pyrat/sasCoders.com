@@ -75,6 +75,9 @@ class SearchController < ApplicationController
 	 render :action=>"index" # just renders it, doesn't run action first
    end
    
+   def get_all
+     @jobs = JobPosting.find(:all, :order => "start_run_date DESC")
+   end
    def by_state
      @jobs = Array.new
      state = params[:state]
