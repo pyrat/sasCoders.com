@@ -63,8 +63,8 @@ class JobPostingController < ApplicationController
 	job = JobPosting.new(params[:jobPosting]) # this gets the job with the updated parameters
 	job.start_run_date = Date.parse(job.start_run_date.to_s) unless job.start_run_date.nil?
 	# the start run date is too confusing, and probably useless
-	job.reference_id = "#{job.id}.#{job.user_id}"
-	job.user_id = @user.id # does this need to happen?, yes i think so
+#	job.reference_id = "#{job.id}.#{job.user_id}"
+#	job.user_id = @user.id # does this need to happen?, yes i think so
 	# otherwise the start_run_date gets set in the approved code
 	
 	#logger.debug
@@ -80,7 +80,18 @@ class JobPostingController < ApplicationController
 	  job.city = geo.city
 	end
 	currentJob = JobPosting.find(params[:id])
-	currentJob.update_attributes(job.attributes)
+	#currentJob.update_attributes(job.attributes)
+	currentJob.title = job.title 
+	currentJob.short_description = job.title
+	currentJob.experience = job.experience
+	currentJob.long_description = job.long_description
+	currentJob.telecommute = job.telecommute
+	currentJob.zip = job.zip
+	currentJob.pay = job.pay
+	currentJob.job_type = job.job_type
+	currentJob.addl_instructions = job.addl_instructions
+	
+	currentJob.save!
 	render 'user/manage_ads'
 	
   end

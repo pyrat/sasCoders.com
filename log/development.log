@@ -32086,3 +32086,173 @@ Rendered site/_content (1.2ms)
 Rendered shared/_sidebar (11.0ms)
 Rendered shared/_footer (1.8ms)
 Completed in 28ms (View: 26, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-11-08 15:32:11) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (10.7ms)
+Rendered shared/_footer (1.0ms)
+Completed in 20ms (View: 18, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#show_login (for 127.0.0.1 at 2010-11-08 15:32:14) [GET]
+Rendering template within layouts/application
+Rendering user/show_login
+Rendered user/_show_login (1.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/user/show_login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#login (for 127.0.0.1 at 2010-11-08 15:32:20) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"pemnaM9Kb7ECS6ac1SPvpHiVlQIsOBG0SusQQnMQIBk=", "pw"=>"cracker8", "email"=>"swelltrain@gmail.com"}
+  [4;36;1mUser Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'swelltrain@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-11-08 23:32:20', `activated_at` = '2010-11-08 23:32:20' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (2.5ms)
+Rendered shared/_search (2.1ms)
+Rendered site/_content (0.7ms)
+Rendered shared/_sidebar (12.9ms)
+Rendered shared/_footer (0.9ms)
+Completed in 77ms (View: 24, DB: 5) | 200 OK [http://localhost/user/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#manage_ads (for 127.0.0.1 at 2010-11-08 15:32:26) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-11-08 23:32:26', `activated_at` = '2010-11-08 23:32:26' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/manage_ads
+Rendered shared/_header (1.4ms)
+  [4;36;1mJobPosting Load (0.5ms)[0m   [0;1mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 1) [0m
+  [4;35;1mJobPosting Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Rendered user/_manage_ads (108.0ms)
+Completed in 135ms (View: 112, DB: 8) | 200 OK [http://localhost/user/manage_ads]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#edit (for 127.0.0.1 at 2010-11-08 15:32:47) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mUser Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-11-08 23:32:47', `activated_at` = '2010-11-08 23:32:47' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mJobPosting Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (8.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering job_posting/edit
+Rendered shared/_header (1.6ms)
+Rendered job_posting/_edit (29.2ms)
+Completed in 103ms (View: 64, DB: 16) | 200 OK [http://localhost/job_posting/edit/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#update (for 127.0.0.1 at 2010-11-08 15:52:46) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"pemnaM9Kb7ECS6ac1SPvpHiVlQIsOBG0SusQQnMQIBk=", "id"=>"4", "jobPosting"=>{"zip"=>"44101", "title"=>"Senior SAS/Credit Analyst", "addl_instructions"=>"some addl instructions", "short_description"=>"We are actively recruiting for a Senior Credit Analyst to participate on a 6+ month project located in the Torrance, CA area.", "long_description"=>"We are actively recruiting for a Senior Credit Analyst to participate on a 6+ month project located in the Torrance, CA area. The candidate of choice will have experience with using and configuring SAS Risk Dimension for at least one year, and should also have experience with SAS Enterprise Guide and SAS programming. The candidate must also be able to communicate inputs and output of the model with technical teams, as well as with the business teams. SAS programming skills are essential. The candidate is expected to understand various models used as an input.\r\n\r\n", "telecommute"=>"0", "pay"=>"60/hr", "job_type"=>"6 mos", "start_run_date"=>"11/04/10", "experience"=>"The primary role and responsibilities are as follows:\r\n* Run discounted cash flow model using SAS and compute NPV, IRR at account level. \r\n* Run Optimization Models using the NPV to determine optimal portfolio mix. \r\n* Simulation and Sensitivity Analysis. \r\n* Knowledge of deal level pricing. \r\n* Portfolio valuation using SAS. \r\n* Develop prepayment speed and life time loss for different cohorts, \r\n* Knowledge to configure SAS Risk Dimension is a plus. \r\n\r\nEducation requirements: \r\n* Minimum BA or BSc in economics, statistics or related fields. \r\n* MSc preferred"}}
+  [4;36;1mUser Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-11-08 23:52:46', `activated_at` = '2010-11-08 23:52:46' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+Google geocoding. Address: 44101. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>44101</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>Cleveland, OH 44101, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>OH</AdministrativeAreaName><Locality><LocalityName>Cleveland</LocalityName><PostalCode><PostalCodeNumber>44101</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="41.4937566" south="41.4874613" east="-81.6684370" west="-81.6786120" />
+    </ExtendedData>
+    <Point><coordinates>-81.6740449,41.4909021,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mJobPosting Update (0.2ms)[0m   [0mUPDATE `job_postings` SET `updated_at` = '2010-11-08 23:52:47', `addl_instructions` = 'some addl instructions', `short_description` = 'Senior SAS/Credit Analyst' WHERE `id` = 4[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user/manage_ads
+Rendered shared/_header (1.4ms)
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.user_id = 1) [0m
+Rendered user/_manage_ads (26.9ms)
+Completed in 432ms (View: 32, DB: 7) | 200 OK [http://localhost/job_posting/update/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#edit (for 127.0.0.1 at 2010-11-08 15:52:58) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.8ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-11-08 23:52:58', `activated_at` = '2010-11-08 23:52:58' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mJobPosting Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.4ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering job_posting/edit
+Rendered shared/_header (1.5ms)
+Rendered job_posting/_edit (7.9ms)
+Completed in 45ms (View: 17, DB: 7) | 200 OK [http://localhost/job_posting/edit/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing JobPostingController#update (for 127.0.0.1 at 2010-11-08 15:53:07) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'swelltrain@gmail.com' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-11-08 23:53:07', `activated_at` = '2010-11-08 23:53:07' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mJobPosting Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (1.6ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::RecordInvalid (Validation failed: Title can't be blank):
+  app/controllers/job_posting_controller.rb:94:in `update'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
