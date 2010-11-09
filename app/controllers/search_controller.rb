@@ -21,7 +21,7 @@ class SearchController < ApplicationController
 	 if telecommute == "only"
 	   # make the front end so it never gets here but links to search/telecommute
 	   # keep this code here just in case though...
-	   redirect_to "/search/telecommute/"
+	   redirect_to "/search/get_all/"
 	   return
 	 end
 	 
@@ -71,13 +71,29 @@ class SearchController < ApplicationController
 	 @jobs = JobPosting.find_all_by_telecommute(true)
 	 @jobs.delete_if {|job| job.end_date.blank? or (job.end_date < Time.now) }
 	 @jobs.delete_if {|job| !job.approved?}
-	 @telecommute = "only"
+	 @action = "telecommute"
+	 if @jobs.length > 0
+	   flash.now[:notice] = "There were #{@jobs.length} jobs found."
+	 else
+	   flash.now[:error] = "There were no jobs found."
+	 end
 	 render :action=>"index" # just renders it, doesn't run action first
    end
    
    def get_all
      @jobs = JobPosting.find(:all, :order => "start_run_date DESC")
+     @jobs.delete_if {|job| job.end_date.blank? or (job.end_date < Time.now) }
+   	 @jobs.delete_if {|job| !job.approved?}
+   	 @action = 'get_all'
+   	 if @jobs.length > 0
+   	   flash.now[:notice] = "There were #{@jobs.length} jobs found."
+   	 else
+   	   flash.now[:error] = "There were no jobs found."
+   	 end
+     
+   	 render :action => 'index'
    end
+   
    def by_state
      @jobs = Array.new
      state = params[:state]

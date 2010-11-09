@@ -32256,3 +32256,210 @@ ActiveRecord::RecordInvalid (Validation failed: Title can't be blank):
 Rendered rescues/_trace (43.9ms)
 Rendered rescues/_request_and_response (0.3ms)
 Rendering rescues/layout (unprocessable_entity)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-11-09 15:50:28) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (30.0ms)
+Rendered shared/_search (21.8ms)
+Rendered site/_content (26.1ms)
+Rendered shared/_sidebar (35.1ms)
+Rendered shared/_footer (1.8ms)
+Completed in 305ms (View: 302, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-11-09 15:50:30) [GET]
+  Parameters: {"city"=>"", "zip"=>"", "commit"=>"Search For Jobs", "within"=>"10", "telecommute"=>"include", "state"=>""}
+Redirected to http://localhost:3000/search/get_all/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/search?zip=&within=10&city=&state=&telecommute=include&commit=Search+For+Jobs]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#get_all (for 127.0.0.1 at 2010-11-09 15:50:30) [GET]
+  [4;36;1mJobPosting Load (0.7ms)[0m   [0;1mSELECT * FROM `job_postings` ORDER BY start_run_date DESC[0m
+  [4;35;1mJobPosting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (1.3ms)
+Rendered search/_index (4.4ms)
+Rendered shared/_sidebar (11.2ms)
+Completed in 118ms (View: 45, DB: 3) | 200 OK [http://localhost/search/get_all/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#show (for 127.0.0.1 at 2010-11-09 15:50:49) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mJobPosting Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `job_postings`[0m
+  [4;35;1mJobPosting Load (0.8ms)[0m   [0mSELECT * FROM `job_postings` WHERE (`job_postings`.`id` = 8) [0m
+Google geocoding. Address: 30.2423639,-85.6383484. Result: <?xml version="1.0" encoding="UTF-8" ?>
+<kml xmlns="http://earth.google.com/kml/2.0"><Response>
+  <name>30.2423639,-85.6383484</name>
+  <Status>
+    <code>200</code>
+    <request>geocode</request>
+  </Status>
+  <Placemark id="p1">
+    <address>1015 Louisiana Ave, Lynn Haven, FL 32444, USA</address>
+    <AddressDetails Accuracy="8" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>FL</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Bay</SubAdministrativeAreaName><Locality><LocalityName>Lynn Haven</LocalityName><Thoroughfare><ThoroughfareName>1015 Louisiana Ave</ThoroughfareName></Thoroughfare><PostalCode><PostalCodeNumber>32444</PostalCodeNumber></PostalCode></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="30.2455836" south="30.2392884" east="-85.6349354" west="-85.6412306" />
+    </ExtendedData>
+    <Point><coordinates>-85.6380830,30.2424360,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p2">
+    <address>Lynn Haven, FL, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>FL</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Bay</SubAdministrativeAreaName><Locality><LocalityName>Lynn Haven</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="30.2672850" south="30.1999210" east="-85.5902859" west="-85.6802819" />
+    </ExtendedData>
+    <Point><coordinates>-85.6482610,30.2454776,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p3">
+    <address>Lynn Haven, FL, USA</address>
+    <AddressDetails Accuracy="4" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>FL</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Bay</SubAdministrativeAreaName><Locality><LocalityName>Lynn Haven</LocalityName></Locality></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="30.3323970" south="30.2113380" east="-85.4559780" west="-85.7148239" />
+    </ExtendedData>
+    <Point><coordinates>-85.5715015,30.2804291,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p4">
+    <address>Lynn Haven, FL 32444, USA</address>
+    <AddressDetails Accuracy="5" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>FL</AdministrativeAreaName><Locality><LocalityName>Lynn Haven</LocalityName><PostalCode><PostalCodeNumber>32444</PostalCodeNumber></PostalCode></Locality></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="30.2641330" south="29.9331950" east="-85.3937909" west="-85.6867740" />
+    </ExtendedData>
+    <Point><coordinates>-85.6004867,30.2414255,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p5">
+    <address>Bay County School District, Florida, USA</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Bay County School District</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="30.5676670" south="29.9242494" east="-85.3841340" west="-85.9957456" />
+    </ExtendedData>
+    <Point><coordinates>-85.5200240,30.1750313,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p6">
+    <address>Bay, Florida, USA</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>FL</AdministrativeAreaName><SubAdministrativeArea><SubAdministrativeAreaName>Bay</SubAdministrativeAreaName></SubAdministrativeArea></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="30.5676820" south="29.9010330" east="-85.3837430" west="-85.9998930" />
+    </ExtendedData>
+    <Point><coordinates>-85.6845780,30.1805306,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p7">
+    <address></address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"/>
+    <ExtendedData>
+      <LatLonBox north="31.0008880" south="29.2888802" east="-82.7589980" west="-86.4740490" />
+    </ExtendedData>
+    <Point><coordinates>-84.7733325,30.2395771,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p8">
+    <address>Florida, USA</address>
+    <AddressDetails Accuracy="2" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName><AdministrativeArea><AdministrativeAreaName>FL</AdministrativeAreaName></AdministrativeArea></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="31.0009680" south="24.3963079" east="-79.9743060" west="-87.6348960" />
+    </ExtendedData>
+    <Point><coordinates>-81.5157535,27.6648274,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p9">
+    <address>United States</address>
+    <AddressDetails Accuracy="1" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><Country><CountryNameCode>US</CountryNameCode><CountryName>USA</CountryName></Country></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="71.5388000" south="18.7763000" east="-66.8850749" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-95.7128910,37.0902400,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p10">
+    <address>North America</address>
+    <AddressDetails Accuracy="0" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>North America</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="85.4117930" south="5.5613000" east="-4.0430000" west="177.1436000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+  <Placemark id="p11">
+    <address>Americas</address>
+    <AddressDetails Accuracy="3" xmlns="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0"><AddressLine>Americas</AddressLine></AddressDetails>
+    <ExtendedData>
+      <LatLonBox north="83.6381000" south="-59.9109760" east="-25.4663086" west="170.5957000" />
+    </ExtendedData>
+    <Point><coordinates>-105.2551187,54.5259614,0</coordinates></Point>
+  </Placemark>
+</Response></kml>
+  [4;36;1mUser Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering search/show
+Rendered shared/_header (1.1ms)
+Rendered search/_show (4.7ms)
+Rendered shared/_sidebar (10.8ms)
+Completed in 892ms (View: 31, DB: 7) | 200 OK [http://localhost/search/show/8]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-11-09 15:55:10) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.6ms)
+Rendered shared/_sidebar (11.0ms)
+Rendered shared/_footer (0.9ms)
+Completed in 20ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-09 15:55:13) [GET]
+  Parameters: {"city"=>"", "zip"=>"", "commit"=>"Search For Jobs", "within"=>"10", "telecommute"=>"include", "state"=>""}
+
+SyntaxError (/Users/stephen/Desktop/rails/sasCoders/app/controllers/search_controller.rb:78: syntax error, unexpected tSTRING_BEG, expecting kEND
+	   flash.now[:error] "There were no jobs found."
+	                      ^
+/Users/stephen/Desktop/rails/sasCoders/app/controllers/search_controller.rb:91: syntax error, unexpected tSTRING_BEG, expecting kEND
+   	   flash.now[:error] "There were no jobs found."
+   	                      ^):
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#index (for 127.0.0.1 at 2010-11-09 15:55:38) [GET]
+  Parameters: {"city"=>"", "zip"=>"", "commit"=>"Search For Jobs", "within"=>"10", "telecommute"=>"include", "state"=>""}
+Redirected to http://localhost:3000/search/get_all/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/search?zip=&within=10&city=&state=&telecommute=include&commit=Search+For+Jobs]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchController#get_all (for 127.0.0.1 at 2010-11-09 15:55:38) [GET]
+  [4;36;1mJobPosting Load (0.6ms)[0m   [0;1mSELECT * FROM `job_postings` ORDER BY start_run_date DESC[0m
+  [4;35;1mJobPosting Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `job_postings`[0m
+Rendering template within layouts/application
+Rendering search/index
+Rendered shared/_header (1.5ms)
+Rendered search/_index (2.6ms)
+Rendered shared/_sidebar (10.2ms)
+Completed in 32ms (View: 18, DB: 3) | 200 OK [http://localhost/search/get_all/]
