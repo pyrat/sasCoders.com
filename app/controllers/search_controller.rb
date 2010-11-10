@@ -57,6 +57,7 @@ class SearchController < ApplicationController
 		 @jobs = t | @jobs if t.length > 0
 	   end
 	   
+	   @jobs.sort!{|a,b| b.start_run_date.to_i <=> a.start_run_date.to_i}
 	   # successfully return w jobs
 	   flash.now[:notice] = "There were #{@jobs.length} jobs found."
 	 else 
@@ -68,7 +69,7 @@ class SearchController < ApplicationController
    
    def telecommute
      # this is for telecommute "only"
-	 @jobs = JobPosting.find_all_by_telecommute(true)
+	 @jobs = JobPosting.find_all_by_telecommute(true, :order => "start_run_date DESC")
 	 @jobs.delete_if {|job| job.end_date.blank? or (job.end_date < Time.now) }
 	 @jobs.delete_if {|job| !job.approved?}
 	 @action = "telecommute"
@@ -107,7 +108,8 @@ class SearchController < ApplicationController
  	     render :action=>"index"
  		   return
 	   end
-      
+     
+     @jobs.sort!{|a,b| b.start_run_date.to_i <=> a.start_run_date.to_i}
      flash.now[:notice] = "There were #{@jobs.length} jobs found in #{state}"
      render :action=>"index"
    end
