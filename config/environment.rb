@@ -12,7 +12,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
 
   # gets rid of those annoying ActionController::InvalidAuthenticityToken errors
-  config.action_controller.allow_forgery_protection = false if SITE_BETA == true
+  # config.action_controller.allow_forgery_protection = false if SITE_BETA == true
   
   
   # Settings in config/environments/* take precedence over those specified here.

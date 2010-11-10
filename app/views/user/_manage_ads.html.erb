@@ -7,7 +7,7 @@
 		      <div class="roundedcornr_content_659996">
 				<strong>Ads Not Running</strong><br><br>
 				<table border="1">
-				<tr><th>Reference ID</th><th>Last Visible Date</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th><th>Apply Credits</th></tr>
+				<tr><th>Reference<br>ID</th><th>Last Visible<br>Date</th> <th>Title</th> <th>Duration/<br>Job Type</th> <th>Location</th> <th>Description</th><th>Apply Credits</th><th>Edit</th></tr>
 				<% for job in @user.jobs_expired %>
 				  <tr>
 				    <td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.reference_id %> </td>
@@ -21,6 +21,7 @@
 					<td style="border-bottom-style: solid; border-width: 1px;"> <%= h "#{job.city},#{job.zip}" %> </td>
 					<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.short_description %> </td>
 					<td style="border-bottom-style: solid; border-width: 1px;"> <%= button_to "Apply Credits", {:controller=>'job_posting', :action=>'apply_credit', :id=>job.id} %>  </td>
+					<td style="border-bottom-style: solid; border-width: 1px;"> <%= link_to "Edit", {:controller=>'job_posting', :action=>'edit', :id=>job.id} %> </td>
 				  </tr>
 				<% end %>
 				</table>
@@ -38,7 +39,7 @@
 		      <div class="roundedcornr_content_659996">
 				<strong>Currently Running Ads</strong><br><br>
 				<table border="1">
-				<tr><th>Reference ID</th><th>Start Date</th><th>Expires In</th> <th>Title</th> <th>Duration/Job Type</th> <th>Location</th> <th>Description</th><th>Apply Credits</th> </tr>
+				<tr><th>Reference<br>ID</th><th>Start Date</th><th>Expires In</th> <th>Title</th> <th>Duration/<br>Job Type</th> <th>Location</th> <th>Description</th><th>Apply Credits</th><th>Edit</th> </tr>
 				<% for job in @user.jobs_running %>
 				  <tr>
 				    <td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.reference_id %> </td>
@@ -49,6 +50,7 @@
 					<td style="border-bottom-style: solid; border-width: 1px;"> <%= h "#{job.city},#{job.zip}" %> </td>
 					<td style="border-bottom-style: solid; border-width: 1px;"> <%= h job.short_description %> </td>
 					<td style="border-bottom-style: solid; border-width: 1px;"> <%= button_to "Apply Credits", {:controller=>'job_posting', :action=>'apply_credit', :id=>job.id} %>  </td>
+					<td style="border-bottom-style: solid; border-width: 1px;"> <%= link_to "Edit", {:controller=>'job_posting', :action=>'edit', :id=>job.id} %> </td>
 				  </tr>
 				<% end %>
 				</table>

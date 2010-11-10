@@ -15,7 +15,8 @@ class UserController < ApplicationController
   
   def collect
     # collect the new users details
-    response.headers['Cache-Control'] = 'public, max-age=1440'
+    # response.headers['Cache-Control'] = 'public, max-age=1440'
+    # doh! don't cache the form!
   end
   def register
     # when a user registers, they are not officially logged in/etc until they validate 
