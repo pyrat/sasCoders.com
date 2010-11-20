@@ -46,4 +46,22 @@ colorCons Smoke icon pack
   Signature: AFrZExOj4oZJL0pjnjNubvZe6wS.AkaUXiolJyCCQulCZGN5GdaacSOy
 ## Right now just using express checkout, implement payment pro next
 
+##############################################################################################
+Hi Michael,
+
+I am finishing up a site that is devoted strictly to SAS jobs.  Much like dice.com, monster.com, icrunchdata.com but without all the annoying registration, badly written jobs, etc.
+
+I was wondering if you would take a few minutes to beta test it and provide some feedback?  Specifically, I would like to make sure everything works and the "flow" of the site is intuitive.  If you could use the site as a SAS recruiter, make up a company name, make up a job advertisement, etc, that would be great.  Everything should work including purchasing credits (no $$ or credit card is actually requested for the beta).
+
+Right now it is being hosted on a free virtual server, so the URL is a little ugly, but it will eventually be on www.sasCoders.com (which is pointing to my blog at the moment).
+
+The site can be found at:
+http://hollow-meadow-93.heroku.com
+
+If you find anything wrong, something could look better, or something could be written better, etc, please email me.  
+
+Thanks very much! 
+-stephen philp
+www.sasCoders.com
+###########################################################################################
   

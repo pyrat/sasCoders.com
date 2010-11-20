@@ -92,6 +92,7 @@ class JobPostingController < ApplicationController
 	currentJob.addl_instructions = job.addl_instructions
 	
 	currentJob.save!
+	flash.now[:notice] = "The job was edited successfully."
 	render 'user/manage_ads'
 	
   end
