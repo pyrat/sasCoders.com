@@ -33353,3 +33353,348 @@ Processing BuyCreditsController#index (for 127.0.0.1 at 2010-11-17 10:35:26) [GE
 Rendering template within layouts/application
 Rendering buy_credits/index
 Completed in 59ms (View: 36, DB: 4) | 200 OK [http://localhost/buy_credits]
+  [4;36;1mSQL (34.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-11-29 15:30:44) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (81.9ms)
+Rendered shared/_search (19.1ms)
+Rendered site/_content (26.1ms)
+Rendered shared/_sidebar (37.0ms)
+Rendered shared/_footer (2.5ms)
+Completed in 309ms (View: 306, DB: 35) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 15:30:53) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.6ms)
+Rendered site/_employers (21.4ms)
+Completed in 51ms (View: 49, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 15:45:59) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.1ms)
+Rendered site/_employers (2.1ms)
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-29 15:45:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/doller.png" with {:method=>:get}):
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-29 15:46:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/doller.png" with {:method=>:get}):
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/stephen/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 15:46:39) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.0ms)
+Rendered site/_employers (2.0ms)
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 15:49:31) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.0ms)
+Rendered site/_employers (2.2ms)
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 15:55:17) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.1ms)
+Rendered site/_employers (2.9ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 15:56:12) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.1ms)
+Rendered site/_employers (2.8ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-11-29 16:01:49) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.6ms)
+Rendered shared/_sidebar (11.5ms)
+Rendered shared/_footer (1.1ms)
+Completed in 22ms (View: 20, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-11-29 16:03:06) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (11.1ms)
+Rendered shared/_footer (0.9ms)
+Completed in 20ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 16:03:16) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.0ms)
+Rendered site/_employers (2.9ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 16:04:41) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.1ms)
+Rendered site/_employers (3.2ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 16:04:44) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.0ms)
+Rendered site/_employers (56.4ms)
+Completed in 62ms (View: 61, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 16:05:06) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.0ms)
+Rendered site/_employers (3.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-11-29 16:06:52) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (10.8ms)
+Rendered shared/_footer (0.9ms)
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 16:08:10) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.0ms)
+Rendered site/_employers (3.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 16:10:00) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.0ms)
+Rendered site/_employers (3.4ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 16:11:13) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.1ms)
+Rendered site/_employers (3.1ms)
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 16:12:41) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.0ms)
+Rendered site/_employers (3.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 16:13:32) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.0ms)
+Rendered site/_employers (3.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#employers (for 127.0.0.1 at 2010-11-29 16:13:53) [GET]
+Rendering template within layouts/application
+Rendering site/employers
+Rendered shared/_header (1.0ms)
+Rendered site/_employers (3.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/site/employers]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-11-29 16:19:36) [GET]
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (1.7ms)
+Rendered user/_collect (10.2ms)
+Completed in 49ms (View: 46, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-11-29 16:19:56) [GET]
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (1.0ms)
+Rendered user/_collect (5.7ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-11-29 16:26:11) [GET]
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (1.0ms)
+Rendered user/_collect (5.8ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-11-29 16:26:21) [GET]
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (1.0ms)
+Rendered user/_collect (5.5ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-11-29 16:26:44) [GET]
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (1.0ms)
+Rendered user/_collect (5.6ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-11-29 16:27:49) [GET]
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (1.0ms)
+Rendered user/_collect (5.6ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserController#collect (for 127.0.0.1 at 2010-11-29 16:29:30) [GET]
+Rendering template within layouts/application
+Rendering user/collect
+Rendered shared/_header (1.0ms)
+Rendered user/_collect (5.8ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/user/collect]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-11-29 16:52:51) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_search (1.4ms)
+Rendered site/_content (0.5ms)
+Rendered shared/_sidebar (10.7ms)
+Rendered shared/_footer (0.9ms)
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#coders (for 127.0.0.1 at 2010-11-29 16:52:54) [GET]
+Rendering template within layouts/application
+Rendering site/coders
+Rendered shared/_header (1.7ms)
+Rendered site/_coders (14.0ms)
+Rendered shared/_search (2.3ms)
+Rendered shared/_sidebar (15.2ms)
+Completed in 122ms (View: 63, DB: 0) | 200 OK [http://localhost/site/coders]

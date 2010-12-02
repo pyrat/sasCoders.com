@@ -9,8 +9,8 @@
 		   <div class="roundedcornr_top_659996"><div></div></div>
 		      <div class="roundedcornr_content_659996">
 				<div class="required"><%= label_tag "Email:" %><%= error_message_on(:user, :email) %></div>
-				 <%= text_field_tag :email, params[:email], :size=>40 %>* 
-				<p class="last">* This is the email address our system will use to communicate with you (invoices, etc). We will also use this email address as the response address for job ads.  <strong>But this address is kept private and never shown on our site.</strong></p>
+				 <%= text_field_tag :email, params[:email], :size=>40 %><span style="color:red">*</span> 
+				<p style="font-size:80%"><span style="color:red">*</span> This is the email address used as the response address for your job listings.  We will also use this address to communicate with you (invoices, etc). <strong>But this address is kept private and never shown on our site.</strong></p>
 
 
 				<div class="required"> <%= label_tag "password:" %></div>
@@ -31,8 +31,8 @@
 				<div class="optional"><%= label_tag "Last Name:" %></div>
 				<%= text_field_tag :last_name, params[:last_name], :size=>40 %>
 				<div class="optional"><%= label_tag "Telephone #:" %></div>
-				<%= text_field_tag :telephone, params[:telephone], :size=>40 %>*
-				<p class="last">*We only ask for a phone number so we can contact you if there are any questions with billing, ad layout, etc.  We <strong>do NOT</strong> share your phone number with anyone.</p>
+				<%= text_field_tag :telephone, params[:telephone], :size=>40 %><span style="color:red">*</span>
+				<p style="font-size:80%"><span style="color:red">*</span>We only ask for a phone number so we can contact you if there are any questions with billing, ad layout, etc.  We <strong>do NOT</strong> share your phone number with anyone.</p>
 				</div>
 				
 		     
