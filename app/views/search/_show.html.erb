@@ -23,7 +23,12 @@
 			    </p>
 			<p><strong>Description:</strong><br>
 			<%= simple_format(@job.long_description) %> </p>
-			<p><strong>Company Name:</strong><br><%= @companyName %></p>
+			<p><strong>Company Name:</strong><br><%= @companyName %><br>
+			<% if !@web_site.blank? %>
+			  <a href= <%= "http://#{@web_site}" %> > <%= @web_site %></a>
+			<% end %>
+			</p>
+			
 
 			<p><strong>Company Description:</strong><br>
 			<%= simple_format(@companyDescription) %>

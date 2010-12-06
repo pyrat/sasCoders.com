@@ -123,6 +123,7 @@ class SearchController < ApplicationController
 	 u = User.find(@job.user_id)
 	 @companyName = u.company
 	 @companyDescription = u.company_description
+	 @web_site = u.web_site
 
    end
 end

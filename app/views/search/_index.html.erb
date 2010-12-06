@@ -1,5 +1,5 @@
 <h3>Jobs Matching Your Search</h3>
-<div style="padding-left:20px;"<%= link_to "<-", :controller=>"site", :action=>"index" %> Back</div><br>
+<div style="padding-left:20px;"><%= link_to "<-", :controller=>"site", :action=>"index" %> Back</div><br>
 <div class="roundedcornr_box_218416">
    <div class="roundedcornr_top_218416"><div></div></div>
       <div class="roundedcornr_content_218416">
@@ -13,7 +13,7 @@
 			<td> <%= h job.job_type %> </td>
 			<td> <%= h "#{job.city}, #{job.zip}" %>
 				<% if job.telecommute? %>
-				  /<br><strong>Telecommute</strong>
+				  /<br><span title="Telecommute means most of the work can be performed off-site."><strong>Telecommute</strong></span>
 				<% end %>
 				 </td>
 			<td> <%= h job.short_description %> </td>
