@@ -2,6 +2,17 @@ http://hollow-meadow-93.heroku.com
 heroku db:reset --app hollow-meadow-93
 heroku rake db:migrate
 
+---- next steps    ----
+install plugin acts_as_redeemable
+edit buy_credits to accept coupon
+edit homepage, register, and "recruiters learn more" to advertise coupon
+when a new user signs up a 30 day coupon is created
+then open more beta testing to some users
+ beta testers:
+	kim lebouton?
+	tal galil?
+	
+
 colorCons Smoke icon pack
 
 + need to add javacript for search form
