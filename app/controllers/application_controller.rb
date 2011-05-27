@@ -9,34 +9,34 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-  
+
   def logged_in?
     # the session variable should contain a user obj
-	# check that the user last logged in within a certain time
-	# i think that should be good enough?
-	if @user.nil? ||
-	   (@user.updated_at.to_i < 1.hour.ago.to_i)
-	  # then it was over an hour ago since they last signed in
-	  session[:user_id] = nil
-	  flash[:error] = "Please login to continue."
+    # check that the user last logged in within a certain time
+    # i think that should be good enough?
+    if @user.nil? ||
+      (@user.updated_at.to_i < 1.hour.ago.to_i)
+      # then it was over an hour ago since they last signed in
+      session[:user_id] = nil
+      flash[:error] = "Please login to continue."
       redirect_to :controller => "site", :action => "index"
       return false
-	else
-	  @user.activated_at = Time.now # update since they are using the site and not idling
-	  @user.save
-	  return true
-	end
+    else
+      @user.activated_at = Time.now # update since they are using the site and not idling
+      @user.save
+      return true
+    end
   end
-  
+
   def fetch_logged_user
     unless session[:user_id].blank?
-	  @user = User.find(session[:user_id])
-	end
-	rescue ActiveRecord::RecordNotFound
+      @user = User.find(session[:user_id])
+    end
+  rescue ActiveRecord::RecordNotFound
   end
-  
+
   def cleanup
-#    flash[:error] = nil
-#    flash[:notice] = nil
+    #    flash[:error] = nil
+    #    flash[:notice] = nil
   end
 end
